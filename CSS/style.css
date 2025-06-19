@@ -221,7 +221,7 @@ button.owl-prev:hover,button.owl-next:hover{opacity: 1;transition: 0.2s ease-out
 .accordion .accordion-button:not(.collapsed){background-color:#EEFCFF;box-shadow:none}
 .accordion .accordion-item:first-of-type>.accordion-header .accordion-button{box-shadow: none;}
 .accordion .accordion-body{padding-inline:30px;}
-.accordion .accordion-body span{font-size:1.125rem;font-weight:400; color:var(--text-text-color);font-family:var(--Montserrat-font);line-height:28px;}
+.accordion .accordion-body span{font-size:1.125rem;font-weight:400; color:var(--text-text-color);font-family:var(--Montserrat-font);}
 .accordion-button::after{background-image:url('../images/chevron-down-solid.svg');}
 .accordion-button:not(.collapsed)::after{background-image: url('../images/chevron-down-solid.svg'); transform: rotate(180deg);  filter: invert(47%) sepia(92%) saturate(1100%) hue-rotate(-10deg) brightness(103%) contrast(101%);}
 #homepage .faq .inner .bg-element{width:110px;height:auto;position: absolute;left:0; bottom:0;z-index:-1;} 
@@ -663,7 +663,7 @@ footer .footer-rightside .links{padding-left: 0px;margin-bottom:50px;}
 
 @media screen and (max-width:768px)
 {
-  section{padding: 35px;}
+  section{padding-bottom: 35px;}
   #homepage .hero .trusted{bottom: 40%;top: auto;left: 45px;max-width: 50%;}
   .testimonials .heading{margin: auto auto 48px;}
   #homepage .faq .inner{padding: 25px 25px 50px;}
@@ -679,10 +679,12 @@ footer .footer-rightside .links{padding-left: 0px;margin-bottom:50px;}
   #benifit .protect-pet .rightside{text-align: center;}
   #benifit .protect-pet .rightside img{width: 70%;margin-inline: auto;}
 #fan .hero .card-container .card{padding: 25px 25px;} 
+#homepage .hero .leftside .footprint{display: none;}
 }
 
 @media screen and (max-width:440px)
 {
+  section{padding-bottom: 20px;}
 .navbar .navbar-nav{gap:10px;}
   #homepage .hero{padding-top:20px;}
 #homepage .hero .trusted{bottom: 15%;left: 15px;}
@@ -701,48 +703,36 @@ button.owl-prev{left:0;}
 #homepage .hero .trusted h4{font-size: 1.25rem;line-height: 30px;}
 .f-16{font-size: 0.75rem;}
 .f-18{font-size: 0.875rem;}
-.f-20{font-size: 1rem;}
-.f-22{font-size: 1.125rem;}
-.f-24{font-size: 1.25rem;}
-.f-26{font-size: 1.125rem;}
-.f-27{font-size: 1.4375rem;}
+.f-20{font-size: 0.875rem;}
+.f-22{font-size: 1rem;}
+.f-24{font-size: 1.125rem;}
+.f-26{font-size: 1rem;}
+.f-27{font-size: 1rem;}
 .f-28{font-size: 1.375rem;}
-.f-32{font-size: 1.75rem;}
-.f-34{font-size: 1.75rem;}
+.f-32{font-size: 1.5rem;}
+.f-34{font-size: 1.25rem;}
 .f-40{font-size: 1.875rem;}
-.f-42{font-size: 2.25rem;}
+.f-42{font-size: 2rem;}
 .f-48{font-size:2.125rem;}
 .f-56{font-size: 2rem;}
 .f-74{font-size: 2rem;}
-.l-h-22{line-height: 18px;}
-.l-h-22{line-height: 18px;}
-.l-h-24{line-height: 20px;}
-.l-h-26{line-height: 19px;}
-.l-h-28{line-height: 16px;}
-.l-h-32{line-height: 24px;}
-.l-h-34{line-height: 26px;}
-.l-h-37{line-height: 26px;}
-.l-h-42{line-height: 32px;}
-.l-h-46{line-height: 28px;}
-.l-h-48{line-height: 2.25rem;}
-.l-h-65{line-height: 46px;}
-.l-h-72{line-height: 44px;}
-.l-h-85{line-height: 38px;}
+.navbar .nav-link{font-size: 1rem;}
 #homepage .hero .leftside .footprint{right:15px;top: 40px;}
 #homepage .faq .inner .leftside .footprint.third{right: 38px;top: 93px;}
-.accordion .accordion-body span{font-size:1rem;line-height: 24px;}
-.quote-now .inner .leftside{gap:10px;}
-#fan .hero .card-container{margin-top: 25px;}
+.accordion .accordion-body span{font-size:1rem;}
+#fan .hero .card-container{margin-top: 16px;}
 #benifit .hero .bottom-content{gap:15px;flex-direction: column;}
-#benifit .hero .bottom-content button{width: fit-content;}
+#benifit .hero .bottom-content button{width: fit-content; font-size: 1rem;}
 .learn-more{width: fit-content;font-size: 1.4375rem;}
 .top-title{font-size: 1.125rem;}
-#benifit .insurance-number .card{min-height: auto;}
+#benifit .insurance-number .card{min-height: auto;padding: 10px;border-radius: 18px;}
 #benifit .real-stories .card .footprint{width:400px;}
-#benifit .real-stories .card{min-height: auto;}
+#benifit .real-stories .card{min-height: auto;padding: 10px;border-radius: 18px;}
 #benifit .protect-pet .leftside .bottom-content{gap:10px;flex-direction: column; align-items: flex-start;margin-top: 20px;}
 .footer-bottom{padding: 10px 10px;}
-#blog .featured-article .inner .rightside .details{gap:10px;}
+#blog .featured-article .inner .rightside .details{gap:0px;margin-block:10px;}
+#blog .featured-article .inner .rightside .details li svg{width: 14px;}
+#blog .featured-article .inner .rightside{padding:10px;}
 #blog .article .navigation-bar{overflow-x:auto; white-space: nowrap;scrollbar-width: none;  }
 #blog .article .navigation-bar .links{min-width: max-content;display: inline-flex;  }
 #blog .article .footprint{width: 310px;}
@@ -752,27 +742,76 @@ button.owl-prev{left:0;}
 #get-quote .hero .leftside .footprint {right: 0rem;top: 0rem;width: 50px;height: 50px;border-radius: 18px;}
 #get-quote .hero .leftside .heading{gap: 16px;}
 #get-quote .hero .rightside{padding-top: 26px;}
-#get-quote .hero .rightside .card {padding: 25px 25px;}
 #get-quote .hero .rightside .card h2 {max-width: 100%;}
 #get-quote .hero .rightside .card input {margin-block: 0px 20px;}
 #get-quote .hero::after {right: 0;}
-.how-works .card{padding: 25px 25px;gap:25px;}
+.how-works .card{padding:10px;border-radius: 18px; gap:25px;}
 #get-quote .how-works .card .footprint{width: 60px;}
-#get-quote .how-works .card span{border-radius: 16px;}
+#get-quote .how-works .card span{border-radius: 10px;}
 .how-works .card .top-content span{padding: 8px 22px;}
 #get-quote-step .hero .card-container{padding:25px 25px;}
 #get-quote-step .hero .card-container .choose-content {gap:15px;}
 #get-quote-step .hero .radio-container{font-size: 1rem;}
 #get-quote-step .hero .radio-container .checkmark{width: 18px;height: 18px;}
 #get-quote-step::before{width: 100%;}
-#get-quote-step .hero .radio-container .checkmark:after{top: 2px;left: 2px;width: 10px; height: 10px;}
+#get-quote-step .hero .radio-container .checkmark:after{top: 3.3px;left: 3.3px;width: 8px; height: 8px;}
 #get-quote-step .hero{position:relative;z-index: 1;}
 .custom-select-wrapper{margin-bottom: 20px;}
+#homepage .choose-us .leftside ul li svg{width: 14px;height: auto;}
+#homepage .our-partners .rightside .partners h3{font-size: 2rem;}
+#homepage .our-partners .rightside .partners ul li img{width: 50px;}
+#homepage .our-partners .rightside .partners ul,.trusted-by ul{gap:10px 10px;}
+.trusted-by ul li img{width: 50px;height: auto;}
+.trusted-by ul li.ratings .review-text{font-size: 1rem;}
+.stars{font-size: 1rem;}
+#benifit .hero .rightside,#benifit .protect-pet .rightside{padding-top:20px;}
+#benifit .complete-protection .card-container .card-inner svg{width: 50px;height:auto;}
+#benifit .complete-protection .card-container .card-inner ul li svg{width: auto;}
+#benifit .complete-protection .card-container .card {padding:10px;border-radius: 18px;}
+#benifit .complete-protection .card-container .card-inner, #benifit .real-stories .card .middle-content, #benifit .complete-protection .card-container .card-inner .content
+{margin-block:0px ;}
+#benifit .complete-protection .card-container .footprint{width: 70%;height: 70%;top:0;}
+#benifit .real-stories .card .profile span{width: 50px;height: 50px;}
+#benifit .real-stories .card .footprint{width: 70%;height: 70%;}
+#benifit .protect-pet .leftside .footprint{width:20%; height:20%;top:0px;}
+#benifit .protect-pet .leftside .bottom-content button{font-size: 1rem;}
+#benifit .insurance-number .card,#benifit .insurance-number .card.third,#benifit .real-stories .card,#benifit .complete-protection .card-container .card{margin-bottom:15px;}
+#blog .featured-article .inner,#blog .featured-article .inner .leftside{border-radius: 18px;}
+#blog .article-main .card .card-body{padding:10px;gap:0;}
+#blog .senior-pet-insurance .leftside ul {margin-top: 16px;gap: 0px;}
+#blog .senior-pet-insurance .leftside ul li svg{width: 14px;height:auto;}
+#read-article .article-top .heading li svg{width: 18px;height:auto;}
+#read-article .article-top .article-image{margin-block: 10px;}
+#read-article .article-middle .leftside .search-container, #read-article .article-middle .rightside .recent-posts, #read-article .leave-reply .inner{padding:10px;border-radius: 18px;}
+.form-action { margin-bottom: 16px;}
+.orange-btn{font-size: 1rem;}
+#read-article .article-middle .leftside {margin-bottom: 25px;}
+#fan .hero .card-container .card,#fan .hero .card-container .card.third {margin-bottom:16px;padding:10px;border-radius: 18px;}
+#fan .how-work .card .card-body{padding:10px;}
+#fan .how-work .card .card-body .top svg{width: 16px; height: auto;}
+#fan .pet-gallery .inner{position: relative;z-index: 1;overflow: hidden;padding:10px;border-radius: 18px;}
+.testimonials .owl-carousel .item{padding:10px;border-radius: 18px;}
+.testimonials .item .commas{top:0px;width: 35px;height: auto;}
+.testimonials .item .footprint{top:0;width: 70%;height: 70%;}
+#get-quote .hero .leftside ul li svg{width: 16px;height: auto;}
+#get-quote .hero .leftside ul li{margin-bottom: 5px;}
+#get-quote .hero .rightside .card {padding: 10px;border-radius: 18px;}
+#get-quote .trusted-by ul li{border-radius: 18px;}
+#get-quote .choose-us::before{display: none;}
+#get-quote .choose-us .leftside ul li svg{width: 14px; height: auto;}
+.quote-now .inner{padding: 10px;}
+.quote-now .inner .leftside{gap:5px;margin: 0;}
+.quote-now .inner .top{width: 50px;height:50px;border-radius: 10px;padding: 10px;}
+footer{border-radius: 18px 18px 0 0;}
+#get-quote-step .hero .card-container .pet-card svg{width: 50px;height: 50px;}
+#get-quote-step .hero .radio-container{padding-left: 25px;}
+
+
 }
 
 @media screen and (max-width:428px)
 {
-  #homepage .hero .trusted{bottom: 35%;max-width: 50%;}
+  #homepage .hero .trusted{bottom:22%;max-width:60%;}
   .how-works .card .top-content span{font-size: 1.375rem;}
   #homepage .choose-us .leftside p {margin-bottom: 16px;}
   .testimonials::after{top: 11rem;width: 75px;height: 170px;}
@@ -782,25 +821,16 @@ button.owl-prev{left:0;}
   #benifit .insurance-number .card-container{margin-top: 20px;}
 #benifit .complete-protection .card-container .card{margin-bottom:25px;}
 #benifit .real-stories .heading { margin-bottom:20px;}
-#blog .featured-article .inner .rightside .details{margin-block:20px;}
 #blog .article-main .card {min-height: auto;}
-#blog .article-main .card .card-body{gap:10px;}
 #blog .article-main .card ul.details{gap:5px;}
-#blog .senior-pet-insurance .leftside ul {margin-top: 16px;gap: 10px;}
 #blog .senior-pet-insurance .rightside {padding-top: 20px; }
 footer .footer-rightside .links{margin-bottom:25px;}
-#read-article .article-middle .leftside .search-container,
-#read-article .article-middle .rightside .recent-posts, 
-#read-article .leave-reply .inner{padding:25px 15px;}
-#fan .hero .card-container .card {margin-bottom: 25px;padding: 25px 15px;}
 #fan .how-work .heading{gap:10px;}
 #fan .how-work .heading{margin-bottom: 16px;}
 #fan .how-work .card{min-height: auto;}
 #fan .how-work .card{margin-bottom:20px;}
 #fan .pet-gallery .card-container .footprint{width: 100%;}
-#fan .pet-gallery .inner {padding: 25px 15px;}
 #fan .pet-gallery .card-container{position: inherit;}
-#fan .pet-gallery .inner{position: relative;z-index: 1;overflow: hidden;}
 #fan .pet-gallery .inner .heading{position: relative;z-index: 2;}
 button.owl-prev, button.owl-next{width: 40px;height: 40px;border-radius: 10px !important;}
 button.owl-prev, button.owl-next {top: -50px;}
@@ -824,15 +854,13 @@ button.owl-next{left:50px;}
 #get-quote .choose-us .leftside h1{line-height: 42px;}
 #get-quote-step .hero .card-container{padding: 25px 15px;}
 #get-quote-step .hero .card-container h2{margin: 0;}
-#get-quote-step .hero .radio-container{padding-left: 25px;}
-.testimonials .owl-carousel .item{padding:25px 15px;}
-.testimonials .item .commas{top:0px;}
-#homepage .our-partners .rightside .partners h3{font-size: 2.375rem;}
 .card-title{top:10px; left:10px;}
-#read-article .article-top .heading li svg{width: 24px;height: 24px;}
 #read-article .article-middle .rightside .post-card{gap:10px;}
 #homepage .hero .leftside .footprint{width: 50px;}
 .testimonials .item p{font-size: 16px;line-height: 22px;}
+#homepage .hero .leftside .bottom-content{flex-direction: column;}
+#homepage .hero .leftside .bottom-content .compare-quote{width: fit-content;}
+.trusted-by ul li.ratings{height: 100%;}
 
 }
 
