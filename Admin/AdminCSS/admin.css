@@ -1,0 +1,187 @@
+*{margin: 0; padding: 0;box-sizing: border-box;}
+body{margin:0;padding:0;}
+a{text-decoration: none;}
+a:focus-visible{outline:none;}
+a img:focus-visible{outline:none;}
+input{background-color: transparent;}
+input:focus{outline:none;}
+textarea:focus{outline:none;}
+select:focus-visible{outline: none;}
+select{appearance:none; -webkit-appearance:none; -moz-appearance:none;position:relative;} 
+select{appearance: none;}
+.select-wrapper{position: relative;}
+.select-wrapper:after{content: "";position: absolute;right:15px;top:10px;width:20px;height:20px;background:url('../images/chevron-down.png') no-repeat center center;background-size: contain;z-index: 1;}
+ul{padding: 0;margin: 0;list-style-type: none;}
+.freedoka{font-family:"Fredoka", sans-serif ;}      /* Font-family */
+.montserrat{font-family:"Montserrat", sans-serif;}
+.c-orange{color:#FEA145;}
+.c-green{color:#34A15C;}
+.c-dark{color:#001D21;}
+.c-red{color:#FF2C2C;}
+.c-light{color:#566369;}
+.c-white{color:#ffffff;}
+.c-cf{color:#CFCFCF;}
+.c-purple{color:#7070FA;}
+.c-skyblue{color:#00A5C3;}
+.c-darkblue{color:#00314B;}
+.f-8{font-size:0.5rem;}   
+.f-10{font-size:0.625rem;} 
+.f-12{font-size:0.75rem;} 
+.f-14{font-size:0.875rem;}  
+.f-16{font-size:1rem;}    
+.f-18{font-size:1.125rem;} 
+.f-20{font-size:1.25rem;}  /* 20px / 16px = 1.25rem */
+.f-22{font-size:1.375rem;} /* 22px / 16px = 1.375rem */
+.f-24{font-size:1.5rem;}   /* 24px / 16px = 1.5rem */
+.f-26{font-size:1.625rem;} /* 26px / 16px = 1.625rem */
+.f-27{font-size:1.6875rem;}/* 27px / 16px = 1.6875rem */
+.f-28{font-size:1.75rem;}  /* 28px / 16px = 1.75rem */
+.f-32{font-size: 2rem;}   /* 32px / 16px = 2rem */
+.f-34{font-size:2.125rem;} /* 34px / 16px = 2.125rem */
+.f-40{font-size:2.5rem;}  /* 40px / 16px = 2.5rem */
+.f-42{font-size:2.625rem;} /* 42px / 16px = 2.625rem */
+.f-56{font-size:3.5rem;}  /* 56px / 16px = 3.5rem */
+.f-63{font-size:3.9375rem;}/* 63px / 16px = 3.9375rem */
+.f-74{font-size: 4.625rem;}/* 74px / 16px = 4.625rem */ 
+.f-w-4{font-weight: 400;} /* font-weight */
+.f-w-5{font-weight: 500;}
+.f-w-6{font-weight: 600;}
+.f-w-7{font-weight: 700;}
+.b-orange{border:1px solid #FEA145;} /* Border */
+.b-blue{border:1px solid #88EDFF;}
+.b-purple{border:1px solid #7070FA;}
+.b-blue-2{border:2px solid #88EDFF;}
+.b-green{border:1px solid #0DFFC4;}
+.b-pink{border:1px solid #EE1AA7;}
+.b-yellow{border:1px solid #E8AA09;}
+.b-dullblue{background-color: #eefcff79;}
+
+
+.dashboard-layout { display: flex; height: 100vh; overflow: hidden; }
+.sidebar { width: 240px; background-color: #CCF7FF; color: white; padding: 20px; flex-shrink: 0; position: fixed; height: 100vh; left: 0; top: 0; border-right: 1px solid #88EDFF; }
+.sidebar .logo { text-align: center; width: 100%; height: auto; display: inline-block; }
+.sidebar .logo img { width: 109px; height: auto; }
+.sidebar ul { list-style: none; margin-top: 20px; }
+.sidebar ul.second li{position: absolute;bottom:0; transform: translate(-50%, -50%);left:50%;}
+.sidebar ul li{display: flex;align-items: center;padding:10px 20px;margin-bottom:10px;border-radius: 5px;}
+.sidebar ul li a {display: flex;align-items: center;gap:10px;}
+.sidebar ul li.active{background-color: #00A5C3;}
+.sidebar ul li.active a svg{filter:  brightness(0) invert(1);}
+.sidebar ul li.active a {color:#ffffff;}
+.sidebar ul li:hover{background-color: #00A5C3;}
+main{margin-top:64px; padding:25px;}
+.main-area { margin-left: 241px; display: flex; flex-direction: column; width: calc(100% - 241px); height: 100vh; }
+header { height: 64px; background-color: #ffffff; border-bottom: 1px solid #ddd; position: fixed; width: calc(100% - 241px); top: 0; left: 241px; z-index: 10; }
+.header-wrapper{display: flex; align-items: center;justify-content: space-between;padding:5px 24px;}
+.header-wrapper .leftside .back{border:0.5px solid #002133; border-radius: 8px;padding: 5px 10px;background-color: #ffffff;}
+header .rightside .profile{display: flex;align-items: center;gap:10px;}
+header .rightside .profile span{width:50px;height: 50px;display: inline-block;border-radius: 50%;overflow: hidden;background-color: #ffffff;}
+header .rightside .profile span img{width: 100%;height: 100%;object-fit: cover;}
+header .rightside .profile .content h2,
+header .rightside .profile .content p{margin: 0;}
+
+section{padding-bottom:30px;}
+.dashboard .Rightside .content-display-area{display: flex;align-items: center;justify-content: space-between;}
+.dashboard .Rightside .content-display-area .leftside h2,.dashboard .Rightside .content-display-area .leftside p{margin: 0;}
+.dashboard .Rightside .content-display-area .rightside{display: flex;align-items: center;gap:20px;}
+.dashboard .Rightside .content-display-area .rightside select{padding:7px 40px 5px 10px;border:1px solid #FEA145;border-radius: 5px;}
+.dashboard .Rightside .content-display-area .rightside button.refresh{border:1px solid #FEA145;padding:6px 10px;background-color: #ffffff;border-radius: 5px;}
+.dashboard .Rightside .status .card{border-radius: 10px;padding: 20px;}
+.dashboard .Rightside .status .top{display: flex;align-items: center;justify-content: space-between;}
+.dashboard .Rightside .status .bottom-content{margin-top:20px;}
+.dashboard .Rightside .status .bottom-content p{margin:0;display: flex; gap: 10px;}
+.dashboard .Rightside .status .bottom-content span{display: flex;align-items: center;gap:5px;}
+.dashboard .Rightside .data-insights .card{padding:20px; border-radius: 10px;min-height: 427px;}
+.dashboard .Rightside .data-insights .card.referral { background: #ffffff; border-radius: 12px; padding: 20px; box-shadow: 0 0 10px rgba(0,0,0,0.05); }
+.dashboard .Rightside .data-insights .card.referral ul { margin-top: 20px; list-style: none; padding-left: 0; }
+.dashboard .Rightside .data-insights .card.referral li { display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; gap: 20px; }
+.dashboard .Rightside .data-insights .card.referral li h3 { max-width: 300px; flex-shrink: 0; margin: 0; min-width: 300px; }
+.dashboard .Rightside .data-insights .card.referral li p { margin: 0; }
+.dashboard .Rightside .data-insights .card.referral .rightside { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+.dashboard .Rightside .data-insights .progress { background-color: #CCF7FF; border-radius: 10px; height: 10px; width: 300px; overflow: hidden; }
+.dashboard .Rightside .data-insights .progress-bar { background-color: #00A5C3; height: 100%; border-radius: 10px; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
