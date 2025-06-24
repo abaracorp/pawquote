@@ -65,19 +65,18 @@ ul{padding: 0;margin: 0;list-style-type: none;}
 
 .form-group label{margin-bottom:5px;}
 .dashboard-layout { display: flex; height: 100vh; overflow: hidden; }
-.sidebar { width: 240px; background-color: #CCF7FF; color: white; padding: 20px; flex-shrink: 0; position: fixed; height: 100vh; left: 0; top: 0; border-right: 1px solid #88EDFF; }
+.sidebar { width: 240px; background-color: #CCF7FF; color: white; padding: 20px; flex-shrink: 0; position: fixed; height: 100%; left: 0; top: 0; border-right: 1px solid #88EDFF; }
 .sidebar .logo { text-align: center; width: 100%; height: auto; display: inline-block; }
 .sidebar .logo img { width: 109px; height: auto; }
-.sidebar ul { list-style: none; margin-top: 20px; height: calc(100vh);}
-.sidebar ul li.logout{margin-top:277px;}
+.sidebar ul { list-style: none; margin-top: 20px; height: calc(100% - 0px);position: relative;}
+.sidebar ul li.logout{position: absolute;bottom:80px;margin:0;}
 .sidebar ul.second li{position: absolute;bottom:0; transform: translate(-50%, -50%);left:50%;}
 .sidebar ul li{display: flex;align-items: center;padding:10px 20px;margin-bottom:10px;border-radius: 5px;}
 .sidebar ul li a {display: flex;align-items: center;gap:10px;}
 .sidebar ul li.active{background-color: #00A5C3;}
 .sidebar ul li.active a svg{filter:  brightness(0) invert(1);}
 .sidebar ul li.active a {color:#ffffff;}
-.sidebar ul li:hover{background-color: #00A5C3;}
-
+/* .sidebar ul li:hover{background-color: #00A5C3;} */
 main{margin-top:64px; padding:25px;}
 .main-area { margin-left: 241px; display: flex; flex-direction: column; width: calc(100% - 241px); height: 100vh; }
 header { height: 64px; background-color: #ffffff; border-bottom: 1px solid #ddd; position: fixed; width: calc(100% - 241px); top: 0; left: 241px; z-index: 10; }
