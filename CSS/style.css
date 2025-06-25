@@ -24,7 +24,7 @@ select:focus-visible{outline: none;}
 select{appearance:none; -webkit-appearance:none; -moz-appearance:none;position:relative;} 
 .custom-select-wrapper{position: relative;}
 .custom-select-wrapper::after {content: "";position: absolute;right:15px;top:15px;width:20px;height:20px;background:url('../images/chevron-down-solid.svg') no-repeat center center;background-size: contain;z-index: 1;}
-.orange-btn{background-color:var(--orange-btn-bg);color:#ffffff;border-radius:18px;font-size:1.125rem;font-weight:400;border:none;padding:13px 28px;}
+.orange-btn{background-color:var(--orange-btn-bg);color:#ffffff;border-radius:18px;font-size:1.125rem;font-weight:500;border:none;padding:9px 18px;}
 .orange-btn-arow{display: flex;align-items: center;gap:5px;}
 .blank-btn{border:1px solid #FEA145; border-radius:18px;font-size:	1.6875rem;font-weight:500;padding:5px 20px;font-family:var(--freedoka-font);background-color: transparent;}
 ul{list-style-type: none;margin:0; padding:0;}
@@ -55,6 +55,7 @@ a{text-decoration: none;}
 .f-34{font-size:2.125rem;} /* 34px / 16px = 2.125rem */
 .f-40{font-size:2.5rem;}  /* 40px / 16px = 2.5rem */
 .f-42{font-size:2.625rem;} /* 42px / 16px = 2.625rem */
+.f-45{font-size:2.8125rem;} /* 42px / 16px = 2.625rem */
 .f-56{font-size:3.5rem;}  /* 56px / 16px = 3.5rem */
 .f-63{font-size:3.9375rem;}/* 63px / 16px = 3.9375rem */
 .f-74{font-size: 4.625rem;}/* 74px / 16px = 4.625rem */ 
@@ -93,9 +94,11 @@ a{text-decoration: none;}
 .bg-l-blue{background-color: #EEFCFF;}
 .bg-darksky{background-color: #88EDFF;}
 .bg-dark{background-color: #002133;}
+.bg-orange{background-color:#FEA145 ;}
 .gap-8{gap:8px;}
 .br-4{border-radius:4px;}/* border-radius */
 .br-8{border-radius:8px;}
+.br-10{border-radius:10px;}
 .br-12{border-radius:12px;}
 .br-16{border-radius:16px;} 
 .br-18{border-radius:18px;}
@@ -133,6 +136,7 @@ section{padding-bottom:70px;}
  .navbar .navbar-nav{gap:30px;}
  .navbar .nav-link.active{color:#FEA145;font-weight: 600;background-color: #ffffff;border-radius: 10px;}
  .navbar .nav-link.active::after{content: "";position: absolute;width: 4px;height:4px; border-radius:10px;background-color: #FEA145;right:-10px;top:10px;}
+ .navbar form .get-quote.active{background-color: #002133;color: #ffffff;}
 #homepage .hero{padding-top:50px;position: relative;}
 #homepage .hero .leftside {position: relative;}
 #homepage .hero .leftside .bottom-content input{border: var(--input-orange-border);padding:var(--input-orange-border-padding);border-radius:12px; flex:1;}
@@ -219,6 +223,7 @@ button.owl-prev:hover,button.owl-next:hover{opacity: 1;transition: 0.2s ease-out
 #homepage .faq .inner .leftside .footprint.third{right:20px;top:45px;}
 #homepage .faq .inner .leftside .footprint.fourth{left:40%;top:52%;}
 .accordion .accordion-item{margin-bottom:20px;border-radius:15px;overflow: hidden;border:var(--border);}
+.accordion .accordion-item:last-of-type{margin:0;}
 .accordion .accordion-button:not(.collapsed){background-color:#EEFCFF;box-shadow:none}
 .accordion .accordion-item:first-of-type>.accordion-header .accordion-button{box-shadow: none;}
 .accordion .accordion-body{padding-inline:30px;}
@@ -227,7 +232,8 @@ button.owl-prev:hover,button.owl-next:hover{opacity: 1;transition: 0.2s ease-out
 .accordion-button:not(.collapsed)::after{background-image: url('../images/chevron-down-solid.svg'); transform: rotate(180deg);  filter: invert(47%) sepia(92%) saturate(1100%) hue-rotate(-10deg) brightness(103%) contrast(101%);}
 #homepage .faq .inner .bg-element{width:110px;height:auto;position: absolute;left:0; bottom:0;z-index:-1;} 
 .quote-now .inner {background-color:#EEFCFF;padding:42px 54px;border:var(--border);border-radius:30px;display: flex;align-items: center;justify-content: space-between;}
-.quote-now .inner .top{width: 68px;height:68px;display:flex;padding:15px; overflow:hidden; border-radius:20px;background-color: #FEA145;}
+.quote-now .inner .top{width: 68px;height:68px;display:flex;align-items: center;justify-content: center; padding:15px; overflow:hidden; border-radius:20px;background-color: #FEA145;}
+.quote-now .inner .top img{width: 100%;height:auto;object-fit: cover;}
 .quote-now .inner .leftside{max-width: 80%;display: flex;flex-direction: column;gap:20px;}
 .quote-now .inner .get-quote{padding:9px 20px;}
 footer{background-color: var(--footer-bg);border-radius:40px 40px  0 0;padding:66px 88px 28px;}
@@ -413,20 +419,36 @@ footer .footer-rightside .links ul li a:hover{color:#FEA145; transition: 0.3s ea
 #get-quote .how-works .card .footprint{position: absolute;right:0; bottom:0;}
 #get-quote .choose-us .rightside img{width: 100%;}
 #get-quote .choose-us .leftside .top-title{margin:0 0 30px;}
+#get-quote .choose-us .leftside ul li{margin-bottom:10px;}
 #get-quote .choose-us{position: relative;}
-#get-quote .choose-us::before {content: "";position: absolute;left:0;bottom: 60px;transform: rotate(90deg); width:500px;height:500px;background:url('../images/orange-shade.png') no-repeat center center;background-size: contain;z-index: 1;}
+#get-quote .choose-us::before {content: "";position: absolute;left:0;bottom: 60px;transform: rotate(90deg); width:500px;height:500px;background:url('../images/orange-shade.png') no-repeat center center;background-size: contain;z-index: -1;}
+#get-quote .insurance-brand .heading{margin-bottom:68px;}
+#get-quote .insurance-brand .heading p{max-width: 90%;margin: auto;}
+#get-quote .table td .image-card{display: inline-block;width: 200px;height:87px;overflow: hidden;transition: all 0.5s ease-out;}
+#get-quote .table td .image-card img{width:100%; height: 100%;object-fit: contain;}
+#get-quote .table td .image-card:hover{transform:translateY(-5px);}
+#get-quote .table td .rating{display: flex;gap:10px; flex-direction: column;white-space:nowrap;}
+#get-quote .table td .rating .stars{font-size: 1rem;}
+#get-quote .table-container{border:1px solid #88EDFF;overflow: hidden;border-radius:30px;}
+#get-quote .table thead th{background-color: #CCF7FF;padding:20px 20px;}
+#get-quote .table{padding: 0;margin:0;}
+#get-quote .table tbody td{padding:30px 20px;}
+table td, table th{vertical-align: middle;}
+tbody, td, tfoot, th, thead, tr{border-color:#88EDFF;}
+#get-quote .table tr:last-of-type td{border:none;}
 /* Get in Quote page CSS Close */
 
 /* Get in Quote Step page CSS Start */
 #get-quote-step{background-color: #F9FEFF;height: 100vh;position: relative;}
-#get-quote-step::before{content: "";position: absolute;right:0;bottom:0; width:500px;height:500px;background:url('../images/orange-shade.png') no-repeat center center;background-size: contain;z-index: 1;}
+/* #get-quote-step::before{content: "";position: absolute;right:0;bottom:0; width:500px;height:500px;background:url('../images/orange-shade.png') no-repeat center center;background-size: contain;z-index: 1;} */
 #get-quote-step .hero{width: 50%;margin: auto;}
 .progress, .progress-stacked{background-color: #CCF7FF;border-radius: 10px;}
 .progress-bar{background-color: #00A5C3;border-radius: 10px;}
-#get-quote-step .hero .card-container{border:2px solid #000000;background-color: #FFF6EE;padding:39px 50px;border-radius:30px;}
+#get-quote-step .hero .card-container{border:2px solid #88EDFF;background-color: #ffffff;padding:39px 50px;border-radius:30px;}
 #get-quote-step .hero .card-container .pet-card{padding:14px 29px;width: 100%;}
-#get-quote-step .hero .step-indicator{margin-block:39px 10px;}
+#get-quote-step .hero .step-indicator{margin-block:16px 39px;}
 #get-quote-step .hero .card-container .choose-content{display: flex;align-items: center;justify-content: space-between;gap:50px;}
+#get-quote-step .hero .card-container .heading{margin-bottom:50px;}
 #get-quote-step .hero .pet-card { border: 2px solid #CDF7FF; background-color: #fff; border-radius: 16px; cursor: pointer; transition: background-color 0.3s ease, border-color 0.3s ease; }
 #get-quote-step .hero .pet-card.selected { background-color: #00A5C3; border: 2px solid #00A5C3; }
 #get-quote-step .hero .radio-container { display: block; position: relative; padding-left: 35px;cursor: pointer; font-size:1.375rem; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
@@ -463,44 +485,85 @@ footer .footer-rightside .links ul li a:hover{color:#FEA145; transition: 0.3s ea
 #pet-protection .recomented{border:1px solid #CDF7FF;border-radius:12px;padding:12px 12px;width:fit-content;background-color: #F5FDFF;display: flex;align-items: center;gap:10px;}
 #pet-protection .recomented a{border:1px solid #FEA145;padding:10px;font-size:1.0625rem;font-weight:500;font-family: var(--Montserrat-font);color: #002133;border-radius:10px;}
 #pet-protection .recomented a.active{background-color: #FEA145;border-color: #FEA145;}
-#pet-protection .protection .card{padding: 42px 42px;background-color:#EEFCFF;}
-.top-pet-protection{display: flex;align-items: center;gap:30px;}
-.top-pet-protection span{width: 180px;height: 100px;display:flex;align-items: center;justify-content: center; overflow: hidden;background-color:#ffffff;}
-.top-pet-protection span img {max-width: 100%;max-height: 100%;object-fit: contain;}
-.top-pet-protection .stars{background-color: transparent;width: auto;height: auto;justify-content: flex-start;letter-spacing: 5px;}
-.top-pet-protection .rating{display: flex;gap:10px; align-items: center;}
-.top-pet-protection .right-content {display: flex;flex-direction: column;gap: 5px; }
-.top-pet-protection .right-content h2{margin:0;color:#333;font-size:1.625rem;}
-#pet-protection .protection .card .middle{border:1px solid #00A5C3;border-radius:10px;padding:14px 20px;background-color:#FFEFE8;display:flex;justify-content:space-between;align-items:center;gap:10px;margin-block:36px;}
-#pet-protection .protection .card .middle .price-item{text-align:center;}
+#pet-protection .insurance .card{margin-bottom:39px; box-shadow: 0px 0px 7px 2px #0000002a;border-radius: 30px;overflow: hidden;background-color: #ffffff;padding:42px 42px;flex-direction: row;align-items: center;justify-content: flex-start;gap:128px;position: relative;}
+#pet-protection .insurance .card .pet-image{width: 200px;height: 87px; display: inline-block;overflow: hidden;background-color: transparent;}
+#pet-protection .insurance .card .pet-image img{width: 100%;height: 100%;object-fit: contain;}
+#pet-protection .insurance .card .rating{display: flex;flex-direction: column;gap:10px;}
+#pet-protection .insurance .card .plan-details{width: 400px;}
+#pet-protection .insurance .card .plan-details ul li{display: flex;gap:5px;align-items: center;}
+#pet-protection .insurance .card .view-plan{border:none; padding:5px 15px;}
+#pet-protection .insurance .card .batch{border:1px solid #88EDFF;border-top:none; border-radius:0 0 5px 5px;padding:7px 14px;position: absolute;left:28px; top:0;}
+
 .features-list{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:12px;margin-bottom:26px;}
 .features-list li{display:flex;align-items:center;gap:10px;color:#333;font-size:0.9375rem;font-family:'Montserrat',sans-serif;font-weight:500;}
 .view-plan-btn{background-color:#FEA145;color:#002133;border:none;border-radius:10px;padding:10px 20px;font-size:1.0625rem;font-weight:600;width:fit-content;font-family:'Montserrat',sans-serif;}
 /* Pet insurance page CSS Close */
 
 /* Payment Plans page CSS Start */
+#payment-plan .best-overall .top-pet-protection{display: flex; gap: 30px;align-items: center;}
+#payment-plan .best-overall .top-pet-protection .pet-image{width: 348px;height: 87px;display:inline-block;overflow: hidden;background-color: transparent;}
+#payment-plan .best-overall .top-pet-protection .pet-image img{width: 100%;height: 100%;object-fit: contain;}
+#payment-plan .best-overall .top-pet-protection .rating {display: flex;flex-direction: column;gap:10px;}
+#payment-plan .best-overall .top-pet-protection .stars{font-size: 1.50rem;}
 #payment-plan .best-overall .top-pet-protection{margin-bottom:26px;}
 #payment-plan .best-overall .price-details{margin-top: 26px;}
 #payment-plan .best-overall .price-details .card{padding:20px 20px;background-color:#EEFCFF;overflow: hidden;}
 #payment-plan .best-overall .price-details .card .content{margin-top:20px;}
 #payment-plan .best-overall .price-details .card{position: relative;z-index:1;}
 #payment-plan .best-overall .price-details .card .footprint{position: absolute;right:10px;top:10px; z-index:-1;}
-#payment-plan .available-plans .card{padding:49px 40px;position: relative;z-index:1;}
- #payment-plan .available-plans .card .select-plan{background-color:transparent;border:none; border-radius: 10px; padding: 7px 20px;font-size: 1.375rem;font-weight:400; font-family: var(--freedoka-font);margin-top:26px;}
- #payment-plan .available-plans .card .select-plan.blue{background-color: #00A5C3;color:#ffffff;}
- #payment-plan .available-plans .card .select-plan.orange{background-color: #FEA145;color:#002133;}
- #payment-plan .available-plans .card .select-plan.purple{background-color: #7070FA;color:#ffffff;}
- #payment-plan ul li{font-size:1.125rem;font-weight: 400;color:#002133; font-family: var(--freedoka-font);display: flex;align-items: center;gap:5px;}
-#payment-plan .available-plans .card .footprint{position: absolute;right:50px; top:150px;}
-#payment-plan .available-plans .card ul li{margin-bottom:10px;}
-#payment-plan .available-plans .card .content{margin-bottom:16px;}
-#payment-plan .available-plans .card .popular{background-color: #FEA145;width: fit-content;padding:5px 15px;position: absolute;top:0; left:50%;transform: translate(-50%, -50%);}
-#payment-plan .coverage-details .card{padding:49px 40px;}
-#payment-plan .coverage-details .card ul {margin-top:16px;}
-#payment-plan .coverage-details .card ul li{margin-bottom:10px;}
-#payment-plan .customer-reviews .card{padding:49px 40px;}
-#payment-plan .customer-reviews .card .top{display: flex;align-items: center; justify-content: space-between;}
-#payment-plan .customer-reviews .accordion{width: 100%;}
+#payment-plan .available-plan .heading{text-align: center;margin-bottom:48px;display: flex;align-items: center;justify-content: center;flex-direction: column;gap:26px;}
+#payment-plan .available-plan .heading .plan-card {background-color: #00A5C3; width: fit-content; border-radius: 40px;padding:5px;margin:auto;}
+#payment-plan .available-plan .heading .plan-card a{padding:5px 10px;display: inline-block;border-radius: 40px;color:#ffffff;}
+#payment-plan .available-plan .heading .plan-card a.active{background-color: #ffffff;color:#002133}
+#payment-plan .available-plan .plans-row .plan-card {background: #ffffff;border-radius: 30px;padding: 40px 40px;position: relative;box-shadow:0 0 4px 0 #0000002a;
+  transition: transform 0.3s;display: flex; flex-direction: column;gap:26px;overflow: hidden;margin-top:50px;cursor: pointer;}
+#payment-plan .available-plan .plans-row .plan-card:hover {transform: translateY(-5px);}
+#payment-plan .available-plan .plans-row .plan-card.standard{margin-top: 0;padding-top:90px;}
+#payment-plan .available-plan .plans-row .plan-card .popular-plan{padding:15px; background-color: #CDF7FF;display: flex;align-items: center;justify-content: center;position: absolute;width: 100%;top:0; left:0;}
+#payment-plan .available-plan .plans-row .plan-card .top-content h3{margin:0;}
+#payment-plan .available-plan .plans-row .plan-card .top-content p{margin:0;}
+/* .available-plans {padding: 60px 20px;background: #fff;text-align: center;} */
+#payment-plan .available-plan .plans-row .plan-card .plan-info li {display: flex;align-items: center;justify-content: space-between;margin-bottom:5px;}
+#payment-plan .available-plan .plans-row .plan-card .plan-info li:last-of-type{margin: 0;}
+#payment-plan .available-plan .plans-row .plan-card .plan-cover p{margin-bottom:16px;}
+#payment-plan .available-plan .plans-row .plan-card .plan-cover li{display: flex;gap:5px; align-items: center;margin-bottom: 10px;}
+#payment-plan .available-plan .plans-row .plan-card .plan-cover li:last-of-type{margin: 0;}
+#payment-plan .available-plan .plans-row .plan-card .select-plan {background: #00A5C3;color: #fff;padding: 10px 20px;border: none;width: 100%;border-radius: 10px;}
+#payment-plan .coverage-detail .card{background: #ffffff;border-radius: 30px;padding: 40px 40px;position: relative;box-shadow:0 0 4px 0 #0000002a;
+  transition: transform 0.3s;display: flex; flex-direction: column;gap:26px;overflow: hidden;}
+  #payment-plan .coverage-detail .heading{margin-bottom:48px;}
+#payment-plan .coverage-detail .card ul h3{margin-bottom:15px;}
+#payment-plan .coverage-detail .card ul li{display: flex;align-items: center;gap:5px; margin-bottom:10px;}
+#payment-plan .coverage-detail .card ul li:last-of-type{margin: 0;}
+#payment-plan .customer-review .home-demo .item {padding:30px;border-radius:30px} #payment-plan .customer-review .heading{margin-bottom:48px;}
+#payment-plan .customer-review .heading h1{margin: 0;}
+#payment-plan .customer-review p{display: -webkit-box;-webkit-line-clamp: 8; -webkit-box-orient: vertical;overflow: hidden; text-overflow: ellipsis;}
+#payment-plan .owl-carousel .owl-nav.disabled{display: block !important;}
+#payment-plan button.owl-prev, button.owl-next{position: absolute;
+    top: 120px;
+    opacity: 0.5;
+    background-color: #566369 !important;
+    width: 58px;
+    height: 58px;
+    border-radius: 22px !important;
+  }
+  #payment-plan button.owl-prev{left:-40px;}
+   #payment-plan button.owl-next{right:-40px;}
+    #payment-plan button.owl-prev::after,button.owl-next::after{content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 28px;
+    height: 28px;
+    background-image: url(/Admin/images/chevron-right.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 2;}
+    #payment-plan button.owl-next::after{transform: translate(-50%, -50%) rotate(180deg);}
+   
+
 /* Payment Plans page CSS Close */
 
 /*============================================Responsive CSS Start  =================================================*/
@@ -662,11 +725,20 @@ footer .footer-rightside .links{padding-left: 0px;margin-bottom:50px;}
 #fan .how-work .row{justify-content: center;}
 #fan .hero .card-container{margin-top: 25px;}
 #blog .article-main .card ul.details{gap:5px;margin-bottom:10px;}
+#get-quote .table-container{width: 100%;overflow-x: auto;}
+#get-quote .table{width: 100%;min-width: 1000px;}
+#payment-plan .best-overall .price-details .card{margin-bottom:30px;}
+/* #payment-plan .available-plan .plans-row .row,
+#payment-plan .coverage-detail .coverage-row .row{justify-content: center;} */
+#payment-plan .coverage-detail .card {margin-bottom:30px;min-height: 545px;}
+#payment-plan .available-plan .plans-row .plan-card.premium{margin:0;}
+#payment-plan .available-plan .plans-row .plan-card{margin-bottom:30px;}
+
 }
 
 @media screen and (max-width:768px)
 {
-  section{padding-bottom: 35px;}
+  /* section{padding-bottom: 35px;} */
   #homepage .hero .trusted{bottom: 40%;top: auto;left: 45px;max-width: 50%;}
   .testimonials .heading{margin: auto auto 48px;}
   #homepage .faq .inner{padding: 25px 25px 50px;}
@@ -693,10 +765,12 @@ footer .footer-rightside .links{padding-left: 0px;margin-bottom:50px;}
 #homepage .hero .trusted{bottom: 15%;left: 15px;}
 #homepage .choose-us .leftside h1 {max-width: 100%;}
 #homepage .our-partners .rightside .partners{max-width: 100%;}
+#homepage .our-partners .rightside{height: auto;margin:0;}
+.how-works .heading, #homepage .our-partners .heading, #homepage .faq .heading{margin-bottom:10px;}
 .testimonials .inner::before{display: none;}
 .testimonials::after{width: 102px;top: 22rem;height: 220px;}
 .testimonials .heading{max-width: 100%;}
-.top-title{margin: auto auto 10px;font-size: 1rem;}
+.top-title{margin: auto auto 10px;font-size:0.875rem;}
 .owl-theme .owl-nav.disabled+.owl-dots{display: none;}
 button.owl-prev, button.owl-next{top:-70px;}
 button.owl-next {right: auto;left:65px;}
@@ -716,19 +790,21 @@ button.owl-prev{left:0;}
 .f-34{font-size: 1.25rem;}
 .f-40{font-size: 1.875rem;}
 .f-42{font-size: 2rem;}
-.f-48{font-size:2.125rem;}
+.f-45{font-size: 2.25rem;}
+.f-48{font-size: 2.125rem;}
 .f-56{font-size: 2rem;}
 .f-74{font-size: 2rem;}
 .navbar .nav-link{font-size: 1rem;}
   #homepage .choose-us .leftside p {margin-bottom: 10px;}
 #homepage .hero .leftside .footprint{right:15px;top: 40px;}
-#homepage .faq .inner .leftside .footprint.third{right: 38px;top: 93px;}
+#homepage .faq .inner .leftside .footprint.third{right: 70px;top:60px;width: 10%;height: 10%;}
+#homepage .faq .inner .leftside .footprint.fourth{left:47%;width: 10%;height: 10%;}
 #homepage .choose-us .top-title{margin:auto auto 10px;}
 #homepage .our-partners .rightside .partners{gap:16px;padding-block: 16px 0;}
 #homepage .faq .inner{border-radius: 18px;}
 .accordion .accordion-body span{font-size:1rem;}
 #fan .hero .card-container{margin-top: 16px;}
-#about-us .hero .bottom-content{gap:15px;flex-direction: column;}
+#about-us .hero .bottom-content{gap:10px;flex-direction: column;margin-top: 10px;}
 #about-us .hero .bottom-content button{width: fit-content; font-size: 1rem;}
 .learn-more{width: fit-content;font-size: 1.4375rem;}
 #about-us .insurance-number .card{min-height: auto;padding: 10px;border-radius: 18px;}
@@ -736,7 +812,6 @@ button.owl-prev{left:0;}
 #about-us .real-stories .card{min-height: auto;padding: 10px;border-radius: 18px;}
 #about-us .protect-pet .leftside .bottom-content{gap:10px;flex-direction: column; align-items: flex-start;margin-top: 20px;}
 .footer-bottom{padding: 10px 10px;}
-#about-us .hero .bottom-content{margin-top: 16px;}
 #about-us .complete-protection .heading h1{margin: 0;}
 h1{margin-bottom:0 !important;}
 #blog .featured-article .inner .rightside .details{gap:0px;margin-block:10px;}
@@ -748,14 +823,15 @@ h1{margin-bottom:0 !important;}
 #read-article .article-middle .rightside .recent-posts{padding: 25px 25px;}
 #read-article .article-middle .leftside .search-container{padding: 25px 25px;}
 #get-quote .hero .leftside .heading{max-width: 100%;}
-#get-quote .hero .leftside .footprint {right: 0rem;top: 0rem;width: 50px;height: 50px;border-radius: 18px;}
-#get-quote .hero .leftside .heading{gap: 16px;}
-#get-quote .hero .rightside{padding-top: 26px;}
+#get-quote .hero .leftside .footprint {right: 0rem;top: 0rem;width: 50px;height: 50px;border-radius: 18px;display: none;}
+#get-quote .hero .leftside .heading{gap: 10px;}
+#get-quote .hero .rightside{padding-top: 10px;}
+#get-quote .trusted-by ul li{padding:0 20px;border-radius: 18px;}
 #get-quote .hero .rightside .card h2 {max-width: 100%;}
 #get-quote .hero .rightside .card input {margin-block: 0px 20px;}
 #get-quote .hero::after {right: 0;}
 .how-works .card{padding:10px;border-radius: 18px; gap:25px;margin-bottom: 15px;}
-#get-quote .how-works .card .footprint{width: 60px;}
+#get-quote .how-works .card .footprint{width: 40px;height: 40px;}
 #get-quote .how-works .card span{border-radius: 10px;}
 .how-works .card .top-content span{padding: 5px 12px;font-size: 1rem;}
 .how-works .card .top-content img{width: 50px;}
@@ -795,9 +871,9 @@ h1{margin-bottom:0 !important;}
 #read-article .article-middle .leftside .search-container, #read-article .article-middle .rightside .recent-posts, #read-article .leave-reply .inner{padding:10px;border-radius: 18px;}
 .form-action { margin-bottom: 16px;}
 .orange-btn{font-size: 1rem;}
-#read-article .article-middle .leftside {margin-bottom: 25px;}
+#read-article .article-middle .leftside {margin-bottom: 16px;}
 #fan .hero .card-container .card,#fan .hero .card-container .card.third {margin-bottom:16px;padding:10px;border-radius: 18px;}
-#fan .how-work .card .card-body{padding:10px;}
+#fan .how-work .card .card-body{padding:10px;gap:5px !important;}
 #fan .how-work .card .card-body .top svg{width: 16px; height: auto;}
 #fan .pet-gallery .inner{position: relative;z-index: 1;overflow: hidden;padding:10px;border-radius: 18px;}
 .testimonials .owl-carousel .item{padding:10px;border-radius: 18px;}
@@ -806,24 +882,53 @@ h1{margin-bottom:0 !important;}
 #get-quote .hero .leftside ul li svg{width: 16px;height: auto;}
 #get-quote .hero .leftside ul li{margin-bottom: 5px;}
 #get-quote .hero .rightside .card {padding: 10px;border-radius: 18px;}
-#get-quote .trusted-by ul li{border-radius: 18px;}
 #get-quote .choose-us::before{display: none;}
 #get-quote .choose-us .leftside ul li svg{width: 14px; height: auto;}
 .quote-now .inner{padding: 10px;border-radius: 18px;}
 .quote-now .inner .leftside{gap:5px;margin: 0;}
-.quote-now .inner .top{width: 50px;height:50px;border-radius: 10px;padding: 10px;}
+.quote-now .inner .top{width: 50px;height:50px;border-radius: 10px;padding: 5px;}
 footer{border-radius: 18px 18px 0 0;}
 #get-quote-step .hero .card-container .pet-card svg{width: 50px;height: 50px;}
 #get-quote-step .hero .radio-container{padding-left: 25px;}
 #about-us .insurance-number .card p{margin-block: 10px 0;}
-#about-us .insurance-number .card .top-content h5{margin: 0;}
+#about-us .insurance-number .card .top-content h5{margin-block:10px 0;}
   #about-us .protect-pet .inner{padding: 15px 15px 0;border-radius: 18px;}
 #homepage .hero .leftside .bottom-content .compare-quote{width: fit-content;padding: 6px 12px;font-size: 1rem;}
 #homepage .hero .leftside .bottom-content input{padding:10px 10px;}
 #homepage .hero .leftside .bottom-content{flex-direction: column;gap:10px;}
 .quote-now .inner .get-quote{padding:6px 12px;}
 button.get-quote{padding:6px 12px;}
-
+#homepage .rightside{margin-top:16px;}
+#about-us .complete-protection .card-container{margin-top: 16px;}
+.accordion .accordion-item{margin-bottom:16px;}
+#about-us .insurance-number .card .top-content h5{margin-bottom:5px;}
+#read-article .banner{padding-bottom:20px;}
+#read-article .article-middle .rightside .post-card span{width: 120px;height: auto;}
+#read-article .leave-reply input, textarea{padding:10px 13px;}
+footer .footer-leftside .logo img{width: 150px;}
+#fan .hero .heading{gap: 0;}
+#fan .hero .heading p{margin:0;}
+.footer-leftside{text-align: center;}
+footer .footer-leftside .social-links{justify-content: center;}
+#get-quote .choose-us .leftside .top-title{margin:auto auto 16px;}
+#get-quote .choose-us .leftside p{margin-bottom: 5px;}
+#get-quote .choose-us .leftside ul li{margin-bottom:5px;}
+#get-quote .trusted li img{height: 40px;}
+#get-quote .trusted-by ul{gap:10px;}
+.trusted-by ul li{height: 42px;}
+#payment-plan .best-overall .top-pet-protection .pet-image{width: 200px;height: 60px;}
+#payment-plan .best-overall .top-pet-protection .stars{font-size: 1.25rem;}
+#payment-plan .best-overall .price-details .card{padding:15px;margin-bottom: 15px;}
+#payment-plan .available-plan .plans-row .plan-card{margin-top:0;padding:15px;border-radius: 18px;}
+#payment-plan .available-plan .heading{margin-bottom: 26px;gap:16px;}
+#payment-plan .available-plan .plans-row .plan-card.standard{padding-top:70px;}
+#payment-plan .available-plan .plans-row .plan-card{gap:16px;}
+#payment-plan .coverage-detail .card{padding: 15px;border-radius: 18px;min-height:auto;}
+#payment-plan .coverage-detail .card ul li{margin-bottom: 5px;}
+#payment-plan .coverage-detail .card ul h3{margin-bottom:10px;}
+#payment-plan .best-overall .price-details .card .content h2 {font-size: 22px; margin: 0;}
+#payment-plan .best-overall .price-details .card .content p {font-size: 16px;}
+#payment-plan button.owl-prev{top: -50px;left: 0;width: 40px;height: 40px;border-radius: 10px !important;}
 
 }
 
@@ -833,7 +938,7 @@ button.get-quote{padding:6px 12px;}
   .testimonials::after{top: 11rem;width: 75px;height: 170px;}
   /* #about-us .insurance-number .card{margin-bottom:25px;} */
   /* #about-us .real-stories .card{margin-bottom:25px;} */
-  #about-us .insurance-number .card-container{margin-top: 16px;}
+  #about-us .insurance-number .card-container{margin-top: 16px;margin-bottom:0;}
 /* #about-us .complete-protection .card-container .card{margin-bottom:25px;} */
 #about-us .real-stories .heading { margin-bottom:20px;}
 #blog .article-main .card {min-height: auto;}
@@ -854,7 +959,7 @@ button.owl-next{left:50px;}
 #fan .pet-gallery .inner .heading h1{line-height:38px;margin: 0;}
 #fan .pet-gallery .card-container .view-all{margin: 16px auto auto;}
 #faqs .hero{padding-bottom: 16px;}
-.accordion .accordion-body {padding-inline: 16px;}
+.accordion .accordion-body {padding-inline: 15px;}
 .accordion .accordion-button{line-height:22px;}
 #faqs .support-options .card {padding: 25px 15px;}
 #faqs .support-options .card{margin-bottom:25px;}
