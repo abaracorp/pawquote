@@ -18,12 +18,12 @@
                                  <input type="text" id="" name="zip-code" placeholder="Enter zip code...">
                                  <button class="compare-quote">Compare Quotes</button>
                              </div>
-                             <img src="images/brown-footprint.png" class="footprint" alt="">
+                             <img src="{{asset('images/brown-footprint.png')}}" class="footprint" alt="">
                          </div>
                      </div>
                      <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12">
                          <div class="rightside">
-                             <img src="images/home-hero-image.png" alt="">
+                             <img src="{{asset('images/home-hero-image.png')}}" alt="">
                          </div>
                      </div>
                      <div class="trusted">
@@ -31,13 +31,13 @@
                              pet owners</h4>
                          <ul>
                              <li>
-                                 <img src="images/pet-owner1.png" alt="">
+                                 <img src="{{asset('images/pet-owner1.png')}}" alt="">
                              </li>
                              <li>
-                                 <img src="images/pet-owner2.png" alt="">
+                                 <img src="{{asset('images/pet-owner2.png')}}" alt="">
                              </li>
                              <li>
-                                 <img src="images/pet-owner3.png" alt="">
+                                 <img src="{{asset('images/pet-owner3.png')}}" alt="">
                              </li>
                              <li>
                                  <i class="fa-solid fa-plus"></i>
@@ -51,10 +51,10 @@
              <div class="trusted-by">
                  <h3>Trusted By:</h3>
                  <ul>
-                     <li class="blue"><img src="images/forbes.png" alt="Forbes"></li>
-                     <li class="pink"><img src="images/techcrunch.png" alt="TechCrunch"></li>
-                     <li class="purple"><img src="images/builtinnyc.png" alt="BuiltInNYC"></li>
-                     <li class="green"><img src="images/axios.png" alt="Axios"></li>
+                     <li class="blue"><img src="{{asset('images/forbes.png')}}" alt="Forbes"></li>
+                     <li class="pink"><img src="{{asset('images/techcrunch.png')}}" alt="TechCrunch"></li>
+                     <li class="purple"><img src="{{asset('images/builtinnyc.png')}}" alt="BuiltInNYC"></li>
+                     <li class="green"><img src="{{asset('images/axios.png')}}" alt="Axios"></li>
                      <li class="ratings">
                          <span class="review-text">Excellent</span>
                          <span class="stars">
@@ -64,7 +64,7 @@
                              <i class="fa-solid fa-star"></i>
                              <i class="fa-solid fa-star-half-stroke"></i>
                          </span> <span class="review-text">Out of 100% reviews</span>
-                         <img src="images/google.png" alt="">
+                         <img src="{{asset('images/google.png')}}" alt="">
                      </li>
                  </ul>
                  <svg width="50" height="58" viewBox="0 0 83 90" fill="currentColor" class="footprint"
@@ -103,7 +103,7 @@
                      <div class="card">
                          <div class="top-content">
                              <span>Step 1</span>
-                             <img src="images/right-arrow.svg" alt="">
+                             <img src="{{asset('images/right-arrow.svg" alt="">
                          </div>
                          <h4 class="f-34 c-dark  freedoka f-w-5">Tell Us About Your Pet</h4>
                          <svg width="164" height="303" viewBox="0 0 164 303" class="footprint" fill="none"
@@ -175,7 +175,7 @@
                      <div class="card">
                          <div class="top-content">
                              <span>Step 2</span>
-                             <img src="images/right-arrow.svg" alt="">
+                             <img src="{{asset('images/right-arrow.svg" alt="">
                          </div>
                          <h4 class="f-34 c-dark  freedoka f-w-5">We Analyze and Match Top Providers</h4>
                          <svg width="164" height="303" viewBox="0 0 164 303" class="footprint" fill="none"
@@ -247,7 +247,7 @@
                      <div class="card">
                          <div class="top-content">
                              <span>Step 3</span>
-                             <img src="images/right-arrow.svg" alt="">
+                             <img src="{{asset('images/right-arrow.svg" alt="">
                          </div>
                          <h4 class="f-34 c-dark  freedoka f-w-5">Choose the Best Plan for You</h4>
                          <svg width="164" height="303" viewBox="0 0 164 303" class="footprint" fill="none"
@@ -363,7 +363,7 @@
                  </div>
                  <div class="col-lg-6">
                      <div class="rightside">
-                         <img src="images/choose-us.png" alt="">
+                         <img src="{{asset('images/choose-us.png')}}" alt="">
                      </div>
                  </div>
              </div>
@@ -380,7 +380,7 @@
              <div class="row">
                  <div class="col-lg-6">
                      <div class="leftside">
-                         <img src="images/dog-partners.png" alt="">
+                         <img src="{{asset('images/dog-partners.png')}}" alt="">
                      </div>
                  </div>
                  <div class="col-lg-6">
@@ -388,14 +388,14 @@
                          <div class="trusted-by partners">
                              <h3>Partners:</h3>
                              <ul>
-                                 <li class="purple"><img src="images/lemonade.png" alt="Forbes"></li>
-                                 <li class="orange"><img src="images/pawprotect.png" alt="TechCrunch"></li>
-                                 <li class="pink"><img src="images/embrace.png" alt="BuiltInNYC"></li>
-                                 <li class="green"><img src="images/metlife.png" alt="Axios"></li>
-                                 <li class="dark-green"><img src="images/petbest.png" alt="Axios"></li>
-                                 <li class="purple"><img src="images/pempkin.png" alt="Axios"></li>
-                                 <li class="orange"><img src="images/fetch.png" alt="Axios"></li>
-                                 <li class="dark-green"><img src="images/spot.png" alt="Axios"></li>
+                                 <li class="purple"><img src="{{asset('images/lemonade.png')}}" alt="Forbes"></li>
+                                 <li class="orange"><img src="{{asset('images/pawprotect.png')}}" alt="TechCrunch"></li>
+                                 <li class="pink"><img src="{{asset('images/embrace.png')}}" alt="BuiltInNYC"></li>
+                                 <li class="green"><img src="{{asset('images/metlife.png')}}" alt="Axios"></li>
+                                 <li class="dark-green"><img src="{{asset('images/petbest.png')}}" alt="Axios"></li>
+                                 <li class="purple"><img src="{{asset('images/pempkin.png')}}" alt="Axios"></li>
+                                 <li class="orange"><img src="{{asset('images/fetch.png')}}" alt="Axios"></li>
+                                 <li class="dark-green"><img src="{{asset('images/spot.png')}}" alt="Axios"></li>
 
                              </ul>
 
@@ -428,7 +428,7 @@
                  </div>
                  <div class="col-lg-6">
                      <div class="rightside">
-                         <img src="images/about-us.png" alt="">
+                         <img src="{{asset('images/about-us.png')}}" alt="">
                      </div>
                  </div>
              </div>
@@ -733,7 +733,7 @@
                  <div class="row">
                      <div class="col-lg-4">
                          <div class="leftside">
-                             <img src="images/faq-pets.png" alt="">
+                             <img src="{{asset('images/faq-pets.png')}}" alt="">
                              <svg width="61" height="63" viewBox="0 0 61 63" class="footprint third"
                                  fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                  <path
@@ -864,7 +864,7 @@
                          </div>
                      </div>
                  </div>
-                 <img src="images/faq-bg-element.png" class="bg-element" alt="">
+                 <img src="{{asset('images/faq-bg-element.png')}}" class="bg-element" alt="">
 
 
              </div>
@@ -874,7 +874,7 @@
          <div class="container">
              <div class="inner">
                  <div class="leftside">
-                     <span class="top"><img src="images/quote-now.png" alt=""></span>
+                     <span class="top"><img src="{{asset('images/quote-now.png')}}" alt=""></span>
                      <h1 class="f-40 c-dark f-w-5 l-h-48 freedoka">Don't wait for the unexpected to happen. <span
                              class="c-orange">Quote now</span> and ensure your well-being
                          without delay.</h1>

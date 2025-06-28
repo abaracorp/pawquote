@@ -764,7 +764,7 @@
                     <div class="row">
                         <div class="col-lg-4">
                             <div class="footer-leftside">
-                                <a href="" class="logo"><img src="images/pawquote-white.png" alt=""></a>
+                                <a href="" class="logo"><img src="{{asset('images/pawquote-white.png')}}" alt=""></a>
                                 <p class="f-22 c-cf f-w-4 l-h-26 montserrat">Helping pet owners find the best insurance
                                     coverage for their furry family members.</p>
                                 <h3 class="f-18 c-white f-w-6 l-h-22 freedoka ">Quick Links:</h3>

@@ -104,9 +104,9 @@
                         </div>
                     </div>
                 </div>
-                <img src="images/orange-shade.png" class="orange-bg shade" alt="">
+                <img src="{{asset('images/orange-shade.png')}}" class="orange-bg shade" alt="">
             </div>
-            <!-- <img src="images/blue-shade.png"class="blue-bg shade" alt=""> -->
+            
 
         </section>
         <section class="how-work">
@@ -124,7 +124,7 @@
                         <div class="col-lg-4 col-md-6 col-sm-12">
                             <div class="card b-blue br-18 overflow-hidden">
                                 <div class="top-image">
-                                    <img src="images/success-stories1.png" alt="" class="w-100">
+                                    <img src="{{asset('images/success-stories1.png')}}" alt="" class="w-100">
                                 </div>
                                 <div class="card-body d-flex flex-column gap-3">
                                     <div class="top d-flex align-items-center gap-2">
@@ -160,7 +160,7 @@
                         <div class="col-lg-4 col-md-6 col-sm-12">
                             <div class="card b-blue br-18 overflow-hidden">
                                 <div class="top-image">
-                                    <img src="images/success-stories2.png" alt="" class="w-100">
+                                    <img src="{{asset('images/success-stories2.png')}}" alt="" class="w-100">
                                 </div>
                                 <div class="card-body d-flex flex-column gap-3">
                                     <div class="top d-flex align-items-center gap-2">
@@ -196,7 +196,7 @@
                         <div class="col-lg-4 col-md-6 col-sm-12">
                             <div class="card b-blue br-18 overflow-hidden mb-0">
                                 <div class="top-image">
-                                    <img src="images/success-stories3.png" alt="" class="w-100">
+                                    <img src="{{asset('images/success-stories3.png')}}" alt="" class="w-100">
                                 </div>
                                 <div class="card-body d-flex flex-column gap-3">
                                     <div class="top d-flex align-items-center gap-2">
@@ -247,7 +247,7 @@
                         <div class="row">
                             <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
                                 <div class="card b-blue br-18 overflow-hidden">
-                                    <span><img src="images/gallery1.png" class="w-100" alt=""></span>
+                                    <span><img src="{{asset('images/gallery1.png')}}" class="w-100" alt=""></span>
                                     <div class="title"><svg width="13" height="13" viewBox="0 0 13 13"
                                             fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path
@@ -262,7 +262,7 @@
                             </div>
                             <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
                                 <div class="card b-blue br-18 overflow-hidden">
-                                    <span><img src="images/gallery2.png" class="w-100" alt=""></span>
+                                    <span><img src="{{asset('images/gallery2.png')}}" class="w-100" alt=""></span>
                                     <div class="title"><svg width="13" height="13" viewBox="0 0 13 13"
                                             fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path
@@ -277,7 +277,7 @@
                             </div>
                             <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
                                 <div class="card b-blue br-18 overflow-hidden">
-                                    <span><img src="images/gallery3.png" class="w-100" alt=""></span>
+                                    <span><img src="{{asset('images/gallery3.png')}}" class="w-100" alt=""></span>
                                     <div class="title"><svg width="13" height="13" viewBox="0 0 13 13"
                                             fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path
@@ -292,7 +292,7 @@
                             </div>
                             <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
                                 <div class="card b-blue br-18 overflow-hidden">
-                                    <span><img src="images/gallery4.png" class="w-100" alt=""></span>
+                                    <span><img src="{{asset('images/gallery4.png')}}" class="w-100" alt=""></span>
                                     <div class="title"><svg width="13" height="13" viewBox="0 0 13 13"
                                             fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path
@@ -307,7 +307,7 @@
                             </div>
                             <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
                                 <div class="card b-blue br-18 overflow-hidden">
-                                    <span><img src="images/gallery5.png" class="w-100" alt=""></span>
+                                    <span><img src="{{asset('images/gallery5.png')}}" class="w-100" alt=""></span>
                                     <div class="title"><svg width="13" height="13" viewBox="0 0 13 13"
                                             fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path
@@ -322,7 +322,7 @@
                             </div>
                             <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
                                 <div class="card b-blue br-18 overflow-hidden">
-                                    <span><img src="images/gallery6.png" class="w-100" alt=""></span>
+                                    <span><img src="{{asset('images/gallery6.png')}}" class="w-100" alt=""></span>
                                     <div class="title"><svg width="13" height="13" viewBox="0 0 13 13"
                                             fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path
@@ -337,7 +337,7 @@
                             </div>
                             <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
                                 <div class="card b-blue br-18 overflow-hidden">
-                                    <span><img src="images/gallery7.png" class="w-100" alt=""></span>
+                                    <span><img src="{{asset('images/gallery7.png')}}" class="w-100" alt=""></span>
                                     <div class="title"><svg width="13" height="13" viewBox="0 0 13 13"
                                             fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path
@@ -352,7 +352,7 @@
                             </div>
                             <div class="col-lg-3 col-md-6 col-sm-12 ">
                                 <div class="card b-blue br-18 overflow-hidden">
-                                    <span><img src="images/gallery8.png" class="w-100" alt=""></span>
+                                    <span><img src="{{asset('images/gallery8.png')}}" class="w-100" alt=""></span>
                                     <div class="title"><svg width="13" height="13" viewBox="0 0 13 13"
                                             fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path
@@ -734,8 +734,8 @@
                     </div>
                 </div>
             </div>
-            <!-- <img src="images/testimonials-cat.png" class="testimonials-cat" alt="">
-                <img src="images/testimonials-dog.png" class="testimonials-dog" alt=""> -->
+            <!-- <img src="{{asset('images/testimonials-cat.png')}}" class="testimonials-cat" alt="">
+                <img src="{{asset('images/testimonials-dog.png')}}" class="testimonials-dog" alt=""> -->
         </section>
         
     </main>

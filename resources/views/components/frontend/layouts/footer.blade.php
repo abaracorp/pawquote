@@ -4,14 +4,14 @@
                     <div class="row">
                         <div class="col-lg-4">
                             <div class="footer-leftside">
-                                <a href="{{route('homepage')}}" class="logo"><img src="images/pawquote-white.png" alt=""></a>
+                                <a href="{{route('homepage')}}" class="logo"><img src="{{asset('images/pawquote-white.png" alt=""></a>
                                 <p class="f-22 c-cf f-w-4  montserrat">Helping pet owners find the best insurance
                                     coverage for their furry family members.</p>
                                 <h3 class="f-18 c-white f-w-6  freedoka ">Quick Links:</h3>
                                 <div class="social-links">
-                                    <a href=""> <img src="images/facebook.svg" alt=""></a>
-                                    <a href=""> <img src="images/twitter.svg" alt=""></a>
-                                    <a href=""> <img src="images/instagram.svg" alt=""></a>
+                                    <a href=""> <img src="{{asset('images/facebook.svg')}}" alt=""></a>
+                                    <a href=""> <img src="{{asset('images/twitter.svg')}}" alt=""></a>
+                                    <a href=""> <img src="{{asset('images/instagram.svg')}}" alt=""></a>
                                 </div>
                             </div>
                         </div>

@@ -322,7 +322,7 @@
             <div class="container">
                 <div class="inner">
                     <div class="leftside">
-                        <span class="top"><img src="images/quote-now.png" alt=""></span>
+                        <span class="top"><img src="{{asset('images/quote-now.png')}}" alt=""></span>
                         <h1 class="f-40 c-dark f-w-5 l-h-48 freedoka">Don't wait for the unexpected to happen. <span
                                 class="c-orange">Quote now</span> and ensure your well-being
                             without delay.</h1>

@@ -83,18 +83,18 @@
                         </div>
                     </div>
                 </div>
-                <img src="images/orange-shade.png" class="orange-bg shade" alt="">
+                <img src="{{asset('images/orange-shade.png')}}" class="orange-bg shade" alt="">
             </div>
             <div class="trusted">
                 <div class="container">
                     <div class="trusted-by">
                         <h3>Trusted By:</h3>
                         <ul>
-                            <li class="blue"><img src="images/trusteddog1.png" alt="Forbes"></li>
-                            <li class="pink"><img src="images/trusteddog2.png" alt="TechCrunch"></li>
-                            <li class="purple"><img src="images/trusteddog1.png" alt="BuiltInNYC"></li>
-                            <li class="green"><img src="images/trusteddog2.png" alt="Axios"></li>
-                            <li class="yellow"><img src="images/trusteddog1.png" alt="Axios"></li>
+                            <li class="blue"><img src="{{asset('images/trusteddog1.png')}}" alt="Forbes"></li>
+                            <li class="pink"><img src="{{asset('images/trusteddog2.png')}}" alt="TechCrunch"></li>
+                            <li class="purple"><img src="{{asset('images/trusteddog1.png')}}" alt="BuiltInNYC"></li>
+                            <li class="green"><img src="{{asset('images/trusteddog2.png')}}" alt="Axios"></li>
+                            <li class="yellow"><img src="{{asset('images/trusteddog1.png')}}" alt="Axios"></li>
                         </ul>
                         <svg width="50" height="58" viewBox="0 0 83 90" fill="currentColor" class="footprint"
                             xmlns="http://www.w3.org/2000/svg">
@@ -252,7 +252,7 @@
                     </div>
                     <div class="col-lg-6">
                         <div class="rightside">
-                            <img src="images/choose-us.png" alt="">
+                            <img src="{{asset('images/choose-us.png')}}" alt="">
                         </div>
                     </div>
                 </div>
@@ -279,7 +279,7 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td><span class="image-card "><img src="/Admin/images/pets-best.svg"
+                                <td><span class="image-card "><img src="{{asset('/Admin/images/pets-best.svg"
                                             alt=""></span></td>
                                 <td>
                                     <div class="rating"><span class="stars">
@@ -297,7 +297,7 @@
                                 <td>Average wait 7 days</td>
                             </tr>
                             <tr>
-                                <td><span class="image-card "><img src="/Admin/images/lemonade2.svg"
+                                <td><span class="image-card "><img src="{{asset('/Admin/images/lemonade2.svg"
                                             alt=""></span></td>
                                 <td>
                                     <div class="rating"><span class="stars">
@@ -315,7 +315,7 @@
                                 <td>Average wait 1-7 days</td>
                             </tr>
                             <tr>
-                                <td><span class="image-card "><img src="/images/pawprotect.png" alt=""></span>
+                                <td><span class="image-card "><img src="{{asset('/images/pawprotect.png')}}" alt=""></span>
                                 </td>
                                 <td>
                                     <div class="rating"><span class="stars">
@@ -334,7 +334,7 @@
                                 <td>Average wait 10 days</td>
                             </tr>
                             <tr>
-                                <td><span class="image-card "><img src="/Admin/images/embrace.svg" alt=""></span>
+                                <td><span class="image-card "><img src="{{asset('/Admin/images/embrace.svg" alt=""></span>
                                 </td>
                                 <td>
                                     <div class="rating"><span class="stars">
@@ -360,7 +360,7 @@
             <div class="container">
                 <div class="inner">
                     <div class="leftside">
-                        <span class="top"><img src="images/quote-now.png" alt=""></span>
+                        <span class="top"><img src="{{asset('images/quote-now.png')}}" alt=""></span>
                         <h1 class="f-40 c-dark f-w-5 l-h-48 freedoka">Don't wait for the unexpected to happen. <span
                                 class="c-orange">Quote now</span> and ensure your well-being
                             without delay.</h1>

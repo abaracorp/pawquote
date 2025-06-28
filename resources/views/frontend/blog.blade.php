@@ -24,7 +24,7 @@
                         </div>
                         <div class="col-lg-3">
                             <div class="rightside">
-                                <img src="images/smart-pet.png" alt="">
+                                <img src="{{asset('images/smart-pet.png')}}" alt="">
                             </div>
                         </div>
                     </div>
@@ -38,7 +38,7 @@
                     <div class="row">
                         <div class="col-lg-6">
                             <div class="leftside">
-                                <img src="images/featured-article.png" alt="" class="w-100">
+                                <img src="{{asset('images/featured-article.png')}}" alt="" class="w-100">
                             </div>
                         </div>
                         <div class="col-lg-6">
@@ -147,7 +147,7 @@
                             <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
                                 <div class="card b-blue br-18 overflow-hidden">
                                     <div class="top-image">
-                                        <img src="images/featured-article.png" alt="" class="w-100">
+                                        <img src="{{asset('images/featured-article.png')}}" alt="" class="w-100">
                                     </div>
                                     <div class="card-body ">
                                         <div class="heading">
@@ -211,7 +211,7 @@
                             <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
                                 <div class="card b-blue br-18 overflow-hidden">
                                     <div class="top-image">
-                                        <img src="images/article2.png" alt="" class="w-100">
+                                        <img src="{{asset('images/article2.png')}}" alt="" class="w-100">
                                     </div>
                                     <div class="card-body ">
                                         <div class="heading">
@@ -276,7 +276,7 @@
                             <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
                                 <div class="card b-blue br-18 overflow-hidden">
                                     <div class="top-image">
-                                        <img src="images/article3.png" alt="" class="w-100">
+                                        <img src="{{asset('images/article3.png')}}" alt="" class="w-100">
                                     </div>
                                     <div class="card-body">
                                         <div class="heading">
@@ -343,7 +343,7 @@
                             <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
                                 <div class="card b-blue br-18 overflow-hidden">
                                     <div class="top-image">
-                                        <img src="images/article4.png" alt="" class="w-100">
+                                        <img src="{{asset('images/article4.png')}}" alt="" class="w-100">
                                     </div>
                                     <div class="card-body ">
                                         <div class="heading">
@@ -406,7 +406,7 @@
                             <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
                                 <div class="card b-blue br-18 overflow-hidden">
                                     <div class="top-image">
-                                        <img src="images/article5.png" alt="" class="w-100">
+                                        <img src="{{asset('images/article5.png')}}" alt="" class="w-100">
                                     </div>
                                     <div class="card-body ">
                                         <div class="heading">
@@ -468,7 +468,7 @@
                             <div class="col-lg-4 col-md-6 col-sm-12">
                                 <div class="card b-blue br-18 overflow-hidden">
                                     <div class="top-image">
-                                        <img src="images/article6.png" alt="" class="w-100">
+                                        <img src="{{asset('images/article6.png')}}" alt="" class="w-100">
                                     </div>
                                     <div class="card-body ">
                                         <div class="heading">
@@ -541,7 +541,7 @@
                 <div class="row">
                     <div class="col-lg-6">
                         <div class="leftside">
-                            <img src="images/pet-ownership.png" alt="">
+                            <img src="{{asset('images/pet-ownership.png')}}" alt="">
                         </div>
                     </div>
                     <div class="col-lg-6">
@@ -640,7 +640,7 @@
                     </div>
                     <div class="col-lg-5">
                         <div class="rightside">
-                            <img src="images/senior-pet-insurance.png" alt="">
+                            <img src="{{asset('images/senior-pet-insurance.png')}}" alt="">
                         </div>
                     </div>
                 </div>

@@ -30,7 +30,7 @@
                         </div>
                         <div class="col-lg-6">
                             <div class="rightside">
-                                <img src="images/benifit-hero.png" alt="">
+                                <img src="{{asset('images/benifit-hero.png')}}" alt="">
                             </div>
                         </div>
                     </div>
@@ -782,7 +782,7 @@
                         </div>
                         <div class="col-lg-6">
                             <div class="rightside">
-                                <img src="images/protect-pet.png" alt="">
+                                <img src="{{asset('images/protect-pet.png"')}} alt="">
                             </div>
                         </div>
                     </div>

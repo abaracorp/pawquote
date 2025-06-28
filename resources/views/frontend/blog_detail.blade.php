@@ -31,7 +31,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="article-image">
-                            <img src="images/article6.png" alt="">
+                            <img src="{{asset('images/article6.png')}}" alt="">
                         </div>
                     </div>
                 </div>
@@ -124,7 +124,7 @@
                                 <div class="row">
                                     <div class="col-lg-12">
                                         <div class="post-card">
-                                            <span><img src="images/featured-article.png" alt=""></span>
+                                            <span><img src="{{asset('images/featured-article.png')}}" alt=""></span>
                                             <div class="content">
                                                 <h4 class="c-light f-18 f-w-4 montserrat mb-0">December 03, 2024</h4>
                                                 <h3 class="c-dark f-20 f-w-5 freedoka">Know Your Breed’s Risk Factors </h3>
@@ -133,7 +133,7 @@
                                     </div>
                                     <div class="col-lg-12">
                                         <div class="post-card">
-                                            <span><img src="images/article4.png" alt=""></span>
+                                            <span><img src="{{asset('images/article4.png')}}" alt=""></span>
                                             <div class="content">
                                                 <h4 class="c-light f-18 f-w-4 montserrat mb-0">December 04, 2024</h4>
                                                 <h3 class="c-dark f-20 f-w-5 freedoka">Invest in Pet Insurance Before You Need It
@@ -143,7 +143,7 @@
                                     </div>
                                     <div class="col-lg-12">
                                         <div class="post-card">
-                                            <span><img src="images/article2.png" alt=""></span>
+                                            <span><img src="{{asset('images/article2.png')}}" alt=""></span>
                                             <div class="content">
                                                 <h4 class="c-light f-18 f-w-4 montserrat mb-0">December 05, 2024</h4>
                                                 <h3 class="c-dark f-20 f-w-5 freedoka"> Build a Relationship With Your Vet </h3>
