@@ -103,7 +103,7 @@
                      <div class="card">
                          <div class="top-content">
                              <span>Step 1</span>
-                             <img src="{{asset('images/right-arrow.svg" alt="">
+                             <img src="{{asset('images/right-arrow.svg')}}" alt="">
                          </div>
                          <h4 class="f-34 c-dark  freedoka f-w-5">Tell Us About Your Pet</h4>
                          <svg width="164" height="303" viewBox="0 0 164 303" class="footprint" fill="none"
@@ -175,7 +175,7 @@
                      <div class="card">
                          <div class="top-content">
                              <span>Step 2</span>
-                             <img src="{{asset('images/right-arrow.svg" alt="">
+                             <img src="{{asset('images/right-arrow.svg')}}" alt="">
                          </div>
                          <h4 class="f-34 c-dark  freedoka f-w-5">We Analyze and Match Top Providers</h4>
                          <svg width="164" height="303" viewBox="0 0 164 303" class="footprint" fill="none"
@@ -247,7 +247,7 @@
                      <div class="card">
                          <div class="top-content">
                              <span>Step 3</span>
-                             <img src="{{asset('images/right-arrow.svg" alt="">
+                             <img src="{{asset('images/right-arrow.svg')}}" alt="">
                          </div>
                          <h4 class="f-34 c-dark  freedoka f-w-5">Choose the Best Plan for You</h4>
                          <svg width="164" height="303" viewBox="0 0 164 303" class="footprint" fill="none"
