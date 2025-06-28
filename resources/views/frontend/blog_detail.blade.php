@@ -1,0 +1,198 @@
+@extends('frontend.master')
+
+@section('content')
+
+<main id="read-article">
+       
+        <section class="article-top">
+            <div class="container">
+                <div class="heading">
+                    <h1 class="c-dark f-56 l-h-72 f-w-5 freedoka mb-0">Track Their Behavior and Energy Levels</h1>
+                    <ul class="d-flex align-items-center gap-5 ">
+                        <li class="c-light f-24 l-h-37 f-w-5 montserrat d-flex align-items-center gap-2"><svg width="32"
+                                height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M16 13.1585C16.6128 13.1585 17.2197 13.0378 17.7859 12.8033C18.352 12.5688 18.8665 12.225 19.2998 11.7917C19.7332 11.3584 20.0769 10.8439 20.3114 10.2777C20.546 9.71153 20.6667 9.1047 20.6667 8.49186C20.6667 7.87903 20.546 7.27219 20.3114 6.70601C20.0769 6.13982 19.7332 5.62537 19.2998 5.19203C18.8665 4.75869 18.352 4.41495 17.7859 4.18042C17.2197 3.9459 16.6128 3.8252 16 3.8252C14.7623 3.8252 13.5753 4.31686 12.7002 5.19203C11.825 6.0672 11.3333 7.25419 11.3333 8.49186C11.3333 9.72954 11.825 10.9165 12.7002 11.7917C13.5753 12.6669 14.7623 13.1585 16 13.1585ZM4 27.0252V27.8252H28V27.0252C28 24.0385 28 22.5452 27.4187 21.4039C26.9073 20.4004 26.0915 19.5845 25.088 19.0732C23.9467 18.4919 22.4533 18.4919 19.4667 18.4919H12.5333C9.54667 18.4919 8.05333 18.4919 6.912 19.0732C5.90851 19.5845 5.09265 20.4004 4.58133 21.4039C4 22.5452 4 24.0385 4 27.0252Z"
+                                    stroke="#566369" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            Admin
+                        </li>
+                        <li class="c-light f-24 l-h-37 f-w-5 montserrat d-flex align-items-center gap-2"><svg width="32"
+                                height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M22 6.66667V4M10 6.66667V4M4.33333 10.6667H27.6667M4 13.392C4 10.572 4 9.16133 4.58133 8.084C5.10699 7.12307 5.92266 6.35267 6.912 5.88267C8.05333 5.33333 9.54667 5.33333 12.5333 5.33333H19.4667C22.4533 5.33333 23.9467 5.33333 25.088 5.88267C26.092 6.36533 26.9067 7.136 27.4187 8.08267C28 9.16267 28 10.5733 28 13.3933V19.9427C28 22.7627 28 24.1733 27.4187 25.2507C26.893 26.2116 26.0773 26.982 25.088 27.452C23.9467 28 22.4533 28 19.4667 28H12.5333C9.54667 28 8.05333 28 6.912 27.4507C5.92286 26.981 5.10722 26.2111 4.58133 25.2507C4 24.1707 4 22.76 4 19.94V13.392Z"
+                                    stroke="#566369" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                            March 5, 2025
+                        </li>
+                    </ul>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="article-image">
+                            <img src="images/article6.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <ul>
+                    <li>
+                        <p class=" c-light f-20 l-h-32 f-w-5 montserrat"> You know your pet better than anyone. Subtle
+                            changes in energy, appetite, or behavior can signal a health issue. Keeping a simple log—or
+                            just staying observant—can help you act before things escalate.</p>
+                    </li>
+                    <li>
+                        <span class="c-dark f-24 l-h-27 f-w-5 freedoka ">Watch for Unusual Habits </span>
+                        <p class="c-light f-20 l-h-32 f-w-4 montserrat">Pets thrive on routine. If your furry friend
+                            suddenly stops greeting you at the door
+                            or skips a favorite toy, it might be more than just a mood. Noticing these patterns early
+                            can make all the difference. </p>
+                    </li>
+                    <li>
+                        <span class="c-dark f-24 l-h-27 f-w-5 freedoka ">Monitor Eating and Drinking</span>
+                        <p class="c-light f-20 l-h-32 f-w-4 montserrat">Changes in how much your pet eats or drinks can
+                            be early signs of trouble. A sudden increase or loss of appetite shouldn't be ignored. Trust
+                            your gut and consult your vet if something feels off.</p>
+                    </li>
+                    <li>
+                        <span class="c-dark f-24 l-h-27 f-w-5 freedoka ">Notice Changes in Sleep Patterns</span>
+                        <p class="c-light f-20 l-h-32 f-w-4 montserrat">A pet who suddenly sleeps much more—or much
+                            less—than usual might be signaling discomfort. While naps are natural, drastic shifts in
+                            rest habits can indicate an underlying issue.</p>
+                    </li>
+                    <li>
+                        <span class="c-dark f-24 l-h-27 f-w-5 freedoka ">Keep an Eye on Bathroom Routines</span>
+                        <p class="c-light f-20 l-h-32 f-w-4 montserrat">Irregular urination or bowel movements can often
+                            be the first sign something’s wrong. Keep an eye on their litter box, backyard habits, or
+                            walks for anything out of the ordinary.</p>
+                    </li>
+                    <li>
+                        <span class="c-dark f-24 l-h-27 f-w-5 freedoka ">Look at Their Body Language</span>
+                        <p class="c-light f-20 l-h-32 f-w-4 montserrat">Your pet communicates through posture, facial
+                            expressions, and tail movement. A tucked tail, flattened ears, or excessive hiding can be
+                            signs they’re not feeling their best.</p>
+                    </li>
+                    <li>
+                        <span class="c-dark f-24 l-h-27 f-w-5 freedoka ">Track Activity Levels Over Time</span>
+                        <p class="c-light f-20 l-h-32 f-w-4 montserrat mb-0">A sudden lack of enthusiasm for play or a daily
+                            walk might not just be a phase. Create a mental baseline of your pet’s usual energy and be
+                            alert to sudden changes.</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="article-middle">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="leftside">
+                            <div class="search-container b-blue br-40">
+                                <div class="top-content d-flex align-items-center gap-3">
+                                    <svg width="21" height="20" viewBox="0 0 21 20" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M11.6598 9.24442C12.0539 9.56134 12.3207 9.97876 12.6027 10.473L12.897 10.9954L12.8978 10.996C13.4286 11.9279 14.0369 12.8157 14.7574 13.6284L14.7579 13.6276L14.8319 13.7117L14.8322 13.7131C15.0722 13.9838 15.3354 14.2796 15.6424 14.5446L15.6419 14.5454C16.1799 15.0164 16.5945 15.6137 16.8067 16.2746L16.8842 16.5613L16.8863 16.5687C16.8917 16.5909 16.8968 16.6134 16.9022 16.6359C16.987 17.2658 16.8871 17.8779 16.559 18.3516C16.248 18.7481 15.9007 18.9254 15.3732 18.9936C15.0578 19.0324 14.7486 18.9904 14.3855 18.9246L14.0016 18.8529L13.6398 18.7867L12.8746 18.6464L11.9868 18.4834L11.6367 18.4192L11.6359 18.4186C10.8635 18.2768 10.0767 18.1628 9.24478 18.2158L8.88545 18.2491L8.75969 18.2644L8.75617 18.2644C8.50057 18.2971 8.24755 18.3392 7.99794 18.3843L7.26018 18.5263C6.3765 18.7023 5.95973 18.785 5.66839 18.8238C5.53368 18.8417 5.42844 18.8505 5.31043 18.8533L4.87628 18.849L4.87411 18.8487C4.83399 18.848 4.79247 18.8467 4.75116 18.8459C4.22161 18.8266 3.76241 18.6605 3.4054 18.3246C3.04874 17.9275 2.87374 17.4282 2.89099 16.8833C2.99181 15.8478 3.65262 14.917 4.49507 14.1628L4.8264 13.8986L4.83429 13.8922C5.22802 13.5736 5.61036 13.2248 5.96505 12.8514L6.31028 12.4706L6.36862 12.4016L6.36997 12.4013C6.78622 11.9153 7.16428 11.4108 7.52277 10.8913L7.5225 10.89C7.70865 10.6213 7.9109 10.3794 8.14168 10.1379L8.14822 10.1317L8.15394 10.125C8.20354 10.0691 8.25263 10.0126 8.30193 9.9562C9.22525 8.93009 10.5997 8.50943 11.6598 9.24442ZM3.0021 7.35794C3.75535 7.92421 4.17426 8.73946 4.35227 9.7187C4.45 10.4521 4.33728 11.1602 3.94416 11.7086C3.70355 11.9891 3.41636 12.1263 3.00936 12.1759C2.52224 12.1888 2.05459 11.9208 1.60021 11.5058C1.07641 10.9966 0.676225 10.2019 0.595269 9.46625L0.583605 9.31939C0.578317 8.46615 0.641701 7.82194 1.11069 7.31548C1.64716 6.87362 2.38073 6.90974 3.00156 7.35875L3.0021 7.35794ZM6.60819 1.15946C7.03822 1.19376 7.49559 1.3998 7.91369 1.76322C8.64634 2.47954 9.01114 3.49533 9.04018 4.5656L9.04099 4.56615C9.04901 5.42356 8.83749 6.22146 8.31483 6.81979C7.92997 7.1988 7.54733 7.37684 7.03249 7.39193C6.58877 7.37351 6.20604 7.19109 5.82511 6.87674L5.66066 6.73284L5.65473 6.72766L5.57711 6.65763C4.88261 5.99147 4.60873 4.93188 4.54214 3.85926C4.53395 3.03048 4.82125 2.1966 5.36847 1.61429C5.76425 1.25117 6.19081 1.12627 6.60819 1.15946ZM19.2068 7.34972C19.2984 7.42992 19.3752 7.51446 19.4459 7.61347L19.5184 7.72248L19.5195 7.72438C19.5309 7.74277 19.5419 7.76157 19.5536 7.78036C19.5679 7.80711 19.5813 7.835 19.5948 7.8659L19.6424 7.98046L19.6419 7.98127C19.6582 8.02336 19.6746 8.06573 19.6913 8.10883L19.6921 8.10938C19.9738 8.9176 19.8307 9.85148 19.4382 10.6898L19.4376 10.6906C19.0782 11.4176 18.5319 11.9538 17.8013 12.2608C17.4777 12.3655 17.1123 12.3329 16.782 12.1776C16.4242 11.9642 16.223 11.6913 16.0981 11.2687C15.8582 10.335 16.0056 9.35657 16.4882 8.51269C16.8005 8.01867 17.1883 7.58096 17.6368 7.31793L17.8343 7.21554L17.8362 7.21446C17.86 7.20359 17.8837 7.19259 17.9079 7.18154C18.3302 7.03011 18.859 7.10164 19.2068 7.34972ZM15.1024 1.32188C15.66 1.81061 15.9199 2.5687 15.9849 3.41196C16.0274 4.66235 15.627 5.74107 14.785 6.67006C14.4281 7.04511 13.9675 7.24422 13.429 7.28325C13.0449 7.28542 12.6632 7.14439 12.3407 6.89194C11.8649 6.4189 11.5914 5.75755 11.5223 5.056L11.505 4.74985L11.5087 4.46845L11.5112 4.3111C11.5185 4.03791 11.5394 3.79615 11.5879 3.55827L11.6463 3.31969L11.6883 3.17366C11.8513 2.66178 12.0944 2.22473 12.448 1.83081L12.5357 1.72511C13.2479 0.8897 14.3036 0.696598 15.1024 1.32188Z"
+                                            fill="#FEA145" stroke="#E2E2FB" />
+                                    </svg>
+                                    <span class="c-dark f-22 f-w-5 freedoka">Search</span>
+                                </div>
+                                <div class="search-card">
+                                    <svg width="18" height="19" viewBox="0 0 18 19" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M15.7502 16.5343L12.4929 13.2771M12.4929 13.2771C13.0501 12.7199 13.492 12.0585 13.7936 11.3305C14.0951 10.6025 14.2503 9.82229 14.2503 9.03433C14.2503 8.24638 14.0951 7.46615 13.7936 6.73817C13.492 6.0102 13.0501 5.34875 12.4929 4.79158C11.9357 4.23442 11.2743 3.79245 10.5463 3.49091C9.81834 3.18938 9.03811 3.03418 8.25015 3.03418C7.4622 3.03418 6.68197 3.18938 5.95399 3.49091C5.22602 3.79245 4.56457 4.23442 4.0074 4.79158C2.88216 5.91683 2.25 7.44299 2.25 9.03433C2.25 10.6257 2.88216 12.1518 4.0074 13.2771C5.13265 14.4023 6.65881 15.0345 8.25015 15.0345C9.84149 15.0345 11.3677 14.4023 12.4929 13.2771Z"
+                                            stroke="black" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+
+                                    <input type="text" placeholder="Search">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-8">
+                        <div class="rightside">
+                            <div class="recent-posts b-blue br-40">
+                                <div class="top-content d-flex align-items-center gap-3">
+                                    <svg width="21" height="20" viewBox="0 0 21 20" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M11.6598 9.24442C12.0539 9.56134 12.3207 9.97876 12.6027 10.473L12.897 10.9954L12.8978 10.996C13.4286 11.9279 14.0369 12.8157 14.7574 13.6284L14.7579 13.6276L14.8319 13.7117L14.8322 13.7131C15.0722 13.9838 15.3354 14.2796 15.6424 14.5446L15.6419 14.5454C16.1799 15.0164 16.5945 15.6137 16.8067 16.2746L16.8842 16.5613L16.8863 16.5687C16.8917 16.5909 16.8968 16.6134 16.9022 16.6359C16.987 17.2658 16.8871 17.8779 16.559 18.3516C16.248 18.7481 15.9007 18.9254 15.3732 18.9936C15.0578 19.0324 14.7486 18.9904 14.3855 18.9246L14.0016 18.8529L13.6398 18.7867L12.8746 18.6464L11.9868 18.4834L11.6367 18.4192L11.6359 18.4186C10.8635 18.2768 10.0767 18.1628 9.24478 18.2158L8.88545 18.2491L8.75969 18.2644L8.75617 18.2644C8.50057 18.2971 8.24755 18.3392 7.99794 18.3843L7.26018 18.5263C6.3765 18.7023 5.95973 18.785 5.66839 18.8238C5.53368 18.8417 5.42844 18.8505 5.31043 18.8533L4.87628 18.849L4.87411 18.8487C4.83399 18.848 4.79247 18.8467 4.75116 18.8459C4.22161 18.8266 3.76241 18.6605 3.4054 18.3246C3.04874 17.9275 2.87374 17.4282 2.89099 16.8833C2.99181 15.8478 3.65262 14.917 4.49507 14.1628L4.8264 13.8986L4.83429 13.8922C5.22802 13.5736 5.61036 13.2248 5.96505 12.8514L6.31028 12.4706L6.36862 12.4016L6.36997 12.4013C6.78622 11.9153 7.16428 11.4108 7.52277 10.8913L7.5225 10.89C7.70865 10.6213 7.9109 10.3794 8.14168 10.1379L8.14822 10.1317L8.15394 10.125C8.20354 10.0691 8.25263 10.0126 8.30193 9.9562C9.22525 8.93009 10.5997 8.50943 11.6598 9.24442ZM3.0021 7.35794C3.75535 7.92421 4.17426 8.73946 4.35227 9.7187C4.45 10.4521 4.33728 11.1602 3.94416 11.7086C3.70355 11.9891 3.41636 12.1263 3.00936 12.1759C2.52224 12.1888 2.05459 11.9208 1.60021 11.5058C1.07641 10.9966 0.676225 10.2019 0.595269 9.46625L0.583605 9.31939C0.578317 8.46615 0.641701 7.82194 1.11069 7.31548C1.64716 6.87362 2.38073 6.90974 3.00156 7.35875L3.0021 7.35794ZM6.60819 1.15946C7.03822 1.19376 7.49559 1.3998 7.91369 1.76322C8.64634 2.47954 9.01114 3.49533 9.04018 4.5656L9.04099 4.56615C9.04901 5.42356 8.83749 6.22146 8.31483 6.81979C7.92997 7.1988 7.54733 7.37684 7.03249 7.39193C6.58877 7.37351 6.20604 7.19109 5.82511 6.87674L5.66066 6.73284L5.65473 6.72766L5.57711 6.65763C4.88261 5.99147 4.60873 4.93188 4.54214 3.85926C4.53395 3.03048 4.82125 2.1966 5.36847 1.61429C5.76425 1.25117 6.19081 1.12627 6.60819 1.15946ZM19.2068 7.34972C19.2984 7.42992 19.3752 7.51446 19.4459 7.61347L19.5184 7.72248L19.5195 7.72438C19.5309 7.74277 19.5419 7.76157 19.5536 7.78036C19.5679 7.80711 19.5813 7.835 19.5948 7.8659L19.6424 7.98046L19.6419 7.98127C19.6582 8.02336 19.6746 8.06573 19.6913 8.10883L19.6921 8.10938C19.9738 8.9176 19.8307 9.85148 19.4382 10.6898L19.4376 10.6906C19.0782 11.4176 18.5319 11.9538 17.8013 12.2608C17.4777 12.3655 17.1123 12.3329 16.782 12.1776C16.4242 11.9642 16.223 11.6913 16.0981 11.2687C15.8582 10.335 16.0056 9.35657 16.4882 8.51269C16.8005 8.01867 17.1883 7.58096 17.6368 7.31793L17.8343 7.21554L17.8362 7.21446C17.86 7.20359 17.8837 7.19259 17.9079 7.18154C18.3302 7.03011 18.859 7.10164 19.2068 7.34972ZM15.1024 1.32188C15.66 1.81061 15.9199 2.5687 15.9849 3.41196C16.0274 4.66235 15.627 5.74107 14.785 6.67006C14.4281 7.04511 13.9675 7.24422 13.429 7.28325C13.0449 7.28542 12.6632 7.14439 12.3407 6.89194C11.8649 6.4189 11.5914 5.75755 11.5223 5.056L11.505 4.74985L11.5087 4.46845L11.5112 4.3111C11.5185 4.03791 11.5394 3.79615 11.5879 3.55827L11.6463 3.31969L11.6883 3.17366C11.8513 2.66178 12.0944 2.22473 12.448 1.83081L12.5357 1.72511C13.2479 0.8897 14.3036 0.696598 15.1024 1.32188Z"
+                                            fill="#FEA145" stroke="#E2E2FB" />
+                                    </svg>
+                                    <span class="c-dark f-22 f-w-5 freedoka">Recent Post</span>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <div class="post-card">
+                                            <span><img src="images/featured-article.png" alt=""></span>
+                                            <div class="content">
+                                                <h4 class="c-light f-18 f-w-4 montserrat mb-0">December 03, 2024</h4>
+                                                <h3 class="c-dark f-20 f-w-5 freedoka">Know Your Breed’s Risk Factors </h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="post-card">
+                                            <span><img src="images/article4.png" alt=""></span>
+                                            <div class="content">
+                                                <h4 class="c-light f-18 f-w-4 montserrat mb-0">December 04, 2024</h4>
+                                                <h3 class="c-dark f-20 f-w-5 freedoka">Invest in Pet Insurance Before You Need It
+                                                </h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="post-card">
+                                            <span><img src="images/article2.png" alt=""></span>
+                                            <div class="content">
+                                                <h4 class="c-light f-18 f-w-4 montserrat mb-0">December 05, 2024</h4>
+                                                <h3 class="c-dark f-20 f-w-5 freedoka"> Build a Relationship With Your Vet </h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="leave-reply">
+            <div class="container">
+                <div class="inner b-blue br-40 bg-l-blue">
+                    <div class="heading">
+                        <h1 class="c-dark f-42 l-h-42 f-w-5 freedoka">Leave a Reply </h1>
+                        <p class="c-light f-24 f-w-4 l-h-32 montserrat">Your email address will not be published. Required fields are marked <span class="c-red f-w-6">*</span> </p>
+                    </div>
+                    <form action="">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="form-action">
+                                    <input type="text"class="b-blue br-12 w-100" placeholder="Enter Name">
+                                </div>
+                            </div>
+                             <div class="col-lg-6">
+                                <div class="form-action">
+                                    <input type="email"class="b-blue br-12 w-100" placeholder="Enter Email">
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <div class="form-action">
+                                    <input type="text"class="b-blue br-12 w-100" placeholder="Enter Website">
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <div class="form-action">
+                                    <textarea name="" id=""class="b-blue br-12 w-100"placeholder="Enter  Your Comments"></textarea>
+                                </div>
+                            </div>
+                            <button class="post-comment orange-btn get-quote w-auto f-w-6 ">Post Comment</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+          
+    </main>
+
+@endsection
