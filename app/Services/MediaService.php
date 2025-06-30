@@ -5,6 +5,7 @@ namespace App\Services;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Collection;
+use Illuminate\Support\Facades\Storage;
 
 class MediaService
 {
@@ -34,6 +35,13 @@ class MediaService
     public function deleteMediaById(Model $model, int $mediaId): bool
     {
         $media = $model->media()->find($mediaId);
+
+        $relativePath = $media->getPathRelativeToRoot();
+
+        if (Storage::disk($media->disk)->exists($relativePath)) {
+            Storage::disk($media->disk)->delete($relativePath);
+        }
+
         if ($media) {
             return $media->delete();
         }
