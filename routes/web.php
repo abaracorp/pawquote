@@ -82,7 +82,11 @@ Route::prefix('admin')
             Route::get('create-new-blog', 'createNewBlog')->name('createNewBlog');
             Route::post('save-blog', 'saveBlogData')->name('saveBlogData');
             Route::get('edit-blog/{blog}', 'editBlog')->name('editBlog');
+            Route::put('update-blog/{blog}', 'updateBlog')->name('updateBlog');
             Route::get('delete-blog/{blog}', 'deleteBlog')->name('deleteBlog');
+            Route::get('search-blog/{blog?}', 'searchBlog')->name('searchBlog');
+            Route::post('blog-bulk-action', 'handleBlogBulkAction')->name('blogBulkAction');
+
         });
 
       

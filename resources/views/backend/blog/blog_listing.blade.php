@@ -14,26 +14,13 @@
             </div>
         </section>
         <section class="filter-tab">
-            <div class="leftside">
-                <ul>
-                    <li>
-                        <a href="javascript:void(0);" class="all f-20 c-dark f-w-5 freedoka">All<span
-                                class="f-18 c-light f-w-4  freedoka">(6)</span></a>
-                    </li>
-                    <li>
-                        <a href="javascript:void(0);" class="before publish f-20 c-dark f-w-5 freedoka">Publish<span
-                                class="f-18 c-light f-w-4  freedoka">(6)</span></a>
-                    </li>
-                    <li>
-                        <a href="javascript:void(0);" class="before draft f-20 c-dark f-w-5 freedoka">Draft<span
-                                class="f-18 c-light f-w-4  freedoka">(0)</span></a>
-                    </li>
-                    <li>
-                        <a href="javascript:void(0);" class="before trash f-20 c-dark f-w-5 freedoka">Trash<span
-                                class="f-18 c-light f-w-4  freedoka">(0)</span></a>
-                    </li>
-                </ul>
-            </div>
+            
+
+            
+            <span id="blogStatusCounts">
+            <x-backend.blog-status-filter :count="$count" />
+            </span>
+
             <div class="rightside">
                 <button class="button add-new  f-18 c-dark f-w-5 freedoka b-orange br-5"><svg width="18" height="18"
                         viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -47,57 +34,34 @@
                     <a href="{{ route('admin.createNewBlog') }}"> Add New Blog</a> </button>
                 <div class="search-container b-orange br-5 ">
                     <i class="fa-solid fa-magnifying-glass"></i>
-                    <input type="text" placeholder="Search blogs....">
+                    <input type="text" id="blogSearchInput" placeholder="Search blogs....">
                 </div>
             </div>
         </section>
+       
+        <form id="bulkActionForm" action="{{route('admin.blogBulkAction')}}" method="POST">
         <div class="select-wrapper b-orange br-5">
-            <select class="c-dark f-16 f-w-5 freedoka">
-                <option class="c-light f-16 f-w-4 freedoka">Bulk Action</option>
-                <option class="c-light f-16 f-w-4 freedoka">Edit</option>
-                <option class="c-light f-16 f-w-4 freedoka">Move to Trash</option>
-                <option class="c-light f-16 f-w-4 freedoka">Change to Published</option>
-            </select>
-        </div>
-        <div class="table-container">
+                @csrf
+                <select name="bulk_action" id="bulkActionSelect" class="c-dark f-16 f-w-5 freedoka">
+                    <option value="">Bulk Action</option>
+                    <option value="delete">Delete</option>
+                    <option value="publish">Change to Published</option>
+                    <option value="draft">Change to Draft</option>
+                </select>
+        </div>    
 
-            
+        <span id="blogResults">
+             @include('backend.blog.blog_table',['blogs' => $blogs])
+        </span>   
+        </form>
 
-            @php
-                $headers = [
-                    '<label class="check-container"><input type="checkbox"><span class="checkmark"></span></label>',
-                    'Title',
-                    'URL Slug',
-                    'Last Updated',
-                    'Status',
-                    'Actions',
-                ];
-
-                $rows = $blogs->map(function ($blog)  {
-                    return [
-                        '<label class="check-container"><input type="checkbox"><span class="checkmark" id="blog-' .
-                        $blog->id .
-                        '"></span></label>',
-                        $blog->title ?? '',
-                        $blog->slug ?? '',
-                        optional($blog->updated_at)->format('m-d-Y') ?? '',
-                        $blog->status_text ?? '',
-                        '<div class="action">
-                                    <a href="' .
-                        route('admin.editBlog', ['blog' => $blog]) .
-                        '">' . view('components.icons.edit')->render() . '</a>
-                                    <a href="' .
-                        route('admin.deleteBlog', ['blog' => $blog]) .
-                        '">🗑️</a>
-                                </div>',
-                    ];
-                });
-            @endphp
-
-            <x-backend.table-component :headers="$headers" :rows="$rows" :pagination="$blogs->links()" />
-
-
-
-        </div>
     </main>
+
+
+    @push('scripts')
+
+    <script src="{{asset('js/tableSearchPagination.js')}}"></script>
+
+    @endpush
+
 @endsection

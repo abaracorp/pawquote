@@ -20,12 +20,16 @@ class BlogController extends Controller
         $this->blogService = $blogService;
     }
 
-    public function getBlogListing(){
+    public function getBlogListing()
+    {
+        $blogs = $this->blogService->getAll(10);
 
-         $blogs = $this->blogService->getAll(10);
+        $count = $this->blogService->getBlogCountsByStatus([
+            'published' => 0,
+            'draft' => 1,
+        ]);
 
-         return view('backend.blog.blog_listing',compact('blogs'));
-
+        return view('backend.blog.blog_listing', compact('blogs', 'count'));
     }
 
     public function createNewBlog(){
@@ -37,8 +41,6 @@ class BlogController extends Controller
 
     public function saveBlogData(Request $request)
     {
-
-        // dd($request->all());
 
         try {
             $validated = $request->validate([
@@ -73,23 +75,24 @@ class BlogController extends Controller
 
     public function editBlog(Blog $blog)
     {
-
-        // dd($blog);
-
-        return view('blogs.edit', compact('blog'));
+        return view('backend.blog.edit_blog', compact('blog'));
     }
 
-    public function update(Request $request, Blog $blog)
+    public function updateBlog(Request $request, Blog $blog)
     {
+
         $validated = $request->validate([
             'title'   => 'required|string|max:255',
+            'slug'   => 'required|string|max:255',
             'summary' => 'nullable|string',
             'content' => 'required|string',
             'status'  => 'nullable|in:0,1',
+            'image'   => 'sometimes|required',
         ]);
 
         $this->blogService->update($blog, $validated);
         return redirect()->route('admin.blogs')->with('success', 'Blog updated successfully.');
+
     }
 
     public function deleteBlog(Blog $blog)
@@ -98,6 +101,59 @@ class BlogController extends Controller
         return redirect()->route('admin.blogs')->with('success', 'Blog deleted successfully.');
     }
 
-    
 
+   
+        public function handleBlogBulkAction(Request $request)
+    {
+        $action = $request->input('bulk_action');
+        $selectedIds = $request->input('selected_ids', []);
+
+        if (empty($selectedIds)) {
+            return redirect()->back()->with('error', 'No blogs selected.');
+        }
+
+        switch ($action) {
+            case 'delete':
+                $this->blogService->deleteMultipleBlogs($selectedIds);
+                break;
+
+            case 'publish':
+                $this->blogService->updateStatusMultiple($selectedIds, 0); 
+                break;
+
+            case 'draft':
+                $this->blogService->updateStatusMultiple($selectedIds, 1); 
+                break;
+        }
+
+        return redirect()->back()->with('message', 'Bulk action applied successfully.');
+    }
+
+        public function searchBlog(Request $request)
+    {
+        $search = $request->input('search');
+        $blogs = $this->blogService->searchBlogs($search);
+
+       
+        $count = [
+            'all' => $blogs->count(),
+            'published' => $blogs->where('status', 0)->count(),
+            'draft' => $blogs->where('status', 1)->count(),
+        ];
+
+        
+        $countFilterPage = view('components.backend.blog-status-filter', compact('count'))->render();
+
+        $tableData = view('backend.blog.blog_table', compact('blogs'))->render();
+
+        return response()->json([
+            'countFilterPage' => $countFilterPage,
+            'tableData' => $tableData,
+        ]);
+
+    }
+
+
+
+    
 }

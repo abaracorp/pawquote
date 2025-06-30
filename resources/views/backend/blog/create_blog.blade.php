@@ -16,10 +16,10 @@
                     <div class="row">
                         <div class="col-lg-6">
                            
-                                <h3 class="page-details f-22 c-dark f-w-5 freedoka">Post Details</h3>
+                                <h3 class="page-details f-22 c-dark f-w-5 freedoka">Blog Details</h3>
                                 <div class="form-group">
-                                    <label for="title"> Post Title: </label>
-                                    <input type="text" class="" name="title" id="title" required placeholder="Enter post title..." value="{{ old('title') }}">
+                                    <label for="title"> Title: </label>
+                                    <input type="text" class="" name="title" id="title" required placeholder="Enter title..." value="{{ old('title') }}">
                                 </div>
                                 <div class="form-group">
                                     <label for="slug"> URL Slug </label>
@@ -75,14 +75,14 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="Content"> Content:</label>
-                                    <textarea name="content" id="Content" placeholder="Enter content" ></textarea>
+                                    <textarea name="content" id="Content" placeholder="Enter content" >{{ old('content') }}</textarea>
                                 </div>
                             
                         </div>
                     </div>
                 </section>
                 <section class="bottom-buttons">
-                    <button class="cancel f-18 c-light f-w-5 freedoka b-light">Cancel</button>
+                    <button class="cancel f-18 c-light f-w-5 freedoka b-light"><a href="{{route('admin.blogs')}}">Cancel</a></button>
                     {{-- <button class="save-draft f-18 c-orange f-w-5 freedoka b-orange">Save Draft</button> --}}
                     <button class="publish f-18 c-parrot-green f-w-5 freedoka b-parrot-green" type="submit">Save</button>
                 </section>
@@ -116,14 +116,15 @@
 
 
     <script>
+
             function generateSlug(text) {
                 return text
                     .toString()
                     .toLowerCase()
                     .trim()
-                    .replace(/[^a-z0-9\s-]/g, '')  // Remove non-alphanumeric characters
-                    .replace(/[\s_-]+/g, '-')      // Replace spaces/underscores with -
-                    .replace(/^-+|-+$/g, '');      // Trim - from start/end
+                    .replace(/[^a-z0-9\s-]/g, '')  
+                    .replace(/[\s_-]+/g, '-')      
+                    .replace(/^-+|-+$/g, '');      
             }
 
             document.getElementById('title').addEventListener('input', function () {
@@ -134,32 +135,32 @@
             });
 
 
-    const fileInput = document.getElementById('fileInput');
-    const viewImage = document.getElementById('viewImage');
-    const imageItem = document.getElementById('imageItem');
-    const fileName = document.getElementById('fileName');
-    const removeImage = document.getElementById('removeImage');
+        const fileInput = document.getElementById('fileInput');
+        const viewImage = document.getElementById('viewImage');
+        const imageItem = document.getElementById('imageItem');
+        const fileName = document.getElementById('fileName');
+        const removeImage = document.getElementById('removeImage');
 
-    fileInput.addEventListener('change', function (e) {
-        const file = e.target.files[0];
-        if (file) {
-            const reader = new FileReader();
-            reader.onload = function (event) {
-                viewImage.src = event.target.result;
-                fileName.textContent = file.name;
-                imageItem.style.display = 'block';
-            };
-            reader.readAsDataURL(file);
-        }
-    });
+        fileInput.addEventListener('change', function (e) {
+            const file = e.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function (event) {
+                    viewImage.src = event.target.result;
+                    fileName.textContent = file.name;
+                    imageItem.style.display = 'block';
+                };
+                reader.readAsDataURL(file);
+            }
+        });
 
-    removeImage.addEventListener('click', function (e) {
-        e.preventDefault();
-        fileInput.value = '';
-        viewImage.src = 'images/profile.png';
-        fileName.textContent = '';
-        imageItem.style.display = 'none';
-    });
+        removeImage.addEventListener('click', function (e) {
+            e.preventDefault();
+            fileInput.value = '';
+            viewImage.src = 'images/profile.png';
+            fileName.textContent = '';
+            imageItem.style.display = 'none';
+        });
         </script>
 
 @endpush

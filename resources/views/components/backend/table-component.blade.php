@@ -1,4 +1,4 @@
-<table class="table">
+<table class="table" id="component-table">
     <thead class="table-head">
         <tr>
             @foreach($headers as $header)
@@ -22,7 +22,9 @@
 </table>
 
 @if($pagination)
-    <nav aria-label="Page navigation example">
+    <nav 
+    {{ request()->has('search') ? 'id=paginationLinks' : '' }}
+    aria-label="Page navigation example">
         <ul class="pagination custom-pagination">
             <div class="d-flex justify-content-center">
                 {!! $pagination !!}
