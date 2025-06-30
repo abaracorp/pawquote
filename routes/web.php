@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\Backend\BlogController;
+use App\Http\Controllers\Backend\FaqGuideController;
+use App\Http\Controllers\Backend\GalleryController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -90,27 +92,58 @@ Route::prefix('admin')
 
         });
 
+        Route::controller(GalleryController::class)
+        ->group(function(){
+            Route::get('gallery', 'getGalleryListing')->name('gallery');
+            Route::get('create-new-gallery', 'createNewGallery')->name('createNewGallery');
+            Route::post('save-gallery', 'saveGalleryData')->name('saveGalleryData');
+            Route::get('edit-gallery/{gallery}', 'editGallery')->name('editGallery');
+            Route::put('update-gallery/{gallery}', 'updateGallery')->name('updateGallery');
+            Route::get('delete-gallery/{gallery}', 'deleteGallery')->name('deleteGallery');
+            
+           
+        });
+
+        // Route::get('faq-guide', function () {
+        //     return view('backend.faq_guide.faq_listing');
+        // })->name('faqGuide');
+
+        // Route::get('create-new-faq', function () {
+        //     return view('backend.faq_guide.create_new_faq');
+        // })->name('createNewFaq');
+
+        Route::controller(FaqGuideController::class)
+        ->group(function(){
+            Route::get('{type}', 'getFaqGuideListing')->name('faqGuide');
+            Route::get('create-new-{type}', 'createNewFaqGuide')->name('createNewFaqGuide');
+            Route::post('save-{type}', 'saveFaqGuideData')->name('saveFaqGuideData');
+            Route::get('edit-{type}/{faqguide}', 'editFaqGuide')->name('editFaqGuide');
+            Route::put('update-{type}/{faqguide}', 'updateFaqGuide')->name('updateFaqGuide');
+            Route::get('delete-{type}/{faqguide}', 'deleteFaqGuide')->name('deleteFaqGuide');
+            Route::get('search-{type}/{faqguide?}', 'searchFaqGuide')->name('searchFaqGuide');          
+        });
+
       
         // fan gallery
 
-        Route::get('fan-gallery', function () {
-            return view('backend.fan_gallery.gallery_listing');
-        })->name('fanGallery');
+        // Route::get('fan-gallery', function () {
+        //     return view('backend.fan_gallery.gallery_listing');
+        // })->name('fanGallery');
 
-        Route::get('create-new-gallery', function () {
-            return view('backend.fan_gallery.create_new_gallery');
-        })->name('createNewGallery');
+        // Route::get('create-new-gallery', function () {
+        //     return view('backend.fan_gallery.create_new_gallery');
+        // })->name('createNewGallery');
 
 
         // faq guide
 
-        Route::get('faq-guide', function () {
-            return view('backend.faq_guide.faq_listing');
-        })->name('faqGuide');
+        // Route::get('faq-guide', function () {
+        //     return view('backend.faq_guide.faq_listing');
+        // })->name('faqGuide');
 
-        Route::get('create-new-faq', function () {
-            return view('backend.faq_guide.create_new_faq');
-        })->name('createNewFaq');
+        // Route::get('create-new-faq', function () {
+        //     return view('backend.faq_guide.create_new_faq');
+        // })->name('createNewFaq');
 
         //setting 
 

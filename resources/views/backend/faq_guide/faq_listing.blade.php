@@ -3,8 +3,16 @@
 <main class="Rightside faq">
     <section class="inner">
         <div class="toggle-container">
-            <a href="" class="active f-18 c-dark f-w-5 freedoka">FAQ</a>
-            <a href="" class=" f-18 c-dark f-w-5 freedoka">Guide</a>
+            <a href="{{ route('admin.faqGuide', ['type' => 'faq']) }}"
+            class="f-18 c-dark f-w-5 freedoka {{ $type === 'faq' ? 'active' : '' }}">
+            FAQ
+            </a>
+
+            <a href="{{ route('admin.faqGuide', ['type' => 'guide']) }}"
+            class="f-18 c-dark f-w-5 freedoka {{ $type === 'guide' ? 'active' : '' }}">
+            Guide
+            </a>
+
         </div>
         <div class="page-title">
             <h1 class="f-32 c-dark f-w-5 freedoka">FAQs</h1>
@@ -23,14 +31,14 @@
                     </svg>
                     Filter
                 </button>
-                <div class="select-wrapper b-orange br-5">
+                {{-- <div class="select-wrapper b-orange br-5">
                     <select name="" id="" class="c-dark f-16 f-w-4 freedoka">
                         <option value="" class="c-light f-16 f-w-4 freedoka">Category 1</option>
                         <option value="" class="c-light f-16 f-w-4 freedoka">Category 2</option>
                         <option value="" class="c-light f-16 f-w-4 freedoka">Category 3</option>
                         <option value="" class="c-light f-16 f-w-4 freedoka">Category 4</option>
                     </select>
-                </div>
+                </div> --}}
             </div>
         </div>
         <div class="filter-tab second">
@@ -54,7 +62,7 @@
                     </li>
                 </ul>
             </div>
-            <a href="{{route('admin.createNewFaq')}}"
+            <a href="{{route('admin.createNewFaqGuide',['type' => $type])}}"
                 class="button add-new  f-18 c-dark f-w-5 freedoka b-orange br-5"><svg width="18" height="18"
                     viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd"

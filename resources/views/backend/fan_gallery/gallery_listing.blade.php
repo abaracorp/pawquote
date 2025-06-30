@@ -2,6 +2,7 @@
 
 @section('content')
 <main class="Rightside gallery-images">
+    <x-alert />
     <section class=" inner">
         <div class="toggle-container">
             <a href="" class=" f-18 c-dark f-w-5 freedoka">Fan</a>
@@ -24,12 +25,21 @@
             </a>
         </div>
         <div class="card-container">
-            <div class="card b-blue br-18 overflow-hidden">
-                <span><img src="{{asset('images/gallery1.png')}}" class="w-100" alt=""></span>
-                <div class="overlay"><a href="#"><i class="fas fa-edit"></i></a><a href="#"><i
+
+            @forelse ($gallery as $item)
+                <div class="card b-blue br-18 overflow-hidden">
+                <span><img src="{{$item->image_url}}" class="w-100" alt=""></span>
+                <div class="overlay">
+                    <a href="{{route('admin.editGallery',['gallery' => $item])}}"><i class="fas fa-edit"></i></a>
+                    <a href="{{route('admin.deleteGallery',['gallery' => $item])}}"><i
                             class="fas fa-trash"></i></a></div>
             </div>
-            <!-- Card -->
+            @empty
+                <h5>No Gallery Images</h5>
+            @endforelse
+            
+
+            {{-- <!-- Card -->
             <div class="card b-blue br-18 overflow-hidden">
                 <span><img src="{{asset('images/gallery2.png')}}" class="w-100" alt=""></span>
                 <div class="overlay"><a href="#"><i class="fas fa-edit"></i></a><a href="#"><i
@@ -70,12 +80,13 @@
                 <span><img src="{{asset('images/gallery8.png')}}" class="w-100" alt=""></span>
                 <div class="overlay"><a href="#"><i class="fas fa-edit"></i></a><a href="#"><i
                             class="fas fa-trash"></i></a></div>
-            </div>
+            </div> --}}
+
         </div>
-        <div class="bottom-buttons">
+        {{-- <div class="bottom-buttons">
             <button class="save  b-orange f-18 c-dark f-w-5 freedoka">Save</button>
             <button class="cancel b-light f-18 c-light f-w-5 freedoka">Cancel</button>
-        </div>
+        </div> --}}
         </div>
     </section>
 </main>

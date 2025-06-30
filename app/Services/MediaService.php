@@ -34,7 +34,8 @@ class MediaService
      */
     public function deleteMediaById(Model $model, int $mediaId): bool
     {
-        $media = $model->media()->find($mediaId);
+        
+        $media = $model->media()->where('model_id',$mediaId)->first();
 
         $relativePath = $media->getPathRelativeToRoot();
 

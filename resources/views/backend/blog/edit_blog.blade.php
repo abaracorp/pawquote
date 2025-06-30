@@ -63,7 +63,22 @@
                                 </label>
                             </div>
 
-                            <ul id="imageList" class="image-container">
+                            <ul id="imagePreviewContainer" class="image-container">
+                                @if($blog->image_url)
+                                    <li>
+                                        <div class="image-card">
+                                            <img src="{{ $blog->image_url }}" alt="Preview" style="width: 100px; height: auto;">
+                                        </div>
+                                        <a href="javascript:void(0);" class="remove-image"><i class="fa-solid fa-xmark"></i></a>
+                                        <p class="f-10 c-dark f-w-5 freedoka">{{ $blog->image_name }}</p>
+                                    </li>
+                                @endif
+                            </ul>
+
+
+                            {{-- <ul class="image-container" id="imagePreviewContainer"></ul> --}}
+
+                            {{-- <ul id="imageList" class="image-container">
                                 <li id="imageItem" style="{{ $blog->image_url ? '' : 'display: none;' }}">
                                     <div class="image-card">
                                         <img id="viewImage" src="{{ $blog->image_url ? $blog->image_url : asset('images/profile.png') }}"
@@ -72,7 +87,7 @@
                                     <a href="javascript:void(0);" id="removeImage"><i class="fa-solid fa-xmark"></i></a>
                                     <p class="f-10 c-dark f-w-5 freedoka" id="fileName">{{ $blog->image_name ? ($blog->image_name) : '' }}</p>
                                 </li>
-                            </ul>
+                            </ul> --}}
                         </div>
 
                         <div class="form-group">
@@ -99,6 +114,7 @@
 
     <script src="{{asset('js/ckEditor.js')}}"></script>
     <script src="{{asset('js/blog.js')}}"></script>
+    <script src="{{asset('js/gallery.js')}}"></script>
 
         <script>
             

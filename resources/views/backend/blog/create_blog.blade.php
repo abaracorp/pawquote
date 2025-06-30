@@ -58,16 +58,9 @@
                                         </div>
                                         
                                     </div>
-                                   
-                                    <ul id="imageList" class="image-container">
-                                        <li id="imageItem" style="display: none;">
-                                            <div class="image-card">
-                                                <img id="viewImage" src="images/profile.png" alt="Preview" style="width: 100px; height: auto;">
-                                            </div>
-                                            <a href="javascript:void(0);" id="removeImage"><i class="fa-solid fa-xmark"></i></a>
-                                            <p class="f-10 c-dark f-w-5 freedoka" id="fileName">dog-play.png</p>
-                                        </li>
-                                    </ul>
+                                    
+                                   <ul class="image-container" id="imagePreviewContainer"></ul>
+                                    
                                 </div>
                                  <div class="form-group">
                                     <label for="Summary"> Excerpt/Summary: <span class="f-12 c-light f-w-4 freedoka">(Optional)</span> </label>
@@ -94,6 +87,7 @@
 
             <script src="{{asset('js/ckEditor.js')}}"></script>
             <script src="{{asset('js/blog.js')}}"></script>
+            <script src="{{asset('js/gallery.js')}}"></script>
 
    
 
