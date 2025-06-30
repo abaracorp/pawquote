@@ -16,6 +16,7 @@ Route::get('/about-us', function () {
     return view('frontend/about');
 })->name('about');
 
+
 Route::get('/blog', function () {
     return view('frontend/blog');
 })->name('blog');
