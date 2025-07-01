@@ -17,8 +17,7 @@ class AdminUserSeeder extends Seeder
     {
         $adminUsers = [
     [
-        'first_name' => 'Admin',
-        'last_name' => 'Pawquote',
+        'name' => 'Admin Pawquote',
         'email' => 'admin@pawquote.com',
         'email_verified_at' => now(),
         'password' => Hash::make('password123'),
@@ -29,8 +28,7 @@ class AdminUserSeeder extends Seeder
         'updated_at' => now(),
     ],
     [
-        'first_name' => 'Admin',
-        'last_name' => 'IT',
+        'name' => 'Admin IT',
         'email' => 'admin@mail.com',
         'email_verified_at' => now(),
         'password' => Hash::make('password123'),

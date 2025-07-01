@@ -3,6 +3,8 @@
 use App\Http\Controllers\Backend\BlogController;
 use App\Http\Controllers\Backend\FaqGuideController;
 use App\Http\Controllers\Backend\GalleryController;
+use App\Http\Controllers\Backend\SettingController;
+use App\Http\Controllers\Frontend\GetQuoteController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -36,9 +38,7 @@ Route::get('/get-quote', function () {
     return view('frontend/get_quote');
 })->name('getQuote');
 
-Route::get('/quote', function () {
-    return view('frontend/quote_steps');
-})->name('quoteSteps');
+
 
 Route::get('/results', function () {
     return view('frontend/pet_protection');
@@ -113,8 +113,15 @@ Route::prefix('admin')
             Route::put('update-{type}/{faqguide}', 'updateFaqGuide')->name('updateFaqGuide');
             Route::get('delete-{type}/{faqguide}', 'deleteFaqGuide')->name('deleteFaqGuide');
             Route::get('search-{type}/{faqguide?}', 'searchFaqGuide')->name('searchFaqGuide');          
-            Route::get('{type}', 'getFaqGuideListing')->name('faqGuide');
+            Route::get('listing/{type}', 'getFaqGuideListing')->name('faqGuide');
             Route::post('bulk-action', 'handleFaqGuideBulkAction')->name('faqGuideBulkAction');
+        });
+
+        Route::controller(SettingController::class)
+        ->group(function(){
+            Route::get('settings', 'getSettings')->name('settings');
+            Route::put('updateUser/{user}', 'updateSetting')->name('updateSetting');
+           
         });
 
       
@@ -122,12 +129,12 @@ Route::prefix('admin')
 
         //setting 
 
-        Route::get('settings', function () {
+        // Route::get('settings', function () {
 
-            dd('hii');
+        //     dd('hii');
 
-            return view('backend.settings');
-        })->name('settings');
+        //     return view('backend.settings');
+        // })->name('settings');
 
         // analytics
         Route::get('analytics', function () {
@@ -140,3 +147,21 @@ Route::prefix('admin')
         })->name('affilate');
         
     });
+
+
+    Route::as('frontend.')
+    ->group(function () {
+
+        Route::controller(GetQuoteController::class)
+        ->group(function(){
+            Route::post('quote-zipcode', 'quoteZipcode')->name('quoteZipcode');
+            
+            Route::get('quote', 'quoteSteps')->name('quoteSteps')->middleware('check.zip');
+        });
+
+
+        
+
+        
+    });
+

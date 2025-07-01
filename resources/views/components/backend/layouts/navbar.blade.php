@@ -11,10 +11,10 @@
         </div>
         <div class="rightside">
             <div class="profile">
-                <span><img src="{{asset('images/profile.png')}}" alt=""></span>
+                <span><img src="{{$user->image_url ? $user->image_url : asset('images/default-profile.png')}}" alt=""></span>
                 <div class="content">
-                    <h2 class="f-20 c-dark f-w-5 freedoka">{{$user->first_name ?? 'Admin'}} {{$user->last_name ?? 'Admin'}}</h2>
-                    <p class="f-12 c-light f-w-4 montserrat">{{$user->email ?? 'Admin'}}</p>
+                    <h2 class="f-20 c-dark f-w-5 freedoka">{{$user->name ?? 'Admin'}}</h2>
+                    <p class="f-12 c-light f-w-4 montserrat">{{$user->email ?? 'admin@gmail.com'}}</p>
                 </div>
             </div>
         </div>

@@ -8,6 +8,7 @@
     <script src="https://owlcarousel2.github.io/OwlCarousel2/assets/owlcarousel/owl.carousel.js">
     </script>
 
+    <script src="{{asset('js/globalVar.js')}}"></script>
 
     <script>
         $(document).ready(function () { // It's good practice to wrap your Owl Carousel initialization in document.ready

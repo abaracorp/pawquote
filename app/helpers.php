@@ -21,3 +21,14 @@ if (!function_exists('viewIcon')) {
     }
 }
 
+if (!function_exists('isActiveRoute')) {
+    function isActiveRoute(array $routes, $class = 'active') {
+        foreach ($routes as $route) {
+            if (request()->routeIs($route)) {
+                return $class;
+            }
+        }
+        return '';
+    }
+}
+

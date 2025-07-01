@@ -72,13 +72,20 @@
                         </div>
                         <div class="col-lg-6">
                             <div class="rightside">
+                                {{-- <form id="zipForm" > --}}
                                 <div class="card b-blue br-30">
                                     <h2 class="c-dark f-32 l-h-38 f-w-5 freedoka">Enter your Zip code to continue...
                                     </h2>
-                                    <input type="text" class="br-16 b-blue" placeholder="Enter zip code...">
-                                    <a class="quote orange-btn f-15 f-w-5" href="{{route('quoteSteps')}}" type="button">Get A Quote</a>
-                                    {{-- <button class="quote orange-btn f-15 f-w-5">Get A Quote</button> --}}
+                                   
+                                    <input type="text" id="zipCode" class="br-16 b-blue" maxlength="5" oninput="validateZipCode(this)" placeholder="Enter ZIP Code" />
+                                    <small id="zipError" style="color: red; display: none;"></small>
+
+
+                                    <button type="button" id="getQuoteBtn"  disabled class="quote orange-btn f-15 f-w-5" >Get A Quote</button>
+                                    {{-- <a class="quote orange-btn f-15 f-w-5" href="{{route('quoteSteps')}}" >Get A Quote</a> --}}
+                                    
                                 </div>
+                            {{-- </form> --}}
                             </div>
                         </div>
                     </div>
@@ -373,4 +380,61 @@
             </div>
         </section>
     </main>
+
+    
+
+<script>
+
+function validateZipCode(input) {
+    const zip = input.value.replace(/\D/g, '').slice(0, 5); 
+    input.value = zip;
+
+    const btn = document.getElementById('getQuoteBtn');
+    btn.disabled = true; 
+
+    if (zip.length === 5) {
+        console.log(`zip.length : ${zip.length}`);
+        
+        checkZipViaApi(zip);
+    }
+}
+
+async function checkZipViaApi(zip) {
+    const button = document.getElementById('getQuoteBtn');
+    const errorText = document.getElementById('zipError');
+
+    try {
+        const res = await fetch(`${baseUrl}/quote-zipcode`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json',
+                'X-CSRF-TOKEN': csrfToken,
+                'X-Requested-With': 'XMLHttpRequest'
+            },
+            body: JSON.stringify({ zip })
+        });
+
+        const data = await res.json();
+
+        
+        if (data?.original?.valid === true) {
+            button.disabled = false;
+            errorText.style.display = 'none';
+        } else {
+            throw new Error('Invalid ZIP');
+        }
+
+    } catch (err) {
+        button.disabled = true;
+        errorText.style.display = 'block';
+        errorText.textContent = 'Please enter valid zip code.';
+    }
+}
+
+
+
+</script>
+
+    
 @endsection

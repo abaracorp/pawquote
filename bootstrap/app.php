@@ -12,6 +12,10 @@ return Application::configure(basePath: dirname(__DIR__))
     )
      ->withMiddleware(function (Middleware $middleware) {
         $middleware->redirectUsersTo('/admin/dashboard'); 
+
+        $middleware->alias([
+        'check.zip' => \App\Http\Middleware\CheckZipCodeSession::class,
+    ]);
     })
     ->withExceptions(function (Exceptions $exceptions): void {
         //

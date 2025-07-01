@@ -94,6 +94,7 @@ return [
     'custom_path_generators' => [
        App\Models\Gallery::class => App\MediaLibrary\GalleryPathGenerator::class,
        App\Models\Blog::class => App\MediaLibrary\BlogPathGenerator::class,
+       App\Models\User::class => App\MediaLibrary\ProfilePathGenerator::class,
         // Model::class => PathGenerator::class
         // or
         // 'model_morph_alias' => PathGenerator::class
