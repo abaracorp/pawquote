@@ -279,7 +279,7 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td><span class="image-card "><img src="{{asset('/Admin/images/pets-best.svg"
+                                <td><span class="image-card "><img src="{{asset('/Admin/images/pets-best.svg')}}"
                                             alt=""></span></td>
                                 <td>
                                     <div class="rating"><span class="stars">
@@ -297,7 +297,7 @@
                                 <td>Average wait 7 days</td>
                             </tr>
                             <tr>
-                                <td><span class="image-card "><img src="{{asset('/Admin/images/lemonade2.svg"
+                                <td><span class="image-card "><img src="{{asset('/Admin/images/lemonade2.svg')}}"
                                             alt=""></span></td>
                                 <td>
                                     <div class="rating"><span class="stars">
@@ -334,7 +334,7 @@
                                 <td>Average wait 10 days</td>
                             </tr>
                             <tr>
-                                <td><span class="image-card "><img src="{{asset('/Admin/images/embrace.svg" alt=""></span>
+                                <td><span class="image-card "><img src="{{asset('/Admin/images/embrace.svg')}}" alt=""></span>
                                 </td>
                                 <td>
                                     <div class="rating"><span class="stars">

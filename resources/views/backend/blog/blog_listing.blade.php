@@ -10,8 +10,8 @@
     
         <section class="filter-tab">
             
-        <span id="blogStatusCounts">
-        <x-backend.blog-status-filter :count="$count" />
+        <span id="statusCounts">
+        <x-backend.status-filter :count="$count" />
         </span>
 
         <div class="rightside">
@@ -26,7 +26,7 @@
             </svg>Add New Blog </a>
             <div class="search-container b-orange br-5 ">
                 <i class="fa-solid fa-magnifying-glass"></i>
-                <input type="text" id="blogSearchInput" placeholder="Search blogs....">
+                <input type="text" id="moduleSearchInput" data-url="search-blog" placeholder="Search blogs....">
             </div>
         </div>
         </section>
@@ -42,7 +42,7 @@
                 </select>
         </div>    
 
-        <span id="blogResults">
+        <span id="tableResults">
              @include('backend.blog.blog_table',['blogs' => $blogs])
         </span>   
         </form>

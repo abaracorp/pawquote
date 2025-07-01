@@ -74,6 +74,7 @@
                         <li><p class="f-18 c-dark f-w-4 freedoka">Phone number </p> <p class="f-18 c-dark f-w-4 freedoka">(+91) 12345-89745</p></li> 
                         <li><p class="f-18 c-dark f-w-4 freedoka">Submit Date </p> <p class="f-18 c-dark f-w-4 freedoka">10-june-2025</p></li> 
                     </ul>
+                    
                     <ul class="pet-detail">
                         <h3 class="f-22 c-dark f-w-5 freedoka">Pet details</h3>
                         <li><p class="f-18 c-dark f-w-4 freedoka">Pet </p> <p class="f-18 c-dark f-w-4 freedoka">Dog</p></li>

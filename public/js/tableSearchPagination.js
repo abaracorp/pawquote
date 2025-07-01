@@ -24,9 +24,10 @@ document.addEventListener('change', function (e) {
 
 
 let timer;
-const searchInput = document.getElementById('blogSearchInput');
-const resultContainer = document.getElementById('blogResults');
-const countContainer = document.getElementById('blogStatusCounts');
+const searchInput = document.getElementById('moduleSearchInput');
+const url = searchInput.getAttribute('data-url');
+const resultContainer = document.getElementById('tableResults');
+const countContainer = document.getElementById('statusCounts');
 
 searchInput.addEventListener('keyup', function () {
     clearTimeout(timer);
@@ -34,7 +35,7 @@ searchInput.addEventListener('keyup', function () {
     timer = setTimeout(() => {
         const query = this.value.trim();
 
-        fetch(`${baseUrl}/admin/search-blog?search=${encodeURIComponent(query)}`, {
+        fetch(`${baseUrl}/admin/${url}?search=${encodeURIComponent(query)}`, {
             headers: {
                 'X-CSRF-TOKEN': csrfToken,
                 'X-Requested-With': 'XMLHttpRequest'

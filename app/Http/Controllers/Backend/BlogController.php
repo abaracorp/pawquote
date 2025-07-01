@@ -142,7 +142,7 @@ class BlogController extends Controller
         ];
 
         
-        $countFilterPage = view('components.backend.blog-status-filter', compact('count'))->render();
+        $countFilterPage = view('components.backend.status-filter', compact('count'))->render();
 
         $tableData = view('backend.blog.blog_table', compact('blogs'))->render();
 

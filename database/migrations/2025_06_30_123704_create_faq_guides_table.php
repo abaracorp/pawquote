@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('faq_quides', function (Blueprint $table) {
+        Schema::create('faq_guides', function (Blueprint $table) {
             $table->id();
             $table->string('question_text');
             $table->longText('content');
@@ -26,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('faq_quides');
+        Schema::dropIfExists('faq_guides');
     }
 };

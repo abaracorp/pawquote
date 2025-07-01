@@ -4,7 +4,7 @@ namespace App\View\Components\Backend;
 
 use Illuminate\View\Component;
 
-class BlogStatusFilter extends Component
+class StatusFilter extends Component
 {
     public $count;
 
@@ -15,7 +15,7 @@ class BlogStatusFilter extends Component
 
     public function render()
     {
-        return view('components.backend.blog-status-filter');
+        return view('components.backend.status-filter');
     }
 }
 

@@ -2,127 +2,104 @@
 
 namespace App\Services;
 
-use App\Models\Blog;
-use Illuminate\Support\Str;
+use App\Models\FaqGuide;
 use Illuminate\Support\Facades\DB;
 
-class BlogService
+class FaqGuideService
 {
     
 
-    public function getTypeOfModel (){
-        return "type";
-    }
-
-
-    public function store(array $data): Blog
+    public function store(array $data , int $type): FaqGuide
     {
 
-        return DB::transaction(function () use ($data) {
+        return DB::transaction(function () use ($data,$type) {
 
-            $blog = Blog::create([
-                'title'   => $data['title'],
-                'slug'    => $data['slug'],
-                'status'  => $data['status'] ?? 0,
-                'summary' => $data['summary'] ?? null,
-                'content' => $data['content'],
+            $faqGuide = FaqGuide::create([
+                'question_text'   => $data['question_text'],
+                'status'          => $data['status'] ?? 0,
+                'content'         => $data['content'],  
+                'type'            => $type,  
             ]);
 
-
-            if (!empty($data['image']) && $data['image']) {
-                $this->mediaService->uploadImage($blog, $data['image'], 'blogs');
-            }
-
-            return $blog;
+            return $faqGuide;
         });
     }
 
 
-    public function update(Blog $blog, array $data): Blog
+
+
+    public function update(FaqGuide $faqGuide, array $data): FaqGuide
     {
-        $blog->title = $data['title'];
-        $blog->slug =  $data['slug'];
-        $blog->status = $data['status'] ?? 0;
-        $blog->summary = $data['summary'] ?? null;
-        $blog->content = $data['content'];
-        $blog->save();
+        $faqGuide->question_text = $data['question_text']; 
+        $faqGuide->status = $data['status'] ?? 0;  
+        $faqGuide->content = $data['content'];
+        $faqGuide->save();
 
-        if (!empty($data['image'])) {
-
-            $this->mediaService->deleteMediaById($blog, $blog->id);
-
-            $this->mediaService->uploadImage($blog, $data['image'], 'blogs');
-        }
-
-        return $blog;
+       
+        return $faqGuide;
     }
 
 
-    public function delete(Blog $blog): void
+    public function delete(FaqGuide $faqGuide): void
     {
-        DB::transaction(function () use ($blog) {
-            $this->mediaService->deleteMediaById($blog, $blog->id);
-            $blog->delete();
+        DB::transaction(function () use ($faqGuide) {
+            $faqGuide->delete();
         });
     }
 
-    public function deleteMultipleBlogs(array $ids): void
-
+        public function deleteMultipleFaqGuide(array $ids): void
     {
         DB::transaction(function () use ($ids) {
-            $blogs = Blog::whereIn('id', $ids)->get();
-
-            foreach ($blogs as $blog) {
-                $this->mediaService->deleteMediaById($blog, $blog->id);
-                $blog->delete();
-            }
+            FaqGuide::whereIn('id', $ids)->delete();
         });
     }
+
 
         public function updateStatusMultiple(array $ids, int $status): void
     {
         DB::transaction(function () use ($ids, $status) {
-            Blog::whereIn('id', $ids)->update(['status' => $status]);
+            FaqGuide::whereIn('id', $ids)->update(['status' => $status]);
         });
     }
 
 
-    public function getAll(int $perPage = 10)
+    public function getAll(int $perPage = 10 , int $type)
     {
-        return Blog::latest()->paginate($perPage);
+        return FaqGuide::latest()->ofType($type)->paginate($perPage);
     }
 
-    public function getCountOfBlog($type){
+    public function getCountOfBlog($status,$type){
 
-        return Blog::where('status',$type)->count();
+        return FaqGuide::where('status',$status)->ofType($type)->count();
 
     }
 
-    public function getBlogCountsByStatus(array $statuses): array
+    public function getBlogCountsByStatus(array $statuses , $type): array
     {
         $counts = [];
 
         foreach ($statuses as $key => $status) {
-            $counts[$key] = $this->getCountOfBlog($status);
+            $counts[$key] = $this->getCountOfBlog($status,$type);
         }
 
-        $counts['all'] = Blog::count();
+        $counts['all'] = FaqGuide::ofType($type)->count();
 
         return $counts;
     }
 
-        public function searchBlogs(?string $search = null, int $perPage = 10)
+        public function searchFaqGuides($type,?string $search = null, int $perPage = 10)
     {
-        return Blog::query()
-            ->when($search, fn($q) => $q->where('title', 'like', "%{$search}%"))
+        return FaqGuide::query()
+            ->ofType($type)
+            ->when($search, fn($q) => $q->where('question_text', 'like', "%{$search}%"))
             ->latest()
             ->paginate($perPage);
     }
 
     
 
-    public function show(Blog $blog): Blog
+    public function show(FaqGuide $faqGuide): FaqGuide
     {
-        return $blog;
+        return $faqGuide;
     }
 }
