@@ -54,7 +54,8 @@ class SettingController extends Controller
 
         if ($request->hasFile('profile_picture')) {
            
-            $this->mediaService->deleteMediaById($user, $user->id);
+            // $this->mediaService->deleteMediaById($user, $user->id);
+            $user->clearMediaCollection('profile_image');
             $this->mediaService->uploadImage($user, $request->file('profile_picture'), 'profile_image');
         }
 
