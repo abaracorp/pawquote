@@ -15,13 +15,17 @@
         @yield('content')
 
        
+        {{-- @dump(Route::currentRouteName()) --}}
+
         <!-- Common Footer -->
-        @if (!Route::is('quoteSteps'))
+        @if (!Route::is('frontend.quoteSteps'))
             <x-frontend.layouts.footer />
         @endif
     
 
     @include('frontend.scripts')
+
+    @stack('scripts')
 </body>
 </html>
 

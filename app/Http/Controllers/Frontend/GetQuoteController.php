@@ -33,7 +33,9 @@ class GetQuoteController extends Controller
 
         $zipCode = session()->get('zip_code');
 
-        return view('frontend.quote_steps',compact('zipCode'));
+        $dogBreed = config('constants.dog_breeds');
+
+        return view('frontend.quote_steps',compact('zipCode','dogBreed'));
         
     }
 
