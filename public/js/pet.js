@@ -106,6 +106,9 @@ function showOrHideError(isValid, errorEl) {
 
 
 function handleStepData(fieldName, selector, errorId) {
+
+    // event.preventDefault();
+
     const input = document.querySelector(selector);
     const errorEl = errorId ? document.getElementById(errorId) : null;
 
@@ -114,6 +117,9 @@ function handleStepData(fieldName, selector, errorId) {
     const isValid = validateField(input, selector);
 
     if (isValid) {
+
+        console.log("input.value :",input.value,"selector :",selector);
+        
         formData[fieldName] = input.value;
     } else {
         delete formData[fieldName];
@@ -157,6 +163,15 @@ function validateAndNextStep(e, fields = []) {
     }
 }
 
+function updateDataOfSelect2(input) {
+
+    console.log(input.id, 'input');
+
+    const el = document.querySelector(`#${input.id}`); 
+
+    formData['selectPetBreed'] = el.value;
+    
+}
 
 
 function updatePetDataHTML() {
@@ -173,6 +188,8 @@ function updatePetDataHTML() {
     }
 
     togglePetIcon(getPetType(formData.petType))
+    
+
 
 }
 
@@ -185,7 +202,49 @@ function togglePetIcon(type) {
             icon.style.display = petType === type ? 'block' : 'none';
         }
     });
+
+    select2Options(type)
+    
 }
+
+let allSelectOptions = [];
+
+$(document).ready(function () {
+    const $select = $('#selectPetBreed');
+
+    
+    $select.select2({
+        placeholder: 'Select a breed',
+        allowClear: true
+    });
+
+    allSelectOptions = $select.find('option').clone();
+
+    select2Options('dog');
+});
+
+function select2Options(petType) {
+    const $select = $('#selectPetBreed');
+
+    const filteredOptions = allSelectOptions.filter(function () {
+        return $(this).data('type') === petType || $(this).val() === "";
+    });
+
+    
+    $select.empty().append(filteredOptions.clone());
+
+    
+    $select.select2({
+        placeholder: 'Select a breed',
+        allowClear: true
+    });
+
+    
+    $select.val(null).trigger('change');
+}
+
+
+        
 
 
 function handleIsHavePet(checkbox) {

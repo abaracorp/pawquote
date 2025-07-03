@@ -32,7 +32,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="card">
-                            <span class="pet-image"><img src="/Admin/images/pets-best.svg" alt=""></span>
+                            <span class="pet-image"><img src="{{asset('/Admin/images/pets-best.svg')}}" alt=""></span>
                             <div class="rating">
                                 <span class="stars">
                                     <i class="fa-solid fa-star"></i>
@@ -68,7 +68,7 @@
                     </div>
                     <div class="col-lg-12 ">
                         <div class="card">
-                            <span class="pet-image"><img src="/Admin/images/lemonade2.svg" alt=""></span>
+                            <span class="pet-image"><img src="{{asset('/Admin/images/lemonade2.svg')}}" alt=""></span>
                             <div class="rating">
                                 <span class="stars">
                                     <i class="fa-solid fa-star"></i>
@@ -104,7 +104,7 @@
                     </div>
                     <div class="col-lg-12">
                         <div class="card">
-                            <span class="pet-image"><img src="images/pawprotect.png" alt=""></span>
+                            <span class="pet-image"><img src="{{asset('images/pawprotect.png')}}" alt=""></span>
                             <div class="rating">
                                 <span class="stars">
                                     <i class="fa-solid fa-star"></i>
@@ -140,7 +140,7 @@
                     </div>
                     <div class="col-lg-12">
                         <div class="card mb-0">
-                            <span class="pet-image"><img src="/Admin/images/embrace.svg" alt=""></span>
+                            <span class="pet-image"><img src="{{asset('/Admin/images/embrace.svg')}}" alt=""></span>
                             <div class="rating">
                                 <span class="stars">
                                     <i class="fa-solid fa-star"></i>

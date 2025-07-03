@@ -9,6 +9,18 @@ class GetQuotes extends Model
 {
     protected $guarded = [];
 
+
+    public function getPetTextAttribute()
+    {
+        return $this->pet == 0 ? 'Dog' : 'Cat';
+    }
+
+    public function getPetGenderTextAttribute()
+    {
+        return $this->pet_gender == 0 ? 'Male' : 'Female';
+    }
+
+
     protected static function boot()
 {
     parent::boot();

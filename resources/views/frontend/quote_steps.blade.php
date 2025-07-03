@@ -34,7 +34,7 @@
 
                         <div class="tab-pane fade" id="step3">
 
-                           @include('frontend.quote_steps.quote_step3',['dogBreed' => $dogBreed])
+                           @include('frontend.quote_steps.quote_step3',['breeds' => $breeds])
 
                         </div>
 

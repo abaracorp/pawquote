@@ -6,16 +6,12 @@
      </div>
      <form action="">
          <div class="custom-select-wrapper">
-             <select class="custom-select c-dark f-16 f-w-4 freedoka" onclick="handleStepData('selectPetBreed', 'select[name=selectPetBreed]', 'petBreedError')" name="selectPetBreed" id="selectPetBreed">
+             <select class="custom-select c-dark f-16 f-w-4 freedoka" onchange="updateDataOfSelect2(this)"  name="selectPetBreed" id="selectPetBreed">
 
-                {{-- @foreach ( as )
-                     <option class="c-light f-16 f-w-4 freedoka">Rottweiler</option>
-                @endforeach --}}
-                 <option class="c-light f-16 f-w-4 freedoka" value="">Select Breed</option>
-                 <option class="c-light f-16 f-w-4 freedoka" value="1">Doberman Pinscher</option>
-                 <option class="c-light f-16 f-w-4 freedoka" value="2">Boxer</option>
-                 <option class="c-light f-16 f-w-4 freedoka" value="3">Siberian Husky</option>
-                 <option class="c-light f-16 f-w-4 freedoka" value="4">Alaskan Malamute</option>
+                @foreach ($breeds as $breed)
+                     <option value="{{$breed['value']}}" data-type="{{$breed['type']}}" class="c-light f-16 f-w-4 freedoka">{{$breed['text']}}</option>
+                @endforeach
+                 
              </select>
          </div>
             <p id="petBreedError" class="f-14 c-red mt-2" style="display: none;">
@@ -28,7 +24,7 @@
             <x-icons.back />
              Back</button>
              
-         <button onclick="validateAndNextStep(event,[{ selector: 'select[name=selectPetBreed]', errorId: 'petBreedError' }])" class="next f-14 f-w-5 montserrat">Next
+         <button onclick="validateAndNextStep(event,[{ selector: 'select[name=selectPetBreed]', errorId: 'petBreedError' }]); " class="next f-14 f-w-5 montserrat">Next
             <x-icons.next />
          </button>
      </div>
