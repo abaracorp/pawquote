@@ -12,10 +12,10 @@
                      <option class="c-light f-16 f-w-4 freedoka">Rottweiler</option>
                 @endforeach --}}
                  <option class="c-light f-16 f-w-4 freedoka" value="">Select Breed</option>
-                 <option class="c-light f-16 f-w-4 freedoka" value="Doberman Pinscher">Doberman Pinscher</option>
-                 <option class="c-light f-16 f-w-4 freedoka" value="Boxer">Boxer</option>
-                 <option class="c-light f-16 f-w-4 freedoka" value="Siberian Husky">Siberian Husky</option>
-                 <option class="c-light f-16 f-w-4 freedoka" value="Alaskan Malamute">Alaskan Malamute</option>
+                 <option class="c-light f-16 f-w-4 freedoka" value="1">Doberman Pinscher</option>
+                 <option class="c-light f-16 f-w-4 freedoka" value="2">Boxer</option>
+                 <option class="c-light f-16 f-w-4 freedoka" value="3">Siberian Husky</option>
+                 <option class="c-light f-16 f-w-4 freedoka" value="4">Alaskan Malamute</option>
              </select>
          </div>
             <p id="petBreedError" class="f-14 c-red mt-2" style="display: none;">

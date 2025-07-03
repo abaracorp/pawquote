@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('get_quotes', function (Blueprint $table) {
             $table->id();
+            $table->uuid();
             $table->integer('zip_code');
             $table->string('email_address')->nullable();
             $table->string('phone_number')->nullable();

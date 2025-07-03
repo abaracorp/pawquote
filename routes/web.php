@@ -156,6 +156,10 @@ Route::prefix('admin')
         ->group(function(){
             Route::post('quote-zipcode', 'quoteZipcode')->name('quoteZipcode');           
             Route::get('quote', 'quoteSteps')->name('quoteSteps')->middleware('check.zip');
+            Route::post('save-quote-steps-data', 'saveQuoteSteps')->name('saveQuoteSteps');
+
+            Route::get('quote-allresults/{uuid}', 'quoteAllResults')->name('quoteAllResults');
+           
         });
 
 

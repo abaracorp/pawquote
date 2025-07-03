@@ -39,5 +39,22 @@ class GetQuoteController extends Controller
         
     }
 
+    public function saveQuoteSteps(Request $request){
+
+      $data = $this->getQuoteService->saveStepsData($request->all());
+
+      return response()->json([
+        'success' => true,
+        'uuid' => $data->uuid, 
+    ]);
+
+    }
+
+    public function quoteAllResults($uuid){
+
+      dd($this->getQuoteService->getPetStepsData($uuid));
+
+    }
+
 
 }

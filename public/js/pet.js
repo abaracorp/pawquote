@@ -12,8 +12,12 @@ function getPetType(val) {
 
 
 const formData = {
+    petName:'',
     petType: 0,
+    isHavePet: 0,
     radioCatGender: 0,
+    petAgeYear:0,
+    petAgeMonth:3,
 };
 
 
@@ -75,6 +79,19 @@ function validateField(fieldEl, selector) {
         }
         
     }
+
+        if (selector.includes('phone')) {
+        if (value.trim() === '') {
+            return { isValid: true }; 
+        }
+
+        const usPhoneRegex = /^(?:\+1\s?)?(?:\(?\d{3}\)?[\s.-]?)?\d{3}[\s.-]?\d{4}$/;
+
+        return usPhoneRegex.test(value.trim())
+            ? { isValid: true }
+            : { isValid: false, message: 'Please enter a valid phone number.' };
+    }
+
 
 
     return { isValid: true };
@@ -173,15 +190,17 @@ function togglePetIcon(type) {
 
 function handleIsHavePet(checkbox) {
     const input = document.getElementById('petName');
-    const petName = document.getElementById('petName');
+    // const petName = document.getElementById('petName');
 
     if (checkbox.checked) {
         input.setAttribute('readonly', true);
-        petName.value = "Your Pet Name"
+        input.value = "Your Pet Name"
+        formData['isHavePet'] = 1;
 
     } else {
         input.removeAttribute('readonly');
-        petName.value = "";
+        input.value = "";
+        delete formData['isHavePet'];
     }
 }
 
@@ -216,15 +235,16 @@ document.querySelectorAll('.pet-card4').forEach(card => {
 
 
 let currentStep = 1;
-const totalSteps = 6;
+const initialSteps = 6;
+const totalSteps = 7;
 
 function showStep(step) {
     document.querySelectorAll('.tab-pane').forEach(tab => tab.classList.remove('show', 'active'));
     document.querySelector(`#step${step}`).classList.add('show', 'active');
 
     document.getElementById('stepNumber').textContent = step;
-    document.getElementById('stepPercent').textContent = Math.round((step / totalSteps) * 100);
-    document.querySelector('.progress-bar').style.width = `${Math.round((step / totalSteps) * 100)}%`;
+    document.getElementById('stepPercent').textContent = Math.round((step / initialSteps) * 100);
+    document.querySelector('.progress-bar').style.width = `${Math.round((step / initialSteps) * 100)}%`;
 
     // Hide/show navigation buttons
     document.querySelector('.back').style.display = (step === 1) ? 'none' : 'inline-flex';
@@ -233,13 +253,54 @@ function showStep(step) {
 
     const header = document.querySelector('.heading');
     header.style.display = (step === 1) ? 'block' : 'none';
+
+    
 }
 
 function changeStep(direction) {
     currentStep += direction;
     if (currentStep < 1) currentStep = 1;
     if (currentStep > totalSteps) currentStep = totalSteps;
-    showStep(currentStep);
+
+    console.log("currentStep :",currentStep);
+
+    if (currentStep === 7) {
+        sendStepSevenAjax();
+    }else{
+        showStep(currentStep);
+    }
+    
+}
+
+
+
+async function sendStepSevenAjax() {
+
+
+    try {
+        const res = await fetch(`${baseUrl}/save-quote-steps-data`, {
+            method: 'POST',
+            headers: {
+                // 'Content-Type': 'application/json',
+                'Accept': 'application/json',
+                'X-CSRF-TOKEN': csrfToken,
+                'X-Requested-With': 'XMLHttpRequest'
+            },
+            // body: JSON.stringify({ formData })
+            body: new URLSearchParams(formData)
+        });
+
+        const data = await res.json();
+
+         if (data.success && data.uuid) {
+            window.location.href = `${baseUrl}/quote-allresults/${data.uuid}`;
+        } else {
+            throw new Error('UUID missing in response');
+        }
+
+    } catch (err) {
+       console.error('Error saving quote:', err);
+    }
 }
 
 

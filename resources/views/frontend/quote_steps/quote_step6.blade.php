@@ -21,7 +21,7 @@
                 send you important updates via call or SMS.</p>
         </div>
         <p id="phoneError" class="f-14 c-red mt-2" style="display: none;">
-        Please enter a valid email address so we can reach you.
+        Please enter a valid phone number .
         </p>
     </form>
     <div class="bottom-buttons d-flex align-items-center justify-content-between mt-5">
