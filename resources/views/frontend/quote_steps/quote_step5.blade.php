@@ -27,7 +27,7 @@
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-6 ">
                     <div class="custom-select-wrapper mb-0"> 
-                        <select name="petAgeMonth" onchange="handleStepData('petAgeMonth', 'select[name=petAgeMonth]', 'petAgeError')" id="petAgeYear" class="c-dark f-16 f-w-4 freedoka">
+                        <select name="petAgeMonth" onchange="handleStepData('petAgeMonth', 'select[name=petAgeMonth]', 'petAgeError')" id="petAgeMonth" class="c-dark f-16 f-w-4 freedoka">
                             <option value="0"  class="c-light f-16 f-w-4 freedoka">0 Months
                             </option>
                             <option value="1"  class="c-light f-16 f-w-4 freedoka">1 Months

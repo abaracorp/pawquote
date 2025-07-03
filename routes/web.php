@@ -154,8 +154,7 @@ Route::prefix('admin')
 
         Route::controller(GetQuoteController::class)
         ->group(function(){
-            Route::post('quote-zipcode', 'quoteZipcode')->name('quoteZipcode');
-            
+            Route::post('quote-zipcode', 'quoteZipcode')->name('quoteZipcode');           
             Route::get('quote', 'quoteSteps')->name('quoteSteps')->middleware('check.zip');
         });
 
