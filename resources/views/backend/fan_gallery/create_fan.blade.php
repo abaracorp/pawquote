@@ -7,24 +7,24 @@
         <div class="page-title">
             <h1 class="f-32 c-dark f-w-5 freedoka">Add New Story</h1>
         </div>
-        <form action="http://127.0.0.1:8000/admin/save-blog" method="POST" enctype="multipart/form-data">
-            <input type="hidden" name="_token" value="35Kh9hGcypwvFYtXNirvfB08D4WljmZ6ygb5HhEc" autocomplete="off">
+        <form action="{{route('admin.saveFanData')}}" method="POST" enctype="multipart/form-data">
+            @csrf
             <div class="">
                 <div class="row">
                     <div class="col-lg-6">
                         <div class="form-group">
                             <label for="post-title"> Post Title: </label>
-                            <input type="text" class="" name="post-title" id="post-title" required=""
+                            <input type="text" class="" name="title" id="post-title" required=""
                                 placeholder="Enter title..." value="">
                         </div>
                         <div class="form-group">
                             <label for="Description"> Description: </label>
-                            <textarea type="text" class="" name="Description" id="Description"
+                            <textarea type="text" class="" name="content" id="Content"
                                 placeholder="Enter Description...." value=""></textarea>
                         </div>
                         <div class="form-group">
                             <label for="Label"> Label: </label>
-                            <input type="text" class="" name="Label" id="Label" required="" placeholder="Enter label..."
+                            <input type="text" class="" name="label" id="Label" required="" placeholder="Enter label..."
                                 value="">
                         </div>
                         <div class="form-group choose-image">
@@ -52,10 +52,19 @@
                 </div>
             </div>
             <div class="bottom-buttons">
-                <button class="Clear f-18 c-orange f-w-5 freedoka b-orange">Clear</button>
-                <button class="Save f-18 c-light f-w-5 freedoka b-light" type="submit">Save</button>
+                <button class="Save f-18 c-orange f-w-5 freedoka b-orange " type="submit">Save</button>
+                <button class="Clear f-18 c-light f-w-5 freedoka b-light">Clear</button>
             </div>
         </form>
     </section>
 </main>
+
+
+@push('scripts')
+
+<script src="{{asset('js/ckEditor.js')}}"></script>
+<script src="{{ asset('js/gallery.js') }}"></script>
+    
+@endpush
+
 @endsection

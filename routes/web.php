@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Backend\AffilateController;
 use App\Http\Controllers\Backend\BlogController;
+use App\Http\Controllers\Backend\FanStoriesController;
 use App\Http\Controllers\Backend\FaqGuideController;
 use App\Http\Controllers\Backend\GalleryController;
 use App\Http\Controllers\Backend\SettingController;
@@ -110,17 +111,7 @@ Route::prefix('admin')
         });
         
         
-        Route::controller(FaqGuideController::class)
-        ->group(function(){
-            Route::get('create-new-{type}', 'createNewFaqGuide')->name('createNewFaqGuide');
-            Route::post('save-{type}', 'saveFaqGuideData')->name('saveFaqGuideData');
-            Route::get('edit-{type}/{faqguide}', 'editFaqGuide')->name('editFaqGuide');
-            Route::put('update-{type}/{faqguide}', 'updateFaqGuide')->name('updateFaqGuide');
-            Route::get('delete-{type}/{faqguide}', 'deleteFaqGuide')->name('deleteFaqGuide');
-            Route::get('search-{type}/{faqguide?}', 'searchFaqGuide')->name('searchFaqGuide');          
-            Route::get('listing/{type}', 'getFaqGuideListing')->name('faqGuide');
-            Route::post('bulk-action', 'handleFaqGuideBulkAction')->name('faqGuideBulkAction');
-        });
+        
 
         Route::controller(SettingController::class)
         ->group(function(){
@@ -136,7 +127,38 @@ Route::prefix('admin')
            
         });
 
-      
+        // Route::get('fan', function () {
+        //     return view('backend.fan_gallery.fan_listing');
+        // })->name('fan');
+
+        // Route::get('create-fan', function () {
+        //      return view('backend.fan_gallery.create_fan');
+        // })->name('createFan');
+
+        Route::controller(FanStoriesController::class)
+        ->group(function(){
+            Route::get('fan', 'getFanListing')->name('fan');
+            Route::get('create-fan-story', 'createFan')->name('createFan');
+            Route::post('save-fan-story', 'saveFanData')->name('saveFanData');
+            Route::get('edit-fan/{fan}', 'editFan')->name('editFan');
+            Route::put('update-fan/{fan}', 'updateFan')->name('updateFan');
+            Route::get('delete-fan/{fan}', 'deleteFan')->name('deleteFan');
+            Route::get('search-fan/{fan?}', 'searchFan')->name('searchFan');
+            Route::post('fan-bulk-action', 'handleFanBulkAction')->name('fanBulkAction');
+            
+        });
+
+        Route::controller(FaqGuideController::class)
+            ->group(function(){
+                Route::get('create-new-{type}', 'createNewFaqGuide')->name('createNewFaqGuide');
+                Route::post('save-{type}', 'saveFaqGuideData')->name('saveFaqGuideData');
+                Route::get('edit-{type}/{faqguide}', 'editFaqGuide')->name('editFaqGuide');
+                Route::put('update-{type}/{faqguide}', 'updateFaqGuide')->name('updateFaqGuide');
+                Route::get('delete-{type}/{faqguide}', 'deleteFaqGuide')->name('deleteFaqGuide');
+                Route::get('search-{type}/{faqguide?}', 'searchFaqGuide')->name('searchFaqGuide');          
+                Route::get('listing/{type}', 'getFaqGuideListing')->name('faqGuide');
+                Route::post('bulk-action', 'handleFaqGuideBulkAction')->name('faqGuideBulkAction');
+            });
         
 
         //setting 
@@ -153,13 +175,13 @@ Route::prefix('admin')
             return view('backend.analytics');
         })->name('analytics');
 
-        Route::get('fan', function () {
-            return view('backend.fan_gallery.fan_listing');
-        })->name('fan');
+        // Route::get('fan', function () {
+        //     return view('backend.fan_gallery.fan_listing');
+        // })->name('fan');
 
-        Route::get('create-fan', function () {
-             return view('backend.fan_gallery.create_fan');
-        })->name('createFan');
+        // Route::get('create-fan', function () {
+        //      return view('backend.fan_gallery.create_fan');
+        // })->name('createFan');
 
         //Affilate
         // Route::get('affilate', function () {

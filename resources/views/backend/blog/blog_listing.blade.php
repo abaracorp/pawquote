@@ -28,6 +28,7 @@
                 </div>
             </div>
         </div>
+        <form id="bulkActionForm" action="{{route('admin.blogBulkAction')}}" method="POST">
          <div class="select-wrapper b-orange br-5">
                 @csrf
                 <select name="bulk_action" id="bulkActionSelect" class="c-dark f-16 f-w-5 freedoka">
@@ -37,7 +38,6 @@
                     <option value="draft">Change to Draft</option>
                 </select>
             </div>
-        <form id="bulkActionForm" action="{{route('admin.blogBulkAction')}}" method="POST">
             <span id="tableResults">
                 @include('backend.blog.blog_table',['blogs' => $blogs])
             </span>

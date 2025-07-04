@@ -37,6 +37,10 @@ class MediaService
         
         $media = $model->media()->where('model_id',$mediaId)->first();
 
+        if (!$media) {
+            return false; // media not found
+        }
+
         $relativePath = $media->getPathRelativeToRoot();
 
         if (Storage::disk($media->disk)->exists($relativePath)) {
