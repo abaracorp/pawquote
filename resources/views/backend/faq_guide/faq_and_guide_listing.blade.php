@@ -59,9 +59,7 @@
                         fill="currentColor" />
                 </svg>Add New {{$text}}</a>
         </div>
-
-        <form id="bulkActionForm" action="{{route('admin.faqGuideBulkAction')}}" method="POST">
-        <div class="select-wrapper b-orange br-5">
+ <div class="select-wrapper b-orange br-5">
                 @csrf
                 <select name="bulk_action" id="bulkActionSelect" class="c-dark f-16 f-w-5 freedoka">
                     <option value="">Bulk Action</option>
@@ -70,7 +68,7 @@
                     <option value="draft">Change to Draft</option>
                 </select>
         </div>
-
+        <form id="bulkActionForm" action="{{route('admin.faqGuideBulkAction')}}" method="POST">
          <span id="tableResults">
              @include('backend.faq_guide.faq_guide_table',['faqGuide' => $faqGuide])
         </span>  

@@ -157,7 +157,7 @@
                 </div>
             </div>
         </section>
-        <section class="leave-reply">
+        <!-- <section class="leave-reply">
             <div class="container">
                 <div class="inner b-blue br-40 bg-l-blue">
                     <div class="heading">
@@ -191,7 +191,7 @@
                     </form>
                 </div>
             </div>
-        </section>
+        </section> -->
           
     </main>
 

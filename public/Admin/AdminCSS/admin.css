@@ -171,6 +171,7 @@ tbody, td, tfoot, th, thead, tr{vertical-align: middle;}
 .custom-pagination .page-item.active .page-link { background-color: #00A5C3; border-color: #00A5C3; color: #ffffff; font-weight: 600; }
 .custom-pagination .page-item.disabled .page-link { pointer-events: none; opacity: 0.5; }
 .pagination .page-link:focus {box-shadow: none;outline: none;}
+.custom-pagination ul.pagination{display: flex;gap:5px;}
 .Rightside form label{font-size: 18px; font-weight: 400;font-family: "Fredoka", sans-serif;}
 .Rightside form input{border:1px solid #FEA145;width: 100%;padding:8px 10px;border-radius:5px;}
 .Rightside form textarea{border:1px solid #FEA145;width: 100%;padding:8px 10px;border-radius:5px;resize: none;height: 100px;}
@@ -189,8 +190,8 @@ tbody, td, tfoot, th, thead, tr{vertical-align: middle;}
 /* label.radio-container, label.check-container{margin:0;} */
 .Rightside .bottom-buttons{display: flex;align-items: center;gap:16px;}
 .Rightside .bottom-buttons button{padding:7px 10px;background-color: transparent;border-radius: 5px;}
-.Rightside .choose-image .image-container{display: flex;align-items: center;gap:20px;flex-wrap: wrap;margin-top:5px;} 
-.Rightside .choose-image .image-container li{position: relative;display: flex;align-items: center;flex-direction: column;}
+.Rightside .choose-image .image-container{display: flex;align-items: flex-start;gap:20px;flex-wrap: wrap;margin-top:5px;} 
+.Rightside .choose-image .image-container li{position: relative;display: flex;align-items: center;flex-direction: column;overflow: hidden;max-width: 120px;}
 .Rightside .choose-image .image-container li a{position: absolute;top:0; right: 0; background-color: #002133;border-radius: 50px;display: flex;align-items: center; justify-content: center; width: 20px;height: 20px;padding: 2px;overflow:hidden;color:#ffffff;}
 .Rightside .choose-image .image-container .image-card{width: 120px;height:80px;display: inline-block;overflow: hidden;border-radius: 5px ;border:1px solid #FEA145;}
 .Rightside .choose-image .image-container .image-card img{width: 100%;height: 100%;object-fit: cover;}
@@ -253,3 +254,6 @@ tbody, td, tfoot, th, thead, tr{vertical-align: middle;}
 .gallery-images .card-container .card .overlay a { color: white; margin: 0 10px; font-size: 20px; text-decoration: none; }
 .gallery-images .card-container .card .overlay a:hover { color: #FEA145; }
 
+/* Add new gallery  */
+.add-new-gallery form .upload-container label {width: 50%;}
+.add-new-gallery form .upload-container .upload-box{height: 100px;display: flex;align-items: center;justify-content: center;}

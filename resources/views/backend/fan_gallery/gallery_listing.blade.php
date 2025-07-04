@@ -5,8 +5,8 @@
     <x-alert />
     <section class=" inner">
         <div class="toggle-container">
-            <a href="" class=" f-18 c-dark f-w-5 freedoka">Fan</a>
-            <a href="" class="active f-18 c-dark f-w-5 freedoka">Gallery</a>
+            <a href="{{route('admin.fan')}}" class=" f-18 c-dark f-w-5 freedoka">Fan</a>
+            <a href="{{route('admin.createNewGallery')}}" class="active f-18 c-dark f-w-5 freedoka">Gallery</a>
         </div>
         <div class="d-flex  align-items-center justify-content-between">
             <div class="page-title">

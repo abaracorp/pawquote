@@ -299,7 +299,7 @@ footer .footer-rightside .links ul li a:hover{color:#FEA145; transition: 0.3s ea
 #blog .article .navigation-bar .links a {padding:9px 16px;}
 #blog .article .navigation-bar{position: relative;z-index:1;}
 #blog .article .footprint{position: absolute;z-index:-1;left:0;bottom:0;}
-#blog .article-main{margin-top:50px;}
+/* #blog .article-main{margin-top:50px;} */
 #blog .article-main .card{position: relative;min-height:476px;}
 #blog .article-main .card .card-body{display: flex;flex-direction: column;gap:16px;}
 #blog .article-main .card ul.details{display: flex;align-items:flex-start;gap:10px;flex-direction: column;}
@@ -344,6 +344,8 @@ footer .footer-rightside .links ul li a:hover{color:#FEA145; transition: 0.3s ea
 #fan .how-work .heading{margin-bottom:68px;display: flex;gap:16px;flex-direction: column;}
 #fan .how-work .heading p{max-width: 90%;margin:auto;}
 #fan .how-work .card{min-height:466px;}
+#fan .how-work .bottom-buttons{margin-top:26px;}
+#fan .how-work .bottom-buttons a{padding:7px 20px;}
 #fan .how-work .card .card-title{right:20px;left:auto;}
 #fan .pet-gallery .inner{padding:49px 40px;}
 #fan .pet-gallery .inner .heading{margin-bottom: 68px;}
@@ -353,6 +355,18 @@ footer .footer-rightside .links ul li a:hover{color:#FEA145; transition: 0.3s ea
 #fan .pet-gallery .card-container {position: relative;z-index:1;}
 #fan .pet-gallery .card-container .footprint{position: absolute;bottom:0;z-index:-1;}
 #fan .pet-gallery .card-container .view-all{display: block; margin:40px auto auto;}
+.custom-pagination { display: flex; justify-content: center; gap: 5px;}
+.custom-pagination .page-item { display: inline-block; }
+.custom-pagination .page-link { border: 1px solid #88EDFF; border-radius: 8px; padding: 10px 16px; color: #333; font-size: 16px; font-weight: 500; background-color: #fff; transition: all 0.3s ease; width: 42px; height: 42px; display: flex; align-items: center; justify-content: center; }
+.custom-pagination .page-link.no-border{border:none;background-color: #CCF7FF;}
+.custom-pagination .page-item.active .page-link { background-color: #00A5C3; border-color: #00A5C3; color: #ffffff; font-weight: 600; }
+.custom-pagination .page-item.disabled .page-link { pointer-events: none; opacity: 0.5; }
+.pagination .page-link:focus {box-shadow: none;outline: none;}
+.custom-pagination ul.pagination{display: flex;gap:5px;}
+
+
+
+
 /* Fan page CSS Close */
 
 /* FAQ's page CSS Start */
@@ -566,6 +580,10 @@ tbody, td, tfoot, th, thead, tr{border-color:#88EDFF;}
    
 
 /* Payment Plans page CSS Close */
+
+/* View Success Story page CSS Start */
+ #view-success-story .article-image {width: 100%;height: 497px;display: inline-block;overflow: hidden;border-radius: 20px;margin-block: 30px;}
+ #view-success-story .article-image img{width: 100%;height: 100%;object-fit: cover;}
 
 /*============================================Responsive CSS Start  =================================================*/
 @media screen and (max-width:1280px)

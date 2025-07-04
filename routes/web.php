@@ -61,6 +61,10 @@ Route::get('/payment-plan', function () {
     return view('frontend/payment_plan');
 })->name('paymentPlan');
 
+Route::get('/view-success-story', function () {
+    return view('frontend/view_success_story');
+})->name('successStory');
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
@@ -140,6 +144,14 @@ Route::prefix('admin')
         Route::get('analytics', function () {
             return view('backend.analytics');
         })->name('analytics');
+
+        Route::get('fan', function () {
+            return view('backend.fan_gallery.fan_listing');
+        })->name('fan');
+
+        Route::get('create-fan', function () {
+             return view('backend.fan_gallery.create_fan');
+        })->name('createFan');
 
         //Affilate
         Route::get('affilate', function () {
