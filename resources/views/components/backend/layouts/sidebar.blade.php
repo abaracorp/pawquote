@@ -1,5 +1,5 @@
 <aside class="sidebar">
-    <a href="{{ route('admin.dashboard') }}" class="logo"><img src="../images/login-logo.png" alt=""></a>
+    <a href="{{ route('admin.dashboard') }}" class="logo"><img src="{{asset('images/login-logo.png')}}" alt=""></a>
     <ul>
         <li class="{{ isActiveRoute(['admin.dashboard']) }}"><a href="{{ route('admin.dashboard') }}" class=" f-18 c-light f-w-5 freedoka"><svg width="24"
                     height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
