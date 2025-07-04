@@ -20,7 +20,7 @@ return new class extends Migration
             $table->tinyInteger('pet')->default(0)->comment('0 => for dog , 1 => for cat');
             $table->string('pet_name')->nullable();
             $table->tinyInteger('is_have_pet_yet')->default(0)->comment('0 => for yes , 1 => for no');
-            $table->tinyInteger('pet_breed')->nullable();
+            $table->string('pet_breed')->nullable();
             $table->tinyInteger('pet_gender')->default(0)->comment('0 => for male , 1 => for female');
             $table->tinyInteger('pet_age_years')->nullable();
             $table->tinyInteger('pet_age_months')->nullable();

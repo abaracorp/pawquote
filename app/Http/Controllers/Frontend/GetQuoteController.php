@@ -33,9 +33,11 @@ class GetQuoteController extends Controller
 
         $zipCode = session()->get('zip_code');
 
-        $dogBreed = config('constants.dog_breeds');
 
-        return view('frontend.quote_steps',compact('zipCode','dogBreed'));
+        $path = public_path('json/breeds-data.json');
+        $breeds = json_decode(file_get_contents($path), true);
+
+        return view('frontend.quote_steps',compact('zipCode','breeds'));
         
     }
 
@@ -52,7 +54,9 @@ class GetQuoteController extends Controller
 
     public function quoteAllResults($uuid){
 
-      dd($this->getQuoteService->getPetStepsData($uuid));
+    //   dd($this->getQuoteService->getPetStepsData($uuid));
+
+      return view('frontend/pet_protection');
 
     }
 

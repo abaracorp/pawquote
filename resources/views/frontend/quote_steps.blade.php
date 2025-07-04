@@ -34,7 +34,7 @@
 
                         <div class="tab-pane fade" id="step3">
 
-                           @include('frontend.quote_steps.quote_step3',['dogBreed' => $dogBreed])
+                           @include('frontend.quote_steps.quote_step3',['breeds' => $breeds])
 
                         </div>
 
@@ -65,6 +65,29 @@
     @push('scripts')
 
     <script src="{{asset('js/pet.js')}}"></script>
+
+    <script>
+    // Prevent going back to /quote by replacing history
+    history.replaceState(null, '', location.href); // current page becomes "first"
+
+    // Push a dummy state so user can "go back"
+    history.pushState({ isRedirect: true }, '');
+
+    console.log('eventevent');
+
+    // Listen for back button
+    window.addEventListener('popstate', function (event) {
+
+        console.log(event,'eventevent');
+        
+
+        if (event.state && event.state.isRedirect) {
+            // User pressed back → redirect to home
+            window.location.href = '/';
+        }
+    });
+</script>
+
         
     @endpush
 

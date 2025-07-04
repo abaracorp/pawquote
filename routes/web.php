@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Backend\AffilateController;
 use App\Http\Controllers\Backend\BlogController;
 use App\Http\Controllers\Backend\FaqGuideController;
 use App\Http\Controllers\Backend\GalleryController;
@@ -40,9 +41,9 @@ Route::get('/get-quote', function () {
 
 
 
-Route::get('/results', function () {
-    return view('frontend/pet_protection');
-})->name('results');
+// Route::get('/results', function () {
+//     return view('frontend/pet_protection');
+// })->name('results');
 
 Route::get('/faq', function () {
     return view('frontend/faq');
@@ -128,6 +129,13 @@ Route::prefix('admin')
            
         });
 
+        Route::controller(AffilateController::class)
+        ->group(function(){
+            Route::get('affilate', 'getAffilate')->name('affilate');
+            // Route::put('updateUser/{user}', 'updateSetting')->name('updateSetting');
+           
+        });
+
       
         
 
@@ -154,9 +162,9 @@ Route::prefix('admin')
         })->name('createFan');
 
         //Affilate
-        Route::get('affilate', function () {
-            return view('backend.affilate');
-        })->name('affilate');
+        // Route::get('affilate', function () {
+        //     return view('backend.affilate');
+        // })->name('affilate');
         
     });
 

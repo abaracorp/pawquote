@@ -382,8 +382,12 @@
     </main>
 
     
+    
+    @push('scripts')
     <script src="{{asset('js/quoteZipcode.js')}}"></script>
-
-
+    
+    
+        
+    @endpush
     
 @endsection

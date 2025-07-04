@@ -8,6 +8,9 @@
     <script src="https://owlcarousel2.github.io/OwlCarousel2/assets/owlcarousel/owl.carousel.js">
     </script>
 
+    <!-- Select2 JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+
     <script src="{{asset('js/globalVar.js')}}"></script>
 
     <script>
@@ -49,4 +52,7 @@
                 }
             });
         });
+
+        
     </script>
+    

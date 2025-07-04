@@ -106,6 +106,9 @@ function showOrHideError(isValid, errorEl) {
 
 
 function handleStepData(fieldName, selector, errorId) {
+
+    // event.preventDefault();
+
     const input = document.querySelector(selector);
     const errorEl = errorId ? document.getElementById(errorId) : null;
 
@@ -114,6 +117,9 @@ function handleStepData(fieldName, selector, errorId) {
     const isValid = validateField(input, selector);
 
     if (isValid) {
+
+        console.log("input.value :",input.value,"selector :",selector);
+        
         formData[fieldName] = input.value;
     } else {
         delete formData[fieldName];
@@ -157,6 +163,15 @@ function validateAndNextStep(e, fields = []) {
     }
 }
 
+function updateDataOfSelect2(input) {
+
+    // console.log(input.id, 'input');
+
+    const el = document.querySelector(`#${input.id}`); 
+
+    formData['selectPetBreed'] = el.value;
+
+}
 
 
 function updatePetDataHTML() {
@@ -173,6 +188,8 @@ function updatePetDataHTML() {
     }
 
     togglePetIcon(getPetType(formData.petType))
+    
+
 
 }
 
@@ -185,7 +202,75 @@ function togglePetIcon(type) {
             icon.style.display = petType === type ? 'block' : 'none';
         }
     });
+
+    select2Options(type)
+    
 }
+
+let allSelectOptions = [];
+
+ // {
+  //   "group": null,
+  //   "value": "",
+  //   "text": "Start typing or select breed...",
+  //   "breedType": null,
+  //   "type": null
+  // },
+
+$(document).ready(function () {
+    const $select = $('#selectPetBreed');
+
+    // Initialize select2 once
+    $select.select2({
+        placeholder: 'Start typing or select breed...',
+        allowClear: true
+    });
+
+    // Cache entire <select> structure (including optgroups + options)
+    allSelectOptions = $select.children().clone();
+
+    // Load default options (e.g. dog)
+    select2Options('dog');
+});
+
+function select2Options(petType) {
+    const $select = $('#selectPetBreed');
+    $select.empty(); // clear existing options
+
+    
+    allSelectOptions.each(function () {
+        if (this.tagName === 'OPTGROUP') {
+            const $optgroup = $('<optgroup>').attr('label', $(this).attr('label'));
+            const matchingOptions = $(this)
+                .children('option')
+                .filter(function () {
+                    return $(this).data('type') === petType || $(this).val() === "";
+                });
+
+            if (matchingOptions.length > 0) {
+                $optgroup.append(matchingOptions.clone());
+                $select.append($optgroup);
+            }
+        } else if (this.tagName === 'OPTION') {
+           
+            if ($(this).data('type') === petType || $(this).val() === "") {
+                $select.append($(this).clone());
+            }
+        }
+    });
+
+   
+    $select.select2({
+        placeholder: 'Start typing or select breed...',
+        allowClear: true
+    });
+
+    $select.val(null).trigger('change');
+}
+
+
+
+        
 
 
 function handleIsHavePet(checkbox) {
