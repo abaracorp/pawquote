@@ -73,7 +73,7 @@
 
             @empty
 
-            <h5>No Affilte Found</h5>
+            <h5>No Affiliate Found</h5>
 
             @endforelse
             {{-- <div class="col-lg-4">
