@@ -9,12 +9,13 @@
             <h1 class="f-32 c-dark f-w-5 freedoka">Affiliate</h1>
         </div>
         <div class="filter-tab">
+            <form id="filterForm">
             <div class="rightside">
                 <div class="search-container b-orange br-5 ">
                     <i class="fa-solid fa-magnifying-glass"></i>
-                    <input type="text" placeholder="Search fan content...">
+                    <input type="text" id="moduleSearchInput" name="moduleSearchInput" data-url="search-affiliate" placeholder="Search affiliate...">
                 </div>
-                <div class="date-container b-orange br-5">
+                <div class="date-container b-orange br-5" id="showCustomDate" style="display: none">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M15.6201 13.263C15.799 13.263 15.9705 13.1919 16.097 13.0654C16.2235 12.9389 16.2946 12.7674 16.2946 12.5885C16.2946 12.4096 16.2235 12.2381 16.097 12.1116C15.9705 11.9851 15.799 11.9141 15.6201 11.9141C15.4412 11.9141 15.2697 11.9851 15.1432 12.1116C15.0167 12.2381 14.9457 12.4096 14.9457 12.5885C14.9457 12.7674 15.0167 12.9389 15.1432 13.0654C15.2697 13.1919 15.4412 13.263 15.6201 13.263ZM15.6201 15.9608C15.799 15.9608 15.9705 15.8897 16.097 15.7632C16.2235 15.6367 16.2946 15.4652 16.2946 15.2863C16.2946 15.1074 16.2235 14.9359 16.097 14.8094C15.9705 14.6829 15.799 14.6119 15.6201 14.6119C15.4412 14.6119 15.2697 14.6829 15.1432 14.8094C15.0167 14.9359 14.9457 15.1074 14.9457 15.2863C14.9457 15.4652 15.0167 15.6367 15.1432 15.7632C15.2697 15.8897 15.4412 15.9608 15.6201 15.9608ZM12.9223 12.5885C12.9223 12.7674 12.8513 12.9389 12.7248 13.0654C12.5983 13.1919 12.4267 13.263 12.2479 13.263C12.069 13.263 11.8974 13.1919 11.771 13.0654C11.6445 12.9389 11.5734 12.7674 11.5734 12.5885C11.5734 12.4096 11.6445 12.2381 11.771 12.1116C11.8974 11.9851 12.069 11.9141 12.2479 11.9141C12.4267 11.9141 12.5983 11.9851 12.7248 12.1116C12.8513 12.2381 12.9223 12.4096 12.9223 12.5885ZM12.9223 15.2863C12.9223 15.4652 12.8513 15.6367 12.7248 15.7632C12.5983 15.8897 12.4267 15.9608 12.2479 15.9608C12.069 15.9608 11.8974 15.8897 11.771 15.7632C11.6445 15.6367 11.5734 15.4652 11.5734 15.2863C11.5734 15.1074 11.6445 14.9359 11.771 14.8094C11.8974 14.6829 12.069 14.6119 12.2479 14.6119C12.4267 14.6119 12.5983 14.6829 12.7248 14.8094C12.8513 14.9359 12.9223 15.1074 12.9223 15.2863ZM8.87562 13.263C9.0545 13.263 9.22605 13.1919 9.35253 13.0654C9.47901 12.9389 9.55007 12.7674 9.55007 12.5885C9.55007 12.4096 9.47901 12.2381 9.35253 12.1116C9.22605 11.9851 9.0545 11.9141 8.87562 11.9141C8.69675 11.9141 8.5252 11.9851 8.39871 12.1116C8.27223 12.2381 8.20117 12.4096 8.20117 12.5885C8.20117 12.7674 8.27223 12.9389 8.39871 13.0654C8.5252 13.1919 8.69675 13.263 8.87562 13.263ZM8.87562 15.9608C9.0545 15.9608 9.22605 15.8897 9.35253 15.7632C9.47901 15.6367 9.55007 15.4652 9.55007 15.2863C9.55007 15.1074 9.47901 14.9359 9.35253 14.8094C9.22605 14.6829 9.0545 14.6119 8.87562 14.6119C8.69675 14.6119 8.5252 14.6829 8.39871 14.8094C8.27223 14.9359 8.20117 15.1074 8.20117 15.2863C8.20117 15.4652 8.27223 15.6367 8.39871 15.7632C8.5252 15.8897 8.69675 15.9608 8.87562 15.9608Z"
@@ -22,7 +23,7 @@
                         <path fill-rule="evenodd" clip-rule="evenodd"
                             d="M8.87741 5C9.01157 5 9.14023 5.05329 9.23509 5.14816C9.32996 5.24302 9.38325 5.37168 9.38325 5.50584V6.02044C9.82974 6.01168 10.3214 6.01168 10.8623 6.01168H13.6363C14.1779 6.01168 14.6696 6.01168 15.1161 6.02044V5.50584C15.1161 5.37168 15.1694 5.24302 15.2642 5.14816C15.3591 5.05329 15.4878 5 15.6219 5C15.7561 5 15.8847 5.05329 15.9796 5.14816C16.0745 5.24302 16.1278 5.37168 16.1278 5.50584V6.06361C16.3031 6.0771 16.4692 6.09418 16.6262 6.11487C17.4166 6.22143 18.0567 6.44535 18.5618 6.94983C19.0663 7.455 19.2902 8.09505 19.3968 8.88551C19.5 9.65438 19.5 10.6357 19.5 11.8753V13.2998C19.5 14.5394 19.5 15.5214 19.3968 16.2896C19.2902 17.0801 19.0663 17.7201 18.5618 18.2253C18.0567 18.7298 17.4166 18.9537 16.6262 19.0603C15.8573 19.1635 14.876 19.1635 13.6363 19.1635H10.8637C9.62403 19.1635 8.64203 19.1635 7.87383 19.0603C7.08338 18.9537 6.44332 18.7298 5.93816 18.2253C5.43367 17.7201 5.20975 17.0801 5.10319 16.2896C5 15.5207 5 14.5394 5 13.2998V11.8753C5 10.6357 5 9.65371 5.10319 8.88551C5.20975 8.09505 5.43367 7.455 5.93816 6.94983C6.44332 6.44535 7.08338 6.22143 7.87383 6.11487C8.0312 6.09418 8.19734 6.0771 8.37225 6.06361V5.50584C8.37225 5.3718 8.42545 5.24324 8.52017 5.14839C8.61489 5.05355 8.74337 5.00018 8.87741 5ZM8.00737 7.11777C7.32955 7.20882 6.93837 7.38013 6.65308 7.66543C6.36778 7.95072 6.19647 8.3419 6.10542 9.01972C6.09014 9.13438 6.0771 9.25555 6.06631 9.38325H18.433C18.4222 9.25555 18.4092 9.13415 18.3939 9.01905C18.3029 8.34123 18.1315 7.95004 17.8462 7.66475C17.561 7.37946 17.1698 7.20815 16.4913 7.1171C15.7986 7.02402 14.8847 7.02268 13.5986 7.02268H10.9008C9.61459 7.02268 8.70138 7.0247 8.00737 7.11777ZM6.011 11.9131C6.011 11.3371 6.011 10.836 6.01977 10.3956H18.4796C18.4883 10.836 18.4883 11.3371 18.4883 11.9131V13.262C18.4883 14.5482 18.487 15.4621 18.3939 16.1554C18.3029 16.8332 18.1315 17.2244 17.8462 17.5097C17.561 17.795 17.1698 17.9663 16.4913 18.0574C15.7986 18.1504 14.8847 18.1518 13.5986 18.1518H10.9008C9.61459 18.1518 8.70138 18.1504 8.00737 18.0574C7.32955 17.9663 6.93837 17.795 6.65308 17.5097C6.36778 17.2244 6.19647 16.8332 6.10542 16.1547C6.01235 15.4621 6.011 14.5482 6.011 13.262V11.9131Z"
                             fill="#566369" />
-                    </svg> <input type="text" id="datepicker" placeholder="dd-mm-yyyy">
+                    </svg> <input type="text" id="dateFrom" name="dateFrom" placeholder="dd-mm-yyyy">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M15.6201 13.263C15.799 13.263 15.9705 13.1919 16.097 13.0654C16.2235 12.9389 16.2946 12.7674 16.2946 12.5885C16.2946 12.4096 16.2235 12.2381 16.097 12.1116C15.9705 11.9851 15.799 11.9141 15.6201 11.9141C15.4412 11.9141 15.2697 11.9851 15.1432 12.1116C15.0167 12.2381 14.9457 12.4096 14.9457 12.5885C14.9457 12.7674 15.0167 12.9389 15.1432 13.0654C15.2697 13.1919 15.4412 13.263 15.6201 13.263ZM15.6201 15.9608C15.799 15.9608 15.9705 15.8897 16.097 15.7632C16.2235 15.6367 16.2946 15.4652 16.2946 15.2863C16.2946 15.1074 16.2235 14.9359 16.097 14.8094C15.9705 14.6829 15.799 14.6119 15.6201 14.6119C15.4412 14.6119 15.2697 14.6829 15.1432 14.8094C15.0167 14.9359 14.9457 15.1074 14.9457 15.2863C14.9457 15.4652 15.0167 15.6367 15.1432 15.7632C15.2697 15.8897 15.4412 15.9608 15.6201 15.9608ZM12.9223 12.5885C12.9223 12.7674 12.8513 12.9389 12.7248 13.0654C12.5983 13.1919 12.4267 13.263 12.2479 13.263C12.069 13.263 11.8974 13.1919 11.771 13.0654C11.6445 12.9389 11.5734 12.7674 11.5734 12.5885C11.5734 12.4096 11.6445 12.2381 11.771 12.1116C11.8974 11.9851 12.069 11.9141 12.2479 11.9141C12.4267 11.9141 12.5983 11.9851 12.7248 12.1116C12.8513 12.2381 12.9223 12.4096 12.9223 12.5885ZM12.9223 15.2863C12.9223 15.4652 12.8513 15.6367 12.7248 15.7632C12.5983 15.8897 12.4267 15.9608 12.2479 15.9608C12.069 15.9608 11.8974 15.8897 11.771 15.7632C11.6445 15.6367 11.5734 15.4652 11.5734 15.2863C11.5734 15.1074 11.6445 14.9359 11.771 14.8094C11.8974 14.6829 12.069 14.6119 12.2479 14.6119C12.4267 14.6119 12.5983 14.6829 12.7248 14.8094C12.8513 14.9359 12.9223 15.1074 12.9223 15.2863ZM8.87562 13.263C9.0545 13.263 9.22605 13.1919 9.35253 13.0654C9.47901 12.9389 9.55007 12.7674 9.55007 12.5885C9.55007 12.4096 9.47901 12.2381 9.35253 12.1116C9.22605 11.9851 9.0545 11.9141 8.87562 11.9141C8.69675 11.9141 8.5252 11.9851 8.39871 12.1116C8.27223 12.2381 8.20117 12.4096 8.20117 12.5885C8.20117 12.7674 8.27223 12.9389 8.39871 13.0654C8.5252 13.1919 8.69675 13.263 8.87562 13.263ZM8.87562 15.9608C9.0545 15.9608 9.22605 15.8897 9.35253 15.7632C9.47901 15.6367 9.55007 15.4652 9.55007 15.2863C9.55007 15.1074 9.47901 14.9359 9.35253 14.8094C9.22605 14.6829 9.0545 14.6119 8.87562 14.6119C8.69675 14.6119 8.5252 14.6829 8.39871 14.8094C8.27223 14.9359 8.20117 15.1074 8.20117 15.2863C8.20117 15.4652 8.27223 15.6367 8.39871 15.7632C8.5252 15.8897 8.69675 15.9608 8.87562 15.9608Z"
@@ -30,123 +31,94 @@
                         <path fill-rule="evenodd" clip-rule="evenodd"
                             d="M8.87741 5C9.01157 5 9.14023 5.05329 9.23509 5.14816C9.32996 5.24302 9.38325 5.37168 9.38325 5.50584V6.02044C9.82974 6.01168 10.3214 6.01168 10.8623 6.01168H13.6363C14.1779 6.01168 14.6696 6.01168 15.1161 6.02044V5.50584C15.1161 5.37168 15.1694 5.24302 15.2642 5.14816C15.3591 5.05329 15.4878 5 15.6219 5C15.7561 5 15.8847 5.05329 15.9796 5.14816C16.0745 5.24302 16.1278 5.37168 16.1278 5.50584V6.06361C16.3031 6.0771 16.4692 6.09418 16.6262 6.11487C17.4166 6.22143 18.0567 6.44535 18.5618 6.94983C19.0663 7.455 19.2902 8.09505 19.3968 8.88551C19.5 9.65438 19.5 10.6357 19.5 11.8753V13.2998C19.5 14.5394 19.5 15.5214 19.3968 16.2896C19.2902 17.0801 19.0663 17.7201 18.5618 18.2253C18.0567 18.7298 17.4166 18.9537 16.6262 19.0603C15.8573 19.1635 14.876 19.1635 13.6363 19.1635H10.8637C9.62403 19.1635 8.64203 19.1635 7.87383 19.0603C7.08338 18.9537 6.44332 18.7298 5.93816 18.2253C5.43367 17.7201 5.20975 17.0801 5.10319 16.2896C5 15.5207 5 14.5394 5 13.2998V11.8753C5 10.6357 5 9.65371 5.10319 8.88551C5.20975 8.09505 5.43367 7.455 5.93816 6.94983C6.44332 6.44535 7.08338 6.22143 7.87383 6.11487C8.0312 6.09418 8.19734 6.0771 8.37225 6.06361V5.50584C8.37225 5.3718 8.42545 5.24324 8.52017 5.14839C8.61489 5.05355 8.74337 5.00018 8.87741 5ZM8.00737 7.11777C7.32955 7.20882 6.93837 7.38013 6.65308 7.66543C6.36778 7.95072 6.19647 8.3419 6.10542 9.01972C6.09014 9.13438 6.0771 9.25555 6.06631 9.38325H18.433C18.4222 9.25555 18.4092 9.13415 18.3939 9.01905C18.3029 8.34123 18.1315 7.95004 17.8462 7.66475C17.561 7.37946 17.1698 7.20815 16.4913 7.1171C15.7986 7.02402 14.8847 7.02268 13.5986 7.02268H10.9008C9.61459 7.02268 8.70138 7.0247 8.00737 7.11777ZM6.011 11.9131C6.011 11.3371 6.011 10.836 6.01977 10.3956H18.4796C18.4883 10.836 18.4883 11.3371 18.4883 11.9131V13.262C18.4883 14.5482 18.487 15.4621 18.3939 16.1554C18.3029 16.8332 18.1315 17.2244 17.8462 17.5097C17.561 17.795 17.1698 17.9663 16.4913 18.0574C15.7986 18.1504 14.8847 18.1518 13.5986 18.1518H10.9008C9.61459 18.1518 8.70138 18.1504 8.00737 18.0574C7.32955 17.9663 6.93837 17.795 6.65308 17.5097C6.36778 17.2244 6.19647 16.8332 6.10542 16.1547C6.01235 15.4621 6.011 14.5482 6.011 13.262V11.9131Z"
                             fill="#566369" />
-                    </svg> <input type="text" id="datepicker2" placeholder="dd-mm-yyyy">
+                    </svg> <input type="text" id="dateTo" name="dateTo" placeholder="dd-mm-yyyy">
                 </div>
                 <div class="select-wrapper b-orange br-5">
-                    <select name="" id="" class="c-dark f-16 f-w-4 freedoka">
-                        <option value="" class="c-light f-16 f-w-4 freedoka">Last 30 Days</option>
-                        <option value="" class="c-light f-16 f-w-4 freedoka">Last 20 Days</option>
-                        <option value="" class="c-light f-16 f-w-4 freedoka">Last 15 Days</option>
-                        <option value="" class="c-light f-16 f-w-4 freedoka">Last 7 Days</option>
+                    <select name="selectDays" id="selectDays" onchange="showCustomDateDiv(this,'showCustomDate')" class="c-dark f-16 f-w-4 freedoka">
+                        <option value="30" class="c-light f-16 f-w-4 freedoka">Last 30 Days</option>
+                        <option value="20" class="c-light f-16 f-w-4 freedoka">Last 20 Days</option>
+                        <option value="15" class="c-light f-16 f-w-4 freedoka">Last 15 Days</option>
+                        <option value="7" class="c-light f-16 f-w-4 freedoka">Last 7 Days</option>
+                        <option value="custom_date" class="c-light f-16 f-w-4 freedoka">Custom Date</option>
                     </select>
                 </div>
-                <button class="clear b-orange br-5 f-18 c-dark f-w-5 freedoka">Clear</button>
-                <button class="submit b-orange br-5 f-18 c-dark f-w-5 freedoka">Submit</button>
+                <button class="clear b-orange br-5 f-18 c-dark f-w-5 freedoka" type="button" onclick="clearFormData(this.form.id)">Clear</button>
+                <button class="submit b-orange br-5 f-18 c-dark f-w-5 freedoka" type="button" onclick="submitFilterData(this.form.id)" >Submit</button>
             </div>
+            </form>
         </div>
       <div class="inner">
-        <div class="row">
+          <span id="tableResults">
+        
+            @include('backend.affiliate_comp',['affilates' => $affilates])
 
-
-
-            @forelse ($affilates as $affilate)
-            {{-- @dump($affilate) --}}
-            <div class="col-lg-4">
-                <div class="card">
-                    <ul class="user-detail">
-                        <h3 class="f-22 c-dark f-w-5 freedoka">User details</h3>
-                        <li><p class="f-18 c-dark f-w-4 freedoka">Zip code</p> <p class="f-18 c-dark f-w-4 freedoka">{{$affilate->zip_code ?? ''}}</p></li>
-                        <li><p class="f-18 c-dark f-w-4 freedoka">Email address</p> <p class="f-18 c-dark f-w-4 freedoka">{{$affilate->email_address ?? ''}}</p></li>
-                        <li><p class="f-18 c-dark f-w-4 freedoka">Phone number </p> <p class="f-18 c-dark f-w-4 freedoka">{{$affilate->phone_number ?? ''}}</p></li> 
-                        <li><p class="f-18 c-dark f-w-4 freedoka">Submit Date </p> <p class="f-18 c-dark f-w-4 freedoka">{{optional($affilate->updated_at)->format('m-d-Y') ?? '',}}</p></li> 
-                    </ul>
-                    <ul class="pet-detail">
-                        <h3 class="f-22 c-dark f-w-5 freedoka">Pet details</h3>
-                        <li><p class="f-18 c-dark f-w-4 freedoka">Pet </p> <p class="f-18 c-dark f-w-4 freedoka">{{$affilate->pet_text ?? ''}}</p></li>
-                        <li><p class="f-18 c-dark f-w-4 freedoka">Pet name</p> <p class="f-18 c-dark f-w-4 freedoka">{{$affilate->pet_name ?? 'No Pet Yet'}}</p></li>
-                        <li><p class="f-18 c-dark f-w-4 freedoka">Pet breed </p> <p class="f-18 c-dark f-w-4 freedoka">{{$affilate->pet_breed ?? ''}}</p></li> 
-                        <li><p class="f-18 c-dark f-w-4 freedoka">Gender </p> <p class="f-18 c-dark f-w-4 freedoka">{{$affilate->pet_gender_text ?? ''}}</p></li> 
-                        <li><p class="f-18 c-dark f-w-4 freedoka">Pet age </p> <p class="f-18 c-dark f-w-4 freedoka">{{$affilate->pet_age_years ?? 0}} year {{$affilate->pet_age_months ?? 0}} months</p></li> 
-                    </ul>
-                </div>
-            </div>
-
-            @empty
-
-            <h5>No Affiliate Found</h5>
-
-            @endforelse
-            {{-- <div class="col-lg-4">
-                <div class="card">
-                    <ul class="user-detail">
-                        <h3 class="f-22 c-dark f-w-5 freedoka">User details</h3>
-                        <li><p class="f-18 c-dark f-w-4 freedoka">Zip code</p> <p class="f-18 c-dark f-w-4 freedoka">58582</p></li>
-                        <li><p class="f-18 c-dark f-w-4 freedoka">Email address</p> <p class="f-18 c-dark f-w-4 freedoka">loremipsum@mail.com</p></li>
-                        <li><p class="f-18 c-dark f-w-4 freedoka">Phone number </p> <p class="f-18 c-dark f-w-4 freedoka">(+91) 12345-89745</p></li> 
-                        <li><p class="f-18 c-dark f-w-4 freedoka">Submit Date </p> <p class="f-18 c-dark f-w-4 freedoka">10-june-2025</p></li> 
-                    </ul>
-                    
-                    <ul class="pet-detail">
-                        <h3 class="f-22 c-dark f-w-5 freedoka">Pet details</h3>
-                        <li><p class="f-18 c-dark f-w-4 freedoka">Pet </p> <p class="f-18 c-dark f-w-4 freedoka">Dog</p></li>
-                        <li><p class="f-18 c-dark f-w-4 freedoka">Pet name</p> <p class="f-18 c-dark f-w-4 freedoka">Max</p></li>
-                        <li><p class="f-18 c-dark f-w-4 freedoka">Pet breed </p> <p class="f-18 c-dark f-w-4 freedoka">Labrador</p></li> 
-                        <li><p class="f-18 c-dark f-w-4 freedoka">Gender </p> <p class="f-18 c-dark f-w-4 freedoka">Male</p></li> 
-                        <li><p class="f-18 c-dark f-w-4 freedoka">Pet age </p> <p class="f-18 c-dark f-w-4 freedoka">1 year 2 months</p></li> 
-                    </ul>
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="card">
-                    <ul class="user-detail">
-                        <h3 class="f-22 c-dark f-w-5 freedoka">User details</h3>
-                        <li><p class="f-18 c-dark f-w-4 freedoka">Zip code</p> <p class="f-18 c-dark f-w-4 freedoka">58582</p></li>
-                        <li><p class="f-18 c-dark f-w-4 freedoka">Email address</p> <p class="f-18 c-dark f-w-4 freedoka">loremipsum@mail.com</p></li>
-                        <li><p class="f-18 c-dark f-w-4 freedoka">Phone number </p> <p class="f-18 c-dark f-w-4 freedoka">(+91) 12345-89745</p></li> 
-                        <li><p class="f-18 c-dark f-w-4 freedoka">Submit Date </p> <p class="f-18 c-dark f-w-4 freedoka">10-june-2025</p></li> 
-                    </ul>
-                    <ul class="pet-detail">
-                        <h3 class="f-22 c-dark f-w-5 freedoka">Pet details</h3>
-                        <li><p class="f-18 c-dark f-w-4 freedoka">Pet </p> <p class="f-18 c-dark f-w-4 freedoka">Dog</p></li>
-                        <li><p class="f-18 c-dark f-w-4 freedoka">Pet name</p> <p class="f-18 c-dark f-w-4 freedoka">Max</p></li>
-                        <li><p class="f-18 c-dark f-w-4 freedoka">Pet breed </p> <p class="f-18 c-dark f-w-4 freedoka">Labrador</p></li> 
-                        <li><p class="f-18 c-dark f-w-4 freedoka">Gender </p> <p class="f-18 c-dark f-w-4 freedoka">Male</p></li> 
-                        <li><p class="f-18 c-dark f-w-4 freedoka">Pet age </p> <p class="f-18 c-dark f-w-4 freedoka">1 year 2 months</p></li> 
-                    </ul>
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="card">
-                    <ul class="user-detail">
-                        <h3 class="f-22 c-dark f-w-5 freedoka">User details</h3>
-                        <li><p class="f-18 c-dark f-w-4 freedoka">Zip code</p> <p class="f-18 c-dark f-w-4 freedoka">58582</p></li>
-                        <li><p class="f-18 c-dark f-w-4 freedoka">Email address</p> <p class="f-18 c-dark f-w-4 freedoka">loremipsum@mail.com</p></li>
-                        <li><p class="f-18 c-dark f-w-4 freedoka">Phone number </p> <p class="f-18 c-dark f-w-4 freedoka">(+91) 12345-89745</p></li> 
-                        <li><p class="f-18 c-dark f-w-4 freedoka">Submit Date </p> <p class="f-18 c-dark f-w-4 freedoka">10-june-2025</p></li> 
-                    </ul>
-                    <ul class="pet-detail">
-                        <h3 class="f-22 c-dark f-w-5 freedoka">Pet details</h3>
-                        <li><p class="f-18 c-dark f-w-4 freedoka">Pet </p> <p class="f-18 c-dark f-w-4 freedoka">Dog</p></li>
-                        <li><p class="f-18 c-dark f-w-4 freedoka">Pet name</p> <p class="f-18 c-dark f-w-4 freedoka">Max</p></li>
-                        <li><p class="f-18 c-dark f-w-4 freedoka">Pet breed </p> <p class="f-18 c-dark f-w-4 freedoka">Labrador</p></li> 
-                        <li><p class="f-18 c-dark f-w-4 freedoka">Gender </p> <p class="f-18 c-dark f-w-4 freedoka">Male</p></li> 
-                        <li><p class="f-18 c-dark f-w-4 freedoka">Pet age </p> <p class="f-18 c-dark f-w-4 freedoka">1 year 2 months</p></li> 
-                    </ul>
-                </div>
-            </div> --}}
-        </div>
+          </span>
       </div>
     </section>
 </main>
+
+@push('scripts')
+
+<script src="{{asset('js/tableSearchPagination.js')}}"></script>
+
 <script>
+
     $(function () {
-        $("#datepicker").datepicker();
+        $("#dateFrom").datepicker({
+            dateFormat: "dd-mm-yy",
+            onSelect: function (selectedDate) {
+                // Set minDate for dateTo
+                const fromDate = $(this).datepicker('getDate');
+                $("#dateTo").datepicker("option", "minDate", fromDate);
+            }
+        });
+
+        $("#dateTo").datepicker({
+            dateFormat: "dd-mm-yy",
+            onSelect: function (selectedDate) {
+                const fromDate = $("#dateFrom").datepicker('getDate');
+                const toDate = $(this).datepicker('getDate');
+
+                if (toDate < fromDate) {
+                    alert("End date cannot be earlier than start date.");
+                    $(this).val(""); // Clear invalid date
+                }
+            }
+        });
     });
+
+
+
+    function showCustomDateDiv(input, id) {
+    const sourceEl = document.getElementById(input.id);
+    const targetEl = document.getElementById(id);
+
+    if (!sourceEl || !targetEl) return;
+
+    targetEl.style.display = sourceEl.value === 'custom_date' ? '' : 'none';
+    }
+
+    function submitFilterData(formID){
+
+        const searchQuery = document.querySelector(`#${formID} #moduleSearchInput`).value;
+        console.log(searchQuery);
+        
+    }
+
+    function clearFormData(formID) {
+    const form = document.querySelector(`#${formID}`);
+    if (form) {
+        form.reset(); 
+        const targetEl = document.getElementById('showCustomDate');
+        targetEl.style.display =  'none';
+    }
+}
+
+
+
 </script>
-<script>
-    $(function () {
-        $("#datepicker2").datepicker();
-    });
-</script>
+
+@endpush
+
 
 @endsection

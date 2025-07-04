@@ -122,7 +122,8 @@ Route::prefix('admin')
 
         Route::controller(AffilateController::class)
         ->group(function(){
-            Route::get('affilate', 'getAffilate')->name('affilate');
+            Route::get('affiliate', 'getAffilate')->name('affilate');
+            Route::get('search-affiliate', 'searchAffiliate')->name('searchAffiliate');
             // Route::put('updateUser/{user}', 'updateSetting')->name('updateSetting');
            
         });

@@ -1,24 +1,55 @@
-document.getElementById('bulkActionSelect').addEventListener('change', function () {
-    const selectedValue = this.value;
+const bulkActionSelect = document.getElementById('bulkActionSelect');
+const bulkActionForm = document.getElementById('bulkActionForm');
+const componentTable = document.getElementById('component-table');
 
-    if (selectedValue !== "") {
-        const checkboxes = document.querySelectorAll('#component-table .row-checkbox:checked');
-        if (checkboxes.length === 0) {
-            alert("Please select at least one row.");
-            document.getElementById('bulkActionForm').reset();
-            return;
+if (bulkActionSelect && bulkActionForm && componentTable) {
+    bulkActionSelect.addEventListener('change', function () {
+        const selectedValue = this.value;
+
+        if (selectedValue !== "") {
+            const checkboxes = componentTable.querySelectorAll('.row-checkbox:checked');
+            if (checkboxes.length === 0) {
+                alert("Please select at least one row.");
+                bulkActionForm.reset();
+                return;
+            }
+
+            bulkActionForm.submit();
         }
+    });
 
-        document.getElementById('bulkActionForm').submit();
-    }
-});
+    document.addEventListener('change', function (e) {
+        if (e.target && e.target.id === 'selectAllChecked') {
+            const checkboxes = componentTable.querySelectorAll('.row-checkbox');
+            checkboxes.forEach(cb => cb.checked = e.target.checked);
+        }
+    });
+}
 
-document.addEventListener('change', function (e) {
-    if (e.target && e.target.id === 'selectAllChecked') {
-        const checkboxes = document.querySelectorAll('#component-table .row-checkbox');
-        checkboxes.forEach(cb => cb.checked = e.target.checked);
-    }
-});
+
+
+
+// document.getElementById('bulkActionSelect').addEventListener('change', function () {
+//     const selectedValue = this.value;
+
+//     if (selectedValue !== "") {
+//         const checkboxes = document.querySelectorAll('#component-table .row-checkbox:checked');
+//         if (checkboxes.length === 0) {
+//             alert("Please select at least one row.");
+//             document.getElementById('bulkActionForm').reset();
+//             return;
+//         }
+
+//         document.getElementById('bulkActionForm').submit();
+//     }
+// });
+
+// document.addEventListener('change', function (e) {
+//     if (e.target && e.target.id === 'selectAllChecked') {
+//         const checkboxes = document.querySelectorAll('#component-table .row-checkbox');
+//         checkboxes.forEach(cb => cb.checked = e.target.checked);
+//     }
+// });
 
 
 

@@ -7,9 +7,13 @@
     
     <section class="inner">
         <div class="toggle-container">
-            <a href="{{route('admin.fan')}}" class=" f-18 c-dark f-w-5 freedoka">Fan</a>
+
+            <a href="{{route('admin.fan')}}" class=" f-18 c-dark f-w-5 freedoka {{ isActiveRoute(['admin.fan']) }}">Fan</a>
+            <a href="{{route('admin.gallery')}}" class="f-18 c-dark f-w-5 freedoka {{ isActiveRoute(['admin.gallery']) }}">Gallery</a>
+
+            {{-- <a href="{{route('admin.fan')}}" class=" f-18 c-dark f-w-5 freedoka">Fan</a>
             <a href="{{route('admin.gallery')}}"
-                class="active f-18 c-dark f-w-5 freedoka">Gallery</a>
+                class="active f-18 c-dark f-w-5 freedoka">Gallery</a> --}}
         </div>
         <div class="page-title">
             <h1 class="f-32 c-dark f-w-5 freedoka">Fan</h1>

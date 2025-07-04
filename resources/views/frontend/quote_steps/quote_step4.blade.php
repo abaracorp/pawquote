@@ -22,12 +22,12 @@
     <div class="choose-gender-card d-flex gap-3">
         <div
             class="pet-card pet-card4 selected b-blue br-16 d-flex align-items-center justify-content-center flex-column gap-3">
-            <label class="radio-container">Boy <input onclick="handleStepData('radioCatGender', 'input[name=radioCatGender]:checked', '')" type="radio" checked id="radioDogGender" name="radioCatGender" value="0"> <span
+            <label class="radio-container">Male <input onclick="handleStepData('radioCatGender', 'input[name=radioCatGender]:checked', '')" type="radio" checked id="radioDogGender" name="radioCatGender" value="0"> <span
                     class="checkmark"></span>
             </label>
         </div>
         <div class="pet-card pet-card4 b-blue br-16 d-flex align-items-center justify-content-center flex-column gap-3">
-            <label class="radio-container">Girl <input onclick="handleStepData('radioCatGender', 'input[name=radioCatGender]:checked', '')" type="radio" id="radioCatGender" name="radioCatGender" value="1"> <span
+            <label class="radio-container">Female <input onclick="handleStepData('radioCatGender', 'input[name=radioCatGender]:checked', '')" type="radio" id="radioCatGender" name="radioCatGender" value="1"> <span
                     class="checkmark"></span>
             </label>
         </div>
