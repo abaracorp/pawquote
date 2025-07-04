@@ -127,8 +127,33 @@ function handleStepData(fieldName, selector, errorId) {
 
     showOrHideError(isValid, errorEl);
     updatePetDataHTML();
+
+    if(fieldName == "petType"){
+        select2Options(getPetType(input.value))
+    }
+
+    
 }
 
+function updateDataOfSelect2(input) {
+    const el = document.querySelector(`#${input.id}`);
+    const error = document.querySelector(`#petBreedError`);
+
+    if (!el) {
+        console.warn("Select2 element not found!");
+        return;
+    }
+
+    const selectedValue = el.value;
+
+    formData['selectPetBreed'] = selectedValue;
+
+    console.log("Updated formData:", formData);
+
+    if (selectedValue) {
+        error.style.display = 'none';
+    }
+}
 
 
 function validateAndNextStep(e, fields = []) {
@@ -163,15 +188,7 @@ function validateAndNextStep(e, fields = []) {
     }
 }
 
-function updateDataOfSelect2(input) {
 
-    // console.log(input.id, 'input');
-
-    const el = document.querySelector(`#${input.id}`); 
-
-    formData['selectPetBreed'] = el.value;
-
-}
 
 
 function updatePetDataHTML() {
@@ -203,7 +220,6 @@ function togglePetIcon(type) {
         }
     });
 
-    select2Options(type)
     
 }
 
@@ -226,14 +242,21 @@ $(document).ready(function () {
         allowClear: true
     });
 
-    // Cache entire <select> structure (including optgroups + options)
     allSelectOptions = $select.children().clone();
 
     // Load default options (e.g. dog)
     select2Options('dog');
 });
 
+
+// select2Options(type)
+
 function select2Options(petType) {
+
+
+    console.log("hit");
+    
+
     const $select = $('#selectPetBreed');
     $select.empty(); // clear existing options
 

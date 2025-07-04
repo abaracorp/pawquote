@@ -15,8 +15,8 @@
                                  up
                                  to 30% with our exclusive deals.</p>
                              <div class="bottom-content">
-                                 <input type="text" id="" name="zip-code" placeholder="Enter zip code...">
-                                 <button class="compare-quote">Compare Quotes</button>
+                                 {{-- <input type="text" id="" name="zip-code" placeholder="Enter zip code..."> --}}
+                                 <a href="{{route('getQuote')}}" class="compare-quote">Get a Free Quote Now</a>
                              </div>
                              <img src="{{asset('images/brown-footprint.png')}}" class="footprint" alt="">
                          </div>
@@ -422,8 +422,10 @@
                              Whether it’s for unexpected emergencies or everyday vet visits, we’re here to help you
                              give
                              your furry family member the care they deserve. </p>
-                         <button class="orange-btn free-quote f-18 c-white f-w-5 montserrat">Get a Free Quote
-                             Now</button>
+
+                         <a href="{{route('getQuote')}}" class="orange-btn free-quote f-18 c-white f-w-5 montserrat">Get a Free Quote
+                             Now</a>
+
                      </div>
                  </div>
                  <div class="col-lg-6">

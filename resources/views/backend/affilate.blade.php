@@ -50,7 +50,7 @@
 
 
             @forelse ($affilates as $affilate)
-            @dump($affilate)
+            {{-- @dump($affilate) --}}
             <div class="col-lg-4">
                 <div class="card">
                     <ul class="user-detail">
@@ -64,7 +64,7 @@
                         <h3 class="f-22 c-dark f-w-5 freedoka">Pet details</h3>
                         <li><p class="f-18 c-dark f-w-4 freedoka">Pet </p> <p class="f-18 c-dark f-w-4 freedoka">{{$affilate->pet_text ?? ''}}</p></li>
                         <li><p class="f-18 c-dark f-w-4 freedoka">Pet name</p> <p class="f-18 c-dark f-w-4 freedoka">{{$affilate->pet_name ?? 'No Pet Yet'}}</p></li>
-                        <li><p class="f-18 c-dark f-w-4 freedoka">Pet breed </p> <p class="f-18 c-dark f-w-4 freedoka">{{$affilate->pet_breed_text ?? ''}}</p></li> 
+                        <li><p class="f-18 c-dark f-w-4 freedoka">Pet breed </p> <p class="f-18 c-dark f-w-4 freedoka">{{$affilate->pet_breed ?? ''}}</p></li> 
                         <li><p class="f-18 c-dark f-w-4 freedoka">Gender </p> <p class="f-18 c-dark f-w-4 freedoka">{{$affilate->pet_gender_text ?? ''}}</p></li> 
                         <li><p class="f-18 c-dark f-w-4 freedoka">Pet age </p> <p class="f-18 c-dark f-w-4 freedoka">{{$affilate->pet_age_years ?? 0}} year {{$affilate->pet_age_months ?? 0}} months</p></li> 
                     </ul>

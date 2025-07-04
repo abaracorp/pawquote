@@ -11,20 +11,20 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav m-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="{{route('homepage')}}">Home</a>
+                        <a class="nav-link {{ isActiveRoute(['homepage']) }}" aria-current="page" href="{{route('homepage')}}">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="{{route('about')}}">About Us</a>
+                        <a class="nav-link {{ isActiveRoute(['about']) }}" aria-current="page" href="{{route('about')}}">About Us</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="{{route('blog')}}">Blog</a>
+                        <a class="nav-link {{ isActiveRoute(['blog']) }}" aria-current="page" href="{{route('blog')}}">Blog</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link " aria-current="page" href="{{route('fan')}}">Fan</a>
+                        <a class="nav-link {{ isActiveRoute(['fan']) }}" aria-current="page" href="{{route('fan')}}">Fan</a>
                     </li>
                 </ul>
                 <form class="d-flex" role="search">
-                    <a class=" get-quote orange-btn " href="{{route('getQuote')}}" type="button">Get A Quote</a>
+                    <a class=" get-quote orange-btn {{ isActiveRoute(['getQuote']) }}" href="{{route('getQuote')}}" type="button">Get A Quote</a>
                 </form>
             </div>
         </div>

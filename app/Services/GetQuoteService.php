@@ -76,6 +76,8 @@ class GetQuoteService
 
         return DB::transaction(function () use ($data) {
 
+            // dd($data);
+
             $quotes = GetQuotes::create([
                 'zip_code'        => session()->get('zip_code'),
                 'email_address'   => $data['email'],

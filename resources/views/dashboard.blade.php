@@ -355,7 +355,9 @@
                 <section class="quick-actions">
                     <h2 class="heading f-32 c-dark f-w-5 freedoka">Quick Actions</h2>
                     <div class="row">
+
                         <div class="col-lg-3">
+                            <a href="{{route('admin.affilate')}}">
                             <div class="card active b-blue br-10">
                                 <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -368,8 +370,11 @@
                                     <p class="f-14 c-light f-w-4  freedoka">Manage quote requests</p>
                                 </div>
                             </div>
+                        </a>
                         </div>
+
                         <div class="col-lg-3">
+                            <a href="{{route('admin.createNewBlog')}}">
                             <div class="card b-blue br-10">
                                 <svg width="25" height="24" viewBox="0 0 25 24" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -394,8 +399,10 @@
                                     <p class="f-14 c-light f-w-4  freedoka">Write New Content</p>
                                 </div>
                             </div>
+                        </a>
                         </div>
                         <div class="col-lg-3">
+                            <a href="{{route('admin.createNewGallery')}}">
                             <div class="card b-blue br-10">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -418,8 +425,10 @@
                                     <p class="f-14 c-light f-w-4  freedoka">Manage images and files</p>
                                 </div>
                             </div>
+                        </a>
                         </div>
                         <div class="col-lg-3">
+                            <a href="{{route('admin.analytics')}}">
                             <div class="card b-blue br-10">
                                 <svg width="25" height="24" viewBox="0 0 25 24" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -433,6 +442,7 @@
                                     <p class="f-14 c-light f-w-4  freedoka">Detailed performance data</p>
                                 </div>
                             </div>
+                            </a>
                         </div>
                     </div>
                 </section>

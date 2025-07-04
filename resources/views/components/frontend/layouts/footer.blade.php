@@ -23,8 +23,9 @@
                                             <h2 class=" f-28 c-orange f-w-5  m-b-16 freedoka">Quick Links</h2>
                                             <ul>
                                                 <li>
-                                                    <a href="index.html"
+                                                    <a href="{{route('homepage')}}"
                                                         class="f-18 c-white  f-w-5 montserrat">
+                                                        
                                                         <svg width="14" height="16" viewBox="0 0 14 16"
                                                             fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                                             <path
@@ -48,7 +49,7 @@
 
                                                 </li>
                                                 <li>
-                                                    <a href="about-us.html" class="f-18 c-white  f-w-5 montserrat">
+                                                    <a href="{{route('about')}}" class="f-18 c-white  f-w-5 montserrat">
                                                         <svg width="14" height="16" viewBox="0 0 14 16"
                                                             fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                                             <path
@@ -67,12 +68,12 @@
                                                                 d="M1.48983 8.65288C2.26532 8.69029 2.91159 9.05274 3.44678 9.59873C3.83567 10.0314 4.10142 10.5721 4.07784 11.1607C4.03708 11.53 3.86286 11.8014 3.57966 12.0388C3.18668 12.3202 2.68885 12.3314 2.22905 12.2631C1.61118 12.1539 0.94733 11.7733 0.563411 11.2687C0.217541 10.7697 -0.0873048 10.263 0.0229176 9.62733C0.209943 8.96781 0.827812 8.63144 1.48983 8.65288Z"
                                                                 fill="#FFDECF" />
                                                         </svg>
-                                                        Benefit
+                                                        About Us
                                                     </a>
 
                                                 </li>
                                                 <li>
-                                                    <a href="Blog.html" class="f-18 c-white  f-w-5 montserrat">
+                                                    <a href="{{route('blog')}}" class="f-18 c-white  f-w-5 montserrat">
                                                         <svg width="14" height="16" viewBox="0 0 14 16"
                                                             fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                                             <path
