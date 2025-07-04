@@ -25,7 +25,7 @@
                     <div class="search-container b-orange br-5 ">
                         <i class="fa-solid fa-magnifying-glass"></i>
                         <input type="text" id="moduleSearchInput" data-url="search-{{ $type }}"
-                            placeholder="Search {{ $type }}....">
+                            placeholder="Search blogs....">
                     </div>
                     <button class="filter b-orange">
                         <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
@@ -62,21 +62,20 @@
                     </svg>Add New {{ $text }}</a>
             </div>
             <form id="bulkActionForm" action="{{ route('admin.faqGuideBulkAction') }}" method="POST">
-                <div class="select-wrapper b-orange br-5">
-                    @csrf
-                    <select name="bulk_action" id="bulkActionSelect" class="c-dark f-16 f-w-5 freedoka">
-                        <option value="">Bulk Action</option>
-                        <option value="delete">Delete</option>
-                        <option value="publish">Change to Published</option>
-                        <option value="draft">Change to Draft</option>
-                    </select>
-                </div>
-
+            <div class="select-wrapper b-orange br-5">
+                @csrf
+                <select name="bulk_action" id="bulkActionSelect" class="c-dark f-16 f-w-5 freedoka">
+                    <option value="">Bulk Action</option>
+                    <option value="delete">Delete</option>
+                    <option value="publish">Change to Published</option>
+                    <option value="draft">Change to Draft</option>
+                </select>
+            </div>
                 <span id="tableResults">
                     @include('backend.faq_guide.faq_guide_table', ['faqGuide' => $faqGuide])
                 </span>
 
-
+            </form>
         </section>
     </main>
 
