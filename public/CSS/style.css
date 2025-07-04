@@ -1012,9 +1012,9 @@ button.owl-next{left:50px;}
 
 
 
+.select2-container--default .select2-selection--single{border: 1px solid #fea145 !important;padding:0px 10px;}
 
-
-
+#step3 .custom-select-wrapper::after{right: 225px;top: 6px; display: none;}
 
 
 

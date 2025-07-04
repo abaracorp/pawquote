@@ -8,9 +8,7 @@
          <div class="custom-select-wrapper">
              <select class="custom-select c-dark f-16 f-w-4 freedoka" onchange="updateDataOfSelect2(this)"  name="selectPetBreed" id="selectPetBreed">
 
-                {{-- @foreach ($breeds as $breed)
-                     <option value="{{$breed['value']}}" data-type="{{$breed['type']}}" class="c-light f-16 f-w-4 freedoka">{{$breed['text']}}</option>
-                @endforeach --}}
+              
 
                 @php
                     $grouped = collect($breeds)->groupBy(function ($item) {
