@@ -154,7 +154,7 @@ section{padding-bottom:70px;}
 #homepage .hero .trusted ul li img{width: 100%;height:100%;object-fit: cover; }
 #homepage .hero .trusted ul li:last-child{background-color: transparent;border:none;width: 15px;height:15px;display: flex;margin-left:5px;}
 #homepage .banner .layer-blur-blue{position: absolute;top:0; left:0;}
-#homepage .about .leftside button{width: fit-content;padding:13px 26px;}
+#homepage .about .leftside a{width: fit-content;padding:13px 26px;}
  .trusted-by {display: flex;align-items: center;gap: 20px;padding-block: 20px;padding-inline: 0;border-radius: 10px;;position: relative;}
  .trusted-by h3 {font-size: 1.25rem;font-weight: 500;font-family: var(--freedoka-font, var(--font-family-default));color: var(--text-dark-color);white-space: nowrap;margin-bottom: 0;position: relative;z-index: 1;}
 .trusted-by ul {display: flex;align-items: center;gap: 15px;list-style: none;margin: 0;padding: 0;}
@@ -468,7 +468,7 @@ tbody, td, tfoot, th, thead, tr{border-color:#88EDFF;}
 #get-quote-step .hero .pet-card.selected { background-color: #00A5C3; border: 2px solid #00A5C3; }
 #get-quote-step .hero .radio-container { display: block; position: relative; padding-left: 35px;cursor: pointer; font-size:1.375rem; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
 #get-quote-step .hero .radio-container input { position: absolute; opacity: 0; cursor: pointer; }
-#get-quote-step .hero .radio-container .checkmark { position: absolute; top: 5px; left: 0; height: 25px; width: 25px; border: 2px solid #FEA145; border-radius: 50%; }
+#get-quote-step .hero .radio-container .checkmark { position: absolute; top:80%; left: 40%;transform: translate(-50%, -50%); height: 25px; width: 25px; border: 2px solid #FEA145; border-radius: 50%; }
 #get-quote-step .hero .radio-container .checkmark:after { content: ""; position: absolute; display: none; }
 #get-quote-step .hero .radio-container input:checked ~ .checkmark:after { display: block; }
 #get-quote-step .hero .radio-container .checkmark:after { top: 3px; left: 3px; width: 15px; height: 15px; border-radius: 50%; background: #FEA145; }
@@ -490,6 +490,11 @@ tbody, td, tfoot, th, thead, tr{border-color:#88EDFF;}
 .form-group label {margin-bottom:5px;font-family: var(--freedoka-font);}
 .form-group input{font-family: var(--freedoka-font);}
 /* Get in Quote Step page CSS Close */
+
+/* Get quote Step 4 CSS */
+#step4 .choose-gender-card {margin-top: 39px;}
+#get-quote-step #step4 .radio-container .checkmark{top:50%;}
+#get-quote-step #step4 .choose-gender-card .text{padding-left:30px;}
 
 /* Pet insurance page CSS Start */
 #pet-protection .hero{background-color: #F5FDFF;position: relative;}
@@ -554,7 +559,7 @@ tbody, td, tfoot, th, thead, tr{border-color:#88EDFF;}
 #payment-plan .customer-review .heading h1{margin: 0;}
 #payment-plan .customer-review p{display: -webkit-box;-webkit-line-clamp: 8; -webkit-box-orient: vertical;overflow: hidden; text-overflow: ellipsis;}
 #payment-plan .owl-carousel .owl-nav.disabled{display: block !important;}
-#payment-plan button.owl-prev, button.owl-next{position: absolute;
+#payment-plan button.owl-prev,#payment-plan button.owl-next{position: absolute;
     top: 120px;
     opacity: 0.5;
     background-color: #566369 !important;
@@ -564,7 +569,7 @@ tbody, td, tfoot, th, thead, tr{border-color:#88EDFF;}
   }
   #payment-plan button.owl-prev{left:-40px;}
    #payment-plan button.owl-next{right:-40px;}
-    #payment-plan button.owl-prev::after,button.owl-next::after{content: "";
+    #payment-plan button.owl-prev::after,#payment-plan button.owl-next::after{content: "";
     position: absolute;
     top: 50%;
     left: 50%;
@@ -1011,11 +1016,13 @@ button.owl-next{left:50px;}
 }
 
 
-
-.select2-container--default .select2-selection--single{border: 1px solid #fea145 !important;padding:0px 10px;}
-
+.select2-container{width: 100% !important;}
+.select2-container .select2-selection--single{height: auto !important;}
+.select2-container--default .select2-selection--single{border: 2px solid #CDF7FF !important;padding:5px 10px;border-radius: 8px !important;}
+.select2-container .select2-selection--single .select2-selection__rendered{padding-inline:0 !important;}
 #step3 .custom-select-wrapper::after{right: 225px;top: 6px; display: none;}
-
+.select2-container--default .select2-selection--single .select2-selection__arrow b{left:0 !important;margin-top: 5px !important;margin-left: 0px !important;}
+.select2-container--default .select2-selection--single .select2-selection__clear{display: none;}
 
 
 
