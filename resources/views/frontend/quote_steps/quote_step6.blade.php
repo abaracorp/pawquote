@@ -31,12 +31,6 @@
 
             Back</button>
 
-        {{-- <button type="button" onclick="changeStep(1)" class="next f-14 f-w-5 montserrat"><a
-                href="{{ route('results') }}">See Results</a>
-                
-                <x-icons.next />
-
-        </button> --}}
 
         <button onclick="validateAndNextStep(event, [{ selector: 'input[name=email]', errorId: 'emailError' }, { selector: 'input[name=phone]', errorId: 'phoneError' }])" class="next f-14 f-w-5 montserrat">
 

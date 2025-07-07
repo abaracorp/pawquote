@@ -31,6 +31,11 @@
             </div>
         </div>
     </section>
+
+    {{-- @dd($featuredBlog) --}}
+
+    @if($featuredBlog)
+
     <section class="featured-article">
         <div class="container">
             <div class="top-title">Featured Article</div>
@@ -38,20 +43,17 @@
                 <div class="row">
                     <div class="col-lg-6">
                         <div class="leftside">
-                            <img src="{{asset('images/featured-article.png')}}" alt="" class="w-100">
+                            <img src="{{$featuredBlog->image_url ?? ''}}" alt="image" class="w-100">
                         </div>
                     </div>
                     <div class="col-lg-6">
                         <div class="rightside">
                             <div class="heading">
-                                <h2 class="f-32 c-dark l-h-42 f-w-5 freedoka ">Keep Vaccinations and Preventive Care
-                                    Up to Date</h2>
-                                <p class="f-22 c-light l-h-32 f-w-4 montserrat mb-0">Vaccines and parasite
-                                    preventives aren’t just checkboxes—they’re shields against diseases that could
-                                    cost thousands to treat. </p>
+                                <h2 class="f-32 c-dark l-h-42 f-w-5 freedoka ">{{$featuredBlog->title ?? ''}}</h2>
+                                <p class="f-22 c-light l-h-32 f-w-4 montserrat mb-0">{{$featuredBlog->summary ?? ''}}</p>
                             </div>
                             <ul class="details">
-                                <li>
+                                {{-- <li>
                                     <a href=""
                                         class="c-light f-22 f-w-5 montserrat d-flex align-items-center gap-2 "><svg
                                             width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -63,7 +65,7 @@
                                         </svg>
                                         Admin
                                     </a>
-                                </li>
+                                </li> --}}
                                 <li>
                                     <a href=""
                                         class="c-light f-22 f-w-5 montserrat d-flex align-items-center gap-2"><svg
@@ -74,13 +76,13 @@
                                                 stroke="#566369" stroke-width="1.5" stroke-linecap="round"
                                                 stroke-linejoin="round" />
                                         </svg>
-                                        March 12, 2025
+                                        {{optional($featuredBlog->created_at)->format('m-d-Y') ?? ''}}
                                     </a>
                                 </li>
                             </ul>
                             <div class="bottom-link d-flex justify-content-between align-items-center">
-                                <span class="c-light f-22 f-w-5 montserrat">5 min read</span>
-                                <a href="{{route('blogDeatils')}}" class="c-dark f-22 f-w-6 montserrat">Read full
+                                <span class="c-light f-22 f-w-5 montserrat">{{ Str::readTime($featuredBlog->content) }} min read</span>
+                                <a href="{{route('frontend.blogDeatil',['slug' => $featuredBlog->slug])}}" class="c-dark f-22 f-w-6 montserrat">Read full
                                     Article<svg width="24" height="25" viewBox="0 0 24 25" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path
@@ -95,6 +97,9 @@
             </div>
         </div>
     </section>
+
+    @endif
+
     <section class="article">
         <div class="container">
             <!-- <div class="navigation-bar bg-l-blue p-4">
@@ -144,18 +149,22 @@
                 <div class="top-title">Featured Article</div>
                 <div class="article-container">
                     <div class="row">
-                        <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+
+
+                        @if($blogs->isNotEmpty())
+
+                        @foreach ($blogs as $blog)
+                            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
                             <div class="card b-blue br-18 overflow-hidden">
                                 <div class="top-image">
-                                    <img src="{{asset('images/featured-article.png')}}" alt="" class="w-100">
+                                    <img src="{{$blog->image_url}}" alt="Image" class="w-100">
                                 </div>
                                 <div class="card-body ">
                                     <div class="heading">
-                                        <h2 class="f-22 c-dark l-h-27 f-w-5 freedoka ">Know Your Breed’s Risk
-                                            Factors</h2>
+                                        <h2 class="f-22 c-dark l-h-27 f-w-5 freedoka ">{{$blog->title}}</h2>
                                     </div>
                                     <ul class="details">
-                                        <li>
+                                        {{-- <li>
                                             <a href=""
                                                 class="c-light f-14 f-w-5 montserrat d-flex align-items-baseline gap-2 "><svg
                                                     width="14" height="15" viewBox="0 0 14 15" fill="none"
@@ -175,7 +184,7 @@
                                                 </svg>
                                                 Admin
                                             </a>
-                                        </li>
+                                        </li> --}}
                                         <li>
                                             <a href="" class="c-light f-14 f-w-5 d-flex align-items-baseline gap-2"><svg
                                                     width="14" height="15" viewBox="0 0 14 15" fill="none"
@@ -186,13 +195,13 @@
                                                         stroke-linejoin="round" />
                                                 </svg>
 
-                                                March 12, 2025
+                                                {{optional($blog->created_at)->format('m-d-Y') ?? ''}}
                                             </a>
                                         </li>
                                     </ul>
                                     <div class="bottom-link d-flex justify-content-between align-items-center">
-                                        <span class="c-light f-14 f-w-5 montserrat">5 min read</span>
-                                        <a href=""
+                                        <span class="c-light f-14 f-w-5 montserrat">{{ Str::readTime($blog->content) }} min read</span>
+                                        <a href="{{route('frontend.blogDeatil',['slug' => $blog->slug])}}"
                                             class="c-dark f-14 f-w-6 montserrat d-flex align-items-center gap-2">Read
                                             full Article<svg width="24" height="25" viewBox="0 0 24 25" fill="none"
                                                 xmlns="http://www.w3.org/2000/svg">
@@ -206,7 +215,12 @@
                                 <!-- <div class="card-title">Health</div> -->
                             </div>
                         </div>
-                        <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                        @endforeach
+                        
+
+                        @endif
+
+                        {{-- <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
                             <div class="card b-blue br-18 overflow-hidden">
                                 <div class="top-image">
                                     <img src="{{asset('images/article2.png')}}" alt="" class="w-100">
@@ -520,7 +534,8 @@
                                 </div>
                                 <!-- <div class="card-title">Finance</div> -->
                             </div>
-                        </div>
+                        </div> --}}
+
                     </div>
                 </div>
             </div>

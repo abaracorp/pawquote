@@ -22,9 +22,7 @@
                 <ul>
                     <li>
                         <h2 class="c-dark f-24 l-h-32 f-w-5 freedoka mb-0">About Us</h2>
-                        <p class="c-light f-18 l-h-26 f-w-4 montserrat mb-0">Paw Quote is operated by Abara Solutions LLC], a
-                            [LLC or other legal structure]
-                            registered in Delaware/Ontario . Our Site provides a comparison service for pet insurance
+                        <p class="c-light f-18 l-h-26 f-w-4 montserrat mb-0">Paw Quote is operated by Abara Solutions LLC . Our Site provides a comparison service for pet insurance
                             plans available in the US and Canada. </p>
                     </li>
                     <li>

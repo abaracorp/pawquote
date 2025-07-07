@@ -2,83 +2,42 @@
 
 @section('content')
 
-<main id="read-article">
-       
+    <main id="read-article">
+
         <section class="article-top">
             <div class="container">
                 <div class="heading">
-                    <h1 class="c-dark f-56 l-h-72 f-w-5 freedoka mb-0">Track Their Behavior and Energy Levels</h1>
+                    <h1 class="c-dark f-56 l-h-72 f-w-5 freedoka mb-0">{{ $blog->title ?? '' }}</h1>
                     <ul class="d-flex align-items-center gap-5 ">
-                        <li class="c-light f-24 l-h-37 f-w-5 montserrat d-flex align-items-center gap-2"><svg width="32"
+                        {{-- <li class="c-light f-24 l-h-37 f-w-5 montserrat d-flex align-items-center gap-2"><svg width="32"
                                 height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path
                                     d="M16 13.1585C16.6128 13.1585 17.2197 13.0378 17.7859 12.8033C18.352 12.5688 18.8665 12.225 19.2998 11.7917C19.7332 11.3584 20.0769 10.8439 20.3114 10.2777C20.546 9.71153 20.6667 9.1047 20.6667 8.49186C20.6667 7.87903 20.546 7.27219 20.3114 6.70601C20.0769 6.13982 19.7332 5.62537 19.2998 5.19203C18.8665 4.75869 18.352 4.41495 17.7859 4.18042C17.2197 3.9459 16.6128 3.8252 16 3.8252C14.7623 3.8252 13.5753 4.31686 12.7002 5.19203C11.825 6.0672 11.3333 7.25419 11.3333 8.49186C11.3333 9.72954 11.825 10.9165 12.7002 11.7917C13.5753 12.6669 14.7623 13.1585 16 13.1585ZM4 27.0252V27.8252H28V27.0252C28 24.0385 28 22.5452 27.4187 21.4039C26.9073 20.4004 26.0915 19.5845 25.088 19.0732C23.9467 18.4919 22.4533 18.4919 19.4667 18.4919H12.5333C9.54667 18.4919 8.05333 18.4919 6.912 19.0732C5.90851 19.5845 5.09265 20.4004 4.58133 21.4039C4 22.5452 4 24.0385 4 27.0252Z"
                                     stroke="#566369" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                             </svg>
                             Admin
-                        </li>
+                        </li> --}}
                         <li class="c-light f-24 l-h-37 f-w-5 montserrat d-flex align-items-center gap-2"><svg width="32"
                                 height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path
                                     d="M22 6.66667V4M10 6.66667V4M4.33333 10.6667H27.6667M4 13.392C4 10.572 4 9.16133 4.58133 8.084C5.10699 7.12307 5.92266 6.35267 6.912 5.88267C8.05333 5.33333 9.54667 5.33333 12.5333 5.33333H19.4667C22.4533 5.33333 23.9467 5.33333 25.088 5.88267C26.092 6.36533 26.9067 7.136 27.4187 8.08267C28 9.16267 28 10.5733 28 13.3933V19.9427C28 22.7627 28 24.1733 27.4187 25.2507C26.893 26.2116 26.0773 26.982 25.088 27.452C23.9467 28 22.4533 28 19.4667 28H12.5333C9.54667 28 8.05333 28 6.912 27.4507C5.92286 26.981 5.10722 26.2111 4.58133 25.2507C4 24.1707 4 22.76 4 19.94V13.392Z"
-                                    stroke="#566369" stroke-width="1.5" stroke-linecap="round"
-                                    stroke-linejoin="round" />
+                                    stroke="#566369" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                             </svg>
-                            March 5, 2025
+                            {{ optional($blog->created_at ?? '')->format('m-d-Y') ?? '' }}
                         </li>
                     </ul>
                 </div>
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="article-image">
-                            <img src="{{asset('images/article6.png')}}" alt="">
+                            <img src="{{ $blog->image_url ?? '' }}" alt="image">
                         </div>
                     </div>
                 </div>
-                <ul>
-                    <li>
-                        <p class=" c-light f-20 l-h-32 f-w-5 montserrat"> You know your pet better than anyone. Subtle
-                            changes in energy, appetite, or behavior can signal a health issue. Keeping a simple log—or
-                            just staying observant—can help you act before things escalate.</p>
-                    </li>
-                    <li>
-                        <span class="c-dark f-24 l-h-27 f-w-5 freedoka ">Watch for Unusual Habits </span>
-                        <p class="c-light f-20 l-h-32 f-w-4 montserrat">Pets thrive on routine. If your furry friend
-                            suddenly stops greeting you at the door
-                            or skips a favorite toy, it might be more than just a mood. Noticing these patterns early
-                            can make all the difference. </p>
-                    </li>
-                    <li>
-                        <span class="c-dark f-24 l-h-27 f-w-5 freedoka ">Monitor Eating and Drinking</span>
-                        <p class="c-light f-20 l-h-32 f-w-4 montserrat">Changes in how much your pet eats or drinks can
-                            be early signs of trouble. A sudden increase or loss of appetite shouldn't be ignored. Trust
-                            your gut and consult your vet if something feels off.</p>
-                    </li>
-                    <li>
-                        <span class="c-dark f-24 l-h-27 f-w-5 freedoka ">Notice Changes in Sleep Patterns</span>
-                        <p class="c-light f-20 l-h-32 f-w-4 montserrat">A pet who suddenly sleeps much more—or much
-                            less—than usual might be signaling discomfort. While naps are natural, drastic shifts in
-                            rest habits can indicate an underlying issue.</p>
-                    </li>
-                    <li>
-                        <span class="c-dark f-24 l-h-27 f-w-5 freedoka ">Keep an Eye on Bathroom Routines</span>
-                        <p class="c-light f-20 l-h-32 f-w-4 montserrat">Irregular urination or bowel movements can often
-                            be the first sign something’s wrong. Keep an eye on their litter box, backyard habits, or
-                            walks for anything out of the ordinary.</p>
-                    </li>
-                    <li>
-                        <span class="c-dark f-24 l-h-27 f-w-5 freedoka ">Look at Their Body Language</span>
-                        <p class="c-light f-20 l-h-32 f-w-4 montserrat">Your pet communicates through posture, facial
-                            expressions, and tail movement. A tucked tail, flattened ears, or excessive hiding can be
-                            signs they’re not feeling their best.</p>
-                    </li>
-                    <li>
-                        <span class="c-dark f-24 l-h-27 f-w-5 freedoka ">Track Activity Levels Over Time</span>
-                        <p class="c-light f-20 l-h-32 f-w-4 montserrat mb-0">A sudden lack of enthusiasm for play or a daily
-                            walk might not just be a phase. Create a mental baseline of your pet’s usual energy and be
-                            alert to sudden changes.</p>
-                    </li>
-                </ul>
+
+                {!! $blog->content ?? '' !!}
+
+
             </div>
         </section>
         <section class="article-middle">
@@ -104,8 +63,10 @@
                                             stroke="black" stroke-linecap="round" stroke-linejoin="round" />
                                     </svg>
 
-                                    <input type="text" placeholder="Search">
+                                    <input type="text" oninput="handleBlogSearch(this.value,'search-suggestions')"
+                                        placeholder="Search">
                                 </div>
+                                <div id="search-suggestions" class="suggestion-box" style="display: none"></div>
                             </div>
                         </div>
                     </div>
@@ -122,16 +83,27 @@
                                     <span class="c-dark f-22 f-w-5 freedoka">Recent Post</span>
                                 </div>
                                 <div class="row">
-                                    <div class="col-lg-12">
-                                        <div class="post-card">
-                                            <span><img src="{{asset('images/featured-article.png')}}" alt=""></span>
-                                            <div class="content">
-                                                <h4 class="c-light f-18 f-w-4 montserrat mb-0">December 03, 2024</h4>
-                                                <h3 class="c-dark f-20 f-w-5 freedoka">Know Your Breed’s Risk Factors </h3>
+
+                                    @if ($latestBlogs->isNotEmpty())
+                                        @foreach ($latestBlogs as $blog)
+                                            <div class="col-lg-12">
+                                                <a href="{{ route('frontend.blogDeatil', ['slug' => $blog->slug]) }}">
+                                                    <div class="post-card">
+                                                        <span><img src="{{ $blog->image_url ?? '' }}" alt="Image"></span>
+                                                        <div class="content">
+                                                            <h4 class="c-light f-18 f-w-4 montserrat mb-0">
+                                                                {{ optional($blog->created_at ?? '')->format('m-d-Y') ?? '' }}
+                                                            </h4>
+                                                            <h3 class="c-dark f-20 f-w-5 freedoka">{{ $blog->title ?? '' }}
+                                                            </h3>
+                                                        </div>
+                                                    </div>
+                                                </a>
                                             </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-12">
+                                        @endforeach
+                                    @endif
+
+                                    {{-- <div class="col-lg-12">
                                         <div class="post-card">
                                             <span><img src="{{asset('images/article4.png')}}" alt=""></span>
                                             <div class="content">
@@ -149,7 +121,7 @@
                                                 <h3 class="c-dark f-20 f-w-5 freedoka"> Build a Relationship With Your Vet </h3>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div> --}}
                                 </div>
                             </div>
                         </div>
@@ -158,41 +130,105 @@
             </div>
         </section>
         <!-- <section class="leave-reply">
-            <div class="container">
-                <div class="inner b-blue br-40 bg-l-blue">
-                    <div class="heading">
-                        <h1 class="c-dark f-42 l-h-42 f-w-5 freedoka">Leave a Reply </h1>
-                        <p class="c-light f-24 f-w-4 l-h-32 montserrat">Your email address will not be published. Required fields are marked <span class="c-red f-w-6">*</span> </p>
-                    </div>
-                    <form action="">
-                        <div class="row">
-                            <div class="col-lg-6">
-                                <div class="form-action">
-                                    <input type="text"class="b-blue br-12 w-100" placeholder="Enter Name">
-                                </div>
-                            </div>
-                             <div class="col-lg-6">
-                                <div class="form-action">
-                                    <input type="email"class="b-blue br-12 w-100" placeholder="Enter Email">
-                                </div>
-                            </div>
-                            <div class="col-lg-12">
-                                <div class="form-action">
-                                    <input type="text"class="b-blue br-12 w-100" placeholder="Enter Website">
-                                </div>
-                            </div>
-                            <div class="col-lg-12">
-                                <div class="form-action">
-                                    <textarea name="" id=""class="b-blue br-12 w-100"placeholder="Enter  Your Comments"></textarea>
-                                </div>
-                            </div>
-                            <button class="post-comment orange-btn get-quote w-auto f-w-6 ">Post Comment</button>
+                <div class="container">
+                    <div class="inner b-blue br-40 bg-l-blue">
+                        <div class="heading">
+                            <h1 class="c-dark f-42 l-h-42 f-w-5 freedoka">Leave a Reply </h1>
+                            <p class="c-light f-24 f-w-4 l-h-32 montserrat">Your email address will not be published. Required fields are marked <span class="c-red f-w-6">*</span> </p>
                         </div>
-                    </form>
+                        <form action="">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="form-action">
+                                        <input type="text"class="b-blue br-12 w-100" placeholder="Enter Name">
+                                    </div>
+                                </div>
+                                 <div class="col-lg-6">
+                                    <div class="form-action">
+                                        <input type="email"class="b-blue br-12 w-100" placeholder="Enter Email">
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div class="form-action">
+                                        <input type="text"class="b-blue br-12 w-100" placeholder="Enter Website">
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div class="form-action">
+                                        <textarea name="" id=""class="b-blue br-12 w-100" placeholder="Enter  Your Comments"></textarea>
+                                    </div>
+                                </div>
+                                <button class="post-comment orange-btn get-quote w-auto f-w-6 ">Post Comment</button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
-            </div>
-        </section> -->
-          
+            </section> -->
+
     </main>
+
+
+    @push('scripts')
+        <script>
+            
+
+           let timer;
+
+        function handleBlogSearch(value, resultDivID) {
+            const query = value.trim();
+            const suggestionBox = document.getElementById(resultDivID);
+
+            clearTimeout(timer); 
+
+            if (query.length === 0) {
+                suggestionBox.innerHTML = '';
+                suggestionBox.style.display = 'none';
+                return;
+            }
+
+            timer = setTimeout(() => {
+                fetch(`/search-blog?query=${encodeURIComponent(query)}`, {
+                    headers: {
+                        'X-CSRF-TOKEN': csrfToken, 
+                        'X-Requested-With': 'XMLHttpRequest'
+                    }
+                })
+                .then(response => {
+                    if (!response.ok) throw new Error("Request failed");
+                    return response.json();
+                })
+                .then(data => {
+                    let html = '';
+
+                    if (data.length > 0) {
+                        data.forEach(item => {
+                            html += `
+                                <div class="suggestion-item d-flex align-items-center gap-2" onclick="selectSuggestion('${item.title}', '${item.slug}')">
+                                    <img src="${item.image_url}" alt="${item.title}" class="suggestion-img" />
+                                    <span>${item.title}</span>
+                                </div>
+                            `;
+                        });
+                    } else {
+                        html = `<div class="suggestion-item no-result">No results found</div>`;
+                    }
+
+                    suggestionBox.innerHTML = html;
+                    suggestionBox.style.display = 'block';
+                })
+                .catch(error => {
+                    console.error('Search error:', error);
+                    suggestionBox.innerHTML = `<div class="suggestion-item no-result">Something went wrong.</div>`;
+                    suggestionBox.style.display = 'block';
+                });
+            }, 300); 
+        }
+
+
+            function selectSuggestion(title, slug) {
+                window.location.href = `${baseUrl}/blog-detail/${slug}`;
+            }
+        </script>
+    @endpush
 
 @endsection

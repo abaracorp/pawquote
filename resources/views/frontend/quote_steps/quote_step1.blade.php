@@ -22,9 +22,9 @@
     </p> --}}
 
     <div class="bottom-buttons d-flex align-items-center justify-content-between mt-5">
-        <button onclick="changeStep(-1)" class="back f-14 f-w-5 montserrat">
+        <button onclick="changeStep(-1)" class="back f-14 f-w-5 montserrat" style="visibility: hidden">
             <x-icons.back />
-            Back</button>
+            </button>
         <button onclick="validateAndNextStep(event)" class="next f-14 f-w-5 montserrat">Next
             <x-icons.next />
         </button>

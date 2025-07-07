@@ -17,7 +17,7 @@
                         <a class="nav-link {{ isActiveRoute(['about']) }}" aria-current="page" href="{{route('about')}}">About Us</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {{ isActiveRoute(['blog']) }}" aria-current="page" href="{{route('blog')}}">Blog</a>
+                        <a class="nav-link {{ isActiveRoute(['frontend.blog']) }}" aria-current="page" href="{{route('frontend.blog')}}">Blog</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link {{ isActiveRoute(['fan']) }}" aria-current="page" href="{{route('fan')}}">Fan</a>

@@ -260,5 +260,6 @@ tbody, td, tfoot, th, thead, tr{vertical-align: middle;}
 
 /* Elementor Editor CSS */
 .ck.ck-toolbar{border:1px solid #FEA145 !important;border-bottom:none !important;}
-.ck.ck-editor__main>.ck-editor__editable:not(.ck-focused){border: 1px solid #FEA145 !important;height: 100px;}
+.ck.ck-editor__main>.ck-editor__editable:not(.ck-focused){border: 1px solid #FEA145 !important;min-height: 100px;max-height: 400px;}
 .ck.ck-content.ck-editor__editable.ck-rounded-corners.ck-editor__editable_inline.ck-focused{border:1px solid #FEA145 !important;box-shadow: none;}
+.ck.ck-editor__main>.ck-editor__editable{max-height: 400px;}

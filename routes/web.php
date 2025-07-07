@@ -6,6 +6,7 @@ use App\Http\Controllers\Backend\FanStoriesController;
 use App\Http\Controllers\Backend\FaqGuideController;
 use App\Http\Controllers\Backend\GalleryController;
 use App\Http\Controllers\Backend\SettingController;
+use App\Http\Controllers\Frontend\BlogController as FrontendBlogController;
 use App\Http\Controllers\Frontend\FaqGuideController as FrontendFaqGuideController;
 use App\Http\Controllers\Frontend\GetQuoteController;
 use App\Http\Controllers\HomeController;
@@ -35,12 +36,19 @@ Route::as('frontend.')
         ->group(function(){
            
             Route::get('/faq', 'getFaqPage')->name('faq');
+            Route::get('/search-faq', 'handleFaqSearch')->name('faqSearch');
            
         });
 
-//         Route::get('/faq', function () {
-//     return view('frontend/faq');
-// })->name('faq');
+        Route::controller(FrontendBlogController::class)
+        ->group(function(){
+
+
+            Route::get('/blog', 'getBlogPage')->name('blog');
+            Route::get('/blog-detail/{slug}', 'getBlogDeatil')->name('blogDeatil');
+            Route::get('/search-blog', 'handleBlogSearch')->name('handleBlogSearch');
+           
+        });
 
 
         Route::controller(GetQuoteController::class)
@@ -55,8 +63,6 @@ Route::as('frontend.')
 
 
         
-
-        
     });
 
 
@@ -67,13 +73,13 @@ Route::get('/about-us', function () {
 })->name('about');
 
 
-Route::get('/blog', function () {
-    return view('frontend/blog');
-})->name('blog');
+// Route::get('/blog', function () {
+//     return view('frontend/blog');
+// })->name('blog');
 
-Route::get('/blog-detail', function () {
-    return view('frontend/blog_detail');
-})->name('blogDeatils');
+// Route::get('/blog-detail', function () {
+//     return view('frontend/blog_detail');
+// })->name('blogDeatils');
 
 Route::get('/fan', function () {
     return view('frontend/fan');

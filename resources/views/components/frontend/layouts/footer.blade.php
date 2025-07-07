@@ -73,7 +73,7 @@
 
                                                 </li>
                                                 <li>
-                                                    <a href="{{route('blog')}}" class="f-18 c-white  f-w-5 montserrat">
+                                                    <a href="{{route('frontend.blog')}}" class="f-18 c-white  f-w-5 montserrat">
                                                         <svg width="14" height="16" viewBox="0 0 14 16"
                                                             fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                                             <path
@@ -290,7 +290,7 @@
                     </div>
                 </div>
                 <div class="footer-bottom m-t-28 t-center br-16">
-                    <span class="f-18 c-dark  f-w-5 freedoka pb-87">© 2025 PetQuote. All rights reserved.</span>
+                    <span class="f-18 c-dark  f-w-5 freedoka pb-87">© {{date('Y')}} PawQuote. All rights reserved.</span>
                     <p class="f-16 c-light  f-w-5 montserrat mb-0">Paw Quote is an affiliate partner of various
                         pet insurance providers. When you purchase through our links, we may earn a commission at no
                         additional cost to you.</p>

@@ -17,4 +17,23 @@ class FaqGuideController extends Controller
 
        }
 
+
+       public function handleFaqSearch (Request $request){
+
+            $search = $request->input('search');
+
+            $faqs = FaqGuide::query()
+                ->OfType(0)->OfStatus(0)
+                ->when($search, fn($q) => $q->where('question_text', 'like', "%{$search}%"))
+                // ->latest()
+                ->get();
+
+            $tableData = view('frontend.faq-question', compact('faqs'))->render();
+
+            return response()->json([
+                'tableData' => $tableData,
+            ]);
+
+       }
+
 }

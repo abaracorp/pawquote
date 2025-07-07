@@ -29,7 +29,7 @@
            <span class="text"> Female</span>
                  <input onclick="handleStepData('radioCatGender', 'input[name=radioCatGender]:checked', '')" type="radio" id="radioCatGender" name="radioCatGender" value="1">
                   <span class="checkmark"></span>
-            </div>
+            {{-- </div> --}}
         </label>
     </div>
 

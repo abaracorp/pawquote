@@ -17,7 +17,7 @@
                                     stroke="#566369" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                             </svg>
 
-                            <input type="text" placeholder="Search FAQs...">
+                            <input type="text"  oninput="searchModules(this.value,'showResultData','search-faq')" placeholder="Search FAQs...">
                         </div>
                     </div>
                     <svg width="1039" height="234" viewBox="0 0 1039 234" class="footprint" fill="none"
@@ -61,94 +61,14 @@
         @if($faqs->isNotEmpty())
         <section class="accordian-section">
             <div class="container">
-                <div class="accordion" id="faqAccordion">
 
-                    
-                     @foreach ($faqs as $key => $faq)
-                                    {{-- @dump($faq) --}}
-                                
-                                 <div class="accordion-item">
-                                     <h2 class="accordion-header">
-                                         <button class="accordion-button c-dark f-22  f-w-5 freedoka" type="button"
-                                             data-bs-toggle="collapse" data-bs-target="#collapse-{{$key}}"
-                                             aria-expanded="true" aria-controls="collapse-{{$key}}">
-                                             {{$faq->question_text}}
-                                         </button>
-                                     </h2>
-                                     <div id="collapse-{{$key}}" class="accordion-collapse collapse @if ($loop->first) show @endif"
-                                         data-bs-parent="#faqAccordion">
-                                         <div class="accordion-body">
-                                             <span class=" c-light f-18  f-w-5 montserrat ">{!! $faq->content !!}</span>
-                                         </div>
-                                     </div>
-                                 </div>
+                <span id="showResultData">
 
-                     @endforeach
-
-                    {{-- <div class="accordion-item">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button collapsed c-dark f-22 l-h-46 f-w-5 freedoka" type="button"
-                                data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false"
-                                aria-controls="collapseTwo">
-                                Can I Use Any Vet With Pet Insurance?
-                            </button>
-                        </h2>
-                        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                            <div class="accordion-body">
-                                <span class=" c-light f-18 l-h-28 f-w-5 montserrat ">Yes. Most providers
-                                    let you visit any licensed veterinarian,
-                                    including specialists and emergency clinics. Flexibility varies by
-                                    provider, so it's worth checking before you choose</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button collapsed c-dark f-22 l-h-46 f-w-5 freedoka" type="button"
-                                data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false"
-                                aria-controls="collapseThree">
-                                Is There a Waiting Period Before Coverage Starts?
-                            </button>
-                        </h2>
-                        <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                            <div class="accordion-body">
-                                <span class=" c-light f-18 l-h-28 f-w-5 montserrat ">Typically, yes.
-                                    Most insurers have waiting periods—usually 2–14
-                                    days for accidents and up to 30 days for illnesses. Some plans offer
-                                    shorter wait times, so that can be a deciding factor when comparing
-                                    options.</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button collapsed c-dark f-22 l-h-46 f-w-5 freedoka" type="button"
-                                data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false"
-                                aria-controls="collapseFour">
-                                Do Pet Insurance Plans Cover Pre-Existing Conditions?
-                            </button>
-                        </h2>
-                        <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                            <div class="accordion-body">
-                                <span class=" c-light f-18 l-h-28 f-w-5 montserrat ">In most cases, pet
-                                    insurance does not cover pre-existing
-                                    conditions. A pre-existing condition is any illness or injury that
-                                    your pet showed symptoms of or was treated for before your policy
-                                    began. This can include chronic issues like diabetes, arthritis, or
-                                    even past injuries.
-                                    However, some insurers may differentiate between curable and
-                                    incurable conditions. For example, if your pet had a minor issue in
-                                    the past that resolved and hasn’t recurred for a set period (often
-                                    6–12 months), certain plans may still offer coverage moving forward.
-                                    That said, not all insurers treat these cases the same way. Some may
-                                    still exclude them from coverage entirely. We recommend contacting
-                                    the insurance provider directly or reviewing their specific policy
-                                    terms to get accurate and personalized information.</span>
-                            </div>
-                        </div>
-                    </div> --}}
-
-                </div>
+                            @include('frontend.faq-question',['guides' => $guides])
+                            
+                        </span>
+                
+                
             </div>
         </section>
         @endif
@@ -291,6 +211,9 @@
                         Pet Owner Should Know</p>
                 </div>
                 <div class="inner">
+
+                    
+
                     <div class="row">
 
                         @foreach ($guides as $key => $guide)
@@ -299,14 +222,14 @@
                             <div class="card b-blue br-40">
                                 <h2 class="c-dark f-26 l-h-37 f-w-5 freedoka">{{$guide->question_text}}</h2>
                                 {{-- <p class="c-light f-18 l-h-26 f-w-4 montserrat">{!! $guide->content !!}</p> --}}
-                                <p class="c-light f-18 l-h-26 f-w-4 montserrat">{!!  str($guide->content)->words(30, '...')  !!}</p>
+                                <p class="c-light f-18 l-h-26 f-w-4 montserrat">{!!  str($guide->content)->limit(150, '...')  !!}</p>
                                 
-                                @if(hasMoreThanWords($guide->content, 30))
+                                @if(hasMoreThanChars($guide->content, 150))
                                     <button class="learn b-blue br-8 c-dark f-18 f-w-5 freedoka">
                                         Read More 
-                                        <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        {{-- <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="..." fill="black" />
-                                        </svg>
+                                        </svg> --}}
                                     </button>
                                 @endif
                             </div>
@@ -314,25 +237,8 @@
 
                         @endforeach
 
-
-                        {{-- <div class="col-lg-6">
-                            <div class="card b-blue br-40">
-                                <h2 class="c-dark f-26 l-h-37 f-w-5 freedoka">What Does Pet Insurance Actually Cover?
-                                </h2>
-                                <p class="c-light f-18 l-h-26 f-w-4 montserrat">Pet insurance generally covers accidents
-                                    and illnesses, including surgeries, hospital stays, medications, and diagnostics
-                                    like blood tests or X-rays. </p>
-                                <button class="learn b-blue br-8 c-dark f-18 f-w-5 freedoka m">Learn More <svg
-                                        width="16" height="17" viewBox="0 0 16 17" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M5.29279 2.13556C5.10532 2.32309 5 2.5774 5 2.84256C5 3.10772 5.10532 3.36203 5.29279 3.54956L10.2428 8.49956L5.29279 13.4496C5.11063 13.6382 5.00983 13.8908 5.01211 14.153C5.01439 14.4152 5.11956 14.666 5.30497 14.8514C5.49038 15.0368 5.74119 15.142 6.00339 15.1442C6.26558 15.1465 6.51818 15.0457 6.70679 14.8636L12.3638 9.20656C12.5513 9.01903 12.6566 8.76472 12.6566 8.49956C12.6566 8.2344 12.5513 7.98009 12.3638 7.79256L6.70679 2.13556C6.51926 1.94809 6.26495 1.84277 5.99979 1.84277C5.73462 1.84277 5.48031 1.94809 5.29279 2.13556Z"
-                                            fill="black" />
-                                    </svg>
-                                </button>
-                            </div>
-                        </div> --}}
                     </div>
+                        
                 </div>
                 <button class="view-all orange-btn f-18 f-w-5 montserrat">View All</button>
             </div>
@@ -357,4 +263,61 @@
         </section>
         
     </main>
+
+    @push('scripts')
+        
+
+    <script>
+
+        let timer;
+
+        function searchModules(value,containerID,url){
+
+            const resultContainer = document.getElementById(containerID);
+
+             clearTimeout(timer);
+
+    timer = setTimeout(() => {
+        const query = value.trim();
+
+        fetch(`${baseUrl}/${url}?search=${encodeURIComponent(query)}`, {
+            headers: {
+                'X-CSRF-TOKEN': csrfToken,
+                'X-Requested-With': 'XMLHttpRequest'
+            }
+        })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error("Search request failed");
+                }
+                return response.json();
+            })
+            .then(data => {
+
+                console.log();
+                
+
+                if (data.tableData && resultContainer) {
+                    resultContainer.innerHTML = data.tableData;
+                }
+
+                // if (data.countFilterPage && countContainer) {
+                //     countContainer.innerHTML = data.countFilterPage;
+                // }
+            })
+            .catch(error => {
+                console.error(error);
+                if (resultContainer) {
+                    resultContainer.innerHTML = "<p class='error-msg'>Something went wrong.</p>";
+                }
+            });
+    }, 300);
+
+        }
+
+    </script>
+
+
+    @endpush
+
 @endsection

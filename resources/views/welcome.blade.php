@@ -900,7 +900,7 @@
                          find the perfect coverage for your furry
                          family member.</p>
                  </div>
-                 <button class="get-quote orange-btn f-22 f-w-6 montserrat">Get A Quote</button>
+                 <a href="{{route('getQuote')}}" class="get-quote orange-btn f-22 f-w-6 montserrat">Get A Quote</a>
              </div>
          </div>
      </section>

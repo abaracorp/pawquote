@@ -46,6 +46,16 @@ if (!function_exists('hasMoreThanWords')) {
     }
 }
 
+if (!function_exists('hasMoreThanChars')) {
+   
+        function hasMoreThanChars(string $content, int $limit = 100): bool
+    {
+        $text = strip_tags($content); 
+        $charCount = mb_strlen($text); 
+        return $charCount > $limit;
+    }
+}
+
 if (!function_exists('generateUniqueSlug')) {
 
 function generateUniqueSlug(string $title, string $table, string $slugColumn = 'slug'): string

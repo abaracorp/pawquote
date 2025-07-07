@@ -37,6 +37,12 @@ class Blog extends Model implements HasMedia
         return $this->status == 0 ? 'Published' : 'Draft';
     }
 
+    public function scopeOfStatus($query, $type)
+    {
+        return $query->where('status', $type);
+    }
+
+
         protected static function boot()
     {
         parent::boot();

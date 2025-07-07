@@ -355,8 +355,8 @@ function showStep(step) {
     document.querySelector('.progress-bar').style.width = `${Math.round((step / initialSteps) * 100)}%`;
 
     // Hide/show navigation buttons
-    document.querySelector('.back').style.display = (step === 1) ? 'none' : 'inline-flex';
-    document.querySelector('.next').style.display = (step === totalSteps) ? 'none' : 'inline-flex';
+    // document.querySelector('.back').style.display = (step === 1) ? 'none' : 'inline-flex';
+    // document.querySelector('.next').style.display = (step === totalSteps) ? 'none' : 'inline-flex';
 
 
     const header = document.querySelector('.heading');

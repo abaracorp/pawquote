@@ -21,7 +21,7 @@
                 <ul>
                     <li>
                         <p class="c-light f-18 l-h-26 f-w-4 montserrat mb-0">By continuing to use Paw Quote
-                            paqquote.com, you consent to our use of cookies. You can manage your cookie preferences
+                            pawquote.com, you consent to our use of cookies. You can manage your cookie preferences
                             through your browser settings. </p>
                         <p class="c-light f-18 l-h-26 f-w-5 montserrat mb-0">For more details, please contact us at
                             pawquote@gmail.com. </p>
@@ -30,7 +30,7 @@
                         <h2 class="c-dark f-24 l-h-32 f-w-5 freedoka mb-0"> Copyright / Intellectual Property Notice
                             Copyright Notice</h2>
                         <p class="c-light f-18 l-h-26 f-w-4 montserrat mb-0">All content, including text, images, logos,
-                            graphics, and software on Paw Quote paqquote.com are the intellectual property of Paw Quote
+                            graphics, and software on Paw Quote pawquote.com are the intellectual property of Paw Quote
                             or its licensors and are protected by copyright laws.</p>
                         <p class="c-light f-18 l-h-26 f-w-4 montserrat mb-0">You may not copy, reproduce, distribute, or
                             create derivative works from any content on this Site without prior written permission from

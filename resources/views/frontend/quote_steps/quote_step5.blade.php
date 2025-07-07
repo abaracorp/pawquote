@@ -12,32 +12,22 @@
                 <div class="col-lg-6 col-md-6 col-sm-6">
                     <div class="custom-select-wrapper">
                         <select name="petAgeYear" onchange="handleStepData('petAgeYear', 'select[name=petAgeYear]', 'petAgeError')" id="petAgeYear"class="c-dark f-16 f-w-4 freedoka">
-                            <option value="0" class="c-light f-16 f-w-4 freedoka">0 Years
-                            </option>
-                            <option value="1" class="c-light f-16 f-w-4 freedoka">1 Years
-                            </option>
-                            <option value="2" class="c-light f-16 f-w-4 freedoka">2 Years
-                            </option>
-                            <option value="3" class="c-light f-16 f-w-4 freedoka">3 Years
-                            </option>
-                            <option value="4" class="c-light f-16 f-w-4 freedoka">4 Years
-                            </option>
+                            @for ($i = 0; $i <= 20; $i++)
+                                <option value="{{ $i }}" class="c-light f-16 f-w-4 freedoka">{{ $i }} Years</option>
+                            @endfor
+
                         </select>
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-6 ">
                     <div class="custom-select-wrapper mb-0"> 
                         <select name="petAgeMonth" onchange="handleStepData('petAgeMonth', 'select[name=petAgeMonth]', 'petAgeError')" id="petAgeMonth" class="c-dark f-16 f-w-4 freedoka">
-                            <option value="0"  class="c-light f-16 f-w-4 freedoka">0 Months
-                            </option>
-                            <option value="1"  class="c-light f-16 f-w-4 freedoka">1 Months
-                            </option>
-                            <option value="2"  class="c-light f-16 f-w-4 freedoka">2 Months
-                            </option>
-                            <option value="3" selected class="c-light f-16 f-w-4 freedoka">3 Months
-                            </option>
-                            <option value="4" class="c-light f-16 f-w-4 freedoka">4 Months
-                            </option>
+                           @for ($i = 0; $i <= 11; $i++)
+                                <option value="{{ $i }}" class="c-light f-16 f-w-4 freedoka" {{ $i == 3 ? 'selected' : '' }}>
+                                    {{ $i }} Months
+                                </option>
+                            @endfor
+
                         </select>
                     </div>
                 </div>

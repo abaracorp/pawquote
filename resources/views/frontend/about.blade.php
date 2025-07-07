@@ -16,14 +16,14 @@
                                     insurance and how it can protect both your pet's health and your financial
                                     well-being..</p>
                                 <div class="bottom-content d-flex">
-                                    <button class=" get-quote orange-btn f-27 freedoka f-w-5 ">Get Your Quote <svg
+                                    <a href="{{route('getQuote')}}" class=" get-quote orange-btn f-27 freedoka f-w-5 ">Get Your Quote <svg
                                             width="16" height="17" viewBox="0 0 16 17" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
                                             <path fill-rule="evenodd" clip-rule="evenodd"
                                                 d="M12 8.5L5.24008 14.5L4 13.3993L9.51984 8.5L4 3.60223L5.24008 2.5L12 8.5Z"
                                                 fill="white" />
                                         </svg>
-                                    </button>
+                                    </a>
                                     <button class="learn-more">Learn More</button>
                                 </div>
                             </div>
@@ -749,14 +749,14 @@
                                     trust
                                     pet insurance to keep their furry family members healthy and protected. </p>
                                 <div class="bottom-content">
-                                    <button class=" get-quote orange-btn f-27 freedoka f-w-5 ">Get Your Quote<svg
+                                    <a href="{{route('getQuote')}}" class=" get-quote orange-btn f-27 freedoka f-w-5 ">Get Your Quote<svg
                                             width="16" height="17" viewBox="0 0 16 17" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
                                             <path fill-rule="evenodd" clip-rule="evenodd"
                                                 d="M12 8.38281L5.24008 14.3828L4 13.2821L9.51984 8.38281L4 3.48504L5.24008 2.38281L12 8.38281Z"
                                                 fill="white" />
                                         </svg>
-                                        </i></button>
+                                        </i></a>
                                     <button class="read-more blank-btn c-orange ">Read More Stories</button>
                                 </div>
                                 <svg width="151" height="160" viewBox="0 0 161 170" class="footprint"
