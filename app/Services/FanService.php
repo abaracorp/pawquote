@@ -24,7 +24,7 @@ class FanService
 
             $fan = Fan::create([
                 'title'   => $data['title'],
-                'slug'    => Str::slug($data['title']),
+                // 'slug'    => Str::slug($data['title']),
                 // 'status'  => $data['status'] ?? 0,
                 'label'   => $data['label'] ?? null,
                 'content' => $data['content'],
@@ -43,7 +43,7 @@ class FanService
     public function update(Fan $fan, array $data): Fan
     {
         $fan->title = $data['title'];
-        $fan->slug =  Str::slug($data['title']);
+        // $fan->slug =  Str::slug($data['title']);
         // $fan->status = $data['status'] ?? 0;
         $fan->label = $data['label'] ?? null;
         $fan->content = $data['content'];

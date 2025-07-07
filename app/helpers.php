@@ -1,5 +1,8 @@
 <?php
 
+use Illuminate\Support\Str;
+use Illuminate\Support\Facades\DB;
+
 if (!function_exists('editIcon')) {
     function editIcon()
     {
@@ -30,5 +33,32 @@ if (!function_exists('isActiveRoute')) {
         }
         return '';
     }
+}
+
+
+if (!function_exists('hasMoreThanWords')) {
+   
+    function hasMoreThanWords(string $content, int $limit = 100): bool
+    {
+        $text = strip_tags($content);
+        $wordCount = str_word_count($text);
+        return $wordCount > $limit;
+    }
+}
+
+if (!function_exists('generateUniqueSlug')) {
+
+function generateUniqueSlug(string $title, string $table, string $slugColumn = 'slug'): string
+{
+    $slug = Str::slug($title);
+    $originalSlug = $slug;
+    $counter = 1;
+
+    while (DB::table($table)->where($slugColumn, $slug)->exists()) {
+        $slug = $originalSlug . '-' . $counter++;
+    }
+
+    return $slug;
+}
 }
 

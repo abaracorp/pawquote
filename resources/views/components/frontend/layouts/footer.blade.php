@@ -4,7 +4,7 @@
                     <div class="row">
                         <div class="col-lg-4">
                             <div class="footer-leftside">
-                                <a href="{{route('homepage')}}" class="logo"><img src="{{asset('images/pawquote-white.png')}}" alt=""></a>
+                                <a href="{{route('frontend.homepage')}}" class="logo"><img src="{{asset('images/pawquote-white.png')}}" alt=""></a>
                                 <p class="f-22 c-cf f-w-4  montserrat">Helping pet owners find the best insurance
                                     coverage for their furry family members.</p>
                                 <h3 class="f-18 c-white f-w-6  freedoka ">Quick Links:</h3>
@@ -23,7 +23,7 @@
                                             <h2 class=" f-28 c-orange f-w-5  m-b-16 freedoka">Quick Links</h2>
                                             <ul>
                                                 <li>
-                                                    <a href="{{route('homepage')}}"
+                                                    <a href="{{route('frontend.homepage')}}"
                                                         class="f-18 c-white  f-w-5 montserrat">
                                                         
                                                         <svg width="14" height="16" viewBox="0 0 14 16"
@@ -97,7 +97,7 @@
 
                                                 </li>
                                                 <li>
-                                                    <a href="{{route('faq')}}" class="f-18 c-white  f-w-5 montserrat">
+                                                    <a href="{{route('frontend.faq')}}" class="f-18 c-white  f-w-5 montserrat">
                                                         <svg width="14" height="16" viewBox="0 0 14 16"
                                                             fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                                             <path

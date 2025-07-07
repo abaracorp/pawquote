@@ -32,8 +32,19 @@ class Fan extends Model implements HasMedia
         return optional($this->getFirstMedia('fan'))->file_name; 
     }
 
-    // public function getStatusTextAttribute()
-    // {
-    //     return $this->status == 0 ? 'Published' : 'Draft';
-    // }
+        protected static function boot()
+    {
+        parent::boot();
+
+        static::creating(function ($model) {
+            $model->slug = generateUniqueSlug($model->title, $model->getTable());
+        });
+
+        static::updating(function ($model) {
+            if ($model->isDirty('title')) {
+                $model->slug = generateUniqueSlug($model->title, $model->getTable());
+            }
+        });
+    }
+   
 }

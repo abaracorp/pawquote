@@ -6,16 +6,60 @@ use App\Http\Controllers\Backend\FanStoriesController;
 use App\Http\Controllers\Backend\FaqGuideController;
 use App\Http\Controllers\Backend\GalleryController;
 use App\Http\Controllers\Backend\SettingController;
+use App\Http\Controllers\Frontend\FaqGuideController as FrontendFaqGuideController;
 use App\Http\Controllers\Frontend\GetQuoteController;
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 
 // Frontend Routes
 
-Route::get('/', function () {
-    return view('welcome');
-})->name('homepage');
+// Route::get('/', function () {
+//     return view('welcome');
+// })->name('homepage');
+
+Route::as('frontend.')
+    ->group(function () {
+
+
+        Route::controller(HomeController::class)
+        ->group(function(){
+           
+            Route::get('/', 'getHomePage')->name('homepage');
+           
+        });
+
+
+        Route::controller(FrontendFaqGuideController::class)
+        ->group(function(){
+           
+            Route::get('/faq', 'getFaqPage')->name('faq');
+           
+        });
+
+//         Route::get('/faq', function () {
+//     return view('frontend/faq');
+// })->name('faq');
+
+
+        Route::controller(GetQuoteController::class)
+        ->group(function(){
+            Route::post('quote-zipcode', 'quoteZipcode')->name('quoteZipcode');           
+            Route::get('quote', 'quoteSteps')->name('quoteSteps')->middleware('check.zip');
+            Route::post('save-quote-steps-data', 'saveQuoteSteps')->name('saveQuoteSteps');
+
+            Route::get('quote-allresults/{uuid}', 'quoteAllResults')->name('quoteAllResults');
+           
+        });
+
+
+        
+
+        
+    });
+
+
 
 
 Route::get('/about-us', function () {
@@ -46,9 +90,9 @@ Route::get('/get-quote', function () {
 //     return view('frontend/pet_protection');
 // })->name('results');
 
-Route::get('/faq', function () {
-    return view('frontend/faq');
-})->name('faq');
+// Route::get('/faq', function () {
+//     return view('frontend/faq');
+// })->name('faq');
 
 Route::get('/cookie-policy', function () {
     return view('frontend/cookie_policy');
@@ -69,7 +113,7 @@ Route::get('/view-success-story', function () {
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 
 // Backend Routes 
@@ -192,22 +236,5 @@ Route::prefix('admin')
     });
 
 
-    Route::as('frontend.')
-    ->group(function () {
-
-        Route::controller(GetQuoteController::class)
-        ->group(function(){
-            Route::post('quote-zipcode', 'quoteZipcode')->name('quoteZipcode');           
-            Route::get('quote', 'quoteSteps')->name('quoteSteps')->middleware('check.zip');
-            Route::post('save-quote-steps-data', 'saveQuoteSteps')->name('saveQuoteSteps');
-
-            Route::get('quote-allresults/{uuid}', 'quoteAllResults')->name('quoteAllResults');
-           
-        });
-
-
-        
-
-        
-    });
+    
 

@@ -37,5 +37,20 @@ class Blog extends Model implements HasMedia
         return $this->status == 0 ? 'Published' : 'Draft';
     }
 
+        protected static function boot()
+    {
+        parent::boot();
+
+        static::creating(function ($model) {
+            $model->slug = generateUniqueSlug($model->title, $model->getTable());
+        });
+
+        static::updating(function ($model) {
+            if ($model->isDirty('title')) {
+                $model->slug = generateUniqueSlug($model->title, $model->getTable());
+            }
+        });
+    }
+
 
 }

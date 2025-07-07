@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\FaqGuide;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -11,18 +12,21 @@ class HomeController extends Controller
      *
      * @return void
      */
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
+    // public function __construct()
+    // {
+    //     $this->middleware('auth');
+    // }
 
     /**
      * Show the application dashboard.
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index()
+    public function getHomePage()
     {
-        return view('home');
+
+        $faqs = FaqGuide::OfType(0)->OfStatus(0)->limit(4)->get();
+
+        return view('welcome',compact('faqs'));
     }
 }

@@ -57,28 +57,35 @@
                 </div>
             </div>
         </section>
+
+        @if($faqs->isNotEmpty())
         <section class="accordian-section">
             <div class="container">
                 <div class="accordion" id="faqAccordion">
-                    <div class="accordion-item">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button c-dark f-22 l-h-46 f-w-5 freedoka" type="button"
-                                data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true"
-                                aria-controls="collapseOne">
-                                How Does the Reimbursement Process Work?
-                            </button>
-                        </h2>
-                        <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
-                            <div class="accordion-body">
-                                <span class=" c-light f-18 l-h-28 f-w-5 montserrat ">After paying your
-                                    vet bill, you submit a claim through your
-                                    provider’s app or website. Most companies process claims in 5–14
-                                    business days. Be sure to check which insurers have a faster
-                                    turnaround time if speed matters to you.</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
+
+                    
+                     @foreach ($faqs as $key => $faq)
+                                    {{-- @dump($faq) --}}
+                                
+                                 <div class="accordion-item">
+                                     <h2 class="accordion-header">
+                                         <button class="accordion-button c-dark f-22  f-w-5 freedoka" type="button"
+                                             data-bs-toggle="collapse" data-bs-target="#collapse-{{$key}}"
+                                             aria-expanded="true" aria-controls="collapse-{{$key}}">
+                                             {{$faq->question_text}}
+                                         </button>
+                                     </h2>
+                                     <div id="collapse-{{$key}}" class="accordion-collapse collapse @if ($loop->first) show @endif"
+                                         data-bs-parent="#faqAccordion">
+                                         <div class="accordion-body">
+                                             <span class=" c-light f-18  f-w-5 montserrat ">{!! $faq->content !!}</span>
+                                         </div>
+                                     </div>
+                                 </div>
+
+                     @endforeach
+
+                    {{-- <div class="accordion-item">
                         <h2 class="accordion-header">
                             <button class="accordion-button collapsed c-dark f-22 l-h-46 f-w-5 freedoka" type="button"
                                 data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false"
@@ -139,10 +146,13 @@
                                     terms to get accurate and personalized information.</span>
                             </div>
                         </div>
-                    </div>
+                    </div> --}}
+
                 </div>
             </div>
         </section>
+        @endif
+
         <section class="support-options">
             <div class="container">
                 <div class="row">
@@ -270,6 +280,9 @@
                 </div>
             </div>
         </section>
+
+
+        @if($guides->isNotEmpty())
         <section class="helpful-guides">
             <div class="container">
                 <div class="heading t-center">
@@ -279,24 +292,30 @@
                 </div>
                 <div class="inner">
                     <div class="row">
+
+                        @foreach ($guides as $key => $guide)
+
                         <div class="col-lg-6">
                             <div class="card b-blue br-40">
-                                <h2 class="c-dark f-26 l-h-37 f-w-5 freedoka">Is Pet Insurance Worth It?</h2>
-                                <p class="c-light f-18 l-h-26 f-w-4 montserrat">Imagine this: it’s 2 a.m. and your dog
-                                    starts whining in pain, refusing to
-                                    eat, and limping after a fall from the couch. A trip to the emergency vet is your
-                                    only option. </p>
-                                <button class="learn b-blue br-8 c-dark f-18 f-w-5 freedoka">Learn More <svg
-                                        width="16" height="17" viewBox="0 0 16 17" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M5.29279 2.13556C5.10532 2.32309 5 2.5774 5 2.84256C5 3.10772 5.10532 3.36203 5.29279 3.54956L10.2428 8.49956L5.29279 13.4496C5.11063 13.6382 5.00983 13.8908 5.01211 14.153C5.01439 14.4152 5.11956 14.666 5.30497 14.8514C5.49038 15.0368 5.74119 15.142 6.00339 15.1442C6.26558 15.1465 6.51818 15.0457 6.70679 14.8636L12.3638 9.20656C12.5513 9.01903 12.6566 8.76472 12.6566 8.49956C12.6566 8.2344 12.5513 7.98009 12.3638 7.79256L6.70679 2.13556C6.51926 1.94809 6.26495 1.84277 5.99979 1.84277C5.73462 1.84277 5.48031 1.94809 5.29279 2.13556Z"
-                                            fill="black" />
-                                    </svg>
-                                </button>
+                                <h2 class="c-dark f-26 l-h-37 f-w-5 freedoka">{{$guide->question_text}}</h2>
+                                {{-- <p class="c-light f-18 l-h-26 f-w-4 montserrat">{!! $guide->content !!}</p> --}}
+                                <p class="c-light f-18 l-h-26 f-w-4 montserrat">{!!  str($guide->content)->words(30, '...')  !!}</p>
+                                
+                                @if(hasMoreThanWords($guide->content, 30))
+                                    <button class="learn b-blue br-8 c-dark f-18 f-w-5 freedoka">
+                                        Read More 
+                                        <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="..." fill="black" />
+                                        </svg>
+                                    </button>
+                                @endif
                             </div>
                         </div>
-                        <div class="col-lg-6">
+
+                        @endforeach
+
+
+                        {{-- <div class="col-lg-6">
                             <div class="card b-blue br-40">
                                 <h2 class="c-dark f-26 l-h-37 f-w-5 freedoka">What Does Pet Insurance Actually Cover?
                                 </h2>
@@ -312,12 +331,14 @@
                                     </svg>
                                 </button>
                             </div>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
                 <button class="view-all orange-btn f-18 f-w-5 montserrat">View All</button>
             </div>
         </section>
+        @endif
+
         <section class="quote-now">
             <div class="container">
                 <div class="inner">
