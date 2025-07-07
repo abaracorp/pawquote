@@ -6,22 +6,16 @@
         </p>
     </div>
     <div class="choose-content">
-        <div class="pet-card pet-card1 selected b-blue br-16 d-flex align-items-center justify-content-center flex-column gap-3">
-            
+        <label for="radioDog" class="pet-card pet-card1 selected b-blue br-16 d-flex align-items-center justify-content-center flex-column gap-3 radio-container">
             <x-icons.dog />
-
-            <label class="radio-container">Dog <input type="radio" onclick="handleStepData('petType', 'input[name=petType]:checked', '')" checked id="radioDog" name="petType" value="0"> <span
+            Dog <input type="radio" onclick="handleStepData('petType', 'input[name=petType]:checked', '')" checked id="radioDog" name="petType" value="0"> <span
                     class="checkmark"></span>
-            </label>
-        </div>
-        <div class="pet-card pet-card1  b-blue br-16 d-flex align-items-center justify-content-center flex-column gap-3">
-            
+        </label>
+       <label for="radioCat" class="pet-card pet-card1  b-blue br-16 d-flex align-items-center justify-content-center flex-column gap-3 radio-container">
             <x-icons.cat />
-
-            <label class="radio-container">Cat <input onclick="handleStepData('petType', 'input[name=petType]:checked', '')" type="radio" id="radioCat" name="petType" value="1"> <span
+            Cat <input onclick="handleStepData('petType', 'input[name=petType]:checked', '')" type="radio" id="radioCat" name="petType" value="1"> <span
                     class="checkmark"></span>
-            </label>
-        </div>
+       </label>
     </div>
     {{-- <p id="petTypeError" class="f-14 c-red mt-2" style="display: none;">
     Please select Dog or Cat before proceeding.

@@ -257,3 +257,8 @@ tbody, td, tfoot, th, thead, tr{vertical-align: middle;}
 /* Add new gallery  */
 .add-new-gallery form .upload-container label {width: 50%;}
 .add-new-gallery form .upload-container .upload-box{height: 100px;display: flex;align-items: center;justify-content: center;}
+
+/* Elementor Editor CSS */
+.ck.ck-toolbar{border:1px solid #FEA145 !important;border-bottom:none !important;}
+.ck.ck-editor__main>.ck-editor__editable:not(.ck-focused){border: 1px solid #FEA145 !important;height: 100px;}
+.ck.ck-content.ck-editor__editable.ck-rounded-corners.ck-editor__editable_inline.ck-focused{border:1px solid #FEA145 !important;box-shadow: none;}
