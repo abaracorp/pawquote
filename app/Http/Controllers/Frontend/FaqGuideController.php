@@ -13,9 +13,20 @@ class FaqGuideController extends Controller
          $faqs = FaqGuide::OfType(0)->OfStatus(0)->get();
          $guides = FaqGuide::OfType(1)->OfStatus(0)->limit(2)->get();
 
-        return view('frontend/faq',compact('faqs','guides'));
+        return view('frontend.faq',compact('faqs','guides'));
 
        }
+
+
+       public function getGuidePage (){
+
+         $guides = FaqGuide::OfType(1)->OfStatus(0)->get();
+
+        return view('frontend.helpful_guides',compact('guides'));
+
+       }
+
+       
 
 
        public function handleFaqSearch (Request $request){
