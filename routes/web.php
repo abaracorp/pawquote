@@ -7,6 +7,7 @@ use App\Http\Controllers\Backend\FaqGuideController;
 use App\Http\Controllers\Backend\GalleryController;
 use App\Http\Controllers\Backend\SettingController;
 use App\Http\Controllers\Frontend\BlogController as FrontendBlogController;
+use App\Http\Controllers\Frontend\FanAndGalleryController;
 use App\Http\Controllers\Frontend\FaqGuideController as FrontendFaqGuideController;
 use App\Http\Controllers\Frontend\GetQuoteController;
 use App\Http\Controllers\HomeController;
@@ -50,6 +51,24 @@ Route::as('frontend.')
            
         });
 
+//         Route::get('/view-success-story', function () {
+//     return view('frontend/view_success_story');
+// })->name('successStory');
+
+        Route::controller(FanAndGalleryController::class)
+        ->group(function(){
+
+
+            Route::get('/fan', 'getFanGalleryPage')->name('fan');
+            Route::get('/view-success-story/{slug}', 'getSuccessStoryPage')->name('successStory');
+            Route::get('/view-all-success-story', 'getAllSuccessStories')->name('successStories');
+            // Route::get('/blog-detail/{slug}', 'getBlogDeatil')->name('blogDeatil');
+            // Route::get('/search-blog', 'handleBlogSearch')->name('handleBlogSearch');
+           
+        });
+
+    
+
 
         Route::controller(GetQuoteController::class)
         ->group(function(){
@@ -81,9 +100,9 @@ Route::get('/about-us', function () {
 //     return view('frontend/blog_detail');
 // })->name('blogDeatils');
 
-Route::get('/fan', function () {
-    return view('frontend/fan');
-})->name('fan');
+// Route::get('/fan', function () {
+//     return view('frontend/fan');
+// })->name('fan');
 
 
 Route::get('/get-quote', function () {
@@ -113,9 +132,9 @@ Route::get('/payment-plan', function () {
     return view('frontend/payment_plan');
 })->name('paymentPlan');
 
-Route::get('/view-success-story', function () {
-    return view('frontend/view_success_story');
-})->name('successStory');
+// Route::get('/view-success-story', function () {
+//     return view('frontend/view_success_story');
+// })->name('successStory');
 
 Auth::routes();
 

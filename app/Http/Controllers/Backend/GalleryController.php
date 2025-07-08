@@ -59,7 +59,9 @@ class GalleryController extends Controller
     public function deleteGallery (Gallery $gallery){
 
         
-        $this->mediaService->deleteMediaById($gallery, $gallery->id);
+        // $this->mediaService->deleteMediaById($gallery, $gallery->id);
+        $this->mediaService->clearMediaCollection($gallery,'gallery-images');
+        // clearMediaCollection
         $gallery->delete();
 
         return redirect()->route('admin.gallery')->with('success', 'Gallery image deleted successfully.');
@@ -77,7 +79,8 @@ class GalleryController extends Controller
         
         if ($request->hasFile('image')) {
 
-            $this->mediaService->deleteMediaById($gallery, $gallery->id);
+            // $this->mediaService->deleteMediaById($gallery, $gallery->id);
+            $this->mediaService->clearMediaCollection($gallery,'gallery-images');
             $this->mediaService->uploadImage($gallery, $request->file('image'), 'gallery-images');
             
         }

@@ -53,7 +53,8 @@ class FanService
 
             // $fan->clearMediaCollection('fan');
 
-            $this->mediaService->deleteMediaById($fan, $fan->id);
+            // $this->mediaService->deleteMediaById($fan, $fan->id);
+             $this->mediaService->clearMediaCollection($fan,'fan');
 
             $this->mediaService->uploadImage($fan, $data['image'], 'fan');
         }
@@ -65,7 +66,8 @@ class FanService
     public function delete(Fan $fan): void
     {
         DB::transaction(function () use ($fan) {
-            $this->mediaService->deleteMediaById($fan, $fan->id);
+            // $this->mediaService->deleteMediaById($fan, $fan->id);
+            $this->mediaService->clearMediaCollection($fan,'fan');
             $fan->delete();
         });
     }
@@ -77,7 +79,8 @@ class FanService
             $fans = Fan::whereIn('id', $ids)->get();
 
             foreach ($fans as $fan) {
-                $this->mediaService->deleteMediaById($fan, $fan->id);
+                // $this->mediaService->deleteMediaById($fan, $fan->id);
+                $this->mediaService->clearMediaCollection($fan,'fan');
                 $fan->delete();
             }
         });

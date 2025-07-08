@@ -5,17 +5,19 @@
     <section class="article-top">
         <div class="container">
             <div class="heading">
-                <h1 class="c-dark f-56 l-h-72 f-w-5 freedoka mb-0">Bella & Sarah M.</h1>
+                <h1 class="c-dark f-56 l-h-72 f-w-5 freedoka mb-0">{{$fan->title ?? ''}}</h1>
             </div>
             <div class="row">
                 <div class="col-lg-12">
                     <div class="article-image">
-                        <img src="http://127.0.0.1:8000/images/article6.png" alt="">
+                        <img src="{{$fan->image_url ?? ''}}" alt="Image">
                     </div>
                 </div>
             </div>
 
-            <ul>
+            {!! $fan->content ?? '' !!}
+
+            {{-- <ul>
                 <li>
                     <p class="c-light f-20 l-h-32 f-w-4 montserrat">
                         When Bella was first diagnosed with cancer, our world came crashing down. She had always been
@@ -79,7 +81,7 @@
                         reminds us to cherish each moment, to stay resilient, and to always fight for those we love.
                     </p>
                 </li>
-            </ul>
+            </ul> --}}
         </div>
     </section>
 </main>

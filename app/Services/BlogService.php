@@ -51,7 +51,8 @@ class BlogService
 
         if (!empty($data['image'])) {
 
-            $this->mediaService->deleteMediaById($blog, $blog->id);
+            // $this->mediaService->deleteMediaById($blog, $blog->id);
+             $this->mediaService->clearMediaCollection($blog,'blogs');
 
             $this->mediaService->uploadImage($blog, $data['image'], 'blogs');
         }
@@ -63,7 +64,8 @@ class BlogService
     public function delete(Blog $blog): void
     {
         DB::transaction(function () use ($blog) {
-            $this->mediaService->deleteMediaById($blog, $blog->id);
+             $this->mediaService->clearMediaCollection($blog,'blogs');
+            // $this->mediaService->deleteMediaById($blog, $blog->id);
             $blog->delete();
         });
     }
@@ -75,7 +77,8 @@ class BlogService
             $blogs = Blog::whereIn('id', $ids)->get();
 
             foreach ($blogs as $blog) {
-                $this->mediaService->deleteMediaById($blog, $blog->id);
+                // $this->mediaService->deleteMediaById($blog, $blog->id);
+                 $this->mediaService->clearMediaCollection($blog,'blogs');
                 $blog->delete();
             }
         });

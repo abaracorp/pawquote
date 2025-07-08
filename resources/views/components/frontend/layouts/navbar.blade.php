@@ -20,7 +20,7 @@
                         <a class="nav-link {{ isActiveRoute(['frontend.blog']) }}" aria-current="page" href="{{route('frontend.blog')}}">Blog</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {{ isActiveRoute(['fan']) }}" aria-current="page" href="{{route('fan')}}">Fan</a>
+                        <a class="nav-link {{ isActiveRoute(['frontend.fan']) }}" aria-current="page" href="{{route('frontend.fan')}}">Fan</a>
                     </li>
                 </ul>
                 <form class="d-flex" role="search">
