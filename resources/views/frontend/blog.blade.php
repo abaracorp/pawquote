@@ -1,4 +1,54 @@
-@extends('frontend.master')
+<div class="card-container gender">
+    <div class="heading">
+        <h2 class="f-32 c-dark f-w-5 l-h-38 freedoka">What is the gender of your <span class="pet-name"> pet </span> ?
+        </h2>
+        <p class="f-20 c-light f-w-4 l-h-38 montserrat">Select your <span class="pet-name"> pet </span>'s gender.
+        </p>
+    </div>
+    <div class="card-pet b-blue-2 br-16">
+
+
+
+        <div id="dog-Icon" style="display: none;">
+            <x-icons.dog />
+            <span class="c-light f-16 f-w-4 freedoka">Dog</span>
+        </div>
+        <div id="cat-Icon" style="display: none;">
+            <x-icons.cat />
+            <span class="c-light f-16 f-w-4 freedoka">Cat</span>
+        </div>
+    </div>
+    <div class="choose-gender-card d-flex gap-3">
+        <label for="radioDogGender"
+            class="pet-card pet-card4 selected b-blue br-16 d-flex align-items-center justify-content-center flex-column gap-3 radio-container">Male
+            <input onclick="handleStepData('radioCatGender', 'input[name=radioCatGender]:checked', '')" type="radio"
+                checked id="radioDogGender" name="radioCatGender" value="0">
+            <span class="checkmark"></span>
+        </label>
+        <label for="radioCatGender"
+            class="radio-container pet-card pet-card4 b-blue br-16 d-flex align-items-center justify-content-center flex-column gap-3">
+            <span class="text"> Female</span>
+            <input onclick="handleStepData('radioCatGender', 'input[name=radioCatGender]:checked', '')" type="radio"
+                id="radioCatGender" name="radioCatGender" value="1">
+            <span class="checkmark"></span>
+    </div>
+    </label>
+</div>
+
+<div class="bottom-buttons d-flex align-items-center justify-content-between mt-5">
+    <button onclick="changeStep(-1)" class="back f-14 f-w-5 montserrat">
+
+        <x-icons.back />
+
+
+
+        Back</button>
+    <button onclick="validateAndNextStep(event)" class="next f-14 f-w-5 montserrat">Next
+        <x-icons.next />
+    </button>
+</div>
+
+</div>@extends('frontend.master')
 
 @section('content')
 
@@ -50,7 +100,8 @@
                         <div class="rightside">
                             <div class="heading">
                                 <h2 class="f-32 c-dark l-h-42 f-w-5 freedoka ">{{$featuredBlog->title ?? ''}}</h2>
-                                <p class="f-22 c-light l-h-32 f-w-4 montserrat mb-0">{{$featuredBlog->summary ?? ''}}</p>
+                                <p class="f-22 c-light l-h-32 f-w-4 montserrat mb-0">{{$featuredBlog->summary ?? ''}}
+                                </p>
                             </div>
                             <ul class="details">
                                 {{-- <li>
@@ -81,8 +132,10 @@
                                 </li>
                             </ul>
                             <div class="bottom-link d-flex justify-content-between align-items-center">
-                                <span class="c-light f-22 f-w-5 montserrat">{{ Str::readTime($featuredBlog->content) }} min read</span>
-                                <a href="{{route('frontend.blogDeatil',['slug' => $featuredBlog->slug])}}" class="c-dark f-22 f-w-6 montserrat">Read full
+                                <span class="c-light f-22 f-w-5 montserrat">{{ Str::readTime($featuredBlog->content) }}
+                                    min read</span>
+                                <a href="{{route('frontend.blogDeatil',['slug' => $featuredBlog->slug])}}"
+                                    class="c-dark f-22 f-w-6 montserrat">Read full
                                     Article<svg width="24" height="25" viewBox="0 0 24 25" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path
@@ -154,7 +207,7 @@
                         @if($blogs->isNotEmpty())
 
                         @foreach ($blogs as $blog)
-                            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                        <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
                             <div class="card b-blue br-18 overflow-hidden">
                                 <div class="top-image">
                                     <img src="{{$blog->image_url}}" alt="Image" class="w-100">
@@ -186,21 +239,25 @@
                                             </a>
                                         </li> --}}
                                         <li>
-                                            <a href="" class="c-light f-14 f-w-5 d-flex align-items-baseline gap-2"><svg
-                                                    width="14" height="15" viewBox="0 0 14 15" fill="none"
+                                            <a href="" class="c-light f-14 f-w-5 d-flex align-items-center gap-1"><svg
+                                                    width="14" height="14" viewBox="0 0 14 14" fill="none"
                                                     xmlns="http://www.w3.org/2000/svg">
                                                     <path
-                                                        d="M9.625 3.04753V1.88086M4.375 3.04753V1.88086M1.89583 4.79753H12.1042M1.75 5.98986C1.75 4.75611 1.75 4.13894 2.00433 3.66761C2.23431 3.2472 2.59116 2.91015 3.024 2.70453C3.52333 2.46419 4.17667 2.46419 5.48333 2.46419H8.51667C9.82333 2.46419 10.4767 2.46419 10.976 2.70453C11.4152 2.91569 11.7717 3.25286 11.9957 3.66703C12.25 4.13953 12.25 4.75669 12.25 5.99044V8.85578C12.25 10.0895 12.25 10.7067 11.9957 11.178C11.7657 11.5984 11.4088 11.9355 10.976 12.1411C10.4767 12.3809 9.82333 12.3809 8.51667 12.3809H5.48333C4.17667 12.3809 3.52333 12.3809 3.024 12.1405C2.59125 11.9351 2.23441 11.5982 2.00433 11.178C1.75 10.7055 1.75 10.0884 1.75 8.85461V5.98986Z"
-                                                        stroke="#566369" stroke-width="1.5" stroke-linecap="round"
-                                                        stroke-linejoin="round" />
+                                                        d="M4.08398 6.41699H5.25065V7.58366H4.08398V6.41699ZM4.08398 8.75033H5.25065V9.91699H4.08398V8.75033ZM6.41732 6.41699H7.58398V7.58366H6.41732V6.41699ZM6.41732 8.75033H7.58398V9.91699H6.41732V8.75033ZM8.75065 6.41699H9.91732V7.58366H8.75065V6.41699ZM8.75065 8.75033H9.91732V9.91699H8.75065V8.75033Z"
+                                                        fill="#566369" />
+                                                    <path
+                                                        d="M2.91667 12.8337H11.0833C11.7267 12.8337 12.25 12.3104 12.25 11.667V3.50033C12.25 2.85691 11.7267 2.33366 11.0833 2.33366H9.91667V1.16699H8.75V2.33366H5.25V1.16699H4.08333V2.33366H2.91667C2.27325 2.33366 1.75 2.85691 1.75 3.50033V11.667C1.75 12.3104 2.27325 12.8337 2.91667 12.8337ZM11.0833 4.66699L11.0839 11.667H2.91667V4.66699H11.0833Z"
+                                                        fill="#566369" />
                                                 </svg>
+
 
                                                 {{optional($blog->created_at)->format('m-d-Y') ?? ''}}
                                             </a>
                                         </li>
                                     </ul>
                                     <div class="bottom-link d-flex justify-content-between align-items-center">
-                                        <span class="c-light f-14 f-w-5 montserrat">{{ Str::readTime($blog->content) }} min read</span>
+                                        <span class="c-light f-14 f-w-5 montserrat">{{ Str::readTime($blog->content) }}
+                                            min read</span>
                                         <a href="{{route('frontend.blogDeatil',['slug' => $blog->slug])}}"
                                             class="c-dark f-14 f-w-6 montserrat d-flex align-items-center gap-2">Read
                                             full Article<svg width="24" height="25" viewBox="0 0 24 25" fill="none"
@@ -216,7 +273,7 @@
                             </div>
                         </div>
                         @endforeach
-                        
+
 
                         @endif
 

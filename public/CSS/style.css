@@ -299,10 +299,11 @@ footer .footer-rightside .links ul li a:hover{color:#FEA145; transition: 0.3s ea
 #blog .article .navigation-bar .links a {padding:9px 16px;}
 #blog .article .navigation-bar{position: relative;z-index:1;}
 #blog .article .footprint{position: absolute;z-index:-1;left:0;bottom:0;}
-/* #blog .article-main{margin-top:50px;} */
-#blog .article-main .card{position: relative;min-height:476px;}
+#blog .article-main .card .top-image{width: 100%;height: 234px;display: inline-block;overflow: hidden;background-color: transparent;}
+#blog .article-main .card .top-image img{width: 100%;height: 100%;object-fit: cover;}
 #blog .article-main .card .card-body{display: flex;flex-direction: column;gap:16px;}
 #blog .article-main .card ul.details{display: flex;align-items:flex-start;gap:10px;flex-direction: column;}
+#blog .article-main .card ul.details li a{display: flex;align-items: center;gap:5px;}
 #blog .ownership .leftside img{width: 100%;}
 #blog .senior-pet-insurance .heading{max-width:80%; margin:auto;margin-bottom:68px;}
 #blog .senior-pet-insurance .leftside ul {margin-top:42px;display: flex;flex-direction: column;gap:26px;}
@@ -426,10 +427,10 @@ footer .footer-rightside .links ul li a:hover{color:#FEA145; transition: 0.3s ea
 #get-quote .hero .rightside .card input{padding:10px 20px;margin-block:31px 20px;background-color: #F5FDFF;}
 #get-quote .hero .rightside .card .orange-btn{width: fit-content;padding: 10px 15px;border-radius:10px;}
 #get-quote .hero::after {content: "";position: absolute;right:15rem;bottom: 0;width:400px;height:245px;background:url('../images/dog-cat2.png') no-repeat center center;background-size: contain;z-index: 1;}
-#get-quote .trusted li img{width:100%;height:70px;}
+/* #get-quote .trusted li img{width:100%;height:70px;}
 #get-quote .trusted-by ul{gap:50px;}
 #get-quote .trusted-by ul li{height: auto;padding:0px 60px;border-radius:30px;}
-#get-quote .trusted-by .footprint{top:auto;}
+#get-quote .trusted-by .footprint{top:auto;} */
 #get-quote .how-works .card span{border-radius:22px;}
 #get-quote .how-works .card .footprint{position: absolute;right:0; bottom:0;}
 #get-quote .choose-us .rightside img{width: 100%;}
@@ -494,7 +495,8 @@ tbody, td, tfoot, th, thead, tr{border-color:#88EDFF;}
 /* Get quote Step 4 CSS */
 #step4 .choose-gender-card {margin-top: 39px;}
 #get-quote-step #step4 .radio-container .checkmark{top:50%;}
-#get-quote-step #step4 .choose-gender-card .text{padding-left:30px;}
+#get-quote-step #step4 .choose-gender-card
+.text{padding-left:30px;}
 
 /* Pet insurance page CSS Start */
 #pet-protection .hero{background-color: #F5FDFF;position: relative;}
@@ -615,7 +617,7 @@ tbody, td, tfoot, th, thead, tr{border-color:#88EDFF;}
  footer{padding: 50px 0px 28px;}
  #get-quote .hero .leftside .footprint{right: 2rem;top: 5rem;}
  #get-quote .hero::after{right:4rem;}
- #get-quote .trusted-by ul {gap: 30px;}
+ /* #get-quote .trusted-by ul {gap: 30px;} */
  #homepage .choose-us .leftside p{margin-bottom: 26px;}
  #fan .how-work .card{min-height: auto;}
 }
@@ -685,7 +687,7 @@ footer .footer-rightside .links{padding-left: 0px;margin-bottom:50px;}
 #about-us .protect-pet .inner{padding: 54px 42px 0;}
 #blog .hero .rightside{justify-content: center;}
 #blog .hero .rightside img{width: 50%;}
-#blog .article-main .card{min-height:397px;}
+/* #blog .article-main .card{min-height:397px;} */
 #blog .article-main .card .top-image {height: 225px;overflow: hidden;display: inline-block;width: 100%;}
 #blog .article-main .card .top-image img {width: 100%;height: 100%; object-fit: cover;}
 #blog .ownership .row{flex-direction: column-reverse;}
@@ -718,8 +720,8 @@ footer .footer-rightside .links{padding-left: 0px;margin-bottom:50px;}
 #cookie-policy .hero .heading p{max-width: 100%;}
 #get-quote .hero .rightside{padding-top: 50px;}
 #get-quote .hero::after{width: 250px;height: 150px;}
-#get-quote .trusted-by ul{gap:20px;}
-#get-quote .trusted-by .footprint {top:45px;}
+/* #get-quote .trusted-by ul{gap:20px;} */
+/* #get-quote .trusted-by .footprint {top:45px;} */
 .how-works .heading,
 #homepage .our-partners .heading,
 #homepage .faq .heading{margin-bottom:25px;}
@@ -850,7 +852,7 @@ h1{margin-bottom:0 !important;}
 #get-quote .hero .leftside .footprint {right: 0rem;top: 0rem;width: 50px;height: 50px;border-radius: 18px;display: none;}
 #get-quote .hero .leftside .heading{gap: 10px;}
 #get-quote .hero .rightside{padding-top: 10px;}
-#get-quote .trusted-by ul li{padding:0 20px;border-radius: 18px;}
+/* #get-quote .trusted-by ul li{padding:0 20px;border-radius: 18px;} */
 #get-quote .hero .rightside .card h2 {max-width: 100%;}
 #get-quote .hero .rightside .card input {margin-block: 0px 20px;}
 #get-quote .hero::after {right: 0;}
@@ -937,8 +939,8 @@ footer .footer-leftside .social-links{justify-content: center;}
 #get-quote .choose-us .leftside .top-title{margin:auto auto 16px;}
 #get-quote .choose-us .leftside p{margin-bottom: 5px;}
 #get-quote .choose-us .leftside ul li{margin-bottom:5px;}
-#get-quote .trusted li img{height: 40px;}
-#get-quote .trusted-by ul{gap:10px;}
+/* #get-quote .trusted li img{height: 40px;} */
+/* #get-quote .trusted-by ul{gap:10px;} */
 .trusted-by ul li{height: 42px;}
 #payment-plan .best-overall .top-pet-protection .pet-image{width: 200px;height: 60px;}
 #payment-plan .best-overall .top-pet-protection .stars{font-size: 1.25rem;}
@@ -965,7 +967,7 @@ footer .footer-leftside .social-links{justify-content: center;}
   #about-us .insurance-number .card-container{margin-top: 16px;margin-bottom:0;}
 /* #about-us .complete-protection .card-container .card{margin-bottom:25px;} */
 #about-us .real-stories .heading { margin-bottom:20px;}
-#blog .article-main .card {min-height: auto;}
+/* #blog .article-main .card {min-height: auto;} */
 #blog .article-main .card ul.details{gap:5px;}
 #blog .senior-pet-insurance .rightside {padding-top: 20px; }
 footer .footer-rightside .links{margin-bottom:25px;}
