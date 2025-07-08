@@ -247,7 +247,7 @@ tbody, td, tfoot, th, thead, tr{vertical-align: middle;}
 /* Gallery Images */
 .gallery-images .card-container{display: grid;grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));gap: 20px;}
 .gallery-images .card-container .card{width: 250px;height: auto;}
-.gallery-images .card-container .card span{width: 100%;height:auto; overflow:hidden; display:inline-block; border-radius: 18px;background-color: #ffffff;}
+.gallery-images .card-container .card span{width: 100%;height:141px; overflow:hidden; display:inline-block; border-radius: 18px;background-color: #ffffff;}
 .gallery-images .card-container .card span img{width: 100%;height:100%; object-fit: cover;}
 .gallery-images .card-container .card .overlay { position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 0.6); display: flex; justify-content: center; align-items: center; opacity: 0; transition: opacity 0.3s ease; }
 .gallery-images .card-container .card:hover .overlay { opacity: 1; }
