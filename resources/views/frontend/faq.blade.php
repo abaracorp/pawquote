@@ -222,14 +222,15 @@
                             <div class="card b-blue br-40">
                                 <h2 class="c-dark f-26 l-h-37 f-w-5 freedoka">{{$guide->question_text}}</h2>
                                 {{-- <p class="c-light f-18 l-h-26 f-w-4 montserrat">{!! $guide->content !!}</p> --}}
-                                <p class="c-light f-18 l-h-26 f-w-4 montserrat">{!!  str($guide->content)->limit(150, '...')  !!}</p>
+                                {!!  $guide->content  !!}
+                                {{-- <p class="c-light f-18 l-h-26 f-w-4 montserrat">{!!  str($guide->content)->limit(150, '...')  !!}</p> --}}
                                 
-                                @if(hasMoreThanChars($guide->content, 150))
+                                {{-- @if(hasMoreThanChars($guide->content, 150))
                                     <button class="learn b-blue br-8 c-dark f-18 f-w-5 freedoka">
                                         Read More 
                                         
                                     </button>
-                                @endif
+                                @endif --}}
                             </div>
                         </div>
 
@@ -238,7 +239,7 @@
                     </div>
                         
                 </div>
-                <button class="view-all orange-btn f-18 f-w-5 montserrat">View All</button>
+                <a href="{{route('frontend.guide')}}" class="view-all orange-btn f-18 f-w-5 montserrat">View All</a>
             </div>
         </section>
         @endif
@@ -255,7 +256,7 @@
                             find the perfect coverage for your furry
                             family member.</p>
                     </div>
-                    <button class="get-quote orange-btn f-22 f-w-6 montserrat">Get A Quote</button>
+                    <a href="{{route('getQuote')}}" class="get-quote orange-btn f-22 f-w-6 montserrat">Get A Quote</a>
                 </div>
             </div>
         </section>

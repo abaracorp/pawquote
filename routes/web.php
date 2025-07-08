@@ -37,6 +37,7 @@ Route::as('frontend.')
         ->group(function(){
            
             Route::get('/faq', 'getFaqPage')->name('faq');
+            Route::get('/helpful-guides', 'getGuidePage')->name('guide');
             Route::get('/search-faq', 'handleFaqSearch')->name('faqSearch');
            
         });
