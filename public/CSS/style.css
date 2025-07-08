@@ -345,10 +345,12 @@ footer .footer-rightside .links ul li a:hover{color:#FEA145; transition: 0.3s ea
 #fan .hero .inner{position: relative;z-index: 1;}
 #fan .how-work .heading{margin-bottom:68px;display: flex;gap:16px;flex-direction: column;}
 #fan .how-work .heading p{max-width: 90%;margin:auto;}
-#fan .how-work .card{height: 497px;overflow: hidden;}
+#fan .how-work .card{height: 497px;}
+#fan .how-work .card-body p{ display: -webkit-box;-webkit-line-clamp: 6;-webkit-box-orient: vertical;overflow: hidden;text-overflow: ellipsis;margin-bottom:0;}
+#fan .how-work .card .card-body{position: relative;}
+#fan .how-work .card .read-more{display:block;width: fit-content;padding: 5px 10px; background-color: transparent;margin-top: 5px;position: absolute;bottom:16px; left:16px;}
 #fan .how-work .card .top-image{width: 100%;height: 234px;display: inline-block;background-color: transparent;}
 #fan .how-work .card .top-image img {width: 100%;height: 100%;object-fit: cover;}
-#fan .how-work .card .read-more{display:block;width: fit-content;padding: 5px 10px; background-color: transparent;margin-top: 5px;}
 #fan .how-work .bottom-buttons{margin-top:26px;}
 #fan .how-work .bottom-buttons a{padding:7px 20px;}
 #fan .how-work .card .card-title{right:20px;left:auto;}
