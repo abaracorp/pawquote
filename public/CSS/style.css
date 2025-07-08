@@ -292,7 +292,8 @@ footer .footer-rightside .links ul li a:hover{color:#FEA145; transition: 0.3s ea
 #blog .hero .rightside{height: 100%;display: flex;align-items: flex-end;}
 #blog .hero .rightside img{width: 100%;}
 #blog .featured-article .inner {overflow: hidden;border-radius:40px;}
-#blog .featured-article .inner .leftside {border-radius:40px;overflow: hidden;}
+#blog .featured-article .inner .leftside {border-radius:40px;overflow: hidden;width: 100%;height:370px;display: inline-block;}
+#blog .featured-article .inner .leftside img{width: 100%;height: 100%;object-fit: cover;}
 #blog .featured-article .inner .rightside{padding:20px;display: flex;flex-direction: column;justify-content: center;height: 100%;}
 #blog .featured-article .inner .rightside .details{display:flex;flex-direction: column; align-items: flex-start;gap:20px;margin-block:39px;}
 #blog .article .navigation-bar .links a.active{font-weight:600; color:#ffffff; background-color: #88EDFF;}
@@ -344,7 +345,10 @@ footer .footer-rightside .links ul li a:hover{color:#FEA145; transition: 0.3s ea
 #fan .hero .inner{position: relative;z-index: 1;}
 #fan .how-work .heading{margin-bottom:68px;display: flex;gap:16px;flex-direction: column;}
 #fan .how-work .heading p{max-width: 90%;margin:auto;}
-#fan .how-work .card{min-height:466px;}
+#fan .how-work .card{height: 466px;overflow: hidden;}
+#fan .how-work .card .top-image{width: 100%;height: 234px;display: inline-block;background-color: transparent;overflow: hidden;}
+#fan .how-work .card .top-image img {width: 100%;height: 100%;object-fit: cover;}
+#fan .how-work .card .read-more{display:block;width: fit-content;padding: 7px 14px;}
 #fan .how-work .bottom-buttons{margin-top:26px;}
 #fan .how-work .bottom-buttons a{padding:7px 20px;}
 #fan .how-work .card .card-title{right:20px;left:auto;}
@@ -356,7 +360,8 @@ footer .footer-rightside .links ul li a:hover{color:#FEA145; transition: 0.3s ea
 #fan .pet-gallery .card-container {position: relative;z-index:1;}
 #fan .pet-gallery .card-container .footprint{position: absolute;bottom:0;z-index:-1;}
 #fan .pet-gallery .card-container .view-all{display: block; margin:40px auto auto;}
-.custom-pagination { display: flex; justify-content: center; gap: 5px;}
+.custom-pagination { display: flex; justify-content: center; gap: 5px;margin-top:30px;}
+.custom-pagination p{margin:0; padding-right:20px;}
 .custom-pagination .page-item { display: inline-block; }
 .custom-pagination .page-link { border: 1px solid #88EDFF; border-radius: 8px; padding: 10px 16px; color: #333; font-size: 16px; font-weight: 500; background-color: #fff; transition: all 0.3s ease; width: 42px; height: 42px; display: flex; align-items: center; justify-content: center; }
 .custom-pagination .page-link.no-border{border:none;background-color: #CCF7FF;}

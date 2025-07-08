@@ -43,7 +43,7 @@
                 <div class="row">
                     <div class="col-lg-6">
                         <div class="leftside">
-                            <img src="{{$featuredBlog->image_url ?? ''}}" alt="image" class="w-100">
+                            <img src="{{$featuredBlog->image_url ?? ''}}" alt="image" class="">
                         </div>
                     </div>
                     <div class="col-lg-6">

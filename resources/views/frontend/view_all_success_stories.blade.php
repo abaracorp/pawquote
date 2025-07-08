@@ -1,7 +1,7 @@
 @extends('frontend.master')
 
 @section('content')
-    <main id="view-all-success-story">
+    <main id="fan" class="all-success-stories">
         @if ($fans->isNotEmpty())
             <section class="how-work">
                 <div class="container">
@@ -50,6 +50,7 @@
                                                 </h2>
                                             </div>
                                             <p class="c-light f-14 l-h-245 f-w-4">{!! $fan->content ?? '' !!}</p>
+                                            <button class="read-more f-18 c-dark f-w-5 freedoka b-blue br-8 bg-white">Read More</button>
                                         </div>
                                         <div class="card-title">{{ $fan->label ?? '' }}</div>
                                     </a>
