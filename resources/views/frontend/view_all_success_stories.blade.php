@@ -16,7 +16,7 @@
                     <div class="card-container">
                         <div class="row">
 
-                            {{-- {{ route('successStory') }} --}}
+
 
                             @foreach ($fans as $fan)
                                 <div class="col-lg-4 col-md-6 col-sm-12">
@@ -49,8 +49,16 @@
                                                 <h2 class="f-24 c-dark l-h-27 f-w-5 freedoka mb-0 ">{{ $fan->title ?? '' }}
                                                 </h2>
                                             </div>
-                                            <p class="c-light f-14 l-h-245 f-w-4">{!! $fan->content ?? '' !!}</p>
-                                            <button class="read-more f-18 c-dark f-w-5 freedoka b-blue br-8 bg-white">Read More</button>
+
+                                            {{-- {!! str($fan->content)->limit(150, '...') !!} --}}
+                                            {!! $fan->content ?? '' !!}
+                                            
+
+                                            @if (hasMoreThanChars($fan->content, 150))
+                                                <button class="read-more b-blue br-8 c-dark f-18 f-w-5 freedoka">
+                                                    Read More
+                                                </button>
+                                            @endif
                                         </div>
                                         <div class="card-title">{{ $fan->label ?? '' }}</div>
                                     </a>
@@ -69,16 +77,15 @@
 
                 </div>
 
-               
 
-                 <nav 
-                    aria-label="Page navigation example">
-                        <ul class="pagination custom-pagination">
-                            <div class="d-flex justify-content-center">
-                                {{ $fans->links() }}
-                            </div>
-                        </ul>
-                    </nav>
+
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination custom-pagination">
+                        <div class="d-flex justify-content-center">
+                            {{ $fans->links() }}
+                        </div>
+                    </ul>
+                </nav>
             </section>
         @endif
     </main>

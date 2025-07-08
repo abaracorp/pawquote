@@ -227,9 +227,7 @@
                                 @if(hasMoreThanChars($guide->content, 150))
                                     <button class="learn b-blue br-8 c-dark f-18 f-w-5 freedoka">
                                         Read More 
-                                        {{-- <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="..." fill="black" />
-                                        </svg> --}}
+                                        
                                     </button>
                                 @endif
                             </div>
