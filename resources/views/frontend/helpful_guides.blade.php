@@ -1,5 +1,5 @@
 @extends('frontend.master')
-
+@section('title', 'Helpful Guides')
 @section('content')
     <main id="helpful-guide">
         <section class="banner">

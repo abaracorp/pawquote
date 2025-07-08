@@ -1,5 +1,5 @@
 @extends('frontend.master')
-
+@section('title', 'Get Quote')
 @section('content')
     <main id="get-quote">
         <section class="banner">

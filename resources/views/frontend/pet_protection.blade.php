@@ -1,5 +1,5 @@
 @extends('frontend.master')
-
+@section('title', 'Pet Protection')
 @section('content')
 
     <main id="pet-protection">

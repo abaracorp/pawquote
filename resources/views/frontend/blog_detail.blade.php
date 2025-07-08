@@ -1,5 +1,5 @@
 @extends('frontend.master')
-
+@section('title', 'Blog Detail')
 @section('content')
 
     <main id="read-article">

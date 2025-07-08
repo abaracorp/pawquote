@@ -1,5 +1,7 @@
 @extends('frontend.master')
 
+@section('title', 'HomePage')
+
 @section('content')
 
     {{-- <x-frontend.layouts.homesections /> --}}

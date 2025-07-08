@@ -1,5 +1,5 @@
 @extends('frontend.master')
-
+@section('title', 'Terms Of Use')
 @section('content')
 
 <main id="terms-use">
