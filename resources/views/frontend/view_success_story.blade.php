@@ -1,5 +1,5 @@
 @extends('frontend.master')
-
+@section('title', 'View Success Story')
 @section('content')
 <main id="view-success-story">
     <section class="article-top">

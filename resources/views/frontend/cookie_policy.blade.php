@@ -1,5 +1,5 @@
 @extends('frontend.master')
-
+@section('title', 'Cookie Policy')
 @section('content')
     <main id="cookie-policy">
         <section class="banner">

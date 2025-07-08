@@ -1,5 +1,5 @@
 @extends('frontend.master')
-
+@section('title', 'Payment Plan')
 @section('content')
 
 <main id="payment-plan">

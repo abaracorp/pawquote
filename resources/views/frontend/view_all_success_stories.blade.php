@@ -1,5 +1,5 @@
 @extends('frontend.master')
-
+@section('title', 'View All Stories')
 @section('content')
     <main id="fan" class="all-success-stories">
         @if ($fans->isNotEmpty())

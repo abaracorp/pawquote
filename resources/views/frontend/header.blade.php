@@ -3,7 +3,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta name="base-url" content="{{ url('/') }}">
-    <title>Pawquote</title>
+    <title>Pawquote | @yield('title')</title>
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
@@ -39,4 +39,19 @@
     rel="stylesheet"
     href="https://unpkg.com/swiper/swiper-bundle.min.css"
     />
+
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FKGXZGRN72"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  console.log(window.dataLayer,'window.dataLayer');
+  
+
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-FKGXZGRN72');
+</script>
+
 </head>
