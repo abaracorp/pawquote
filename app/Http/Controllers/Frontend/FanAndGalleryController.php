@@ -18,7 +18,7 @@ class FanAndGalleryController extends Controller
 
         public function getAllSuccessStories (){
 
-            $fans = Fan::get();
+            $fans = Fan::paginate(3);
             return view('frontend.view_all_success_stories',compact('fans'));
 
         }
