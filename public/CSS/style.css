@@ -393,7 +393,7 @@ footer .footer-rightside .links ul li a:hover{color:#FEA145; transition: 0.3s ea
 #faqs .helpful-guides .inner{margin-block: 68px;}
 #faqs .helpful-guides .inner .card {padding:49px 40px;}
 #faqs .helpful-guides .inner .card .learn{width: fit-content;padding:10px 15px;background-color: transparent;margin-top:20px;}
-#faqs .helpful-guides .view-all{display: block;margin: auto;}
+#faqs .helpful-guides .view-all{display: block;margin: auto; width:fit-content;}
 /* FAQ's page CSS Close */
 
 /* Helpful Guide's page CSS Start */
@@ -710,7 +710,7 @@ footer .footer-rightside .links{padding-left: 0px;margin-bottom:50px;}
 #fan .hero .heading{gap: 16px;}
 #fan .hero .card-container .card{margin-bottom:48px;}
 #fan .hero .card-container .card.third {margin: 0;}
-#fan .how-work .card .top-image{width: 100%;height: auto;overflow: hidden;display:inline-block;}
+#fan .how-work .card .top-image{width: 100%;height: 190px;display:inline-block;}
 #fan .how-work .heading{margin-bottom: 48px;}
 #fan .how-work .heading p {max-width: 100%;}
 #fan .pet-gallery .inner {padding: 25px 25px;overflow: hidden;}
@@ -982,8 +982,7 @@ footer .footer-leftside .social-links{justify-content: center;}
 footer .footer-rightside .links{margin-bottom:25px;}
 #fan .how-work .heading{gap:10px;}
 #fan .how-work .heading{margin-bottom: 16px;}
-#fan .how-work .card{min-height: auto;}
-#fan .how-work .card{margin-bottom:20px;}
+#fan .how-work .card{min-height: auto;height: 430px;margin-bottom:20px;}
 #fan .pet-gallery .card-container .footprint{width: 100%;}
 #fan .pet-gallery .card-container{position: inherit;}
 #fan .pet-gallery .inner .heading{position: relative;z-index: 2;}
