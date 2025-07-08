@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
 use App\Models\Fan;
+use App\Models\Gallery;
 use Illuminate\Http\Request;
 
 class FanAndGalleryController extends Controller
@@ -11,7 +12,9 @@ class FanAndGalleryController extends Controller
         public function getFanGalleryPage (){
 
             $fans = Fan::take(3)->get();
-            return view('frontend.fan',compact('fans'));
+            $galleries = Gallery::get();
+
+            return view('frontend.fan',compact('fans','galleries'));
 
         }
 

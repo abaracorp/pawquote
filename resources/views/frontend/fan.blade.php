@@ -241,6 +241,9 @@
 
         @endif
 
+        
+        
+        {{-- @if ($galleries->isNotEmpty())
         <section class="pet-gallery">
             <div class="container">
                 <div class="inner bg-l-blue br-40">
@@ -252,169 +255,40 @@
                     </div>
                     <div class="card-container">
                         <div class="row">
+
+
+                            @foreach ($galleries as $gallery)
+                                
+                            
                             <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
                                 <div class="card b-blue br-18 overflow-hidden">
-                                    <span><img src="{{ asset('images/gallery1.png') }}" class="w-100"
-                                            alt=""></span>
-                                    <!-- <div class="title"><svg width="13" height="13" viewBox="0 0 13 13"
-                                                fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M6.5 4.78711C6.5 4.78711 6.5 4.78711 6.12 4.28711C5.68 3.70711 5.03 3.28711 4.25 3.28711C3.005 3.28711 2 4.29211 2 5.53711C2 6.00211 2.14 6.43211 2.38 6.78711C2.785 7.39211 6.5 11.2871 6.5 11.2871M6.5 4.78711C6.5 4.78711 6.5 4.78711 6.88 4.28711C7.32 3.70711 7.97 3.28711 8.75 3.28711C9.995 3.28711 11 4.29211 11 5.53711C11 6.00211 10.86 6.43211 10.62 6.78711C10.215 7.39211 6.5 11.2871 6.5 11.2871"
-                                                    fill="#FEA145" />
-                                                <path
-                                                    d="M6.5 4.78711C6.5 4.78711 6.5 4.78711 6.12 4.28711C5.68 3.70711 5.03 3.28711 4.25 3.28711C3.005 3.28711 2 4.29211 2 5.53711C2 6.00211 2.14 6.43211 2.38 6.78711C2.785 7.39211 6.5 11.2871 6.5 11.2871C6.5 11.2871 10.215 7.39211 10.62 6.78711C10.86 6.43211 11 6.00211 11 5.53711C11 4.29211 9.995 3.28711 8.75 3.28711C7.97 3.28711 7.32 3.70711 6.88 4.28711C6.5 4.78711 6.5 4.78711 6.5 4.78711Z"
-                                                    stroke="#FEA145" stroke-linecap="round" stroke-linejoin="round" />
-                                            </svg><span class="f-12 c-dark f-w-4 freedoka">348</span>
-                                        </div> -->
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
-                                <div class="card b-blue br-18 overflow-hidden">
-                                    <span><img src="{{ asset('images/gallery2.png') }}" class="w-100"
-                                            alt=""></span>
-                                    <!-- <div class="title"><svg width="13" height="13" viewBox="0 0 13 13"
-                                                fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M6.5 4.78711C6.5 4.78711 6.5 4.78711 6.12 4.28711C5.68 3.70711 5.03 3.28711 4.25 3.28711C3.005 3.28711 2 4.29211 2 5.53711C2 6.00211 2.14 6.43211 2.38 6.78711C2.785 7.39211 6.5 11.2871 6.5 11.2871M6.5 4.78711C6.5 4.78711 6.5 4.78711 6.88 4.28711C7.32 3.70711 7.97 3.28711 8.75 3.28711C9.995 3.28711 11 4.29211 11 5.53711C11 6.00211 10.86 6.43211 10.62 6.78711C10.215 7.39211 6.5 11.2871 6.5 11.2871"
-                                                    fill="#FEA145" />
-                                                <path
-                                                    d="M6.5 4.78711C6.5 4.78711 6.5 4.78711 6.12 4.28711C5.68 3.70711 5.03 3.28711 4.25 3.28711C3.005 3.28711 2 4.29211 2 5.53711C2 6.00211 2.14 6.43211 2.38 6.78711C2.785 7.39211 6.5 11.2871 6.5 11.2871C6.5 11.2871 10.215 7.39211 10.62 6.78711C10.86 6.43211 11 6.00211 11 5.53711C11 4.29211 9.995 3.28711 8.75 3.28711C7.97 3.28711 7.32 3.70711 6.88 4.28711C6.5 4.78711 6.5 4.78711 6.5 4.78711Z"
-                                                    stroke="#FEA145" stroke-linecap="round" stroke-linejoin="round" />
-                                            </svg><span class="f-12 c-dark f-w-4 freedoka">514</span>
-                                        </div>-->
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
-                                <div class="card b-blue br-18 overflow-hidden">
-                                    <span><img src="{{ asset('images/gallery3.png') }}" class="w-100"
-                                            alt=""></span>
-                                    <!-- <div class="title"><svg width="13" height="13" viewBox="0 0 13 13"
-                                                fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M6.5 4.78711C6.5 4.78711 6.5 4.78711 6.12 4.28711C5.68 3.70711 5.03 3.28711 4.25 3.28711C3.005 3.28711 2 4.29211 2 5.53711C2 6.00211 2.14 6.43211 2.38 6.78711C2.785 7.39211 6.5 11.2871 6.5 11.2871M6.5 4.78711C6.5 4.78711 6.5 4.78711 6.88 4.28711C7.32 3.70711 7.97 3.28711 8.75 3.28711C9.995 3.28711 11 4.29211 11 5.53711C11 6.00211 10.86 6.43211 10.62 6.78711C10.215 7.39211 6.5 11.2871 6.5 11.2871"
-                                                    fill="#FEA145" />
-                                                <path
-                                                    d="M6.5 4.78711C6.5 4.78711 6.5 4.78711 6.12 4.28711C5.68 3.70711 5.03 3.28711 4.25 3.28711C3.005 3.28711 2 4.29211 2 5.53711C2 6.00211 2.14 6.43211 2.38 6.78711C2.785 7.39211 6.5 11.2871 6.5 11.2871C6.5 11.2871 10.215 7.39211 10.62 6.78711C10.86 6.43211 11 6.00211 11 5.53711C11 4.29211 9.995 3.28711 8.75 3.28711C7.97 3.28711 7.32 3.70711 6.88 4.28711C6.5 4.78711 6.5 4.78711 6.5 4.78711Z"
-                                                    stroke="#FEA145" stroke-linecap="round" stroke-linejoin="round" />
-                                            </svg><span class="f-12 c-dark f-w-4 freedoka">250</span>
-                                        </div> -->
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
-                                <div class="card b-blue br-18 overflow-hidden">
-                                    <span><img src="{{ asset('images/gallery4.png') }}" class="w-100"
-                                            alt=""></span>
-                                    <!-- <div class="title"><svg width="13" height="13" viewBox="0 0 13 13"
-                                                fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M6.5 4.78711C6.5 4.78711 6.5 4.78711 6.12 4.28711C5.68 3.70711 5.03 3.28711 4.25 3.28711C3.005 3.28711 2 4.29211 2 5.53711C2 6.00211 2.14 6.43211 2.38 6.78711C2.785 7.39211 6.5 11.2871 6.5 11.2871M6.5 4.78711C6.5 4.78711 6.5 4.78711 6.88 4.28711C7.32 3.70711 7.97 3.28711 8.75 3.28711C9.995 3.28711 11 4.29211 11 5.53711C11 6.00211 10.86 6.43211 10.62 6.78711C10.215 7.39211 6.5 11.2871 6.5 11.2871"
-                                                    fill="#FEA145" />
-                                                <path
-                                                    d="M6.5 4.78711C6.5 4.78711 6.5 4.78711 6.12 4.28711C5.68 3.70711 5.03 3.28711 4.25 3.28711C3.005 3.28711 2 4.29211 2 5.53711C2 6.00211 2.14 6.43211 2.38 6.78711C2.785 7.39211 6.5 11.2871 6.5 11.2871C6.5 11.2871 10.215 7.39211 10.62 6.78711C10.86 6.43211 11 6.00211 11 5.53711C11 4.29211 9.995 3.28711 8.75 3.28711C7.97 3.28711 7.32 3.70711 6.88 4.28711C6.5 4.78711 6.5 4.78711 6.5 4.78711Z"
-                                                    stroke="#FEA145" stroke-linecap="round" stroke-linejoin="round" />
-                                            </svg><span class="f-12 c-dark f-w-4 freedoka">189</span>
-                                        </div> -->
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
-                                <div class="card b-blue br-18 overflow-hidden">
-                                    <span><img src="{{ asset('images/gallery5.png') }}" class="w-100"
-                                            alt=""></span>
-                                    <!-- <div class="title"><svg width="13" height="13" viewBox="0 0 13 13"
-                                                fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M6.5 4.78711C6.5 4.78711 6.5 4.78711 6.12 4.28711C5.68 3.70711 5.03 3.28711 4.25 3.28711C3.005 3.28711 2 4.29211 2 5.53711C2 6.00211 2.14 6.43211 2.38 6.78711C2.785 7.39211 6.5 11.2871 6.5 11.2871M6.5 4.78711C6.5 4.78711 6.5 4.78711 6.88 4.28711C7.32 3.70711 7.97 3.28711 8.75 3.28711C9.995 3.28711 11 4.29211 11 5.53711C11 6.00211 10.86 6.43211 10.62 6.78711C10.215 7.39211 6.5 11.2871 6.5 11.2871"
-                                                    fill="#FEA145" />
-                                                <path
-                                                    d="M6.5 4.78711C6.5 4.78711 6.5 4.78711 6.12 4.28711C5.68 3.70711 5.03 3.28711 4.25 3.28711C3.005 3.28711 2 4.29211 2 5.53711C2 6.00211 2.14 6.43211 2.38 6.78711C2.785 7.39211 6.5 11.2871 6.5 11.2871C6.5 11.2871 10.215 7.39211 10.62 6.78711C10.86 6.43211 11 6.00211 11 5.53711C11 4.29211 9.995 3.28711 8.75 3.28711C7.97 3.28711 7.32 3.70711 6.88 4.28711C6.5 4.78711 6.5 4.78711 6.5 4.78711Z"
-                                                    stroke="#FEA145" stroke-linecap="round" stroke-linejoin="round" />
-                                            </svg><span class="f-12 c-dark f-w-4 freedoka">449</span>
-                                        </div> -->
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
-                                <div class="card b-blue br-18 overflow-hidden">
-                                    <span><img src="{{ asset('images/gallery6.png') }}" class="w-100"
-                                            alt=""></span>
-                                    <!-- <div class="title"><svg width="13" height="13" viewBox="0 0 13 13"
-                                                fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M6.5 4.78711C6.5 4.78711 6.5 4.78711 6.12 4.28711C5.68 3.70711 5.03 3.28711 4.25 3.28711C3.005 3.28711 2 4.29211 2 5.53711C2 6.00211 2.14 6.43211 2.38 6.78711C2.785 7.39211 6.5 11.2871 6.5 11.2871M6.5 4.78711C6.5 4.78711 6.5 4.78711 6.88 4.28711C7.32 3.70711 7.97 3.28711 8.75 3.28711C9.995 3.28711 11 4.29211 11 5.53711C11 6.00211 10.86 6.43211 10.62 6.78711C10.215 7.39211 6.5 11.2871 6.5 11.2871"
-                                                    fill="#FEA145" />
-                                                <path
-                                                    d="M6.5 4.78711C6.5 4.78711 6.5 4.78711 6.12 4.28711C5.68 3.70711 5.03 3.28711 4.25 3.28711C3.005 3.28711 2 4.29211 2 5.53711C2 6.00211 2.14 6.43211 2.38 6.78711C2.785 7.39211 6.5 11.2871 6.5 11.2871C6.5 11.2871 10.215 7.39211 10.62 6.78711C10.86 6.43211 11 6.00211 11 5.53711C11 4.29211 9.995 3.28711 8.75 3.28711C7.97 3.28711 7.32 3.70711 6.88 4.28711C6.5 4.78711 6.5 4.78711 6.5 4.78711Z"
-                                                    stroke="#FEA145" stroke-linecap="round" stroke-linejoin="round" />
-                                            </svg><span class="f-12 c-dark f-w-4 freedoka">365</span>
-                                        </div> -->
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
-                                <div class="card b-blue br-18 overflow-hidden">
-                                    <span><img src="{{ asset('images/gallery7.png') }}" class="w-100"
-                                            alt=""></span>
-                                    <!-- <div class="title"><svg width="13" height="13" viewBox="0 0 13 13"
-                                                fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M6.5 4.78711C6.5 4.78711 6.5 4.78711 6.12 4.28711C5.68 3.70711 5.03 3.28711 4.25 3.28711C3.005 3.28711 2 4.29211 2 5.53711C2 6.00211 2.14 6.43211 2.38 6.78711C2.785 7.39211 6.5 11.2871 6.5 11.2871M6.5 4.78711C6.5 4.78711 6.5 4.78711 6.88 4.28711C7.32 3.70711 7.97 3.28711 8.75 3.28711C9.995 3.28711 11 4.29211 11 5.53711C11 6.00211 10.86 6.43211 10.62 6.78711C10.215 7.39211 6.5 11.2871 6.5 11.2871"
-                                                    fill="#FEA145" />
-                                                <path
-                                                    d="M6.5 4.78711C6.5 4.78711 6.5 4.78711 6.12 4.28711C5.68 3.70711 5.03 3.28711 4.25 3.28711C3.005 3.28711 2 4.29211 2 5.53711C2 6.00211 2.14 6.43211 2.38 6.78711C2.785 7.39211 6.5 11.2871 6.5 11.2871C6.5 11.2871 10.215 7.39211 10.62 6.78711C10.86 6.43211 11 6.00211 11 5.53711C11 4.29211 9.995 3.28711 8.75 3.28711C7.97 3.28711 7.32 3.70711 6.88 4.28711C6.5 4.78711 6.5 4.78711 6.5 4.78711Z"
-                                                    stroke="#FEA145" stroke-linecap="round" stroke-linejoin="round" />
-                                            </svg><span class="f-12 c-dark f-w-4 freedoka">226</span>
-                                        </div> -->
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-6 col-sm-12 ">
-                                <div class="card b-blue br-18 overflow-hidden">
-                                    <span><img src="{{ asset('images/gallery8.png') }}" class="w-100"
-                                            alt=""></span>
-                                    <!-- <div class="title"><svg width="13" height="13" viewBox="0 0 13 13"
-                                                fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M6.5 4.78711C6.5 4.78711 6.5 4.78711 6.12 4.28711C5.68 3.70711 5.03 3.28711 4.25 3.28711C3.005 3.28711 2 4.29211 2 5.53711C2 6.00211 2.14 6.43211 2.38 6.78711C2.785 7.39211 6.5 11.2871 6.5 11.2871M6.5 4.78711C6.5 4.78711 6.5 4.78711 6.88 4.28711C7.32 3.70711 7.97 3.28711 8.75 3.28711C9.995 3.28711 11 4.29211 11 5.53711C11 6.00211 10.86 6.43211 10.62 6.78711C10.215 7.39211 6.5 11.2871 6.5 11.2871"
-                                                    fill="#FEA145" />
-                                                <path
-                                                    d="M6.5 4.78711C6.5 4.78711 6.5 4.78711 6.12 4.28711C5.68 3.70711 5.03 3.28711 4.25 3.28711C3.005 3.28711 2 4.29211 2 5.53711C2 6.00211 2.14 6.43211 2.38 6.78711C2.785 7.39211 6.5 11.2871 6.5 11.2871C6.5 11.2871 10.215 7.39211 10.62 6.78711C10.86 6.43211 11 6.00211 11 5.53711C11 4.29211 9.995 3.28711 8.75 3.28711C7.97 3.28711 7.32 3.70711 6.88 4.28711C6.5 4.78711 6.5 4.78711 6.5 4.78711Z"
-                                                    stroke="#FEA145" stroke-linecap="round" stroke-linejoin="round" />
-                                            </svg><span class="f-12 c-dark f-w-4 freedoka">142</span>
-                                        </div>
-                                    </div>-->
-                                </div>
-                            </div>
-                            <nav aria-label="Page navigation">
-                                <div class="d-flex align-items-center justify-content-center gap-2 w-100">
-                                    <!-- Showing results text -->
-                                    <div>
-                                        <p class="small text-muted mb-0 f-14 c-light f-w-4 montserrat">
-                                            Showing <span class="fw-semibold f-w-5">11</span> to
-                                            <span class="fw-semibold f-w-5">15</span> of
-                                            <span class="fw-semibold f-w-5">15</span> results
-                                        </p>
-                                    </div>
-                                    <!-- Pagination -->
-                                    <ul class="pagination custom-pagination mb-0">
-                                        <li class="page-item">
-                                            <a class="page-link" href="http://127.0.0.1:8000/admin/listing/faq?page=1"
-                                                rel="prev" aria-label="Previous">
-                                                ‹
+                                    <span>
+
+                                        <a
+                                            data-fancybox="gallery"
+                                            data-src="{{ $gallery->image_url ?? '' }}"
+                                            data-caption=""
+                                            >
+                                           <img src="{{ $gallery->image_url ?? '' }}" class="w-100"
+                                            alt="">
                                             </a>
-                                        </li>
 
-                                        <li class="page-item">
-                                            <a class="page-link"
-                                                href="http://127.0.0.1:8000/admin/listing/faq?page=1">1</a>
-                                        </li>
-
-                                        <li class="page-item active" aria-current="page">
-                                            <span class="page-link">2</span>
-                                        </li>
-
-                                        <li class="page-item disabled" aria-disabled="true" aria-label="Next">
-                                            <span class="page-link" aria-hidden="true">›</span>
-                                        </li>
-                                    </ul>
+                                        </span>
                                 </div>
-                            </nav>
+                            </div>
+                            @endforeach
+
+                           
+
+
+                            <nav 
+                    aria-label="Page navigation example">
+                        <ul class="pagination custom-pagination">
+                            <div class="d-flex justify-content-center">
+                                {{ $galleries->links() }}
+                            </div>
+                        </ul>
+                    </nav>
 
 
 
@@ -500,6 +374,52 @@
                     </div>
                 </div>
         </section>
+        @endif --}}
+
+        @if ($galleries->isNotEmpty())
+            <section class="pet-gallery">
+                <div class="container">
+                    <div class="inner bg-l-blue br-40">
+                        <div class="heading t-center">
+                            <h1 class="c-dark f-42 l-h-72 f-w-5 freedoka">
+                                Community Pet <span class="c-orange">Gallery</span>
+                            </h1>
+                            <p class="c-light f-26 l-h-37 f-w-4">
+                                Check out these adorable photos shared by our community members!
+                            </p>
+                        </div>
+
+                        <div class="swiper myGallerySwiper">
+                            <div class="swiper-wrapper">
+                                @foreach ($galleries as $gallery)
+                                    <div class="swiper-slide">
+                                        <div class="card b-blue br-18 overflow-hidden">
+                                            <a
+                                                data-fancybox="gallery"
+                                                data-src="{{ $gallery->image_url ?? '' }}"
+                                                data-caption=""
+                                            >
+                                                <img src="{{ $gallery->image_url ?? '' }}" class="w-100" alt="">
+                                            </a>
+                                        </div>
+                                    </div>
+                                @endforeach
+                                
+                            </div>
+                            
+
+                            <div class="swiper-pagination"></div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </section>
+        @endif
+
+
+        
         <section class="testimonials">
             <div class="container">
                 <div class="inner">
@@ -788,4 +708,60 @@
         </section>
 
     </main>
+
+
+    @push('scripts')
+
+    
+    
+
+
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        new Swiper(".myGallerySwiper", {
+            slidesPerView: 4,
+            slidesPerGroup: 2, 
+            grid: {
+                rows: 2,
+                fill: 'row'
+            },
+            spaceBetween: 20,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            breakpoints: {
+                1024: {
+                    slidesPerView: 4,
+                    slidesPerGroup: 2,
+                    grid: { rows: 2 }
+                },
+                768: {
+                    slidesPerView: 2,
+                    slidesPerGroup: 2,
+                    grid: { rows: 2 }
+                },
+                480: {
+                    slidesPerView: 1,
+                    slidesPerGroup: 1,
+                    grid: { rows: 2 }
+                }
+            }
+        });
+    });
+</script>
+</script>
+    
+    <script>
+      Fancybox.bind("[data-fancybox]", {
+        // Your custom options
+      });
+    </script>
+
+    @endpush
+
 @endsection
