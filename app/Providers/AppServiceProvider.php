@@ -7,16 +7,31 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\Str;
 use Illuminate\Support\ServiceProvider;
-// use App\Services\BlogService;
+use Google\Analytics\Data\V1beta\Client\BetaAnalyticsDataClient;
+
+use Spatie\Analytics\AnalyticsClient;
+use Spatie\Analytics\Analytics;
+use Illuminate\Contracts\Cache\Repository;
 
 class AppServiceProvider extends ServiceProvider
 {
     /**
      * Register any application services.
      */
-    public function register(): void
+    public function register()
     {
-        //  $this->app->singleton(BlogService::class, fn () => new BlogService());
+
+        
+        $this->app->bind(Analytics::class, function ($app) {
+            $propertyId = config('analytics.property_id');
+            $credentialsPath = config('analytics.service_account_credentials_json');
+            $betaAnalyticsDataClient = new BetaAnalyticsDataClient([
+                'credentials' => $credentialsPath,
+            ]);
+            $configRepository = $app->make(Repository::class);
+            $analyticsClient = new AnalyticsClient($betaAnalyticsDataClient, $configRepository);
+            return new Analytics($analyticsClient, $propertyId);
+        });
     }
 
     /**

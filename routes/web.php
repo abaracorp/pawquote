@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Backend\AffilateController;
 use App\Http\Controllers\Backend\BlogController;
+use App\Http\Controllers\Backend\DashboardController;
 use App\Http\Controllers\Backend\FanStoriesController;
 use App\Http\Controllers\Backend\FaqGuideController;
 use App\Http\Controllers\Backend\GalleryController;
@@ -149,9 +150,20 @@ Route::prefix('admin')
     ->as('admin.')
     ->group(function () {
 
-        Route::get('dashboard', function () {
-            return view('dashboard');
-        })->name('dashboard');
+        // Route::get('dashboard', function () {
+        //     return view('dashboard');
+        // })->name('dashboard');
+
+        Route::controller(DashboardController::class)
+        ->group(function(){
+            Route::get('dashboard', 'dashboard')->name('dashboard');
+            Route::get('dashboard-data', 'getData')->name('getData');
+
+            // Route::put('updateUser/{user}', 'updateSetting')->name('updateSetting');
+           
+        });
+
+
 
 
         //blogs 

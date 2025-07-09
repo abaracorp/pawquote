@@ -152,12 +152,19 @@
                                     <h2 class="f-24 c-dark l-h-27 f-w-5 freedoka mb-0 ">{{ $fan->title ?? '' }}
                                     </h2>
                                 </div>
-                                {!! $fan->content ?? '' !!}
 
-                                <div>
+                                {{-- {!! $fan->content ?? '' !!} --}}
+                                <p>{{ str(strip_tags($fan->content))->limit(150, '...') }}</p>
+
+                                @if (hasMoreThanChars($fan->content, 150))
+                                    <div>
+                                        <button class="read-more f-18 c-dark f-w-5 freedoka b-blue br-8">Read More</button>
+                                    </div>
+                                @endif
+
+                                {{-- <div>
                                     <button class="read-more f-18 c-dark f-w-5 freedoka b-blue br-8">Read More</button>
-
-                                </div>
+                                </div> --}}
 
                             </div>
                             <div class="card-title">{{ $fan->label ?? '' }}</div>

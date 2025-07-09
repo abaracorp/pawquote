@@ -50,14 +50,14 @@
                                                 </h2>
                                             </div>
 
-                                            {{-- {!! str($fan->content)->limit(150, '...') !!} --}}
-                                            {!! $fan->content ?? '' !!}
+                                            <p>{{ str(strip_tags($fan->content))->limit(150, '...') }}</p>
+                                            {{-- {!! $fan->content ?? '' !!} --}}
                                             
 
                                             @if (hasMoreThanChars($fan->content, 150))
-                                                <button class="read-more b-blue br-8 c-dark f-18 f-w-5 freedoka">
-                                                    Read More
-                                                </button>
+                                                 <div>
+                                                    <button class="read-more f-18 c-dark f-w-5 freedoka b-blue br-8">Read More</button>
+                                                </div>
                                             @endif
                                         </div>
                                         <div class="card-title">{{ $fan->label ?? '' }}</div>
