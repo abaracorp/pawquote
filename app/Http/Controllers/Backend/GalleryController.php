@@ -37,7 +37,7 @@ class GalleryController extends Controller
     {
         $request->validate([
             'images'   => 'required|array',
-            // 'images.*' => 'mimes:jpeg,png,jpg,gif,svg',
+            'images.*' => 'mimes:jpeg,png,jpg,gif,svg|max:10240',
         ]);
 
         if ($request->hasFile('images')) {
@@ -52,7 +52,7 @@ class GalleryController extends Controller
             }
         }
 
-         return redirect()->route('admin.gallery')->with('success', 'Images uploaded and saved as separate gallery records.');
+         return redirect()->route('admin.gallery')->with('success', 'Gallery images uploaded successfully.');
        
     }
 

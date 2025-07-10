@@ -18,7 +18,7 @@
                 <option value="today" >Today</option>
                 <option value="yesterday">Yesterday</option>
                 <option value="thisWeek">This week</option>
-                <option value="lastWeek">Last week</option>
+                {{-- <option value="lastWeek">Last week</option> --}}
                 <option value="last7" selected>Last 7 days</option>
                 <option value="last14">Last 14 days</option>
                 <option value="last28">Last 28 days</option>

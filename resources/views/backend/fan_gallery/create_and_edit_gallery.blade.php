@@ -1,6 +1,9 @@
 @extends('backend.master')
 
 @section('content')
+
+
+
 <main class="Rightside add-new-gallery">
     <x-alert />
     <section class="inner">

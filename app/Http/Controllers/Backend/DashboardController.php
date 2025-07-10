@@ -85,11 +85,11 @@ class DashboardController extends Controller
                     return $this->buildResponse($this->dateRange($start, $end));
                 }
 
-            case 'lastWeek': {
-                    $start = $today->copy()->startOfWeek()->subWeek();
-                    $end = $start->copy()->endOfWeek();
-                    return $this->buildResponse($this->dateRange($start, $end));
-                }
+           case 'lastWeek': {
+                $start = $today->copy()->subWeek()->startOfWeek();
+                $end = $start->copy()->endOfWeek();
+                return $this->buildResponse($this->dateRange($start, $end));
+            }
 
             case 'last7':
             case 'last14':
