@@ -483,9 +483,9 @@
 
         
 
-        <section>
+        {{-- <section>
             <div id="chart"></div>
-        </section>
+        </section> --}}
 
     </main>
 
@@ -737,7 +737,10 @@
                 const { categories, data , trafficSources , totalVisitors , totalEngagementRate } = await generateApiData(range, from, to);
                 chart.updateOptions({
                     xaxis: { categories },
-                    series: [{ name: 'Visitor', data }]
+                    series: [
+                        { name: 'Visitors', data },
+                        // {name: 'Page View',data }
+                    ]
                 });
 
 
