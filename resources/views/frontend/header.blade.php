@@ -47,11 +47,15 @@
 
   console.log(window.dataLayer,'window.dataLayer');
   
-
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
   gtag('config', 'G-FKGXZGRN72');
+
+  gtag('event', 'referrer_capture', {
+  referrer: document.referrer
+});
+console.log(document.referrer,'document.referrer');
 </script>
 
 </head>
