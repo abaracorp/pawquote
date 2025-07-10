@@ -18,28 +18,31 @@ class DashboardController extends Controller
 
     public function dashboard(Request $request, Analytics $analytics)
     {
-        $days = $request->input('days', 30);
+        // $days = $request->input('days', 30);
 
-        $period = Period::days($days);
+        // $period = Period::days($days);
 
         // dump($period);
 
-        $totalVisitors = $this->getTotalVisitors($analytics, $period);
+        // $totalVisitors = $this->getTotalVisitors($analytics, $period);
+
+        $totalVisitors = 0;
+
+        // $fetchTopReferrers = $analytics->fetchTopReferrers($period, 2000);
+
+        // dd($fetchTopReferrers);
+
+        // $analyticsData = $analytics->fetchTotalVisitorsAndPageViews(Period::days(7));
+
+        // dd($analyticsData);
+        // $totalPageViews = $analyticsData['totalPageViews'];
+
+
 
         return view('dashboard', compact('totalVisitors'));
     }
 
-    // public function getData(Request $request, Analytics $analytics)
-    // {
-    //     $days = $request->input('days', 30); 
-
-    //     $period = Period::days($days);
-
-    //     $totalVisitors = $this->getTotalVisitors($analytics, $period);
-
-    //     return response()->json($totalVisitors);
-
-    // }
+    
 
 
     public function getTotalVisitors(Analytics $analytics, Period $period)
@@ -58,31 +61,7 @@ class DashboardController extends Controller
         return $result->first()['totalUsers'] ?? 0;
     }
 
-    // public function websiteTrafficAndConversions(Analytics $analytics, Period $period)
-    // {
-
-
-    //     $metrics = [
-    //         'totalUsers',
-    //         'sessions',
-    //         'bounceRate',
-    //         'conversions',
-    //         'sessionConversionRate'
-    //     ];
-
-    //     $dimensions = ['day'];
-    //     $maxResults = 1000;
-
-    //     $results = $analytics->get(
-    //         $period,
-    //         $metrics,
-    //         $dimensions,
-    //         $maxResults
-    //     );
-
-
-    //     return $results;
-    // }
+   
 
 
     public function getData(Request $request , Analytics $analytics)
@@ -95,21 +74,21 @@ class DashboardController extends Controller
 
         switch ($range) {
             case 'today':
-                return $this->buildResponse([$today],$analytics);
+                return $this->buildResponse([$today]);
 
             case 'yesterday':
-                return $this->buildResponse([$today->copy()->subDay()],$analytics);
+                return $this->buildResponse([$today->copy()->subDay()]);
 
             case 'thisWeek': {
                     $start = $today->copy()->startOfWeek();
                     $end = $today;
-                    return $this->buildResponse($this->dateRange($start, $end),$analytics);
+                    return $this->buildResponse($this->dateRange($start, $end));
                 }
 
             case 'lastWeek': {
                     $start = $today->copy()->startOfWeek()->subWeek();
                     $end = $start->copy()->endOfWeek();
-                    return $this->buildResponse($this->dateRange($start, $end),$analytics);
+                    return $this->buildResponse($this->dateRange($start, $end));
                 }
 
             case 'last7':
@@ -120,7 +99,7 @@ class DashboardController extends Controller
             case 'last90': {
                     $days = (int) str_replace('last', '', $range);
                     $start = $today->copy()->subDays($days - 1);
-                    return $this->buildResponse($this->dateRange($start, $today),$analytics);
+                    return $this->buildResponse($this->dateRange($start, $today));
                 }
 
             case 'qtd': {
@@ -158,7 +137,7 @@ class DashboardController extends Controller
                     $diffInMonths = $fromDate->diffInMonths($toDate);
 
                     if ($diffInMonths === 0) {
-                        return $this->buildResponse($this->dateRange($fromDate, $toDate),$analytics);
+                        return $this->buildResponse($this->dateRange($fromDate, $toDate));
                     } else {
                         $months = [];
                         $current = $fromDate->copy()->startOfMonth();
@@ -185,67 +164,107 @@ class DashboardController extends Controller
         return $dates;
     }
 
-    private function buildResponse($dates,$analytics)
+    // done for now
+    private function buildResponse($dates)
     {
         $start = $dates[0];
         $end = end($dates);
 
         $period = Period::create($start, $end);
-        // $analytics = app(Analytics::class);
+        
+        $analytics = app(Analytics::class);
 
         $results = $this->websiteTrafficAndConversions($analytics, $period);
 
+        $results2 = $this->trafficSources($analytics, $period);
+
+        $totalVisitors = $this->getTotalVisitors($analytics, $period);
+
+        $totalEngagementRate = $this->fetchTotalEngagementRate($analytics, $period);
+
+        // dd($results2);
+
         $mapped = collect($results)->map(function ($item) {
-
-            // dd($item);
-
-            return [
-                'day' => $item['day'] ?? '',
-                'value' => $item['totalUsers'] ?? 0
-            ];
+        return [
+            'date' => $item['date']->format('Y-m-d') ?? null,
+            'value' => $item['totalUsers'] ?? 0
+        ];
         });
-
-        $categories = $mapped->pluck('day')->map(function ($d) {
-            return Carbon::createFromFormat('Ymd', $d)->format('d M');
+        
+        $categories = $mapped->pluck('date')->map(function ($d) {
+            return Carbon::createFromFormat('Y-m-d', $d)->format('d M');
         });
+       
+    //    $categories = $mapped
+    //     ->sortBy('date') 
+    //     ->pluck('date')
+    //     ->map(function ($d) {
+    //         return Carbon::createFromFormat('Y-m-d', $d)->format('d M');
+    //     })
+    //     ->values(); 
 
+        
         $data = $mapped->pluck('value');
 
+       
         return response()->json([
             'categories' => $categories,
-            'data' => $data
+            'data' => $data,
+            'trafficSources' => $results2,
+            'totalVisitors' => $totalVisitors,
+            'totalEngagementRate' => $totalEngagementRate,
         ]);
     }
 
     private function buildMonthlyResponse($months, $year)
     {
-            $start = Carbon::create($year, min($months), 1)->startOfMonth();
-            $end = Carbon::create($year, max($months), 1)->endOfMonth();
+        $start = Carbon::create($year, min($months), 1)->startOfMonth();
+        $end = Carbon::create($year, max($months), 1)->endOfMonth();
 
-            $period = Period::create($start, $end);
-            $analytics = app(Analytics::class);
+        $period = Period::create($start, $end);
+        $analytics = app(Analytics::class);
 
-            $results = $this->websiteTrafficAndConversions($analytics, $period);
+        $results = $this->websiteTrafficAndConversions($analytics, $period);
 
-            $grouped = collect($results)->groupBy(function ($item) {
-                return Carbon::createFromFormat('Ymd', $item['day'])->format('M Y');
-            });
+        $results2 = $this->trafficSources($analytics, $period);
 
-            $categories = [];
-            $data = [];
+        $totalVisitors = $this->getTotalVisitors($analytics, $period);
 
-            foreach ($months as $month) {
-                $label = Carbon::create($year, $month, 1)->format('M Y');
-                $categories[] = $label;
-                $total = $grouped->get($label, collect())->sum('totalUsers');
-                $data[] = $total;
-            }
+        $totalEngagementRate = $this->fetchTotalEngagementRate($analytics, $period);
 
-            return response()->json([
-                'categories' => $categories,
-                'data' => $data
-            ]);
+        // dd($results2);
+
+        $mapped = collect($results)->map(function ($item) {
+            return [
+                'date' => $item['date']->format('Y-m-d') ?? null,
+                'value' => $item['totalUsers'] ?? 0
+            ];
+        });
+
+        $grouped = $mapped->groupBy(function ($item) {
+            return Carbon::createFromFormat('Y-m-d', $item['date'])->format('M Y');
+        });
+
+        $categories = [];
+        $data = [];
+
+        foreach ($months as $month) {
+            $label = Carbon::create($year, $month, 1)->format('M Y');
+            $categories[] = $label;
+            $total = $grouped->get($label, collect())->sum('value');
+            $data[] = $total;
+        }
+
+        return response()->json([
+            'categories' => $categories,
+            'data' => $data,
+            'trafficSources'  => $results2,
+            'totalVisitors'   => $totalVisitors,
+            'totalEngagementRate' => $totalEngagementRate,
+            
+        ]);
     }
+
 
     private function buildMonthlyFromDates($monthDates)
     {
@@ -257,8 +276,21 @@ class DashboardController extends Controller
 
         $results = $this->websiteTrafficAndConversions($analytics, $period);
 
-        $grouped = collect($results)->groupBy(function ($item) {
-            return Carbon::createFromFormat('Ymd', $item['day'])->format('M Y');
+        $results2 = $this->trafficSources($analytics, $period);
+
+        $totalVisitors = $this->getTotalVisitors($analytics, $period);
+
+        $totalEngagementRate = $this->fetchTotalEngagementRate($analytics, $period);
+
+        $mapped = collect($results)->map(function ($item) {
+            return [
+                'date' => $item['date']->format('Y-m-d') ?? null,
+                'value' => $item['totalUsers'] ?? 0
+            ];
+        });
+
+        $grouped = $mapped->groupBy(function ($item) {
+            return Carbon::createFromFormat('Y-m-d', $item['date'])->format('M Y');
         });
 
         $categories = [];
@@ -267,21 +299,24 @@ class DashboardController extends Controller
         foreach ($monthDates as $month) {
             $label = $month->format('M Y');
             $categories[] = $label;
-            $total = $grouped->get($label, collect())->sum('totalUsers');
+            $total = $grouped->get($label, collect())->sum('value');
             $data[] = $total;
         }
 
         return response()->json([
             'categories' => $categories,
-            'data' => $data
+            'data' => $data,
+            'trafficSources' => $results2,
+            'totalVisitors' => $totalVisitors,
+             'totalEngagementRate' => $totalEngagementRate,
         ]);
     }
+
 
     public function websiteTrafficAndConversions(Analytics $analytics, $period)
     {
 
-        // dd($period);
-
+        
         $metrics = [
             'totalUsers',
             'sessions',
@@ -290,7 +325,7 @@ class DashboardController extends Controller
             'sessionConversionRate'
         ];
 
-        $dimensions = ['day'];
+        $dimensions = ['date'];
         $maxResults = 1000;
 
         $results = $analytics->get(
@@ -300,8 +335,74 @@ class DashboardController extends Controller
             $maxResults
         );
 
-        // dd($results);
+        
 
-        return $results;
+         $sorted = collect($results)->sortBy(function ($item) {
+            return $item['date']->format('Y-m-d');
+        })->values(); 
+
+        return $sorted;
     }
+
+
+    public function trafficSources(Analytics $analytics, $period)
+{
+    $metrics = ['sessions'];
+    // $dimensions = ['date'];
+   $dimensions = ['sessionSource', 'sessionMedium'];
+    $maxResults = 1000;
+
+    $results = $analytics->get(
+        $period,
+        $metrics,
+        $dimensions,
+        $maxResults
+    );
+
+    // dd($results); // Uncomment only for debugging
+
+    // $sources = $results->map(function ($row) {
+    //     return [
+    //         'sessionSource' => $row[0], // source
+    //         'sessionMedium' => $row[1], // medium
+    //         'sessions' => $row[2] ?? 0,
+    //     ];
+    // });
+
+    return $results;
+}
+
+    public function fetchTotalEngagementRate(Analytics $analytics, $period)
+    {
+       $metrics = [
+            'engagementRate'
+        ];
+
+        $dimensions = ['date'];
+        $maxResults = 1000;
+
+        $results = $analytics->get(
+            $period,
+            $metrics,
+            $dimensions,
+            $maxResults
+        );
+
+        
+
+        //  $sorted = collect($results)->sortBy(function ($item) {
+        //     return $item['date']->format('Y-m-d');
+        // })->values(); 
+
+        // return $sorted;
+
+        $sorted = collect($results)
+        ->sortBy(fn($item) => $item['date']->format('Y-m-d'))
+        ->values();
+
+        $averageRate = $sorted->avg('engagementRate'); 
+        return round($averageRate * 100, 2); 
+        
+    }
+
 }

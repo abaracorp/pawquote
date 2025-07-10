@@ -11,12 +11,32 @@
             </div>
             <div class="rightside">
                 <div class="select-wrapper">
-                    <select name="" id="">
-                        <option value="">Last 7 Days</option>
-                        <option value="">Last 10 Days</option>
-                        <option value="">Last 15 Days</option>
-                        <option value="">Last 30 Days</option>
-                    </select>
+                    
+           
+            <select id="rangeSelect">
+                <option value="custom">Custom</option>
+                <option value="today" >Today</option>
+                <option value="yesterday">Yesterday</option>
+                <option value="thisWeek">This week</option>
+                <option value="lastWeek">Last week</option>
+                <option value="last7" selected>Last 7 days</option>
+                <option value="last14">Last 14 days</option>
+                <option value="last28">Last 28 days</option>
+                <option value="last30">Last 30 days</option>
+                <option value="last60">Last 60 days</option>
+                <option value="last90">Last 90 days</option>
+                <option value="qtd">Quarter to date</option>
+                <option value="last12mo">Last 12 months</option>
+                <option value="thisYear" >This year (Jan - Today)</option>
+                <option value="lastYear">Last year</option>
+            </select>
+       
+
+        <div id="custom-date-range" style="display: none">
+            <label>From: <input type="text" id="dateFrom" name="dateFrom" placeholder="dd-mm-yyyy"></label>
+            <label>To: <input type="text" id="dateTo" name="dateTo" placeholder="dd-mm-yyyy"></label>
+            <button id="applyCustom">Apply</button>
+        </div>
                 </div>
                 <button class="refresh"><svg width="19" height="19" class="refresh" viewBox="0 0 19 19"
                         fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -48,7 +68,7 @@
                             </svg>
                         </div>
                         <div class="bottom-content">
-                            <h2 class="f-32 c-dark f-w-6 montserrat">{{ $totalVisitors ?? '' }}</h2>
+                            <h2 class="f-32 c-dark f-w-6 montserrat" id="totalVisitorsRender">{{ $totalVisitors ?? '' }}</h2>
                             {{-- <p class="f-14 c-light f-w-4 montserrat"><span class=" c-green "><svg width="21"
                                                 height="12" viewBox="0 0 21 12" fill="none"
                                                 xmlns="http://www.w3.org/2000/svg">
@@ -91,7 +111,7 @@
                 <div class="col-lg-3">
                     <div class="card b-blue">
                         <div class="top">
-                            <h4 class="f-20 c-darl f-w-5 montserrat">Conversion Rate </h4>
+                            <h4 class="f-20 c-darl f-w-5 montserrat">Engagement Rate</h4>
                             <svg width="23" height="22" viewBox="0 0 23 22" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" clip-rule="evenodd"
@@ -101,15 +121,15 @@
 
                         </div>
                         <div class="bottom-content">
-                            <h2 class="f-32 c-dark f-w-6 montserrat">15,445</h2>
-                            <p class="f-14 c-light f-w-4 montserrat"><span class=" c-red "><svg width="6"
+                            <h2 class="f-32 c-dark f-w-6 montserrat" id="appendEngagementRate">0%</h2>
+                            {{-- <p class="f-14 c-light f-w-4 montserrat"><span class=" c-red "><svg width="6"
                                         height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path
                                             d="M0.66707 5.87409L4.47524 5.87409C4.54613 5.87254 4.61601 5.85701 4.68089 5.82839C4.81169 5.77376 4.91568 5.66977 4.97031 5.53897C4.99893 5.4741 5.01446 5.40421 5.016 5.33333L5.016 1.52515C5.016 1.45414 5.00202 1.38382 4.97484 1.31821C4.94767 1.2526 4.90783 1.19299 4.85762 1.14278C4.75621 1.04136 4.61866 0.98439 4.47524 0.98439C4.33182 0.98439 4.19428 1.04136 4.09287 1.14278C3.99146 1.24419 3.93448 1.38173 3.93448 1.52515L3.93829 4.03474L1.04789 1.14433C0.946888 1.04333 0.809903 0.986594 0.667069 0.986594C0.524235 0.986594 0.387251 1.04333 0.286252 1.14433C0.185253 1.24533 0.128512 1.38232 0.128512 1.52515C0.128512 1.66799 0.185253 1.80497 0.286252 1.90597L3.17666 4.79637L0.667069 4.79256C0.595974 4.79227 0.525525 4.80606 0.459785 4.83313C0.394045 4.86021 0.334316 4.90003 0.284044 4.9503C0.233771 5.00057 0.19395 5.0603 0.166878 5.12604C0.139806 5.19178 0.126018 5.26223 0.126309 5.33332C0.126018 5.40442 0.139805 5.47487 0.166877 5.54061C0.19395 5.60635 0.233772 5.66608 0.284044 5.71635C0.334316 5.76662 0.394045 5.80644 0.459785 5.83352C0.525524 5.86059 0.595975 5.87438 0.66707 5.87409Z"
                                             fill="#EF4444" />
                                     </svg>
                                     -2.3%
-                                </span>from last period</p>
+                                </span>from last period</p> --}}
                         </div>
                     </div>
                 </div>
@@ -159,7 +179,8 @@
                             <h2 class="f-28 c-dark f-w-5 freedoka">Top Referral Sources</h2>
                             <p class="f-18 c-light f-w-5 montserrat">Where your visitors are coming from</p>
                         </div>
-                        <ul>
+                        
+                        <ul id="appendSourcesData">
                             <li>
                                 <h3 class="f-22 c-dark f-w-5 freedoka">Google</h3>
                                 <div class="rightside">
@@ -171,7 +192,7 @@
                                 </div>
                             </li>
 
-                            <li>
+                            {{-- <li>
                                 <h3 class="f-22 c-dark f-w-5 freedoka">Direct</h3>
                                 <div class="rightside">
                                     <p class="f-20 c-light f-w-5 montserrat">1,159</p>
@@ -191,7 +212,7 @@
                                         <div class="progress-bar" style="width: 30%;"></div>
                                     </div>
                                 </div>
-                            </li>
+                            </li> --}}
                         </ul>
                     </div>
                 </div>
@@ -445,32 +466,7 @@
             </div>
         </section>
 
-        <div class="form-group">
-            <label for="rangeSelect">Select Range:</label>
-            <select id="rangeSelect">
-                <option value="custom">Custom</option>
-                <option value="today">Today</option>
-                <option value="yesterday">Yesterday</option>
-                <option value="thisWeek">This week</option>
-                <option value="lastWeek">Last week</option>
-                <option value="last7">Last 7 days</option>
-                <option value="last14">Last 14 days</option>
-                <option value="last28">Last 28 days</option>
-                <option value="last30">Last 30 days</option>
-                <option value="last60">Last 60 days</option>
-                <option value="last90">Last 90 days</option>
-                <option value="qtd">Quarter to date</option>
-                <option value="last12mo">Last 12 months</option>
-                <option value="thisYear" selected>This year (Jan - Today)</option>
-                <option value="lastYear">Last year</option>
-            </select>
-        </div>
-
-        <div id="custom-date-range" style="display: none">
-            <label>From: <input type="text" id="dateFrom" name="dateFrom" placeholder="dd-mm-yyyy"></label>
-            <label>To: <input type="text" id="dateTo" name="dateTo" placeholder="dd-mm-yyyy"></label>
-            <button id="applyCustom">Apply</button>
-        </div>
+        
 
         <section>
             <div id="chart"></div>
@@ -723,11 +719,19 @@
             }
 
             async function updateChart(range, from = null, to = null) {
-                const { categories, data } = await generateApiData(range, from, to);
+                const { categories, data , trafficSources , totalVisitors , totalEngagementRate } = await generateApiData(range, from, to);
                 chart.updateOptions({
                     xaxis: { categories },
-                    series: [{ name: 'Desktops', data }]
+                    series: [{ name: 'Visitor', data }]
                 });
+
+
+                renderTrafficSources(trafficSources)
+
+                document.getElementById('totalVisitorsRender').innerText = totalVisitors ?? 0;
+                document.getElementById('appendEngagementRate').innerText = `${totalEngagementRate} %` ?? '0 %';
+
+                  
             }
 
 
@@ -758,7 +762,40 @@
             });
 
             
-            updateChart("thisYear");
+            updateChart("last7");
+
+            function renderTrafficSources(trafficSources) {
+            const totalSessions = trafficSources.reduce((sum, item) => sum + parseInt(item.sessions), 0);
+            const ul = document.getElementById('appendSourcesData');
+
+            
+            ul.innerHTML = '';
+
+            trafficSources.forEach(item => {
+                const sourceLabel = formatSource(item.sessionSource, item.sessionMedium);
+                const sessionCount = parseInt(item.sessions);
+                const percent = totalSessions > 0 ? Math.round((sessionCount / totalSessions) * 100) : 0;
+
+                const li = document.createElement('li');
+                li.innerHTML = `
+                    <h3 class="f-22 c-dark f-w-5 freedoka">${sourceLabel}</h3>
+                    <div class="rightside">
+                        <p class="f-20 c-light f-w-5 montserrat">${sessionCount}</p>
+                        <div class="progress" role="progressbar" aria-valuenow="${percent}" aria-valuemin="0" aria-valuemax="100">
+                            <div class="progress-bar" style="width: ${percent}%;"></div>
+                        </div>
+                    </div>
+                `;
+                ul.appendChild(li);
+            });
+        }
+
+        
+        function formatSource(source, medium) {
+            if (source === "(direct)" && medium === "(none)") return "Direct";
+            if (source === "(not set)" || medium === "(not set)") return "Other";
+            return source.charAt(0).toUpperCase() + source.slice(1);
+        }
         </script>
     @endpush
 @endsection
