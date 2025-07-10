@@ -52,10 +52,7 @@
 
   gtag('config', 'G-FKGXZGRN72');
 
-  gtag('event', 'referrer_capture', {
-  referrer: document.referrer
-});
-console.log(document.referrer,'document.referrer');
+  
 </script>
 
 </head>

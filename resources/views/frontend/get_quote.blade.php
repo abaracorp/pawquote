@@ -406,7 +406,8 @@
                             find the perfect coverage for your furry
                             family member.</p>
                     </div>
-                    <button class="get-quote orange-btn f-22 f-w-6 montserrat">Get A Quote</button>
+                    <button class="get-quote orange-btn f-22 f-w-6 montserrat" id="goToPageTop">Get A Quote</button>
+                    {{-- <a href="{{route('getQuote')}}" class="get-quote orange-btn f-22 f-w-6 montserrat">Get A Quote</a> --}}
                 </div>
             </div>
         </section>
@@ -416,9 +417,19 @@
     
     @push('scripts')
     <script src="{{asset('js/quoteZipcode.js')}}"></script>
-    
-    
-        
+
+    <script>
+
+    const btn = document.getElementById('goToPageTop');
+
+    btn.addEventListener('click', function(){
+
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+
+    })
+
+    </script>
+   
     @endpush
     
 @endsection

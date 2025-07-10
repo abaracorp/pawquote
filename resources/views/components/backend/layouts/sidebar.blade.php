@@ -53,13 +53,13 @@
                 FAQ/Guide</a></li>
 
 
-        <li class="{{ isActiveRoute(['admin.analytics']) }}"><a href="{{ route('admin.analytics') }}" class="f-18 c-light f-w-5 freedoka"><svg
+        {{-- <li class="{{ isActiveRoute(['admin.analytics']) }}"><a href="{{ route('admin.analytics') }}" class="f-18 c-light f-w-5 freedoka"><svg
                     width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
                         d="M4.8 3V19.2H21V21H3V3H4.8ZM15.6 6.6H21V12H19.2V9.6807L17.7789 11.0982L15.3363 13.5354L14.7 14.1717L11.1 10.5717L6.6 15.0717L5.3274 13.8L11.1 8.0265L14.7 11.6265L16.5081 9.8238L17.9346 8.4H15.6V6.6Z"
                         fill="#566369" />
                 </svg>
-                Analytics</a></li>
+                Analytics</a></li> --}}
         <li class="{{ isActiveRoute(['admin.affilate']) }}"><a href="{{ route('admin.affilate') }}" class="f-18 c-light f-w-5 freedoka"><svg
                     width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path

@@ -164,7 +164,7 @@
         </section>
         <section class="data-insights">
             <div class="row">
-                <div class="col-lg-6">
+                {{-- <div class="col-lg-6">
                     <div class="card traffic b-blue">
                         <div class="top">
                             <h2 class="f-28 c-dark f-w-5 freedoka">Traffic Overview</h2>
@@ -172,53 +172,24 @@
                         </div>
                         <canvas id="myChart" style="width:100%;max-width:600px; background-color:#EEFCFF;"></canvas>
                     </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="card referral b-blue">
+                </div> --}}
+                <div class="col-lg-12">
+                    <div class="card traffic b-blue">
                         <div class="top">
-                            <h2 class="f-28 c-dark f-w-5 freedoka">Top Referral Sources</h2>
-                            <p class="f-18 c-light f-w-5 montserrat">Where your visitors are coming from</p>
+                            <h2 class="f-28 c-dark f-w-5 freedoka">Traffic Overview</h2>
+                            <p class="f-18 c-light f-w-5 montserrat">Website traffic and conversion data</p>
                         </div>
                         
-                        <ul id="appendSourcesData">
-                            <li>
-                                <h3 class="f-22 c-dark f-w-5 freedoka">Google</h3>
-                                <div class="rightside">
-                                    <p class="f-20 c-light f-w-5 montserrat">2,452</p>
-                                    <div class="progress" role="progressbar" aria-valuenow="75" aria-valuemin="0"
-                                        aria-valuemax="100">
-                                        <div class="progress-bar" style="width: 75%;"></div>
-                                    </div>
-                                </div>
-                            </li>
-
-                            {{-- <li>
-                                <h3 class="f-22 c-dark f-w-5 freedoka">Direct</h3>
-                                <div class="rightside">
-                                    <p class="f-20 c-light f-w-5 montserrat">1,159</p>
-                                    <div class="progress" role="progressbar" aria-valuenow="50" aria-valuemin="0"
-                                        aria-valuemax="100">
-                                        <div class="progress-bar" style="width: 50%;"></div>
-                                    </div>
-                                </div>
-                            </li>
-
-                            <li>
-                                <h3 class="f-22 c-dark f-w-5 freedoka">Other</h3>
-                                <div class="rightside">
-                                    <p class="f-20 c-light f-w-5 montserrat">985</p>
-                                    <div class="progress" role="progressbar" aria-valuenow="30" aria-valuemin="0"
-                                        aria-valuemax="100">
-                                        <div class="progress-bar" style="width: 30%;"></div>
-                                    </div>
-                                </div>
-                            </li> --}}
-                        </ul>
+                      <div id="chart"></div>
+       
                     </div>
                 </div>
+
+
+              
             </div>
         </section>
-        <section class="activity-feed">
+        <section class="activity-feed data-insights">
             <div class="row">
                 <div class="col-lg-6">
                     <div class=" card b-blue br-10 recent-leads">
@@ -305,7 +276,51 @@
                         <button class="view-all b-orange f-18 c-dark f-w-5 freedoka">View All Leads</button>
                     </div>
                 </div>
-                <div class="col-lg-6">
+
+                  <div class="col-lg-6">
+                    <div class="card referral b-blue">
+                        <div class="top">
+                            <h2 class="f-28 c-dark f-w-5 freedoka">Top Referral Sources</h2>
+                            <p class="f-18 c-light f-w-5 montserrat">Where your visitors are coming from</p>
+                        </div>
+                        
+                        <ul id="appendSourcesData">
+                            {{-- <li>
+                                <h3 class="f-22 c-dark f-w-5 freedoka">Google</h3>
+                                <div class="rightside">
+                                    <p class="f-20 c-light f-w-5 montserrat">2,452</p>
+                                    <div class="progress" role="progressbar" aria-valuenow="75" aria-valuemin="0"
+                                        aria-valuemax="100">
+                                        <div class="progress-bar" style="width: 75%;"></div>
+                                    </div>
+                                </div>
+                            </li> --}}
+
+                            {{-- <li>
+                                <h3 class="f-22 c-dark f-w-5 freedoka">Direct</h3>
+                                <div class="rightside">
+                                    <p class="f-20 c-light f-w-5 montserrat">1,159</p>
+                                    <div class="progress" role="progressbar" aria-valuenow="50" aria-valuemin="0"
+                                        aria-valuemax="100">
+                                        <div class="progress-bar" style="width: 50%;"></div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li>
+                                <h3 class="f-22 c-dark f-w-5 freedoka">Other</h3>
+                                <div class="rightside">
+                                    <p class="f-20 c-light f-w-5 montserrat">985</p>
+                                    <div class="progress" role="progressbar" aria-valuenow="30" aria-valuemin="0"
+                                        aria-valuemax="100">
+                                        <div class="progress-bar" style="width: 30%;"></div>
+                                    </div>
+                                </div>
+                            </li> --}}
+                        </ul>
+                    </div>
+                </div>
+                {{-- <div class="col-lg-6">
                     <div class=" card b-blue br-10 content-calendar">
                         <div class="top">
                             <div class="leftside">
@@ -368,7 +383,7 @@
                         <button class="view-all manage-content b-orange f-18 c-dark f-w-5 freedoka">Manage
                             Content</button>
                     </div>
-                </div>
+                </div> --}}
             </div>
         </section>
         <section class="quick-actions">
@@ -531,7 +546,7 @@
                     curve: 'straight'
                 },
                 title: {
-                    text: 'Product Trends',
+                    text: 'Visitors',
                     align: 'left'
                 },
                 grid: {
