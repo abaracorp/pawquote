@@ -39,7 +39,13 @@ class SettingController extends Controller
         $request->validate([
             'name' => 'required|string|max:255',
             'password' => 'nullable|string|min:6|confirmed',
-        ]);
+             'profile_image'   => 'sometimes|image|mimes:jpeg,png,jpg,gif,svg|max:10240', // 10MB
+            ], [
+                'profile_image.required' => 'An image is required.',
+                'profile_image.image'    => 'The uploaded file must be an image.',
+                'profile_image.mimes'    => 'Only jpeg, png, jpg, gif, and svg file types are allowed.',
+                'profile_image.max'      => 'The image must not exceed 10MB in size.',
+            ]);
 
         // dd($user);
 

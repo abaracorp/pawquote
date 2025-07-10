@@ -43,14 +43,20 @@ class BlogController extends Controller
     {
 
         try {
-            $validated = $request->validate([
+           $validated = $request->validate([
                 'title'   => 'required|string|max:255',
                 'slug'    => 'required|string|max:255',
                 'summary' => 'nullable|string',
                 'content' => 'required|string',
                 'status'  => 'nullable|in:0,1',
-                'image'   => 'required',
+                'image'   => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:10240', // 10MB
+            ], [
+                'image.required' => 'An image is required.',
+                'image.image'    => 'The uploaded file must be an image.',
+                'image.mimes'    => 'Only jpeg, png, jpg, gif, and svg file types are allowed.',
+                'image.max'      => 'The image must not exceed 10MB in size.',
             ]);
+
 
             $this->blogService->store($validated);
 
@@ -81,14 +87,28 @@ class BlogController extends Controller
     public function updateBlog(Request $request, Blog $blog)
     {
 
-        $validated = $request->validate([
-            'title'   => 'required|string|max:255',
-            'slug'   => 'required|string|max:255',
-            'summary' => 'nullable|string',
-            'content' => 'required|string',
-            'status'  => 'nullable|in:0,1',
-            'image'   => 'sometimes|required',
-        ]);
+        // $validated = $request->validate([
+        //     'title'   => 'required|string|max:255',
+        //     'slug'   => 'required|string|max:255',
+        //     'summary' => 'nullable|string',
+        //     'content' => 'required|string',
+        //     'status'  => 'nullable|in:0,1',
+        //     'image'   => 'sometimes|required',
+        // ]);
+
+         $validated = $request->validate([
+                'title'   => 'required|string|max:255',
+                'slug'    => 'required|string|max:255',
+                'summary' => 'nullable|string',
+                'content' => 'required|string',
+                'status'  => 'nullable|in:0,1',
+                'image'   => 'sometimes|image|mimes:jpeg,png,jpg,gif,svg|max:10240', // 10MB
+            ], [
+                'image.required' => 'An image is required.',
+                'image.image'    => 'The uploaded file must be an image.',
+                'image.mimes'    => 'Only jpeg, png, jpg, gif, and svg file types are allowed.',
+                'image.max'      => 'The image must not exceed 10MB in size.',
+            ]);
 
         $this->blogService->update($blog, $validated);
         return redirect()->route('admin.blogs')->with('success', 'Blog updated successfully.');

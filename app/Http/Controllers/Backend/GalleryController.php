@@ -36,8 +36,10 @@ class GalleryController extends Controller
     public function saveGalleryData(Request $request)
     {
         $request->validate([
-            'images'   => 'required|array',
-            'images.*' => 'mimes:jpeg,png,jpg,gif,svg|max:10240',
+        'images'   => 'required|array',
+        'images.*' => 'mimes:jpeg,png,jpg,gif,svg|max:10240',
+        ], [
+            'images.*.max' => 'Each image must not be greater than 10MB.',
         ]);
 
         if ($request->hasFile('images')) {

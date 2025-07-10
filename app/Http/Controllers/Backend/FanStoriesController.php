@@ -50,7 +50,12 @@ class FanStoriesController extends Controller
                 'content' => 'required|string',
                 'status'  => 'nullable|in:0,1',
                 'label'   => 'required|string|max:255',
-                'image'   => 'required',
+               'image'   => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:10240', // 10MB
+            ], [
+                'image.required' => 'An image is required.',
+                'image.image'    => 'The uploaded file must be an image.',
+                'image.mimes'    => 'Only jpeg, png, jpg, gif, and svg file types are allowed.',
+                'image.max'      => 'The image must not exceed 10MB in size.',
             ]);
 
             $this->fanService->store($validated);
@@ -86,8 +91,13 @@ class FanStoriesController extends Controller
             'content' => 'required|string',
             'status'  => 'nullable|in:0,1',
             'label'   => 'required|string|max:255',
-           'image'   => 'sometimes|required',
-        ]);
+           'image'   => 'sometimes|image|mimes:jpeg,png,jpg,gif,svg|max:10240', // 10MB
+            ], [
+                'image.required' => 'An image is required.',
+                'image.image'    => 'The uploaded file must be an image.',
+                'image.mimes'    => 'Only jpeg, png, jpg, gif, and svg file types are allowed.',
+                'image.max'      => 'The image must not exceed 10MB in size.',
+            ]);
 
         $this->fanService->update($fan, $validated);
         return redirect()->route('admin.fan')->with('success', 'Fan story updated successfully.');
