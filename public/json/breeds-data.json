@@ -1,0 +1,3965 @@
+[
+ 
+  {
+    "group": "",
+    "value": "Mixed/Designer Small (Up To 22lb)",
+    "text": "Mixed/Designer Small (Up To 22lb)",
+    "breedType": "mixed",
+    "type": "dog"
+  },
+  {
+    "group": "",
+    "value": "Mixed/Designer Medium (23lb - 70lb)",
+    "text": "Mixed/Designer Medium (23lb - 70lb)",
+    "breedType": "mixed",
+    "type": "dog"
+  },
+  {
+    "group": "",
+    "value": "Mixed/Designer Large (Over 70lb)",
+    "text": "Mixed/Designer Large (Over 70lb)",
+    "breedType": "mixed",
+    "type": "dog"
+  },
+  {
+    "group": "",
+    "value": "Domestic Longhair",
+    "text": "Domestic Longhair",
+    "breedType": "mixed",
+    "type": "cat"
+  },
+  {
+    "group": "",
+    "value": "Domestic Mediumhair",
+    "text": "Domestic Mediumhair",
+    "breedType": "mixed",
+    "type": "cat"
+  },
+  {
+    "group": "",
+    "value": "Domestic Shorthair",
+    "text": "Domestic Shorthair",
+    "breedType": "mixed",
+    "type": "cat"
+  },
+  {
+    "group": "",
+    "value": "Mixed Breed",
+    "text": "Mixed Breed",
+    "breedType": "mixed",
+    "type": "cat"
+  },
+  {
+    "group": "",
+    "value": "Other/Breed Not Found",
+    "text": "Other/Breed Not Found",
+    "breedType": "mixed",
+    "type": "cat"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Other/Breed Not Found",
+    "text": "Other/Breed Not Found",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Affenpinscher",
+    "text": "Affenpinscher",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Affenpoo",
+    "text": "Affenpoo",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Afghan Hound",
+    "text": "Afghan Hound",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Aidi",
+    "text": "Aidi",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Ainu Dog",
+    "text": "Ainu Dog",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Airedale Terrier",
+    "text": "Airedale Terrier",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Akbash Dog",
+    "text": "Akbash Dog",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Akita",
+    "text": "Akita",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Alano Espanol",
+    "text": "Alano Espanol",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Alapaha Blue Blood Bulldog",
+    "text": "Alapaha Blue Blood Bulldog",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Alaskan Husky",
+    "text": "Alaskan Husky",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Alaskan Klee Kai",
+    "text": "Alaskan Klee Kai",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Alaskan Malamute",
+    "text": "Alaskan Malamute",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Alpine Dachsbracke",
+    "text": "Alpine Dachsbracke",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Alsatian",
+    "text": "Alsatian",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "American Bulldog",
+    "text": "American Bulldog",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "American Bullnese",
+    "text": "American Bullnese",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "American Bully",
+    "text": "American Bully",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "American Cocker Spaniel",
+    "text": "American Cocker Spaniel",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "American Eskimo Dog",
+    "text": "American Eskimo Dog",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "American Eskimo Dog - miniature",
+    "text": "American Eskimo Dog - miniature",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "American Foxhound",
+    "text": "American Foxhound",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "American Hairless Terrier",
+    "text": "American Hairless Terrier",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "American Indian Dog",
+    "text": "American Indian Dog",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "American Lo-Sze Pugg",
+    "text": "American Lo-Sze Pugg",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "American Mastiff",
+    "text": "American Mastiff",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "American Pit Bull Terrier",
+    "text": "American Pit Bull Terrier",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "American Staffordshire Terrier",
+    "text": "American Staffordshire Terrier",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "American Staghound",
+    "text": "American Staghound",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "American Tundra Shepherd",
+    "text": "American Tundra Shepherd",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "American Water Spaniel",
+    "text": "American Water Spaniel",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "American White Shepherd",
+    "text": "American White Shepherd",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Anatolian Shepherd Dog",
+    "text": "Anatolian Shepherd Dog",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Appenzell Mountain Dog",
+    "text": "Appenzell Mountain Dog",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Argentine Dogo",
+    "text": "Argentine Dogo",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Ariegoeis",
+    "text": "Ariegoeis",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Aussiedoodle (Miniature)",
+    "text": "Aussiedoodle (Miniature)",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Aussiedoodle (Standard)",
+    "text": "Aussiedoodle (Standard)",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Aussiedoodle (Toy)",
+    "text": "Aussiedoodle (Toy)",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Australian Cattle Dog",
+    "text": "Australian Cattle Dog",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Australian Kelpie",
+    "text": "Australian Kelpie",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Australian Shepherd",
+    "text": "Australian Shepherd",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Australian Shepherd - miniature",
+    "text": "Australian Shepherd - miniature",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Australian Terrier",
+    "text": "Australian Terrier",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Austrian Brandlbracke",
+    "text": "Austrian Brandlbracke",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Austrian Shorthaired Pinscher",
+    "text": "Austrian Shorthaired Pinscher",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Azawakh",
+    "text": "Azawakh",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Barbet",
+    "text": "Barbet",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Basenji",
+    "text": "Basenji",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Basset Artesien Normand",
+    "text": "Basset Artesien Normand",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Basset Bleu De Gascogne",
+    "text": "Basset Bleu De Gascogne",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Basset Fauve De Bretagne",
+    "text": "Basset Fauve De Bretagne",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Basset Hound",
+    "text": "Basset Hound",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Beagle",
+    "text": "Beagle",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Beagleman",
+    "text": "Beagleman",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Bearded Collie",
+    "text": "Bearded Collie",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Beauceron",
+    "text": "Beauceron",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Bedlington Terrier",
+    "text": "Bedlington Terrier",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Belgian Shepherd Groenendael",
+    "text": "Belgian Shepherd Groenendael",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Belgian Shepherd Laekenois",
+    "text": "Belgian Shepherd Laekenois",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Belgian Shepherd Malinois",
+    "text": "Belgian Shepherd Malinois",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Belgian Shepherd Tervuren",
+    "text": "Belgian Shepherd Tervuren",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Bergamasco",
+    "text": "Bergamasco",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Berger des Pyrenees",
+    "text": "Berger des Pyrenees",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Berger Picard",
+    "text": "Berger Picard",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Bernedoodle (Medium)",
+    "text": "Bernedoodle (Medium)",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Bernedoodle (Mini)",
+    "text": "Bernedoodle (Mini)",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Bernedoodle (Standard)",
+    "text": "Bernedoodle (Standard)",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Bernedoodle (Tiny)",
+    "text": "Bernedoodle (Tiny)",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Bernese Mountain Dog",
+    "text": "Bernese Mountain Dog",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Bichon Frise",
+    "text": "Bichon Frise",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Biewer",
+    "text": "Biewer",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Black Mouth Cur",
+    "text": "Black Mouth Cur",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Black Russian Terrier",
+    "text": "Black Russian Terrier",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Bloodhound",
+    "text": "Bloodhound",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Blue Heeler",
+    "text": "Blue Heeler",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Blue Lacy",
+    "text": "Blue Lacy",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Bluetick Coonhound",
+    "text": "Bluetick Coonhound",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Boerboel",
+    "text": "Boerboel",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Bolognese",
+    "text": "Bolognese",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Bolonka",
+    "text": "Bolonka",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Border Collie",
+    "text": "Border Collie",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Border Terrier",
+    "text": "Border Terrier",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Borzoi",
+    "text": "Borzoi",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Bosnian Coarse Haired Hound",
+    "text": "Bosnian Coarse Haired Hound",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Boston Terrier",
+    "text": "Boston Terrier",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Bouvier Des Flandres",
+    "text": "Bouvier Des Flandres",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Boxer",
+    "text": "Boxer",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Boxerman",
+    "text": "Boxerman",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Boykin Spaniel",
+    "text": "Boykin Spaniel",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Bracco Italiano",
+    "text": "Bracco Italiano",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Braque d Auvergne",
+    "text": "Braque d Auvergne",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Braque du Bourbonnais",
+    "text": "Braque du Bourbonnais",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Braque Francais",
+    "text": "Braque Francais",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Brazilian Fila",
+    "text": "Brazilian Fila",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Brazilian Terrier",
+    "text": "Brazilian Terrier",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Briard",
+    "text": "Briard",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Briquet Griffon Vendeen",
+    "text": "Briquet Griffon Vendeen",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Brittany",
+    "text": "Brittany",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Brussels Griffon",
+    "text": "Brussels Griffon",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Bull Terrier",
+    "text": "Bull Terrier",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Bull Terrier - miniature",
+    "text": "Bull Terrier - miniature",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Bulldog",
+    "text": "Bulldog",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Bullmastiff",
+    "text": "Bullmastiff",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Ca de Bou",
+    "text": "Ca de Bou",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Cairn Terrier",
+    "text": "Cairn Terrier",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Canaan Dog",
+    "text": "Canaan Dog",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Canadian Eskimo Dog",
+    "text": "Canadian Eskimo Dog",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Canary Dog",
+    "text": "Canary Dog",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Cane Corso",
+    "text": "Cane Corso",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Cao de Fila de Sao Miguel",
+    "text": "Cao de Fila de Sao Miguel",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Cardigan Welsh Corgi",
+    "text": "Cardigan Welsh Corgi",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Carolina Dog",
+    "text": "Carolina Dog",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Catahoula Leopard Dog",
+    "text": "Catahoula Leopard Dog",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Caucasian Ovtcharka",
+    "text": "Caucasian Ovtcharka",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Cavachon",
+    "text": "Cavachon",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Cavalier King Charles Spaniel",
+    "text": "Cavalier King Charles Spaniel",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Cavapoo",
+    "text": "Cavapoo",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Central Asian Ovtcharka",
+    "text": "Central Asian Ovtcharka",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Cesky Fousek",
+    "text": "Cesky Fousek",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Cesky Terrier",
+    "text": "Cesky Terrier",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Chasa Apso",
+    "text": "Chasa Apso",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Chesapeake Bay Retriever",
+    "text": "Chesapeake Bay Retriever",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Chi-Chon",
+    "text": "Chi-Chon",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Chien D Artois",
+    "text": "Chien D Artois",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Chihuahua",
+    "text": "Chihuahua",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Chihuahua long-haired",
+    "text": "Chihuahua long-haired",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Chinese Chongqing Dog",
+    "text": "Chinese Chongqing Dog",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Chinese Crested Dog",
+    "text": "Chinese Crested Dog",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Chinese Crested Hairless",
+    "text": "Chinese Crested Hairless",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Chinese Crested Powder Puff",
+    "text": "Chinese Crested Powder Puff",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Chinese Foo",
+    "text": "Chinese Foo",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Chinese Imperial",
+    "text": "Chinese Imperial",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Chinook",
+    "text": "Chinook",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Chiweenie",
+    "text": "Chiweenie",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Chorkie",
+    "text": "Chorkie",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Chow Chow",
+    "text": "Chow Chow",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Chug",
+    "text": "Chug",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Cirneco dell Etna",
+    "text": "Cirneco dell Etna",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Clumber Spaniel",
+    "text": "Clumber Spaniel",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Cockapoo (Miniature)",
+    "text": "Cockapoo (Miniature)",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Cockapoo (Standard)",
+    "text": "Cockapoo (Standard)",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Cockapoo (Teacup)",
+    "text": "Cockapoo (Teacup)",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Cockapoo (Toy)",
+    "text": "Cockapoo (Toy)",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Cocker Spaniel",
+    "text": "Cocker Spaniel",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Cocker Spaniel Miniature",
+    "text": "Cocker Spaniel Miniature",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Collie",
+    "text": "Collie",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Collie smooth-coated",
+    "text": "Collie smooth-coated",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Coonhound - black and tan",
+    "text": "Coonhound - black and tan",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Coonhound - blue tick",
+    "text": "Coonhound - blue tick",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Coonhound - red bone",
+    "text": "Coonhound - red bone",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Corgi",
+    "text": "Corgi",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Corgipoo",
+    "text": "Corgipoo",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Coton De Tulear",
+    "text": "Coton De Tulear",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Curly-Coated Retriever",
+    "text": "Curly-Coated Retriever",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Czechoslovakian Wolfdog (Vlcak)",
+    "text": "Czechoslovakian Wolfdog (Vlcak)",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Dachshund",
+    "text": "Dachshund",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Dachshund - long haired",
+    "text": "Dachshund - long haired",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Dachshund - smooth coat",
+    "text": "Dachshund - smooth coat",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Dachshund - wire haired",
+    "text": "Dachshund - wire haired",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Dachshund miniature - long haired",
+    "text": "Dachshund miniature - long haired",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Dachshund miniature - smooth coat",
+    "text": "Dachshund miniature - smooth coat",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Dachshund miniature - wire haired",
+    "text": "Dachshund miniature - wire haired",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Dalmatian",
+    "text": "Dalmatian",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Dandie Dinmont Terrier",
+    "text": "Dandie Dinmont Terrier",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Danish-Swedish Farmdog",
+    "text": "Danish-Swedish Farmdog",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Deerhound",
+    "text": "Deerhound",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Designer Large (Over 70lb As Adult)",
+    "text": "Designer Large (Over 70lb As Adult)",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Designer Medium (23lb - 70lb As Adult)",
+    "text": "Designer Medium (23lb - 70lb As Adult)",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Designer Small (Up To 22lb As Adult)",
+    "text": "Designer Small (Up To 22lb As Adult)",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Deutsch Drahthaar",
+    "text": "Deutsch Drahthaar",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Deutscher Wachtelhund",
+    "text": "Deutscher Wachtelhund",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Doberman Pinscher",
+    "text": "Doberman Pinscher",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Dogo Argentino",
+    "text": "Dogo Argentino",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Dogue De Bordeaux",
+    "text": "Dogue De Bordeaux",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Drever",
+    "text": "Drever",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Dunker",
+    "text": "Dunker",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Dutch Sheepdog",
+    "text": "Dutch Sheepdog",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Dutch Shepherd",
+    "text": "Dutch Shepherd",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Dutch Smoushond",
+    "text": "Dutch Smoushond",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Elkhound",
+    "text": "Elkhound",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "English Bulldog",
+    "text": "English Bulldog",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "English Cocker Spaniel",
+    "text": "English Cocker Spaniel",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "English Coonhound",
+    "text": "English Coonhound",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "English Foxhound",
+    "text": "English Foxhound",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "English Mastiff",
+    "text": "English Mastiff",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "English Pointer",
+    "text": "English Pointer",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "English Setter",
+    "text": "English Setter",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "English Shepherd",
+    "text": "English Shepherd",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "English Springer Spaniel",
+    "text": "English Springer Spaniel",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "English Toy Spaniel",
+    "text": "English Toy Spaniel",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "English Toy Terrier",
+    "text": "English Toy Terrier",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Entlebucher Mountain Dog",
+    "text": "Entlebucher Mountain Dog",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Eskimo Dog",
+    "text": "Eskimo Dog",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Estonian Hound",
+    "text": "Estonian Hound",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Estrela Mountain Dog",
+    "text": "Estrela Mountain Dog",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Eurasier",
+    "text": "Eurasier",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Fell Terrier",
+    "text": "Fell Terrier",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Field Spaniel",
+    "text": "Field Spaniel",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Fila Brasileiro",
+    "text": "Fila Brasileiro",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Finnish Hound",
+    "text": "Finnish Hound",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Finnish Lapphund",
+    "text": "Finnish Lapphund",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Finnish Spitz",
+    "text": "Finnish Spitz",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Flat-coated Retriever",
+    "text": "Flat-coated Retriever",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Fox Hound",
+    "text": "Fox Hound",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Fox Terrier",
+    "text": "Fox Terrier",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "French Bulldog",
+    "text": "French Bulldog",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "French Mastiff",
+    "text": "French Mastiff",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "French Spaniel",
+    "text": "French Spaniel",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Gazelle Hound",
+    "text": "Gazelle Hound",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "German Longhaired Pointer",
+    "text": "German Longhaired Pointer",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "German Pinscher",
+    "text": "German Pinscher",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "German Shepherd",
+    "text": "German Shepherd",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "German Shorthaired Pointer",
+    "text": "German Shorthaired Pointer",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "German Spitz",
+    "text": "German Spitz",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "German Wirehaired Pointer",
+    "text": "German Wirehaired Pointer",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Giant Schnauzer",
+    "text": "Giant Schnauzer",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Glen Of Imaal Terrier",
+    "text": "Glen Of Imaal Terrier",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Golden Retriever",
+    "text": "Golden Retriever",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Goldendoodle",
+    "text": "Goldendoodle",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Gordon Setter",
+    "text": "Gordon Setter",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Gran Mastin de Borinquen",
+    "text": "Gran Mastin de Borinquen",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Grand Basset Griffon Vendeen",
+    "text": "Grand Basset Griffon Vendeen",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Grand Bleu de Gascogne",
+    "text": "Grand Bleu de Gascogne",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Great Dane",
+    "text": "Great Dane",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Great Pyrenean",
+    "text": "Great Pyrenean",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Great Pyrenees",
+    "text": "Great Pyrenees",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Greater Swiss Mountain Dog",
+    "text": "Greater Swiss Mountain Dog",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Greenland Dog",
+    "text": "Greenland Dog",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Greyhound",
+    "text": "Greyhound",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Griffon Bruxellois",
+    "text": "Griffon Bruxellois",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Groenendael",
+    "text": "Groenendael",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Hamiltonstovare",
+    "text": "Hamiltonstovare",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Harrier",
+    "text": "Harrier",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Havanese",
+    "text": "Havanese",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Horgi",
+    "text": "Horgi",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Hovawart",
+    "text": "Hovawart",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Hungarian Kuvasz",
+    "text": "Hungarian Kuvasz",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Hungarian Puli",
+    "text": "Hungarian Puli",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Hungarian Pumi",
+    "text": "Hungarian Pumi",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Hungarian Sheepdog",
+    "text": "Hungarian Sheepdog",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Hungarian Vizsla",
+    "text": "Hungarian Vizsla",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Hungarian Wire Haired Vizsla",
+    "text": "Hungarian Wire Haired Vizsla",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Ibizan Hound",
+    "text": "Ibizan Hound",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Icelandic Sheepdog",
+    "text": "Icelandic Sheepdog",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Inca Hairless Dog",
+    "text": "Inca Hairless Dog",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Inca Orchid",
+    "text": "Inca Orchid",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Irish Red and White Setter",
+    "text": "Irish Red and White Setter",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Irish Setter",
+    "text": "Irish Setter",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Irish Staffordshire Bull Terrier",
+    "text": "Irish Staffordshire Bull Terrier",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Irish Terrier",
+    "text": "Irish Terrier",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Irish Water Spaniel",
+    "text": "Irish Water Spaniel",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Irish Wolfhound",
+    "text": "Irish Wolfhound",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Italian Greyhound",
+    "text": "Italian Greyhound",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Jack Russell Terrier",
+    "text": "Jack Russell Terrier",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Jackapoo",
+    "text": "Jackapoo",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Japanese Chin",
+    "text": "Japanese Chin",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Japanese Spitz",
+    "text": "Japanese Spitz",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Japanese Terrier",
+    "text": "Japanese Terrier",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Kai Dog",
+    "text": "Kai Dog",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Kangal Dog",
+    "text": "Kangal Dog",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Karabash",
+    "text": "Karabash",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Karelian Bear Dog",
+    "text": "Karelian Bear Dog",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Keeshond",
+    "text": "Keeshond",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Kelpie",
+    "text": "Kelpie",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Kerry Blue Terrier",
+    "text": "Kerry Blue Terrier",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "King Charles Spaniel",
+    "text": "King Charles Spaniel",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "King Shepherd",
+    "text": "King Shepherd",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Kishu Inu",
+    "text": "Kishu Inu",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Komondor",
+    "text": "Komondor",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Kooikerhondje",
+    "text": "Kooikerhondje",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Koolie",
+    "text": "Koolie",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Korean Jindo",
+    "text": "Korean Jindo",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Kuvasz",
+    "text": "Kuvasz",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Kyi-Leo",
+    "text": "Kyi-Leo",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Labradoodle (Medium)",
+    "text": "Labradoodle (Medium)",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Labradoodle (Mini)",
+    "text": "Labradoodle (Mini)",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Labradoodle (Standard)",
+    "text": "Labradoodle (Standard)",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Labrador Retriever",
+    "text": "Labrador Retriever",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Labrador Retriever - Black",
+    "text": "Labrador Retriever - Black",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Labrador Retriever - Chocolate",
+    "text": "Labrador Retriever - Chocolate",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Labrador Retriever - Yellow",
+    "text": "Labrador Retriever - Yellow",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Laekenois",
+    "text": "Laekenois",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Lagotto Romagnolo",
+    "text": "Lagotto Romagnolo",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Lakeland Terrier",
+    "text": "Lakeland Terrier",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Lancashire Heeler",
+    "text": "Lancashire Heeler",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Landseer",
+    "text": "Landseer",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Lapinporokoira",
+    "text": "Lapinporokoira",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Large Munsterlander",
+    "text": "Large Munsterlander",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Leonberger",
+    "text": "Leonberger",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Lhasa Apso",
+    "text": "Lhasa Apso",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Llewellin Setter",
+    "text": "Llewellin Setter",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Louisiana Catahoula Leopard Dog",
+    "text": "Louisiana Catahoula Leopard Dog",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Lowchen",
+    "text": "Lowchen",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Lucas Terrier",
+    "text": "Lucas Terrier",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Lurcher",
+    "text": "Lurcher",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Malamute Husky",
+    "text": "Malamute Husky",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Malinois",
+    "text": "Malinois",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Maltese",
+    "text": "Maltese",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Maltipoo",
+    "text": "Maltipoo",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Manchester Terrier",
+    "text": "Manchester Terrier",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Maremma Sheepdog",
+    "text": "Maremma Sheepdog",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Mastiff",
+    "text": "Mastiff",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Mexican Hairless Crested",
+    "text": "Mexican Hairless Crested",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Mexican Hairless Dog",
+    "text": "Mexican Hairless Dog",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Miki",
+    "text": "Miki",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Miniature Dachshund",
+    "text": "Miniature Dachshund",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Miniature Pinscher",
+    "text": "Miniature Pinscher",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Miniature Poodle",
+    "text": "Miniature Poodle",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Miniature Schnauzer",
+    "text": "Miniature Schnauzer",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Mioritic Sheepdog",
+    "text": "Mioritic Sheepdog",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Morkie",
+    "text": "Morkie",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Mountain Cur",
+    "text": "Mountain Cur",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Mountain Feist",
+    "text": "Mountain Feist",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Mudi",
+    "text": "Mudi",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Native American Indian Dog",
+    "text": "Native American Indian Dog",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Neapolitan Mastiff",
+    "text": "Neapolitan Mastiff",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Nebolish Mastiff",
+    "text": "Nebolish Mastiff",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "New Zealand Huntaway (Sheepdog)",
+    "text": "New Zealand Huntaway (Sheepdog)",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Newfoundland",
+    "text": "Newfoundland",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Nippon Terrier",
+    "text": "Nippon Terrier",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Norfolk Terrier",
+    "text": "Norfolk Terrier",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Northern Inuit Dog",
+    "text": "Northern Inuit Dog",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Norwegian Buhund",
+    "text": "Norwegian Buhund",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Norwegian Elkhound",
+    "text": "Norwegian Elkhound",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Norwegian Lundehund",
+    "text": "Norwegian Lundehund",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Norwich Terrier",
+    "text": "Norwich Terrier",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Nova Scotia Duck Tolling Retriever",
+    "text": "Nova Scotia Duck Tolling Retriever",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Old English Mastiff",
+    "text": "Old English Mastiff",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Old English Sheepdog",
+    "text": "Old English Sheepdog",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Olde English Bulldogge",
+    "text": "Olde English Bulldogge",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Olde Victorian Bulldogge",
+    "text": "Olde Victorian Bulldogge",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Ori Pei",
+    "text": "Ori Pei",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Otterhound",
+    "text": "Otterhound",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Papillon",
+    "text": "Papillon",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Parson Jack Russell Terrier",
+    "text": "Parson Jack Russell Terrier",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Patterdale Terrier",
+    "text": "Patterdale Terrier",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Pekingese",
+    "text": "Pekingese",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Pembroke Welsh Corgi",
+    "text": "Pembroke Welsh Corgi",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Perro de Presa Mallorquin",
+    "text": "Perro de Presa Mallorquin",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Peruvian Inca Orchid",
+    "text": "Peruvian Inca Orchid",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Petit Basset Griffon Vendeen",
+    "text": "Petit Basset Griffon Vendeen",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Petit Brabancon",
+    "text": "Petit Brabancon",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Pharaoh Hound",
+    "text": "Pharaoh Hound",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Pit Bull",
+    "text": "Pit Bull",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Plott Hound",
+    "text": "Plott Hound",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Pointer",
+    "text": "Pointer",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Polish Lowland Sheepdog",
+    "text": "Polish Lowland Sheepdog",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Polish Tatra Sheepdog",
+    "text": "Polish Tatra Sheepdog",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Pomchi",
+    "text": "Pomchi",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Pomeranian",
+    "text": "Pomeranian",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Pomsky (Mini)",
+    "text": "Pomsky (Mini)",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Pomsky (Standard)",
+    "text": "Pomsky (Standard)",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Pomsky (Toy)",
+    "text": "Pomsky (Toy)",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Poodle",
+    "text": "Poodle",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Poodle - Giant",
+    "text": "Poodle - Giant",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Poodle - Miniature",
+    "text": "Poodle - Miniature",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Poodle - Standard",
+    "text": "Poodle - Standard",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Poodle - Teacup",
+    "text": "Poodle - Teacup",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Poodle - Toy",
+    "text": "Poodle - Toy",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Porcelaine",
+    "text": "Porcelaine",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Porkie",
+    "text": "Porkie",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Portuguese Mastiff (Rafeiro Do Alentejo)",
+    "text": "Portuguese Mastiff (Rafeiro Do Alentejo)",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Portuguese Podengo",
+    "text": "Portuguese Podengo",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Portuguese Pointer",
+    "text": "Portuguese Pointer",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Portuguese Water Dog",
+    "text": "Portuguese Water Dog",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Presa Canario",
+    "text": "Presa Canario",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Pudelpointer",
+    "text": "Pudelpointer",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Pug",
+    "text": "Pug",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Puggle",
+    "text": "Puggle",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Puli",
+    "text": "Puli",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Pumi",
+    "text": "Pumi",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Pyrenean Mastiff",
+    "text": "Pyrenean Mastiff",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Pyrenean Mountain Dog",
+    "text": "Pyrenean Mountain Dog",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Pyrenean Shepherd",
+    "text": "Pyrenean Shepherd",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Queensland Heeler",
+    "text": "Queensland Heeler",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Rat Terrier",
+    "text": "Rat Terrier",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Rhodesian Ridgeback",
+    "text": "Rhodesian Ridgeback",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Rottweiler",
+    "text": "Rottweiler",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Rough Collie",
+    "text": "Rough Collie",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Saarlooswolfhond",
+    "text": "Saarlooswolfhond",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Saint Bernard",
+    "text": "Saint Bernard",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Saluki",
+    "text": "Saluki",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Samoyed",
+    "text": "Samoyed",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Sarplaninac",
+    "text": "Sarplaninac",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Schapendoes",
+    "text": "Schapendoes",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Schipperke",
+    "text": "Schipperke",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Schnauzer",
+    "text": "Schnauzer",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Schnauzer - giant",
+    "text": "Schnauzer - giant",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Schnauzer - miniature",
+    "text": "Schnauzer - miniature",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Schnauzer - standard",
+    "text": "Schnauzer - standard",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Schnoodle (Giant)",
+    "text": "Schnoodle (Giant)",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Schnoodle (Miniature)",
+    "text": "Schnoodle (Miniature)",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Schnoodle (Standard)",
+    "text": "Schnoodle (Standard)",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Schnoodle (Toy)",
+    "text": "Schnoodle (Toy)",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Scottish Deerhound",
+    "text": "Scottish Deerhound",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Scottish Terrier",
+    "text": "Scottish Terrier",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Sealyham Terrier",
+    "text": "Sealyham Terrier",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Segugio Italiano",
+    "text": "Segugio Italiano",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Shar-pei",
+    "text": "Shar-pei",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Sheepapoodle (Medium)",
+    "text": "Sheepapoodle (Medium)",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Sheepapoodle (Mini)",
+    "text": "Sheepapoodle (Mini)",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Sheepapoodle (Standard)",
+    "text": "Sheepapoodle (Standard)",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Sheepapoodle (Toy)",
+    "text": "Sheepapoodle (Toy)",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Shepherd Chow",
+    "text": "Shepherd Chow",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Shetland Sheepdog",
+    "text": "Shetland Sheepdog",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Shiba Inu",
+    "text": "Shiba Inu",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Shih Tzu",
+    "text": "Shih Tzu",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Shih-poo",
+    "text": "Shih-poo",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Shikoku",
+    "text": "Shikoku",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Shiloh Shepherd",
+    "text": "Shiloh Shepherd",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Siberian Husky",
+    "text": "Siberian Husky",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Siberian Retriever",
+    "text": "Siberian Retriever",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Silken Windhound",
+    "text": "Silken Windhound",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Silky Terrier",
+    "text": "Silky Terrier",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Skye Terrier",
+    "text": "Skye Terrier",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Sloughi",
+    "text": "Sloughi",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Small Munsterlander",
+    "text": "Small Munsterlander",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Smooth Collie",
+    "text": "Smooth Collie",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Smooth Fox Terrier",
+    "text": "Smooth Fox Terrier",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Soft Coated Wheaten Terrier",
+    "text": "Soft Coated Wheaten Terrier",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Spanish Bulldog",
+    "text": "Spanish Bulldog",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Spanish Mastiff",
+    "text": "Spanish Mastiff",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Spanish Water Dog",
+    "text": "Spanish Water Dog",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Spinone italiano",
+    "text": "Spinone italiano",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Spitz",
+    "text": "Spitz",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Springador",
+    "text": "Springador",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Sprocker Spaniel",
+    "text": "Sprocker Spaniel",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Sprollie",
+    "text": "Sprollie",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Stabyhoun (Stabij)",
+    "text": "Stabyhoun (Stabij)",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Staffordshire Bull Terrier",
+    "text": "Staffordshire Bull Terrier",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Staghound",
+    "text": "Staghound",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Sussex Spaniel",
+    "text": "Sussex Spaniel",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Swedish Elkhound",
+    "text": "Swedish Elkhound",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Swedish Lapphund",
+    "text": "Swedish Lapphund",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Swedish Vallhund",
+    "text": "Swedish Vallhund",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Tervuren",
+    "text": "Tervuren",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Thai Ridgeback",
+    "text": "Thai Ridgeback",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Tibetan KyiApso",
+    "text": "Tibetan KyiApso",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Tibetan Mastiff",
+    "text": "Tibetan Mastiff",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Tibetan Spaniel",
+    "text": "Tibetan Spaniel",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Tibetan Terrier",
+    "text": "Tibetan Terrier",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Tosa Inu",
+    "text": "Tosa Inu",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Toy Fox Terrier",
+    "text": "Toy Fox Terrier",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Toy Terrier",
+    "text": "Toy Terrier",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Treeing Tennessee Brindle",
+    "text": "Treeing Tennessee Brindle",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Treeing Walker Coonhound",
+    "text": "Treeing Walker Coonhound",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Victorian Bulldog",
+    "text": "Victorian Bulldog",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Vizsla",
+    "text": "Vizsla",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Volpino Italiano",
+    "text": "Volpino Italiano",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Weimaraner",
+    "text": "Weimaraner",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Welsh Corgi",
+    "text": "Welsh Corgi",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Welsh Corgi - Cardigan",
+    "text": "Welsh Corgi - Cardigan",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Welsh Corgi - Pembroke",
+    "text": "Welsh Corgi - Pembroke",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Welsh Springer Spaniel",
+    "text": "Welsh Springer Spaniel",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Welsh Terrier",
+    "text": "Welsh Terrier",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "West Highland White Terrier",
+    "text": "West Highland White Terrier",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Wheaten Terrier",
+    "text": "Wheaten Terrier",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Whippet",
+    "text": "Whippet",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Wirehaired Fox Terrier",
+    "text": "Wirehaired Fox Terrier",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Wirehaired Pointing Griffon",
+    "text": "Wirehaired Pointing Griffon",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Wirehaired Vizsla",
+    "text": "Wirehaired Vizsla",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Xoloitzcuintli - Mexican Hairless Dog",
+    "text": "Xoloitzcuintli - Mexican Hairless Dog",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Yorkie-Poo",
+    "text": "Yorkie-Poo",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Yorkipoo",
+    "text": "Yorkipoo",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Yorkshire Terrier",
+    "text": "Yorkshire Terrier",
+    "breedType": null,
+    "type": "dog"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Abyssinian",
+    "text": "Abyssinian",
+    "breedType": null,
+    "type": "cat"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "American Bobtail",
+    "text": "American Bobtail",
+    "breedType": null,
+    "type": "cat"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "American Curl",
+    "text": "American Curl",
+    "breedType": null,
+    "type": "cat"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "American Curl Shorthair",
+    "text": "American Curl Shorthair",
+    "breedType": null,
+    "type": "cat"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "American Keuda",
+    "text": "American Keuda",
+    "breedType": null,
+    "type": "cat"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "American Longhair",
+    "text": "American Longhair",
+    "breedType": null,
+    "type": "cat"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "American Shorthair (purebred)",
+    "text": "American Shorthair (purebred)",
+    "breedType": null,
+    "type": "cat"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "American Wirehair",
+    "text": "American Wirehair",
+    "breedType": null,
+    "type": "cat"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Angora",
+    "text": "Angora",
+    "breedType": null,
+    "type": "cat"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Australian Mist",
+    "text": "Australian Mist",
+    "breedType": null,
+    "type": "cat"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Balinese",
+    "text": "Balinese",
+    "breedType": null,
+    "type": "cat"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Bengal",
+    "text": "Bengal",
+    "breedType": null,
+    "type": "cat"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Bengalese",
+    "text": "Bengalese",
+    "breedType": null,
+    "type": "cat"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Birman",
+    "text": "Birman",
+    "breedType": null,
+    "type": "cat"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Bombay",
+    "text": "Bombay",
+    "breedType": null,
+    "type": "cat"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Brazilian Shorthair",
+    "text": "Brazilian Shorthair",
+    "breedType": null,
+    "type": "cat"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "British Shorthair",
+    "text": "British Shorthair",
+    "breedType": null,
+    "type": "cat"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Burmese",
+    "text": "Burmese",
+    "breedType": null,
+    "type": "cat"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Burmilla",
+    "text": "Burmilla",
+    "breedType": null,
+    "type": "cat"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "California Spangled Cat",
+    "text": "California Spangled Cat",
+    "breedType": null,
+    "type": "cat"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Cameo Longhair",
+    "text": "Cameo Longhair",
+    "breedType": null,
+    "type": "cat"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Chantilly/Tiffany",
+    "text": "Chantilly/Tiffany",
+    "breedType": null,
+    "type": "cat"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Chartreux",
+    "text": "Chartreux",
+    "breedType": null,
+    "type": "cat"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Chausie",
+    "text": "Chausie",
+    "breedType": null,
+    "type": "cat"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Chinchilla",
+    "text": "Chinchilla",
+    "breedType": null,
+    "type": "cat"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Colorpoint",
+    "text": "Colorpoint",
+    "breedType": null,
+    "type": "cat"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Colorpoint Longhair",
+    "text": "Colorpoint Longhair",
+    "breedType": null,
+    "type": "cat"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Colorpoint Shorthair",
+    "text": "Colorpoint Shorthair",
+    "breedType": null,
+    "type": "cat"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Cornish Rex",
+    "text": "Cornish Rex",
+    "breedType": null,
+    "type": "cat"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Cymric",
+    "text": "Cymric",
+    "breedType": null,
+    "type": "cat"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Devon Rex",
+    "text": "Devon Rex",
+    "breedType": null,
+    "type": "cat"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Egyptian Mau",
+    "text": "Egyptian Mau",
+    "breedType": null,
+    "type": "cat"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "European Burmese",
+    "text": "European Burmese",
+    "breedType": null,
+    "type": "cat"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "European Shorthair",
+    "text": "European Shorthair",
+    "breedType": null,
+    "type": "cat"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Exotic",
+    "text": "Exotic",
+    "breedType": null,
+    "type": "cat"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Exotic Longhair",
+    "text": "Exotic Longhair",
+    "breedType": null,
+    "type": "cat"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Exotic Shorthair",
+    "text": "Exotic Shorthair",
+    "breedType": null,
+    "type": "cat"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Feral",
+    "text": "Feral",
+    "breedType": null,
+    "type": "cat"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "German Rex",
+    "text": "German Rex",
+    "breedType": null,
+    "type": "cat"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Havana Brown",
+    "text": "Havana Brown",
+    "breedType": null,
+    "type": "cat"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Highland Fold",
+    "text": "Highland Fold",
+    "breedType": null,
+    "type": "cat"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Highland Lynx",
+    "text": "Highland Lynx",
+    "breedType": null,
+    "type": "cat"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Himalayan",
+    "text": "Himalayan",
+    "breedType": null,
+    "type": "cat"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Himalayan Blue Point",
+    "text": "Himalayan Blue Point",
+    "breedType": null,
+    "type": "cat"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Himalayan Flame Point",
+    "text": "Himalayan Flame Point",
+    "breedType": null,
+    "type": "cat"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Himalayan Lilac Point",
+    "text": "Himalayan Lilac Point",
+    "breedType": null,
+    "type": "cat"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Himalayan Seal Point",
+    "text": "Himalayan Seal Point",
+    "breedType": null,
+    "type": "cat"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Japanese Bobtail",
+    "text": "Japanese Bobtail",
+    "breedType": null,
+    "type": "cat"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Javanese",
+    "text": "Javanese",
+    "breedType": null,
+    "type": "cat"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Kashmir",
+    "text": "Kashmir",
+    "breedType": null,
+    "type": "cat"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Korat",
+    "text": "Korat",
+    "breedType": null,
+    "type": "cat"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "La Perm",
+    "text": "La Perm",
+    "breedType": null,
+    "type": "cat"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Maine Coon",
+    "text": "Maine Coon",
+    "breedType": null,
+    "type": "cat"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Manx",
+    "text": "Manx",
+    "breedType": null,
+    "type": "cat"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Manx Longhair",
+    "text": "Manx Longhair",
+    "breedType": null,
+    "type": "cat"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Munchkin",
+    "text": "Munchkin",
+    "breedType": null,
+    "type": "cat"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Nebelung",
+    "text": "Nebelung",
+    "breedType": null,
+    "type": "cat"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Nibelung",
+    "text": "Nibelung",
+    "breedType": null,
+    "type": "cat"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Norwegian Forest Cat",
+    "text": "Norwegian Forest Cat",
+    "breedType": null,
+    "type": "cat"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Ocicat",
+    "text": "Ocicat",
+    "breedType": null,
+    "type": "cat"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Oriental",
+    "text": "Oriental",
+    "breedType": null,
+    "type": "cat"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Oriental Colorpoint",
+    "text": "Oriental Colorpoint",
+    "breedType": null,
+    "type": "cat"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Oriental Longhair",
+    "text": "Oriental Longhair",
+    "breedType": null,
+    "type": "cat"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Oriental Shorthair",
+    "text": "Oriental Shorthair",
+    "breedType": null,
+    "type": "cat"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Persian",
+    "text": "Persian",
+    "breedType": null,
+    "type": "cat"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Peterbald",
+    "text": "Peterbald",
+    "breedType": null,
+    "type": "cat"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Pinto",
+    "text": "Pinto",
+    "breedType": null,
+    "type": "cat"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Pixie-Bob",
+    "text": "Pixie-Bob",
+    "breedType": null,
+    "type": "cat"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "RagaMuffin",
+    "text": "RagaMuffin",
+    "breedType": null,
+    "type": "cat"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Ragdoll",
+    "text": "Ragdoll",
+    "breedType": null,
+    "type": "cat"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Russian Blue",
+    "text": "Russian Blue",
+    "breedType": null,
+    "type": "cat"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Safari Cat",
+    "text": "Safari Cat",
+    "breedType": null,
+    "type": "cat"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Savannah",
+    "text": "Savannah",
+    "breedType": null,
+    "type": "cat"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Scotish Fold",
+    "text": "Scotish Fold",
+    "breedType": null,
+    "type": "cat"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Scottish Fold Longhair",
+    "text": "Scottish Fold Longhair",
+    "breedType": null,
+    "type": "cat"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Selkirk Rex",
+    "text": "Selkirk Rex",
+    "breedType": null,
+    "type": "cat"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Selkirk Rex Longhair",
+    "text": "Selkirk Rex Longhair",
+    "breedType": null,
+    "type": "cat"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Seychellois",
+    "text": "Seychellois",
+    "breedType": null,
+    "type": "cat"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Siamese",
+    "text": "Siamese",
+    "breedType": null,
+    "type": "cat"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Siberian",
+    "text": "Siberian",
+    "breedType": null,
+    "type": "cat"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Singapura",
+    "text": "Singapura",
+    "breedType": null,
+    "type": "cat"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Snowshoe",
+    "text": "Snowshoe",
+    "breedType": null,
+    "type": "cat"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Sokoke",
+    "text": "Sokoke",
+    "breedType": null,
+    "type": "cat"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Somali",
+    "text": "Somali",
+    "breedType": null,
+    "type": "cat"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Sphynx",
+    "text": "Sphynx",
+    "breedType": null,
+    "type": "cat"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Sterling",
+    "text": "Sterling",
+    "breedType": null,
+    "type": "cat"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Tiffanie",
+    "text": "Tiffanie",
+    "breedType": null,
+    "type": "cat"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Tonkinese",
+    "text": "Tonkinese",
+    "breedType": null,
+    "type": "cat"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Turkish Angora",
+    "text": "Turkish Angora",
+    "breedType": null,
+    "type": "cat"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "Turkish Van",
+    "text": "Turkish Van",
+    "breedType": null,
+    "type": "cat"
+  },
+  {
+    "group": "— Pure Breeds",
+    "value": "York Chocolate",
+    "text": "York Chocolate",
+    "breedType": null,
+    "type": "cat"
+  }
+]
