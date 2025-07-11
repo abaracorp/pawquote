@@ -27,7 +27,7 @@
                         <input type="text" id="moduleSearchInput" data-url="search-{{ $type }}"
                             placeholder="Search {{ $type }}....">
                     </div>
-                    <button class="filter b-orange">
+                    {{-- <button class="filter b-orange">
                         <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -35,7 +35,7 @@
                                 fill="currentColor"></path>
                         </svg>
                         Filter
-                    </button>
+                    </button> --}}
                     {{-- <div class="select-wrapper b-orange br-5">
                     <select name="" id="" class="c-dark f-16 f-w-4 freedoka">
                         <option value="" class="c-light f-16 f-w-4 freedoka">Category 1</option>
