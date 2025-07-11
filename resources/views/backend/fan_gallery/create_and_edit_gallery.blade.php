@@ -14,7 +14,7 @@
         </div>
 
         <form action="{{ isset($gallery) ? route('admin.updateGallery', $gallery) : route('admin.saveGalleryData') }}"
-            method="POST" enctype="multipart/form-data">
+            method="POST" id="galleryFrom" enctype="multipart/form-data">
             @csrf
             @if(isset($gallery))
             @method('PUT')
@@ -62,8 +62,8 @@
                 <button class="save-gallery f-18 c-orange f-w-5 freedoka b-orange">
                     {{ isset($gallery) ? 'Update Gallery' : 'Save Gallery' }}
                 </button>
-                <button type="button" class="cancel f-18 c-light f-w-5 freedoka b-light">
-                    Cancel
+                <button type="button" onclick="clearFormData(this.form.id)" class="cancel f-18 c-light f-w-5 freedoka b-light">
+                    clear
                 </button>
                 {{-- <a href="{{ route('admin.gallery') }}"
                     class="cancel f-18 c-light f-w-5 freedoka b-light">Cancel</a> --}}

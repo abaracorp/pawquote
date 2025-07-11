@@ -9,7 +9,7 @@
                 <h1 class="f-32 c-dark f-w-5 freedoka">Add New {{$text}}</h1>
             </div>
         </section>
-        <form action="{{route('admin.saveFaqGuideData',['type' => $type])}}" method="POST">
+        <form action="{{route('admin.saveFaqGuideData',['type' => $type])}}" id="faqGuideForm" method="POST">
             @csrf
         <section class="">
             <div class="row">
@@ -41,8 +41,8 @@
                 </div>
             </section>
             <section class="bottom-buttons">
-                <button class="save-faq f-18 c-orange f-w-5 freedoka b-orange">Save {{$text}}</button>
-                <button class="cancel f-18 c-light f-w-5 freedoka b-light">Cancel</button>
+                <button type="button" onclick="clearFormData(this.form.id)" class="cancel f-18 c-light f-w-5 freedoka b-light">Clear</button>
+                <button type="submit"  class="save-faq f-18 c-orange f-w-5 freedoka b-orange">Save {{$text}}</button>
             </section>
         </form>
     </main>

@@ -7,7 +7,7 @@
         <div class="page-title">
             <h1 class="f-32 c-dark f-w-5 freedoka">Add New Story</h1>
         </div>
-        <form action="{{route('admin.saveFanData')}}" method="POST" enctype="multipart/form-data">
+        <form action="{{route('admin.saveFanData')}}" method="POST" id="fanStoriesForm" enctype="multipart/form-data">
             @csrf
             <div class="">
                 <div class="row">
@@ -53,7 +53,7 @@
             </div>
             <div class="bottom-buttons">
                 <button class="Save f-18 c-orange f-w-5 freedoka b-orange " type="submit">Save</button>
-                <button class="Clear f-18 c-light f-w-5 freedoka b-light">Clear</button>
+                <button class="Clear f-18 c-light f-w-5 freedoka b-light" type="button" onclick="clearFormData(this.form.id)">Clear</button>
             </div>
         </form>
     </section>

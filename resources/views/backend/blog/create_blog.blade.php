@@ -7,7 +7,7 @@
         <div class="page-title">
             <h1 class="f-32 c-dark f-w-5 freedoka">Add New Blog</h1>
         </div>
-        <form action="{{route('admin.saveBlogData')}}" method="POST" enctype="multipart/form-data">
+        <form action="{{route('admin.saveBlogData')}}" method="POST" id="blogForm" enctype="multipart/form-data">
             @csrf
             <div class="">
                 <div class="row">
@@ -82,7 +82,7 @@
             </div>
             </div>
             <div class="bottom-buttons">
-                <button class="cancel f-18 c-light f-w-5 freedoka b-light">Clear</button>
+                <button type="button" onclick="clearFormData(this.form.id)" class="cancel f-18 c-light f-w-5 freedoka b-light">Clear</button>
                 {{-- <button class="save-draft f-18 c-orange f-w-5 freedoka b-orange">Save Draft</button> --}}
                 <button class="publish f-18 c-parrot-green f-w-5 freedoka b-parrot-green" type="submit">Save</button>
             </div>

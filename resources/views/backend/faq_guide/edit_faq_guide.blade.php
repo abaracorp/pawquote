@@ -13,7 +13,7 @@
     
 
     
-    <form action="{{ route('admin.updateFaqGuide', ['type' => $type, 'faqguide' => $faqGuide]) }}" method="POST">
+    <form action="{{ route('admin.updateFaqGuide', ['type' => $type, 'faqguide' => $faqGuide]) }}" id="editFaqGuideForm" method="POST">
         @csrf
         @method('PUT')
 
@@ -55,8 +55,8 @@
         </section>
 
         <section class="bottom-buttons">
-            <button class="save-faq f-18 c-orange f-w-5 freedoka b-orange">Update {{ $text }}</button>
-            <button class="cancel f-18 c-light f-w-5 freedoka b-light">Cancel</button>
+            <button type="submit" class="save-faq f-18 c-orange f-w-5 freedoka b-orange">Update {{ $text }}</button>
+            <button type="button" onclick="clearFormData(this.form.id)" class="cancel f-18 c-light f-w-5 freedoka b-light">Clear</button>
             {{-- <a href="{{ route('admin.faqGuide', ['type' => $type]) }}"
                class="cancel f-18 c-light f-w-5 freedoka b-light">Cancel</a> --}}
         </section>

@@ -25,7 +25,7 @@
                     <div class="search-container b-orange br-5 ">
                         <i class="fa-solid fa-magnifying-glass"></i>
                         <input type="text" id="moduleSearchInput" data-url="search-{{ $type }}"
-                            placeholder="Search blogs....">
+                            placeholder="Search {{ $type }}....">
                     </div>
                     <button class="filter b-orange">
                         <svg width="24" height="25" viewBox="0 0 24 25" fill="none"

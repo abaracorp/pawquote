@@ -11,7 +11,7 @@
             </div>
         </section>
 
-        <form action="{{ route('admin.updateBlog', $blog->id) }}" method="POST" enctype="multipart/form-data">
+        <form action="{{ route('admin.updateBlog', $blog->id) }}" id="editBlogFrom" method="POST" enctype="multipart/form-data">
             @csrf
             @method('PUT')
             <section class="">
@@ -104,7 +104,7 @@
             </section>
 
             <section class="bottom-buttons">
-                <button class="cancel f-18 c-light f-w-5 freedoka b-light"><a href="{{route('admin.blogs')}}">Cancel</a></button>
+                <button class="cancel f-18 c-light f-w-5 freedoka b-light" type="button" onclick="clearFormData(this.form.id)">Clear</button>
                 <button class="publish f-18 c-parrot-green f-w-5 freedoka b-parrot-green" type="submit">Update</button>
             </section>
         </form>

@@ -8,7 +8,7 @@
             <h1 class="f-32 c-dark f-w-5 freedoka">Edit Story</h1>
         </div>
 
-        <form action="{{ route('admin.updateFan', $fan->id) }}" method="POST" enctype="multipart/form-data">
+        <form action="{{ route('admin.updateFan', $fan->id) }}" id="editFanStoriesForm" method="POST" enctype="multipart/form-data">
             @csrf
             @method('PUT')
 
@@ -64,7 +64,7 @@
 
             <div class="bottom-buttons">
                 <button class="Save f-18 c-orange f-w-5 freedoka b-orange " type="submit">Update</button>
-                <button class="Clear f-18 c-light f-w-5 freedoka b-light">Cancel</button>
+                <button class="Clear f-18 c-light f-w-5 freedoka b-light" type="button" onclick="clearFormData(this.form.id)">Clear</button>
             </div>
         </form>
     </section>

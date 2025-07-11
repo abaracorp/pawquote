@@ -105,14 +105,7 @@
         
     }
 
-    function clearFormData(formID) {
-    const form = document.querySelector(`#${formID}`);
-    if (form) {
-        form.reset(); 
-        const targetEl = document.getElementById('showCustomDate');
-        targetEl.style.display =  'none';
-    }
-}
+    
 
 
 
