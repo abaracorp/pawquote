@@ -7,6 +7,7 @@ use App\Http\Controllers\Backend\FanStoriesController;
 use App\Http\Controllers\Backend\FaqGuideController;
 use App\Http\Controllers\Backend\GalleryController;
 use App\Http\Controllers\Backend\SettingController;
+use App\Http\Controllers\Frontend\AboutController;
 use App\Http\Controllers\Frontend\BlogController as FrontendBlogController;
 use App\Http\Controllers\Frontend\FanAndGalleryController;
 use App\Http\Controllers\Frontend\FaqGuideController as FrontendFaqGuideController;
@@ -31,6 +32,16 @@ Route::as('frontend.')
            
             Route::get('/', 'getHomePage')->name('homepage');
            
+        });
+
+
+        // Route::get('/about-us', function () {
+        //     return view('frontend/about');
+        // })->name('about');
+
+        Route::controller(AboutController::class)
+        ->group(function(){
+            Route::get('/about-us', 'getAboutPage')->name('about');
         });
 
 
@@ -89,9 +100,9 @@ Route::as('frontend.')
 
 
 
-Route::get('/about-us', function () {
-    return view('frontend/about');
-})->name('about');
+// Route::get('/about-us', function () {
+//     return view('frontend/about');
+// })->name('about');
 
 
 // Route::get('/blog', function () {

@@ -49,7 +49,7 @@
 
                                                 </li>
                                                 <li>
-                                                    <a href="{{route('about')}}" class="f-18 c-white  f-w-5 montserrat">
+                                                    <a href="{{route('frontend.about')}}" class="f-18 c-white  f-w-5 montserrat">
                                                         <svg width="14" height="16" viewBox="0 0 14 16"
                                                             fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                                             <path

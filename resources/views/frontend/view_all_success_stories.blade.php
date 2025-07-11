@@ -14,12 +14,12 @@
                             how Paw Quote made a difference in their pets' lives.</p>
                     </div>
                     <div class="card-container">
+                        
+                        
+                        
                         <div class="row">
-
-
-
                             @foreach ($fans as $fan)
-                                <div class="col-lg-4 col-md-6 col-sm-12">
+                                <div class="col-lg-4 col-md-6 col-sm-12 @if($loop->iteration > 3) mt-5 @endif">
                                     <a href="{{ route('frontend.successStory', ['slug' => $fan->slug]) }}"
                                         class="card b-blue br-18 overflow-hidden">
                                         <div class="top-image">
@@ -64,8 +64,6 @@
                                     </a>
                                 </div>
                             @endforeach
-
-
 
                         </div>
 

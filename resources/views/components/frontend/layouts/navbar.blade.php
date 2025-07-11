@@ -14,7 +14,7 @@
                         <a class="nav-link {{ isActiveRoute(['frontend.homepage']) }}" aria-current="page" href="{{route('frontend.homepage')}}">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {{ isActiveRoute(['about']) }}" aria-current="page" href="{{route('about')}}">About Us</a>
+                        <a class="nav-link {{ isActiveRoute(['frontend.about']) }}" aria-current="page" href="{{route('frontend.about')}}">About Us</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link {{ isActiveRoute(['frontend.blog']) }}" aria-current="page" href="{{route('frontend.blog')}}">Blog</a>
