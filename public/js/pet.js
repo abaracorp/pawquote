@@ -301,7 +301,6 @@ function handleIsHavePet(checkbox) {
 }
 
 
-
 let currentStep = 1;
 const initialSteps = 6;
 const totalSteps = 7;
@@ -406,6 +405,7 @@ function renderPetForm(index) {
     document.querySelector('input[name="petName"]').value = pet.petName || '';
     document.querySelector('select[name="petAgeYear"]').value = pet.petAgeYear || 0;
     document.querySelector('select[name="petAgeMonth"]').value = pet.petAgeMonth || 0;
+    
 
     document.querySelectorAll('input[name="petType"]').forEach(radio => {
         const isMatch = +radio.value === +(pet.petType || 0);
@@ -426,6 +426,9 @@ function renderPetForm(index) {
     $('#selectPetBreed').val(pet.selectPetBreed || '').trigger('change');
 
     const petNameInput = document.getElementById('petName');
+    const isHavePet = document.getElementById('isHavePet');
+    isHavePet.checked = false;
+
     if (+pet.isHavePet === 1) {
         petNameInput.readOnly = true;
         petNameInput.value = "Your Pet Name";

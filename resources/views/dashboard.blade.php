@@ -462,7 +462,7 @@
                     </a>
                 </div>
                 <div class="col-lg-3">
-                    <a href="{{ route('admin.analytics') }}">
+                    <a href="{{ route('admin.affilate') }}">
                         <div class="card b-blue br-10">
                             <svg width="25" height="24" viewBox="0 0 25 24" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -472,7 +472,7 @@
                             </svg>
 
                             <div class="content">
-                                <h3 class="f-20 c-dark f-w-5 freedoka">Manage Analytics</h3>
+                                <h3 class="f-20 c-dark f-w-5 freedoka">Manage Affiliate</h3>
                                 <p class="f-14 c-light f-w-4  freedoka">Detailed performance data</p>
                             </div>
                         </div>

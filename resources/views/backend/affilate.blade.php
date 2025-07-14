@@ -73,14 +73,9 @@
              <div class="row">
                 <div class="col-lg-12">
                 <div class="card">
-                   <ul class="pet-detail">
-                        <h3 class="f-20 c-dark f-w-5 freedoka">Pet 1</h3>
-                        <li><p class="f-18 c-dark f-w-4 freedoka">Pet </p> <p class="f-18 c-dark f-w-4 freedoka">Cat</p></li>
-                        <li><p class="f-18 c-dark f-w-4 freedoka">Pet name</p> <p class="f-18 c-dark f-w-4 freedoka">No Pet Yet</p></li>
-                        <li><p class="f-18 c-dark f-w-4 freedoka">Pet breed </p> <p class="f-18 c-dark f-w-4 freedoka">2</p></li> 
-                        <li><p class="f-18 c-dark f-w-4 freedoka">Gender </p> <p class="f-18 c-dark f-w-4 freedoka">Female</p></li> 
-                        <li><p class="f-18 c-dark f-w-4 freedoka">Pet age </p> <p class="f-18 c-dark f-w-4 freedoka">1 year 2 months</p></li> 
-                    </ul>
+                    
+                    <span id="appendPetDetails"></span>
+                 
                 </div>
                 </div>
             </div>
@@ -142,6 +137,44 @@
     }
 
     
+  function viewPetDetails(getQuoteID) {
+    fetch(`${baseUrl}/admin/view-pet-details?quote_id=${encodeURIComponent(getQuoteID)}`, {
+        method: 'GET',
+        headers: {
+            'X-CSRF-TOKEN': csrfToken,
+            'X-Requested-With': 'XMLHttpRequest'
+        }
+    })
+    .then(response => {
+        if (!response.ok) throw new Error('Network response was not ok');
+        return response.json();
+    })
+    .then(data => {
+        console.log('Response:', data);
+
+        const container = document.getElementById('appendPetDetails');
+        container.innerHTML = ''; // clear previous contents
+
+        data.forEach((pet, index) => {
+            const petHTML = `
+                <ul class="pet-detail mt-3">
+                    <h3 class="f-20 c-dark f-w-5 freedoka">Pet ${index + 1}</h3>
+                    <li><p class="f-18 c-dark f-w-4 freedoka">Pet</p> <p class="f-18 c-dark f-w-4 freedoka">${pet.pet_text}</p></li>
+                    <li><p class="f-18 c-dark f-w-4 freedoka">Pet name</p> <p class="f-18 c-dark f-w-4 freedoka">${pet.pet_name || 'No Pet Yet'}</p></li>
+                    <li><p class="f-18 c-dark f-w-4 freedoka">Pet breed</p> <p class="f-18 c-dark f-w-4 freedoka">${pet.pet_breed || ''}</p></li>
+                    <li><p class="f-18 c-dark f-w-4 freedoka">Gender</p> <p class="f-18 c-dark f-w-4 freedoka">${pet.pet_gender_text}</p></li>
+                    <li><p class="f-18 c-dark f-w-4 freedoka">Pet age</p> <p class="f-18 c-dark f-w-4 freedoka">${pet.pet_age_years} year ${pet.pet_age_months} months</p></li>
+                </ul>
+            `;
+            container.insertAdjacentHTML('beforeend', petHTML);
+        });
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });
+}
+
+
 
 
 

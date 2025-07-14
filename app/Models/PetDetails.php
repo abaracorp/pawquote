@@ -7,6 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 class PetDetails extends Model
 {
    protected $guarded = [];
+   protected $appends = [
+    'pet_text','pet_gender_text'
+   ];
 
     public function getPetTextAttribute()
     {
