@@ -21,7 +21,7 @@
                             @foreach ($fans as $fan)
                                 <div class="col-lg-4 col-md-6 col-sm-12 @if($loop->iteration > 3) mt-5 @endif">
                                     <a href="{{ route('frontend.successStory', ['slug' => $fan->slug]) }}"
-                                        class="card b-blue br-18 overflow-hidden">
+                                        class="card b-blue br-40 overflow-hidden">
                                         <div class="top-image">
                                             <img src="{{ $fan->image_url ?? '' }}" alt="" class="w-100">
                                         </div>
@@ -56,7 +56,7 @@
 
                                             @if (hasMoreThanChars($fan->content, 150))
                                                  <div>
-                                                    <button class="read-more f-18 c-dark f-w-5 freedoka b-blue br-8">Read More</button>
+                                                    <button class="read-more f-18 c-dark f-w-5 freedoka b-blue br-8 px-3">Read More</button>
                                                 </div>
                                             @endif
                                         </div>
