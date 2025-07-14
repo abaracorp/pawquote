@@ -55,6 +55,42 @@
           </span>
       </div>
     </section>
+
+   
+
+    <!-- Modal -->
+    <div class="modal fade" id="pet-details" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+             <div class="modal-header">
+                   <h2 class="f-22 c-dark f-w-5 freedoka mb-0">Pet details</h2>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+        <div class="pet-details">
+         
+           <div class="inner">
+             <div class="row">
+                <div class="col-lg-12">
+                <div class="card">
+                   <ul class="pet-detail">
+                        <h3 class="f-20 c-dark f-w-5 freedoka">Pet 1</h3>
+                        <li><p class="f-18 c-dark f-w-4 freedoka">Pet </p> <p class="f-18 c-dark f-w-4 freedoka">Cat</p></li>
+                        <li><p class="f-18 c-dark f-w-4 freedoka">Pet name</p> <p class="f-18 c-dark f-w-4 freedoka">No Pet Yet</p></li>
+                        <li><p class="f-18 c-dark f-w-4 freedoka">Pet breed </p> <p class="f-18 c-dark f-w-4 freedoka">2</p></li> 
+                        <li><p class="f-18 c-dark f-w-4 freedoka">Gender </p> <p class="f-18 c-dark f-w-4 freedoka">Female</p></li> 
+                        <li><p class="f-18 c-dark f-w-4 freedoka">Pet age </p> <p class="f-18 c-dark f-w-4 freedoka">1 year 2 months</p></li> 
+                    </ul>
+                </div>
+                </div>
+            </div>
+           </div>
+        </div>
+        </div>
+        </div>
+    </div>
+    </div>
+
 </main>
 
 @push('scripts')

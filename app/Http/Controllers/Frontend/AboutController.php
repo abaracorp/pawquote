@@ -10,7 +10,7 @@ class AboutController extends Controller
 {
     public function  getAboutPage(){
 
-         $fans = Fan::take(2)->get();
+         $fans = Fan::take(3)->get();
            
          return view('frontend/about',compact('fans'));
 

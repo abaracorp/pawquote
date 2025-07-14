@@ -19,6 +19,10 @@
                         <li><p class="f-18 c-dark f-w-4 freedoka">Gender </p> <p class="f-18 c-dark f-w-4 freedoka">{{$affilate->pet_gender_text ?? ''}}</p></li> 
                         <li><p class="f-18 c-dark f-w-4 freedoka">Pet age </p> <p class="f-18 c-dark f-w-4 freedoka">{{$affilate->pet_age_years ?? 0}} year {{$affilate->pet_age_months ?? 0}} months</p></li> 
                     </ul>
+                     <!-- Button trigger modal -->
+    <button type="button" class=" view-more f-20 c-dark f-w-4 freedoka b-orange bg-white" data-bs-toggle="modal" data-bs-target="#pet-details">
+  View More
+    </button>
                 </div>
             </div>
 

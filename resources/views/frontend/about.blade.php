@@ -581,7 +581,7 @@
                     <div class="row">
 
                           @foreach ($fans as $fan)
-                            <div class="col-md-6">
+                            <div class="col-md-4">
                                 <a href="{{ route('frontend.successStory', ['slug' => $fan->slug]) }}"
                                     class="card b-blue br-18 overflow-hidden">
                                     <div class="top-image">
@@ -617,7 +617,7 @@
 
                                         @if (hasMoreThanChars($fan->content, 150))
                                             <div>
-                                                <button class="read-more f-18 c-dark f-w-5 freedoka b-blue br-8">Read More</button>
+                                                <button class="read-more f-18 c-dark f-w-5 freedoka b-blue br-8 bg-white px-3">Read More</button>
                                             </div>
                                         @endif
 
