@@ -513,6 +513,18 @@ tbody, td, tfoot, th, thead, tr{border-color:#88EDFF;}
 #get-quote-step .hero.gender .pet-card.selected{border: 2px solid #CDF7FF;}
 .form-group label {margin-bottom:5px;font-family: var(--freedoka-font);}
 .form-group input{font-family: var(--freedoka-font);}
+#get-quote-step .add-pet{margin-bottom:50px;}
+#get-quote-step .add-pet .inner{display: flex;flex-direction: column;gap:10px;max-height: 230px;overflow-y: auto;}
+#step5 .another-pet{display: flex;align-items: center;gap:10px;border: 2px solid #88EDFF;background-color: #F5FDFF;padding: 10px 10px;border-radius: 10px;}
+#get-quote-step .add-pet .pet-detail{border: 2px solid #CDF7FF;background-color: #F5FDFF;display: flex;align-items: center;justify-content: space-between;padding:20px 20px;border-radius: 10px;}
+#get-quote-step .add-pet .pet-detail .leftside{display: flex;align-items: center;gap:10px;}
+#get-quote-step .add-pet .pet-detail .leftside ul{display: flex;align-items: center;gap:20px;}
+#get-quote-step .add-pet .pet-detail .leftside ul li{position: relative;}
+#get-quote-step .add-pet .pet-detail .leftside ul li::after{content: "";position: absolute;width: 4px;height: 4px;border-radius: 50px;background-color: #002133;transform: translate(-50%, -50%);top:51%; right:-14px;}
+#get-quote-step .add-pet .pet-detail .leftside ul li:last-of-type::after{display: none;}
+#get-quote-step .add-pet .pet-detail a.remove-pet{display: flex;align-items: center;gap:5px;}
+#get-quote-step .add-pet .pet-detail a.remove-pet:hover{color:#FEA145; transition: all 0.1s ease-out;}
+
 /* Get in Quote Step page CSS Close */
 
 /* Get quote Step 4 CSS */

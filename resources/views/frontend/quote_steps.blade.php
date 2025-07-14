@@ -1,79 +1,131 @@
 @extends('frontend.master')
 @section('title', 'Quote Steps')
 @section('content')
-    <main id="get-quote-step">
-        <section class="banner">
+<main id="get-quote-step">
+  <section class="banner">
 
-            <div class="hero ">
-                <div class="container">
-                    <!-- Progress Bar -->
-                    <div class="progress mb-3" role="progressbar">
-                        <div class="progress-bar" id="progressBar" style="width: 17%"></div>
-                    </div>
-
-                    <!-- Step Indicator -->
-                    <div class="step-indicator d-flex align-items-center justify-content-between mb-4">
-                        <p>Step <span id="stepNumber">1</span> of 6</p>
-                        <p><span id="stepPercent">17</span>% Complete</p>
-                    </div>
-
-                    <!-- Tab Content -->
-                    <div class="tab-content">
-
-                        <div class="tab-pane fade show active" id="step1">
-
-                            @include('frontend.quote_steps.quote_step1')
-
-                        </div>
-
-                        <div class="tab-pane fade" id="step2">
-
-                            @include('frontend.quote_steps.quote_step2')
-
-                        </div>
-
-                        <div class="tab-pane fade" id="step3">
-
-                           @include('frontend.quote_steps.quote_step3',['breeds' => $breeds])
-
-                        </div>
-
-                        <div class="tab-pane fade" id="step4">
-
-                            @include('frontend.quote_steps.quote_step4')
-
-                        </div>
-                        <div class="tab-pane fade" id="step5">
-
-                            @include('frontend.quote_steps.quote_step5')
-
-                        </div>
-                        <div class="tab-pane fade" id="step6">
-
-                           @include('frontend.quote_steps.quote_step6') 
-
-                        </div>
-                    </div>
-
-                   
-                </div>
+    <div class="hero ">
+      <div class="container">
+        <!-- Added Pet -->
+        <div class="add-pet">
+          <h1 class="f-32 c-dark f-w-5 freedoka">Added Pets</h1>
+          <div class="inner">
+              <div class="pet-detail">
+            <div class="leftside">
+              <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M31.881 9.98473C17.336 9.60973 12.626 20.8697 12.266 25.0947C11.986 28.3797 10.576 40.3947 17.426 48.4647C20.961 52.6297 26.626 54.7047 32.631 54.5647C38.686 54.4247 44.156 53.2197 47.836 48.3697C54.031 40.2047 53.371 28.0047 52.531 24.0597C51.741 20.3897 48.676 10.4147 31.881 9.98473Z"
+                  fill="#FEA145" />
+                <path
+                  d="M48.4088 32.2147C48.9238 36.1197 47.2288 39.8447 42.7638 40.1097C38.6788 40.3547 36.1588 37.7497 35.9588 33.9147C35.7538 29.9847 37.9038 26.3297 41.3188 25.9547C44.9238 25.5597 47.8988 28.3097 48.4088 32.2147Z"
+                  fill="white" />
+                <path
+                  d="M9.45057 13.3603C9.45057 13.3603 4.53557 15.2853 3.35057 18.1453C1.75557 21.9953 2.49057 29.6353 3.35057 32.6003C4.19557 35.5103 6.44557 38.5153 9.92057 38.4203C13.3956 38.3253 16.4456 34.8053 17.5206 30.2103C18.6006 25.6103 18.8356 17.7303 19.1606 16.3203C19.4856 14.9103 20.0506 13.7853 20.0506 13.7853C20.0506 13.7853 15.7356 9.60533 9.45057 13.3603ZM50.6056 12.7503C50.6056 12.7503 57.2706 12.9853 58.8656 13.6903C60.4606 14.3953 61.9156 17.5853 61.7756 21.8553C61.6356 26.1253 61.3556 33.0303 59.1956 35.4153C57.4106 37.3853 53.8006 37.5253 51.7806 35.0853C49.7606 32.6453 48.4956 28.5153 48.0256 25.8403C47.5556 23.1653 46.7606 19.6953 46.2406 18.1453C45.7256 16.5953 44.4556 13.5003 43.8006 12.7953C43.1406 12.0953 44.4556 11.4353 50.6056 12.7503Z"
+                  fill="#FFE5CC" />
+                <path
+                  d="M14.9837 11.1546C11.3687 10.9246 5.40874 13.7846 4.18874 16.7396C2.96874 19.6946 3.68374 29.2846 4.70874 32.0846C5.78874 35.0396 8.03874 38.7496 11.9337 35.5596C15.8287 32.3696 16.8587 24.3446 17.2387 21.7646C17.6137 19.1846 18.1287 16.0396 18.6937 15.3846C19.2587 14.7296 20.0537 13.7896 20.0537 13.7896C20.0537 13.7896 19.4437 11.4346 14.9837 11.1546ZM51.3988 10.5446C54.7938 10.7796 58.4838 12.0446 59.8438 15.0046C61.2038 17.9596 60.6888 24.9546 60.1738 28.2846C59.6588 31.6146 58.4388 35.0896 55.3888 34.7146C52.3387 34.3396 50.7887 30.2096 49.8537 26.3146C48.9137 22.4196 47.9287 18.5246 46.7087 15.7096C45.9737 14.0096 43.4237 12.7546 43.4237 12.7546C43.4237 12.7546 44.5488 10.0746 51.3988 10.5446Z"
+                  fill="#FEA145" />
+                <path
+                  d="M25.2505 33.8452C25.0505 35.5552 24.1705 36.9352 22.2605 36.7352C20.9055 36.5902 19.9955 34.9751 20.1955 33.2601C20.3955 31.5501 20.9905 30.3201 22.5905 30.3501C25.0755 30.3951 25.4505 32.1302 25.2505 33.8452ZM44.8705 33.3652C44.9505 35.0852 44.2705 36.5552 42.2855 36.7002C40.5605 36.8252 39.6755 35.3302 39.6005 33.6102C39.5205 31.8901 40.3755 30.5101 42.0205 30.3051C44.1555 30.0301 44.7905 31.6452 44.8705 33.3652ZM37.5605 42.0351C37.6405 43.7551 36.4805 45.3652 32.8655 45.3202C29.3455 45.2752 28.0655 43.8502 27.9855 42.1302C27.9055 40.4102 29.9055 38.8651 32.7705 38.8001C36.7155 38.7001 37.4805 40.3101 37.5605 42.0351Z"
+                  fill="black" />
+                <path
+                  d="M29.5781 48.9803C29.5781 48.9803 30.0031 53.0653 30.4231 54.2853C31.3131 56.8653 35.0631 56.4353 35.7281 54.0053C36.2931 51.9403 35.9181 48.3753 35.9181 48.3753L32.5881 47.9053L29.5781 48.9803Z"
+                  fill="#E94B8C" />
+                <path
+                  d="M32.9791 50.3403C32.3941 50.3653 32.4141 50.9053 32.4141 52.1453C32.4141 53.3903 32.4841 54.1403 33.0491 54.1153C33.6141 54.0903 33.5441 53.1303 33.5441 52.2403C33.5441 51.3503 33.5891 50.3153 32.9791 50.3403Z"
+                  fill="#EF87B2" />
+                <path
+                  d="M25.0756 45.1054C24.4006 46.1004 25.7106 46.9804 26.7906 47.7104C27.8706 48.4353 29.1806 49.5404 30.7306 49.5154C32.4656 49.4904 32.9356 48.3204 32.9356 48.3204C32.9356 48.3204 33.5006 49.7054 35.9606 49.4454C37.2756 49.3054 38.8956 47.8304 39.3856 47.5004C40.3256 46.8654 41.4506 46.0704 40.9556 45.4104C40.3906 44.6554 39.1956 45.6704 37.9756 46.3004C36.7556 46.9354 36.3356 47.2404 35.4206 47.2404C34.5056 47.2404 33.8706 46.8654 33.8256 45.3404C33.7856 44.0954 33.8006 43.8604 33.8006 43.8604H31.7106C31.7106 43.8604 31.7806 45.1754 31.7806 45.5504C31.7806 46.5354 31.2656 46.9604 30.2806 47.0054C29.2956 47.0504 28.2406 46.2304 27.7206 45.9254C27.2106 45.6254 25.6156 44.3104 25.0756 45.1054Z"
+                  fill="black" />
+              </svg>
+              <div class="content">
+                <h3 class="name f-20 c-dark f-w-4 freedoka mb-0">Tommy</h3>
+                <ul>
+                  <li>Boxer</li>
+                  <li>Male</li>
+                  <li>2 years old</li>
+                </ul>
+              </div>
             </div>
+            <a href="" class="remove-pet f-16 c-light f-w-4 freedoka">Remove pet<svg width="16" height="16"
+                viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M13.3333 3.33301C13.5101 3.33301 13.6797 3.40325 13.8047 3.52827C13.9298 3.65329 14 3.82286 14 3.99967C14 4.17649 13.9298 4.34605 13.8047 4.47108C13.6797 4.5961 13.5101 4.66634 13.3333 4.66634H12.6667L12.6647 4.71367L12.0427 13.4277C12.0187 13.7641 11.8682 14.0789 11.6214 14.3087C11.3746 14.5386 11.0499 14.6663 10.7127 14.6663H5.28667C4.94943 14.6663 4.62471 14.5386 4.37792 14.3087C4.13114 14.0789 3.98061 13.7641 3.95667 13.4277L3.33467 4.71434L3.33333 4.66634H2.66667C2.48986 4.66634 2.32029 4.5961 2.19526 4.47108C2.07024 4.34605 2 4.17649 2 3.99967C2 3.82286 2.07024 3.65329 2.19526 3.52827C2.32029 3.40325 2.48986 3.33301 2.66667 3.33301H13.3333ZM9.33333 1.33301C9.51014 1.33301 9.67971 1.40325 9.80474 1.52827C9.92976 1.65329 10 1.82286 10 1.99967C10 2.17649 9.92976 2.34605 9.80474 2.47108C9.67971 2.5961 9.51014 2.66634 9.33333 2.66634H6.66667C6.48986 2.66634 6.32029 2.5961 6.19526 2.47108C6.07024 2.34605 6 2.17649 6 1.99967C6 1.82286 6.07024 1.65329 6.19526 1.52827C6.32029 1.40325 6.48986 1.33301 6.66667 1.33301H9.33333Z"
+                  fill="currentColor" />
+              </svg>
+            </a>
+          </div>
+          </div>
+        
+        </div>
+        <!-- Progress Bar -->
+        <div class="progress mb-3" role="progressbar">
+          <div class="progress-bar" id="progressBar" style="width: 17%"></div>
+        </div>
 
-        </section>
-    </main>
+        <!-- Step Indicator -->
+        <div class="step-indicator d-flex align-items-center justify-content-between mb-4">
+          <p>Step <span id="stepNumber">1</span> of 6</p>
+          <p><span id="stepPercent">17</span>% Complete</p>
+        </div>
 
-    @push('scripts')
+        <!-- Tab Content -->
+        <div class="tab-content">
 
-    <script src="{{asset('js/pet.js')}}"></script>
+          <div class="tab-pane fade show active" id="step1">
 
-    <script>
-    if (window.performance && window.performance.navigation.type == window.performance.navigation.TYPE_BACK_FORWARD) {
+            @include('frontend.quote_steps.quote_step1')
+
+          </div>
+
+          <div class="tab-pane fade" id="step2">
+
+            @include('frontend.quote_steps.quote_step2')
+
+          </div>
+
+          <div class="tab-pane fade" id="step3">
+
+            @include('frontend.quote_steps.quote_step3',['breeds' => $breeds])
+
+          </div>
+
+          <div class="tab-pane fade" id="step4">
+
+            @include('frontend.quote_steps.quote_step4')
+
+          </div>
+          <div class="tab-pane fade" id="step5">
+
+            @include('frontend.quote_steps.quote_step5')
+
+          </div>
+          <div class="tab-pane fade" id="step6">
+
+            @include('frontend.quote_steps.quote_step6')
+
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+
+  </section>
+</main>
+
+@push('scripts')
+
+<script src="{{asset('js/pet.js')}}"></script>
+
+<script>
+  if (window.performance && window.performance.navigation.type == window.performance.navigation.TYPE_BACK_FORWARD) {
     window.location.replace('/get-quote');
-    }
+  }
 </script>
 
-        
-    @endpush
+
+@endpush
 
 
 @endsection
