@@ -12,13 +12,20 @@ function getPetType(val) {
 
 
 const formData = {
-    petName:'',
-    petType: 0,
-    isHavePet: 0,
-    radioCatGender: 0,
-    petAgeYear:0,
-    petAgeMonth:3,
+    email: '',
+    phone: '',
+    pets: [
+        {
+            petName: '',
+            petType: 0,
+            isHavePet: 0,
+            radioCatGender: 0,
+            petAgeYear: 0,
+            petAgeMonth: 3
+        }
+    ]
 };
+
 
 
 
@@ -96,7 +103,6 @@ function validateField(fieldEl, selector) {
 
     return { isValid: true };
 }
-
 
 
 function showOrHideError(isValid, errorEl) {
@@ -189,8 +195,6 @@ function validateAndNextStep(e, fields = []) {
 }
 
 
-
-
 function updatePetDataHTML() {
     const petNameEls = document.getElementsByClassName('pet-name');
 
@@ -225,18 +229,9 @@ function togglePetIcon(type) {
 
 let allSelectOptions = [];
 
- // {
-  //   "group": null,
-  //   "value": "",
-  //   "text": "Start typing or select breed...",
-  //   "breedType": null,
-  //   "type": null
-  // },
-
 $(document).ready(function () {
     const $select = $('#selectPetBreed');
 
-    // Initialize select2 once
     $select.select2({
         placeholder: 'Start typing or select breed...',
         allowClear: true
@@ -244,7 +239,6 @@ $(document).ready(function () {
 
     allSelectOptions = $select.children().clone();
 
-    // Load default options (e.g. dog)
     select2Options('dog');
 });
 
@@ -292,13 +286,8 @@ function select2Options(petType) {
 }
 
 
-
-        
-
-
 function handleIsHavePet(checkbox) {
     const input = document.getElementById('petName');
-    // const petName = document.getElementById('petName');
 
     if (checkbox.checked) {
         input.setAttribute('readonly', true);
@@ -311,34 +300,6 @@ function handleIsHavePet(checkbox) {
         delete formData['isHavePet'];
     }
 }
-
-
-document.querySelectorAll('.pet-card1').forEach(card => {
-    card.addEventListener('click', () => {
-
-        document.querySelectorAll('.pet-card1').forEach(c => c.classList.remove('selected'));
-
-        card.classList.add('selected');
-        const radio = card.querySelector('input[type="radio"]');
-        if (radio) radio.checked = true;
-    });
-});
-
-document.querySelectorAll('.pet-card4').forEach(card => {
-    card.addEventListener('click', () => {
-
-        document.querySelectorAll('.pet-card4').forEach(c => c.classList.remove('selected'));
-
-
-        card.classList.add('selected');
-
-
-        const radio = card.querySelector('input[type="radio"]');
-        if (radio) radio.checked = true;
-    });
-});
-
-
 
 
 
@@ -354,11 +315,7 @@ function showStep(step) {
     document.getElementById('stepPercent').textContent = Math.round((step / initialSteps) * 100);
     document.querySelector('.progress-bar').style.width = `${Math.round((step / initialSteps) * 100)}%`;
 
-    // Hide/show navigation buttons
-    // document.querySelector('.back').style.display = (step === 1) ? 'none' : 'inline-flex';
-    // document.querySelector('.next').style.display = (step === totalSteps) ? 'none' : 'inline-flex';
-
-
+  
     const header = document.querySelector('.heading');
     header.style.display = (step === 1) ? 'block' : 'none';
 
@@ -384,6 +341,12 @@ function changeStep(direction) {
 
 async function sendStepSevenAjax() {
 
+    const formDataFixed = {
+    ...formData,
+    pets: JSON.stringify(formData.pets)  // Convert array/object to string manually
+    };
+
+// body: new URLSearchParams(formDataFixed)
 
     try {
         const res = await fetch(`${baseUrl}/save-quote-steps-data`, {
@@ -395,7 +358,7 @@ async function sendStepSevenAjax() {
                 'X-Requested-With': 'XMLHttpRequest'
             },
             // body: JSON.stringify({ formData })
-            body: new URLSearchParams(formData)
+            body: new URLSearchParams(formDataFixed)
         });
 
         const data = await res.json();
@@ -411,7 +374,33 @@ async function sendStepSevenAjax() {
     }
 }
 
-
 document.addEventListener('DOMContentLoaded', () => {
     showStep(currentStep);
+});
+
+// for showing background color on selected radio input tags
+
+document.querySelectorAll('.pet-card1').forEach(card => {
+    card.addEventListener('click', () => {
+
+        document.querySelectorAll('.pet-card1').forEach(c => c.classList.remove('selected'));
+
+        card.classList.add('selected');
+        const radio = card.querySelector('input[type="radio"]');
+        if (radio) radio.checked = true;
+    });
+});
+
+document.querySelectorAll('.pet-card4').forEach(card => {
+    card.addEventListener('click', () => {
+
+        document.querySelectorAll('.pet-card4').forEach(c => c.classList.remove('selected'));
+
+
+        card.classList.add('selected');
+
+
+        const radio = card.querySelector('input[type="radio"]');
+        if (radio) radio.checked = true;
+    });
 });

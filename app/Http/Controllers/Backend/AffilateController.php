@@ -10,7 +10,9 @@ class AffilateController extends Controller
 {
     public function getAffilate(){
 
-        $affilates = GetQuotes::latest()->get();
+        $affilates = GetQuotes::with('getPetDetails')->latest()->get();
+
+        // dd($affilates[0]['getPetDetails'][0]->pet_text);
 
         return view('backend.affilate',compact('affilates'));
 
