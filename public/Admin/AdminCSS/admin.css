@@ -243,16 +243,23 @@ tbody, td, tfoot, th, thead, tr{vertical-align: middle;}
 .affiliate .filter-tab .submit,.clear{padding:9px 18px;background-color: transparent;}
 .affiliate .inner .card{box-shadow: 0px 0px 4px 0px #00000057;padding:20px;display: flex;gap:26px; flex-direction: column;margin-bottom:25px;position: relative; cursor: pointer;}
 .affiliate .inner .card ul li{display: flex;align-items: center;justify-content: space-between;}
+.affiliate .inner .card .view-more{display: block;width: fit-content;padding-inline: 10px;border-radius: 5px;margin:0 0 auto auto;}
+
+/*Affiliate Add Pet Modal  */
+.modal-header{align-items: center;}
+#pet-details .card{box-shadow: 0px 0px 4px 0px #00000049;padding:10px 20px;gap:0;border-radius: 10px;}
+#pet-details .card ul li {display: flex;align-items: center;justify-content: space-between;}
+#pet-details .inner {max-height: 400px;overflow-y: auto;overflow-x: hidden;padding:10px;}
 
 /* Gallery Images */
 .gallery-images .card-container{display: grid;grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));gap: 20px;}
-.gallery-images .card-container .card{width: 250px;height: auto;}
+.gallery-images .card-container .card{width: 250px;height: auto;border-radius: 10px;padding: 20px;}
 .gallery-images .card-container .card span{width: 100%;height:141px; overflow:hidden; display:inline-block; border-radius: 18px;background-color: #ffffff;}
 .gallery-images .card-container .card span img{width: 100%;height:100%; object-fit: cover;}
 .gallery-images .card-container .card .overlay { position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 0.6); display: flex; justify-content: center; align-items: center; opacity: 0; transition: opacity 0.3s ease; }
 .gallery-images .card-container .card:hover .overlay { opacity: 1; }
 .gallery-images .card-container .card .overlay a { color: white; margin: 0 10px; font-size: 20px; text-decoration: none; }
-.gallery-images .card-container .card .overlay a:hover { color: #FEA145; }
+.gallery-images .card-container .card .overlay a:hover { color: #FEA145;}
 
 /* Add new gallery  */
 .add-new-gallery form .upload-container label {width: 50%;}
