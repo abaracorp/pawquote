@@ -39,7 +39,8 @@
         </div>
       </div>
     </div>
-    <a href="" class="another-pet">
+
+    <a href="javascript:void(0)" onclick="addAnotherPet()" class="another-pet">
       <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
           d="M17.5013 5.83366C23.934 5.83366 29.168 11.0676 29.168 17.5003C29.168 23.933 23.934 29.167 17.5013 29.167C11.0686 29.167 5.83464 23.933 5.83464 17.5003C5.83464 11.0676 11.0686 5.83366 17.5013 5.83366ZM17.5013 2.91699C9.44693 2.91699 2.91797 9.44595 2.91797 17.5003C2.91797 25.5547 9.44693 32.0837 17.5013 32.0837C25.5557 32.0837 32.0846 25.5547 32.0846 17.5003C32.0846 9.44595 25.5557 2.91699 17.5013 2.91699ZM24.793 16.042H18.9596V10.2087H16.043V16.042H10.2096V18.9587H16.043V24.792H18.9596V18.9587H24.793V16.042Z"
@@ -50,6 +51,7 @@
         <p class="f-16 c-light f-w-4 freedoka mb-0">Save up to 10% on a plan for each additional pet you enroll</p>
       </span>
     </a>
+
   </form>
   <div class="bottom-buttons d-flex align-items-center justify-content-between mt-5">
     <button onclick="changeStep(-1)" class="back f-14 f-w-5 montserrat">
