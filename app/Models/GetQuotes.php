@@ -10,6 +10,13 @@ class GetQuotes extends Model
     protected $guarded = [];
 
 
+    public function getPetDetails(){
+
+    return $this->hasMany(PetDetails::class,'get_quote_id','id');
+
+    }
+
+
     public function getPetTextAttribute()
     {
         return $this->pet == 0 ? 'Dog' : 'Cat';
