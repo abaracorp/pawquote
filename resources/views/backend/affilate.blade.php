@@ -9,7 +9,7 @@
             <h1 class="f-32 c-dark f-w-5 freedoka">Affiliate</h1>
         </div>
         <div class="filter-tab">
-            <form id="filterForm">
+            <form id="filterForm" >
             <div class="rightside">
                 <div class="search-container b-orange br-5 ">
                     <i class="fa-solid fa-magnifying-glass"></i>
@@ -39,10 +39,12 @@
                         <option value="20" class="c-light f-16 f-w-4 freedoka">Last 20 Days</option>
                         <option value="15" class="c-light f-16 f-w-4 freedoka">Last 15 Days</option>
                         <option value="7" class="c-light f-16 f-w-4 freedoka">Last 7 Days</option>
+                        <option value="1" class="c-light f-16 f-w-4 freedoka">Yesterday</option>
+                        <option value="0" class="c-light f-16 f-w-4 freedoka">Today</option>
                         <option value="custom_date" class="c-light f-16 f-w-4 freedoka">Custom Date</option>
                     </select>
                 </div>
-                <button class="clear b-orange br-5 f-18 c-dark f-w-5 freedoka" type="button" onclick="clearFormData(this.form.id)">Clear</button>
+                <button class="clear b-orange br-5 f-18 c-dark f-w-5 freedoka" type="button" onclick="clearFormData(this.form.id); submitFilterData(this.form.id);">Clear</button>
                 <button class="submit b-orange br-5 f-18 c-dark f-w-5 freedoka" type="button" onclick="submitFilterData(this.form.id)" >Submit</button>
             </div>
             </form>
@@ -94,29 +96,33 @@
 
 <script>
 
-    $(function () {
-        $("#dateFrom").datepicker({
-            dateFormat: "dd-mm-yy",
-            onSelect: function (selectedDate) {
-                // Set minDate for dateTo
-                const fromDate = $(this).datepicker('getDate');
-                $("#dateTo").datepicker("option", "minDate", fromDate);
-            }
-        });
+   $(function () {
+    const today = new Date();
 
-        $("#dateTo").datepicker({
-            dateFormat: "dd-mm-yy",
-            onSelect: function (selectedDate) {
-                const fromDate = $("#dateFrom").datepicker('getDate');
-                const toDate = $(this).datepicker('getDate');
-
-                if (toDate < fromDate) {
-                    alert("End date cannot be earlier than start date.");
-                    $(this).val(""); // Clear invalid date
-                }
-            }
-        });
+    $("#dateFrom").datepicker({
+        dateFormat: "dd-mm-yy",
+        maxDate: 0, 
+        onSelect: function (selectedDate) {
+            const fromDate = $(this).datepicker('getDate');
+            $("#dateTo").datepicker("option", "minDate", fromDate);
+        }
     });
+
+    $("#dateTo").datepicker({
+        dateFormat: "dd-mm-yy",
+        maxDate: 0, 
+        onSelect: function (selectedDate) {
+            const fromDate = $("#dateFrom").datepicker('getDate');
+            const toDate = $(this).datepicker('getDate');
+
+            if (toDate < fromDate) {
+                alert("End date cannot be earlier than start date.");
+                $(this).val(""); // Clear invalid date
+            }
+        }
+    });
+});
+
 
 
 
@@ -131,8 +137,57 @@
 
     function submitFilterData(formID){
 
+        const resultContainer = document.getElementById('tableResults');
         const searchQuery = document.querySelector(`#${formID} #moduleSearchInput`).value;
-        console.log(searchQuery);
+        const selectDays = document.querySelector(`#${formID} #selectDays`).value;
+
+        let queryParts = [];
+
+        if (searchQuery.trim() !== '') {
+            queryParts.push(`searchQuery=${encodeURIComponent(searchQuery)}`);
+        }
+
+        if (selectDays.trim() !== '') {
+            queryParts.push(`selectDays=${encodeURIComponent(selectDays)}`);
+        }
+
+        if (selectDays === 'custom_date') {
+            const dateFrom = document.querySelector(`#${formID} #dateFrom`).value;
+            const dateTo = document.querySelector(`#${formID} #dateTo`).value;
+
+            if (dateFrom.trim() !== '') {
+                queryParts.push(`dateFrom=${encodeURIComponent(dateFrom)}`);
+            }
+
+            if (dateTo.trim() !== '') {
+                queryParts.push(`dateTo=${encodeURIComponent(dateTo)}`);
+            }
+        }
+
+        const query = queryParts.join('&');
+
+
+
+        fetch(`${baseUrl}/admin/filter-pet-details?${query}`, {
+        method: 'GET',
+        headers: {
+            'X-CSRF-TOKEN': csrfToken,
+            'X-Requested-With': 'XMLHttpRequest'
+        }
+        })
+        .then(response => {
+            if (!response.ok) throw new Error('Network response was not ok');
+            return response.json();
+        })
+        .then(data => {
+             if (data.tableData && resultContainer) {
+                    resultContainer.innerHTML = data.tableData;
+                }
+            
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
         
     }
 

@@ -218,6 +218,7 @@ Route::prefix('admin')
             Route::get('affiliate', 'getAffilate')->name('affilate');
             Route::get('search-affiliate', 'searchAffiliate')->name('searchAffiliate');
             Route::get('view-pet-details', 'viewPetDetails')->name('viewPetDetails');
+            Route::get('filter-pet-details', 'filterPetDetails')->name('filterPetDetails');
             // Route::put('updateUser/{user}', 'updateSetting')->name('updateSetting');
            
         });
