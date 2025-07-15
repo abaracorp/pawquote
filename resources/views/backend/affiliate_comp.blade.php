@@ -1,5 +1,5 @@
 <div class="row">
-    @forelse ($affilates as $affilate)
+    @forelse ($affiliates as $affilate)
         <div class="col-lg-4">
             <div class="card">
                 <ul class="user-detail">

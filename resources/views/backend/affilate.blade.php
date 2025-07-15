@@ -52,7 +52,7 @@
       <div class="inner">
           <span id="tableResults">
         
-            @include('backend.affiliate_comp',['affilates' => $affilates])
+            @include('backend.affiliate_comp',['affiliates' => $affiliates])
 
           </span>
       </div>

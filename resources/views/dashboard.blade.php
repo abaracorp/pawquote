@@ -96,15 +96,15 @@
 
                         </div>
                         <div class="bottom-content">
-                            <h2 class="f-32 c-dark f-w-6 montserrat">1,586</h2>
-                            <p class="f-14 c-light f-w-4 montserrat"><span class=" c-green "><svg width="7"
+                            <h2 class="f-32 c-dark f-w-6 montserrat" id="totalQuotesRender">0</h2>
+                            {{-- <p class="f-14 c-light f-w-4 montserrat"><span class=" c-green "><svg width="7"
                                         height="6" viewBox="0 0 7 6" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path
                                             d="M6.09303 5.05873L6.09304 0.937341C6.09136 0.860623 6.07455 0.784992 6.04358 0.714786C5.98446 0.573224 5.87191 0.460678 5.73035 0.40156C5.66015 0.370585 5.58451 0.353778 5.5078 0.352103L1.3864 0.352103C1.30955 0.352103 1.23345 0.367241 1.16244 0.396652C1.09144 0.426063 1.02692 0.469171 0.972578 0.523516C0.862825 0.633269 0.801166 0.782127 0.801166 0.937341C0.801166 1.09256 0.862825 1.24141 0.972579 1.35117C1.08233 1.46092 1.23119 1.52258 1.3864 1.52258L4.1024 1.51846L0.974265 4.6466C0.864958 4.7559 0.80355 4.90415 0.803551 5.05873C0.803551 5.21332 0.864958 5.36157 0.974265 5.47087C1.08357 5.58018 1.23182 5.64159 1.3864 5.64159C1.54099 5.64159 1.68924 5.58018 1.79854 5.47087L4.92668 2.34274L4.92256 5.05873C4.92224 5.13568 4.93717 5.21192 4.96647 5.28307C4.99576 5.35421 5.03886 5.41886 5.09327 5.47326C5.14768 5.52767 5.21232 5.57077 5.28346 5.60007C5.35461 5.62937 5.43085 5.64429 5.5078 5.64397C5.58474 5.64429 5.66098 5.62937 5.73213 5.60007C5.80328 5.57077 5.86792 5.52767 5.92233 5.47326C5.97673 5.41886 6.01983 5.35421 6.04913 5.28307C6.07843 5.21192 6.09335 5.13568 6.09303 5.05873Z"
                                             fill="#34A15C" />
                                     </svg>
                                     +8.2%
-                                </span>from last period</p>
+                                </span>from last period</p> --}}
                         </div>
                     </div>
                 </div>
@@ -146,7 +146,7 @@
                         </div>
                         <div class="bottom-content">
                             <h2 class="f-32 c-dark f-w-6 montserrat">$8,432</h2>
-                            <p class="f-14 c-light f-w-4 montserrat"><span class=" c-green "><svg width="21"
+                            {{-- <p class="f-14 c-light f-w-4 montserrat"><span class=" c-green "><svg width="21"
                                         height="12" viewBox="0 0 21 12" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path d="M13.8633 1H19.579V6.71389" stroke="#34A15C" stroke-width="0.9"
@@ -156,7 +156,7 @@
                                             stroke="#34A15C" stroke-width="0.9" stroke-linecap="round"
                                             stroke-linejoin="round" />
                                     </svg>+18.7%
-                                </span>from last period</p>
+                                </span>from last period</p> --}}
                         </div>
                     </div>
                 </div>
@@ -588,7 +588,7 @@
             }
 
             async function updateChart(range, from = null, to = null) {
-                const { categories, data , trafficSources , totalVisitors , totalEngagementRate } = await generateApiData(range, from, to);
+                const { categories, data , trafficSources , totalVisitors , totalEngagementRate ,totalQuotesCount} = await generateApiData(range, from, to);
                 chart.updateOptions({
                     xaxis: { categories },
                     series: [
@@ -601,6 +601,7 @@
                 renderTrafficSources(trafficSources)
 
                 document.getElementById('totalVisitorsRender').innerText = totalVisitors ?? 0;
+                document.getElementById('totalQuotesRender').innerText = totalQuotesCount ?? 0;
                 document.getElementById('appendEngagementRate').innerText = `${totalEngagementRate} %` ?? '0 %';
 
                   

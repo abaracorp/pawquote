@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
+use App\Models\GetQuotes;
 use Illuminate\Http\Request;
 use Spatie\Analytics\Analytics;
 use Spatie\Analytics\Period;
@@ -182,6 +183,9 @@ class DashboardController extends Controller
 
         $totalEngagementRate = $this->fetchTotalEngagementRate($analytics, $period);
 
+
+        $totalQuotesCount = $this->getQuotesCount($period);
+
         // dd($results2);
 
         $mapped = collect($results)->map(function ($item) {
@@ -213,6 +217,7 @@ class DashboardController extends Controller
             'trafficSources' => $results2,
             'totalVisitors' => $totalVisitors,
             'totalEngagementRate' => $totalEngagementRate,
+            'totalQuotesCount' => $totalQuotesCount,
         ]);
     }
 
@@ -231,6 +236,8 @@ class DashboardController extends Controller
         $totalVisitors = $this->getTotalVisitors($analytics, $period);
 
         $totalEngagementRate = $this->fetchTotalEngagementRate($analytics, $period);
+
+        $totalQuotesCount = $this->getQuotesCount($period);
 
         // dd($results2);
 
@@ -261,6 +268,7 @@ class DashboardController extends Controller
             'trafficSources'  => $results2,
             'totalVisitors'   => $totalVisitors,
             'totalEngagementRate' => $totalEngagementRate,
+            'totalQuotesCount' => $totalQuotesCount,
             
         ]);
     }
@@ -281,6 +289,8 @@ class DashboardController extends Controller
         $totalVisitors = $this->getTotalVisitors($analytics, $period);
 
         $totalEngagementRate = $this->fetchTotalEngagementRate($analytics, $period);
+
+        $totalQuotesCount = $this->getQuotesCount($period);
 
         $mapped = collect($results)->map(function ($item) {
             return [
@@ -308,7 +318,8 @@ class DashboardController extends Controller
             'data' => $data,
             'trafficSources' => $results2,
             'totalVisitors' => $totalVisitors,
-             'totalEngagementRate' => $totalEngagementRate,
+            'totalEngagementRate' => $totalEngagementRate,
+            'totalQuotesCount' => $totalQuotesCount,
         ]);
     }
 
@@ -335,11 +346,13 @@ class DashboardController extends Controller
             $maxResults
         );
 
-        
+        // dd($results);
 
          $sorted = collect($results)->sortBy(function ($item) {
             return $item['date']->format('Y-m-d');
         })->values(); 
+
+        // dd($sorted);
 
         return $sorted;
     }
@@ -403,6 +416,19 @@ class DashboardController extends Controller
         $averageRate = $sorted->avg('engagementRate'); 
         return round($averageRate * 100, 2); 
         
+    }
+
+    public function getQuotesCount($period){
+
+        // dd($period->endDate);
+
+        return GetQuotes::has('getPetDetails')->whereBetween('created_at', [
+            Carbon::parse($period->startDate)->startOfDay(),
+        Carbon::parse($period->endDate)->endOfDay()
+        ])->count();
+        // return GetQuotes::whereBetween('created_at',[$start,$end])->count();
+        // return GetQuotes::whereBetween('created_at',[$start,$end])->count();
+
     }
 
 }
