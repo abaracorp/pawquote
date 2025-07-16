@@ -14,7 +14,7 @@
                     
            
             <select id="rangeSelect">
-                <option value="custom">Custom</option>
+                <option value="custom">Custom Date</option>
                 <option value="today" >Today</option>
                 <option value="yesterday">Yesterday</option>
                 <option value="thisWeek">This week</option>
@@ -40,10 +40,10 @@
 
             <button class="" id="applyCustom">Apply</button>
 
-            
+
         </div>
                 </div>
-                <button class="refresh"><svg width="19" height="19" class="refresh" viewBox="0 0 19 19"
+                <button class="refresh"  onclick="location.reload()"><svg width="19" height="19" class="refresh" viewBox="0 0 19 19"
                         fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M17.67 8.27756C17.4152 6.44408 16.5646 4.74525 15.2493 3.44273C13.9341 2.14022 12.227 1.30629 10.3911 1.0694C8.55525 0.832513 6.69241 1.20581 5.08957 2.13179C3.48673 3.05777 2.2328 4.48506 1.52094 6.19381M1 2.02631V6.19381H5.1675M1 10.3613C1.2548 12.1948 2.10536 13.8936 3.42065 15.1961C4.73595 16.4986 6.44301 17.3326 8.27888 17.5695C10.1148 17.8063 11.9776 17.433 13.5804 16.5071C15.1833 15.5811 16.4372 14.1538 17.1491 12.4451M17.67 16.6126V12.4451H13.5025"
