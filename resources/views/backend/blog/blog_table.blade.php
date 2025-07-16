@@ -25,7 +25,7 @@
                     '<div class="action">
                         <a href="' . route('admin.editBlog', ['blog' => $blog]) . '">' . editIcon() . '</a>
                         <a href="' . route('admin.deleteBlog', ['blog' => $blog]) . '">' . deleteIcon() . '</a>
-                        <a href="#">' . viewIcon() . '</a>
+                        <a href="' . route('frontend.blogDeatil',['slug' => $blog->slug]) . '">' . viewIcon() . '</a>
                     </div>',
                 ];
             });

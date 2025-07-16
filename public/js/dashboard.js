@@ -66,19 +66,6 @@ const chartOptions = {
 const chart = new ApexCharts(document.querySelector("#chart"), chartOptions);
 chart.render();
 
-function getFormattedDate(d) {
-    return d.toLocaleDateString('en-GB', {
-        day: '2-digit',
-        month: 'short'
-    }); // 09 Jul
-}
-
-function randomData(length) {
-    return Array.from({
-        length
-    }, () => Math.floor(Math.random() * 100));
-}
-
 
 async function generateApiData(range, from = null, to = null) {
     const params = new URLSearchParams({ range });
@@ -169,34 +156,52 @@ function renderTrafficSources(trafficSources) {
 
 
 function renderQuotesDataFn(quotesData) {
-    const ul = document.getElementById('renderQuotesData');
+    const container = document.getElementById('renderQuotesData');
+    container.innerHTML = ''; 
 
+    if (!quotesData || quotesData.length === 0) {
+        const noData = document.createElement('p');
+        noData.className = 'f-16 c-light f-w-4 montserrat text-center';
+        noData.textContent = 'No leads found';
+        container.appendChild(noData);
+        return;
+    }
 
-    ul.innerHTML = '';
+    
+    const ul = document.createElement('ul');
 
     quotesData.forEach(item => {
-
-        console.log("item :", item);
-
         const li = document.createElement('li');
         li.innerHTML = `
-                                <div class="left-content">
-                                    <strong class="f-22 c-dark f-w-5 freedoka">${getUserName(item?.email_address)}</strong>
-                                    <p class="f-14 c-light f-w-4 montserrat">${item?.email_address}
-                                        <span>${item?.zip_code}</span><span>${filterPet(item?.get_pet_details)}</span>
-                                    </p>
-                                </div>
-                                <div class="right-content" >
-                                    <span class="f-14 c-light f-w-4 freedoka">${item?.time}</span>
-                                    <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#pet-details" 
-                            onclick="viewPetDetails(${item?.id})" class="f-14 c-dark f-w-4 freedoka"> View </a>
-                                </div>
-                `;
+            <div class="left-content">
+                <strong class="f-22 c-dark f-w-5 freedoka">${getUserName(item?.email_address)}</strong>
+                <p class="f-14 c-light f-w-4 montserrat">
+                    ${item?.email_address}
+                    <span>${item?.zip_code}</span>
+                    <span>${filterPet(item?.get_pet_details)}</span>
+                </p>
+            </div>
+            <div class="right-content">
+                <span class="f-14 c-light f-w-4 freedoka">${item?.time}</span>
+                <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#pet-details" 
+                   onclick="viewPetDetails(${item?.id})" 
+                   class="f-14 c-dark f-w-4 freedoka"> View </a>
+            </div>
+        `;
         ul.appendChild(li);
-
     });
 
+    container.appendChild(ul);
+
+    
+    const viewAllLink = document.createElement('a');
+    viewAllLink.href = `${baseUrl}/admin/affiliate`;
+    viewAllLink.className = "view-all b-orange f-18 c-dark f-w-5 freedoka";
+    viewAllLink.textContent = "View All Leads";
+    container.appendChild(viewAllLink);
 }
+
+
 
 function filterPet(arr) {
   return arr
@@ -205,8 +210,6 @@ function filterPet(arr) {
     .map(text => Array.isArray(text) ? text.join(',') : text) 
     .join(','); 
 }
-
-
 
 
 function formatSource(source, medium) {

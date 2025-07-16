@@ -24,10 +24,11 @@
                     '<div class="action">
                         <a href="' . route('admin.editFan', ['fan' => $fan]) . '">' . editIcon() . '</a>
                         <a href="' . route('admin.deleteFan', ['fan' => $fan]) . '">' . deleteIcon() . '</a>
-                        <a href="#">' . viewIcon() . '</a>
+                        <a href="' . route('frontend.successStory', ['slug' => $fan->slug]) . '">' . viewIcon() . '</a>
                     </div>',
                 ];
             });
+
 
             @endphp
 

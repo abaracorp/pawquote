@@ -133,22 +133,12 @@ class DashboardController extends Controller
                         return response()->json(['categories' => [], 'data' => []]);
                     }
 
-                    $fromDate = Carbon::createFromFormat('d-m-Y', $from);
-                    $toDate = Carbon::createFromFormat('d-m-Y', $to);
-                    $diffInMonths = $fromDate->diffInMonths($toDate);
+                    $fromDate = Carbon::createFromFormat('d-m-Y', $from)->startOfDay();
+                    $toDate = Carbon::createFromFormat('d-m-Y', $to)->endOfDay();
 
-                    if ($diffInMonths === 0) {
-                        return $this->buildResponse($this->dateRange($fromDate, $toDate));
-                    } else {
-                        $months = [];
-                        $current = $fromDate->copy()->startOfMonth();
-                        while ($current <= $toDate) {
-                            $months[] = $current->copy();
-                            $current->addMonth();
-                        }
-                        return $this->buildMonthlyFromDates($months);
-                    }
+                    return $this->buildResponse($this->dateRange($fromDate, $toDate));
                 }
+
 
             default:
                 return response()->json(['categories' => [], 'data' => []]);
@@ -172,6 +162,8 @@ class DashboardController extends Controller
         $end = end($dates);
 
         $period = Period::create($start, $end);
+
+        // dd($period,'buildResponse');
         
         $analytics = app(Analytics::class);
 
@@ -200,13 +192,13 @@ class DashboardController extends Controller
             return Carbon::createFromFormat('Y-m-d', $d)->format('d M');
         });
        
-    //    $categories = $mapped
-    //     ->sortBy('date') 
-    //     ->pluck('date')
-    //     ->map(function ($d) {
-    //         return Carbon::createFromFormat('Y-m-d', $d)->format('d M');
-    //     })
-    //     ->values(); 
+            //    $categories = $mapped
+            //     ->sortBy('date') 
+            //     ->pluck('date')
+            //     ->map(function ($d) {
+            //         return Carbon::createFromFormat('Y-m-d', $d)->format('d M');
+            //     })
+            //     ->values(); 
 
         
         $data = $mapped->pluck('value');
@@ -229,6 +221,8 @@ class DashboardController extends Controller
         $end = Carbon::create($year, max($months), 1)->endOfMonth();
 
         $period = Period::create($start, $end);
+
+        //  dd($period,'buildMonthlyResponse');
         $analytics = app(Analytics::class);
 
         $results = $this->websiteTrafficAndConversions($analytics, $period);
@@ -285,6 +279,8 @@ class DashboardController extends Controller
         $end = end($monthDates)->copy()->endOfMonth();
 
         $period = Period::create($start, $end);
+
+        //  dd($period,'buildMonthlyFromDates');
         $analytics = app(Analytics::class);
 
         $results = $this->websiteTrafficAndConversions($analytics, $period);

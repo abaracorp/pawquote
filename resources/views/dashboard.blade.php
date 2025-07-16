@@ -35,7 +35,12 @@
         <div id="custom-date-range" style="display: none">
             <label>From: <input type="text" id="dateFrom" name="dateFrom" placeholder="dd-mm-yyyy"></label>
             <label>To: <input type="text" id="dateTo" name="dateTo" placeholder="dd-mm-yyyy"></label>
-            <button id="applyCustom">Apply</button>
+
+           
+
+            <button class="" id="applyCustom">Apply</button>
+
+            
         </div>
                 </div>
                 <button class="refresh"><svg width="19" height="19" class="refresh" viewBox="0 0 19 19"
@@ -211,72 +216,13 @@
                                 </button>
                             </div> --}}
                         </div>
-                        <ul class="lead-list" id="renderQuotesData" >
 
+                        <span id="renderQuotesData">
 
-                            {{-- <li>
-                                <div class="left-content">
-                                    <strong class="f-22 c-dark f-w-5 freedoka">Sophia Lee</strong>
-                                    <p class="f-14 c-light f-w-4 montserrat">sophia.lee@example.com
-                                        <span>Dog</span><span>Premium</span>
-                                    </p>
-                                </div>
-                                <div class="right-content">
-                                    <span class="f-14 c-light f-w-4 freedoka">3 hours ago</span>
-                                    <a href="#" class="f-14 c-dark f-w-4 freedoka">View</a>
-                                </div>
-                            </li> --}}
+                        </span>
 
-                            {{-- <li>
-                                <div class="left-content">
-                                    <strong class="f-22 c-dark f-w-5 freedoka">Liam Martin</strong>
-                                    <p class="f-14 c-light f-w-4 montserrat"> liam.martin@example.com
-                                        <span> Cat</span><span>Comprehensive </span>
-                                    </p>
-                                </div>
-                                <div class="right-content">
-                                    <span class="f-14 c-light f-w-4 freedoka">6 hours ago</span>
-                                    <a href="#" class="f-14 c-dark f-w-4 freedoka">View</a>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="left-content">
-                                    <strong class="f-22 c-dark f-w-5 freedoka">Noah Green</strong>
-                                    <p class="f-14 c-light f-w-4 montserrat">noah.green@example.com
-                                        <span>Dog</span><span>Accident Only</span>
-                                    </p>
-                                </div>
-                                <div class="right-content">
-                                    <span class="f-14 c-light f-w-4 freedoka">Yesterday</span>
-                                    <a href="#" class="f-14 c-dark f-w-4 freedoka">View</a>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="left-content">
-                                    <strong class="f-22 c-dark f-w-5 freedoka">Ava Thompson</strong>
-                                    <p class="f-14 c-light f-w-4 montserrat">ava.t@example.com
-                                        <span>Rabbit</span><span>Basic</span>
-                                    </p>
-                                </div>
-                                <div class="right-content">
-                                    <span class="f-14 c-light f-w-4 freedoka">2 days ago</span>
-                                    <a href="#" class="f-14 c-dark f-w-4 freedoka">View</a>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="left-content">
-                                    <strong class="f-22 c-dark f-w-5 freedoka">Ethan White</strong>
-                                    <p class="f-14 c-light f-w-4 montserrat"> ethan.w@example.com
-                                        <span>Dog</span><span>Basic</span>
-                                    </p>
-                                </div>
-                                <div class="right-content">
-                                    <span class="f-14 c-light f-w-4 freedoka">3 days ago</span>
-                                    <a href="#" class="f-14 c-dark f-w-4 freedoka">View</a>
-                                </div>
-                            </li> --}}
-                        </ul>
-                        <a href="{{route('admin.affilate')}}" class="view-all b-orange f-18 c-dark f-w-5 freedoka">View All Leads</a>
+                        
+                        
                     </div>
                 </div>
 

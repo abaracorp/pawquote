@@ -21,7 +21,7 @@
                     '<div class="action">
                         <a href="' . route('admin.editFaqGuide', ['type' => $type,'faqguide' => $item]) . '">' . editIcon() . '</a>
                         <a href="' . route('admin.deleteFaqGuide', ['type' => $type,'faqguide' => $item]) . '">' . deleteIcon() . '</a>
-                        <a href="#">' . viewIcon() . '</a>
+                        <a href="' . route('frontend.'.$type) . '">' . viewIcon() . '</a>
                     </div>',
                 ];
             });
