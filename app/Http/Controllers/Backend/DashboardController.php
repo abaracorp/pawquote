@@ -183,8 +183,9 @@ class DashboardController extends Controller
 
         $totalEngagementRate = $this->fetchTotalEngagementRate($analytics, $period);
 
-
         $totalQuotesCount = $this->getQuotesCount($period);
+
+        $getQuotesData = $this->getQuotesData($period);
 
         // dd($results2);
 
@@ -218,6 +219,7 @@ class DashboardController extends Controller
             'totalVisitors' => $totalVisitors,
             'totalEngagementRate' => $totalEngagementRate,
             'totalQuotesCount' => $totalQuotesCount,
+            'getQuotesData' => $getQuotesData,
         ]);
     }
 
@@ -238,6 +240,8 @@ class DashboardController extends Controller
         $totalEngagementRate = $this->fetchTotalEngagementRate($analytics, $period);
 
         $totalQuotesCount = $this->getQuotesCount($period);
+
+        $getQuotesData = $this->getQuotesData($period);
 
         // dd($results2);
 
@@ -263,12 +267,13 @@ class DashboardController extends Controller
         }
 
         return response()->json([
-            'categories' => $categories,
-            'data' => $data,
-            'trafficSources'  => $results2,
-            'totalVisitors'   => $totalVisitors,
+            'categories'          => $categories,
+            'data'                => $data,
+            'trafficSources'      => $results2,
+            'totalVisitors'       => $totalVisitors,
             'totalEngagementRate' => $totalEngagementRate,
-            'totalQuotesCount' => $totalQuotesCount,
+            'totalQuotesCount'    => $totalQuotesCount,
+            'getQuotesData'       => $getQuotesData,
             
         ]);
     }
@@ -291,6 +296,8 @@ class DashboardController extends Controller
         $totalEngagementRate = $this->fetchTotalEngagementRate($analytics, $period);
 
         $totalQuotesCount = $this->getQuotesCount($period);
+
+        $getQuotesData = $this->getQuotesData($period);
 
         $mapped = collect($results)->map(function ($item) {
             return [
@@ -320,6 +327,7 @@ class DashboardController extends Controller
             'totalVisitors' => $totalVisitors,
             'totalEngagementRate' => $totalEngagementRate,
             'totalQuotesCount' => $totalQuotesCount,
+            'getQuotesData' => $getQuotesData,
         ]);
     }
 
@@ -359,31 +367,31 @@ class DashboardController extends Controller
 
 
     public function trafficSources(Analytics $analytics, $period)
-{
-    $metrics = ['sessions'];
-    // $dimensions = ['date'];
-   $dimensions = ['sessionSource', 'sessionMedium'];
-    $maxResults = 1000;
+    {
+        $metrics = ['sessions'];
+        // $dimensions = ['date'];
+        $dimensions = ['sessionSource', 'sessionMedium'];
+        $maxResults = 1000;
 
-    $results = $analytics->get(
-        $period,
-        $metrics,
-        $dimensions,
-        $maxResults
-    );
+        $results = $analytics->get(
+            $period,
+            $metrics,
+            $dimensions,
+            $maxResults
+        );
 
-    // dd($results); // Uncomment only for debugging
+        // dd($results); // Uncomment only for debugging
 
-    // $sources = $results->map(function ($row) {
-    //     return [
-    //         'sessionSource' => $row[0], // source
-    //         'sessionMedium' => $row[1], // medium
-    //         'sessions' => $row[2] ?? 0,
-    //     ];
-    // });
+        // $sources = $results->map(function ($row) {
+        //     return [
+        //         'sessionSource' => $row[0], // source
+        //         'sessionMedium' => $row[1], // medium
+        //         'sessions' => $row[2] ?? 0,
+        //     ];
+        // });
 
-    return $results;
-}
+        return $results;
+    }
 
     public function fetchTotalEngagementRate(Analytics $analytics, $period)
     {
@@ -420,14 +428,26 @@ class DashboardController extends Controller
 
     public function getQuotesCount($period){
 
-        // dd($period->endDate);
-
         return GetQuotes::has('getPetDetails')->whereBetween('created_at', [
             Carbon::parse($period->startDate)->startOfDay(),
-        Carbon::parse($period->endDate)->endOfDay()
+            Carbon::parse($period->endDate)->endOfDay()
         ])->count();
-        // return GetQuotes::whereBetween('created_at',[$start,$end])->count();
-        // return GetQuotes::whereBetween('created_at',[$start,$end])->count();
+
+    }
+
+    public function getQuotesData($period){
+
+        return GetQuotes::has('getPetDetails')->with('getPetDetails')->whereBetween('created_at', [
+            Carbon::parse($period->startDate)->startOfDay(),
+            Carbon::parse($period->endDate)->endOfDay()
+        ])
+        ->take(5)
+        ->latest()
+        ->get()
+        ->map(function($data) {
+            $data->time = $data->created_at->diffForHumans();
+            return $data;
+        });
 
     }
 
