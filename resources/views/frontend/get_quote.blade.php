@@ -130,10 +130,10 @@
             <div class="trusted-by">
                  <h3>Trusted By:</h3>
                  <ul>
-                     <li class="blue"><img src="http://127.0.0.1:8000/images/forbes.png" alt="Forbes"></li>
-                     <li class="pink"><img src="http://127.0.0.1:8000/images/techcrunch.png" alt="TechCrunch"></li>
-                     <li class="purple"><img src="http://127.0.0.1:8000/images/builtinnyc.png" alt="BuiltInNYC"></li>
-                     <li class="green"><img src="http://127.0.0.1:8000/images/axios.png" alt="Axios"></li>
+                     <li class="blue"><img src="{{asset('images/forbes.png')}}" alt="Forbes"></li>
+                     <li class="pink"><img src="{{asset('images/techcrunch.png')}}" alt="TechCrunch"></li>
+                     <li class="purple"><img src="{{asset('images/builtinnyc.png')}}" alt="BuiltInNYC"></li>
+                     <li class="green"><img src="{{asset('images/axios.png')}}" alt="Axios"></li>
                      <li class="ratings">
                          <span class="review-text">Excellent</span>
                          <span class="stars">
@@ -143,7 +143,7 @@
                              <i class="fa-solid fa-star"></i>
                              <i class="fa-solid fa-star-half-stroke"></i>
                          </span> <span class="review-text">Out of 100% reviews</span>
-                         <img src="http://127.0.0.1:8000/images/google.png" alt="">
+                         <img src="{{asset('images/google.png')}}" alt="">
                      </li>
                  </ul>
                  <svg width="50" height="58" viewBox="0 0 83 90" fill="currentColor" class="footprint" xmlns="http://www.w3.org/2000/svg">
