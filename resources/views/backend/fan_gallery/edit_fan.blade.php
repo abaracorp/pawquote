@@ -1,5 +1,5 @@
 @extends('backend.master')
-
+@section('title', 'Edit Story')
 @section('content')
 <main class="Rightside Add-new-story">
     <x-alert />

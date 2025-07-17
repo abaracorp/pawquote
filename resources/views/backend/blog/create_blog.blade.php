@@ -1,5 +1,5 @@
 @extends('backend.master')
-
+@section('title', 'Create Blog')
 @section('content')
 <main class="Rightside">
     <x-alert />

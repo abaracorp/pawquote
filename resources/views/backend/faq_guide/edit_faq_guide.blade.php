@@ -1,5 +1,5 @@
 @extends('backend.master')
-
+@section('title','Edit '.$text)
 @section('content')
 <main class="Rightside">
     <x-alert />

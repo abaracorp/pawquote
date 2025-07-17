@@ -1,5 +1,5 @@
 @extends('backend.master')
-
+@section('title', 'Gallery' )
 @section('content')
 <main class="Rightside gallery-images">
     <x-alert />

@@ -1,5 +1,5 @@
 @extends('backend.master')
-
+@section('title', 'Edit Blog')
 @section('content')
     <main class="Rightside">
 

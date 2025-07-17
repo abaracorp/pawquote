@@ -10,7 +10,7 @@
                             <div class="leftside">
                                 <div class="heading ">
                                     <h1 class="c-dark f-56 l-h-72 f-w-6 freedoka mb-0"><span class="c-orange">Pet
-                                            insurance</span>for the lowest price-guaranteed!
+                                            insurance</span> for the lowest price-guaranteed!
                                     </h1>
                                     <ul>
                                         <li class="d-flex align-items-center gap-2"><svg width="24" height="27"
@@ -353,7 +353,8 @@
                                 <td>Average wait 1-7 days</td>
                             </tr>
                             <tr>
-                                <td><span class="image-card "><img src="{{asset('/images/pawprotect.png')}}" alt=""></span>
+                                <td>
+                                    <span class="image-card"><img src="{{asset('/images/pawprotect.png')}}" alt=""></span>
                                 </td>
                                 <td>
                                     <div class="rating"><span class="stars">

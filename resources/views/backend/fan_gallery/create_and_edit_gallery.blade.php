@@ -1,5 +1,5 @@
 @extends('backend.master')
-
+@section('title', isset($gallery) ? 'Edit Gallery' : 'Add Gallery')
 @section('content')
 
 

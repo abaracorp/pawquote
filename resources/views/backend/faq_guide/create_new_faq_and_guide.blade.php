@@ -1,4 +1,5 @@
 @extends('backend.master')
+@section('title','Create '.$text)
 @section('content')
     <main class="Rightside">
 

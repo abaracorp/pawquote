@@ -1,5 +1,5 @@
 @extends('backend.master')
-
+@section('title', 'Fan' )
 @section('content')
 <main class="Rightside gallery-images">
     
@@ -40,7 +40,7 @@
         </div>
         
             <form id="bulkActionForm" action="{{route('admin.fanBulkAction')}}" method="POST">
-         <div class="select-wrapper b-orange br-5">
+         <div class="select-wrapper b-orange br-5 mb-2">
                 @csrf
                 <select name="bulk_action" id="bulkActionSelect" class="c-dark f-16 f-w-5 freedoka">
                     <option value="">Bulk Action</option>

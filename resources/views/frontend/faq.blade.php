@@ -88,8 +88,9 @@
                                 <h2 class="c-dark f-26 f-w-5 freedoka">Phone Support</h2>
                             </div>
                             <ul>
-                                <li class="f-18 c-light l-h-37 f-w-4 montserrat mb-0">Call us at: <a href=""
-                                        class="c-dark f-w-5 mb-0">+1 (800) 555-4545</a></li>
+                                <li class="f-18 c-light l-h-37 f-w-4 montserrat mb-0">Call us at: 
+                                    <a href="tel:+18005554545" class="c-dark f-w-5 mb-0">+1 (800) 555-4545</a>
+                                    </li>
                                 <li class="f-18 c-light l-h-37 f-w-4 montserrat">Monday - Friday, 8 AM - 8 PM EST</li>
                             </ul>
                             <svg width="54" height="56" viewBox="0 0 54 56" class="footprint" fill="none"
@@ -170,8 +171,9 @@
                                 <h2 class="c-dark f-26 f-w-5 freedoka">Email Support</h2>
                             </div>
                             <ul>
-                                <li class="f-18 c-light l-h-37 f-w-4 montserrat mb-0"> <a href=""
-                                        class="c-dark f-w-5 mb-0">pawquote@gmail.com</a></li>
+                                <li class="f-18 c-light l-h-37 f-w-4 montserrat mb-0"> 
+                                    <a href="mailto:pawquote@gmail.com" class="c-dark f-w-5 mb-0">pawquote@gmail.com</a>
+                                    </li>
                                 <li class="f-18 c-light l-h-37 f-w-4 montserrat">Response within 24 hours</li>
                             </ul>
                             <svg width="54" height="56" viewBox="0 0 54 56" class="footprint" fill="none"
