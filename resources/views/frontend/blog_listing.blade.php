@@ -110,6 +110,10 @@
                     </ul>
                 </nav>
             </section>
+        @else
+
+        <h5 class="text-center">No Blog Found</h5>
+
         @endif
     </main>
 @endsection

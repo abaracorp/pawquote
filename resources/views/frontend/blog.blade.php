@@ -103,6 +103,8 @@
 
     @endif
 
+
+     @if($blogs->isNotEmpty())
     <section class="article">
         <div class="container">
            
@@ -112,7 +114,7 @@
                     <div class="row">
 
 
-                        @if($blogs->isNotEmpty())
+                       
 
                         @foreach ($blogs as $blog)
                         <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
@@ -183,7 +185,7 @@
                         @endforeach
 
 
-                        @endif
+                        
 
                     </div>
                 </div>
@@ -195,6 +197,9 @@
                     All Stories</a>
             </div>
     </section>
+
+    @endif
+
     <section class="ownership">
         <div class="container">
             <div class="row">
