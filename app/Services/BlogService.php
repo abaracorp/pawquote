@@ -24,7 +24,7 @@ class BlogService
 
             $blog = Blog::create([
                 'title'   => $data['title'],
-                // 'slug'    => $data['slug'],
+                'slug'    => $data['slug'],
                 'status'  => $data['status'] ?? 0,
                 'summary' => $data['summary'] ?? null,
                 'content' => $data['content'],
@@ -43,7 +43,7 @@ class BlogService
     public function update(Blog $blog, array $data): Blog
     {
         $blog->title = $data['title'];
-        // $blog->slug =  $data['slug'];
+        $blog->slug =  $data['slug'];
         $blog->status = $data['status'] ?? 0;
         $blog->summary = $data['summary'] ?? null;
         $blog->content = $data['content'];

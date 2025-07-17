@@ -43,20 +43,38 @@ class Blog extends Model implements HasMedia
     }
 
 
-        protected static function boot()
-    {
-        parent::boot();
+    //     protected static function boot()
+    // {
+    //     parent::boot();
 
-        static::creating(function ($model) {
-            $model->slug = generateUniqueSlug($model->title, $model->getTable());
-        });
+    //     static::creating(function ($model) {
+    //         $model->slug = generateUniqueSlug($model->title, $model->getTable());
+    //     });
 
-        static::updating(function ($model) {
-            if ($model->isDirty('title')) {
-                $model->slug = generateUniqueSlug($model->title, $model->getTable());
-            }
-        });
-    }
+    //     static::updating(function ($model) {
+    //         if ($model->isDirty('title')) {
+    //             $model->slug = generateUniqueSlug($model->title, $model->getTable());
+    //         }
+    //     });
+    // } 
+
+  protected static function boot()
+{
+    parent::boot();
+
+    static::creating(function ($model) {
+        if (!empty($model->slug)) {
+            $model->slug = generateUniqueSlugForBlog($model->slug, $model->getTable());
+        }
+    });
+
+    static::updating(function ($model) {
+        if ($model->isDirty('slug') && !empty($model->slug)) {
+            $model->slug = generateUniqueSlugForBlog($model->slug, $model->getTable(), 'slug', $model->id);
+        }
+    });
+}
+ 
 
 
 }

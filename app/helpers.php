@@ -70,5 +70,36 @@ function generateUniqueSlug(string $title, string $table, string $slugColumn = '
 
     return $slug;
 }
+
+
+}
+
+if (!function_exists('generateUniqueSlugForBlog')) {
+
+function generateUniqueSlugForBlog(string $baseSlug, string $table, string $slugColumn = 'slug', $ignoreId = null): string
+    {
+        $slug = Str::slug($baseSlug);
+        $originalSlug = $slug;
+        $counter = 1;
+
+        do {
+            $query = DB::table($table)->where($slugColumn, $slug);
+
+            if ($ignoreId !== null) {
+                $query->where('id', '!=', $ignoreId);
+            }
+
+            $exists = $query->exists();
+
+            if ($exists) {
+                $slug = $originalSlug . '-' . $counter++;
+            }
+
+        } while ($exists);
+
+        return $slug;
+    }
+
+
 }
 

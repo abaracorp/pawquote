@@ -37,7 +37,8 @@ class GalleryController extends Controller
     {
         $request->validate([
         'images'   => 'required|array',
-        'images.*' => 'mimes:jpeg,png,jpg,gif,svg|max:10240',
+        'images.*' => 'image|mimes:jpeg,png,jpg,gif,svg|max:10240',
+        
         ], [
             'images.*.max' => 'Each image must not be greater than 10MB.',
         ]);
@@ -78,6 +79,14 @@ class GalleryController extends Controller
 
     public function updateGallery(Request $request, Gallery $gallery)
     {
+
+         $request->validate([
+         'image'   => 'sometimes|image|mimes:jpeg,png,jpg,gif,svg|max:10240', // 10MB
+            ], [
+                'image.image'    => 'The uploaded file must be an image.',
+                'image.mimes'    => 'Only jpeg, png, jpg, gif, and svg file types are allowed.',
+                'image.max'      => 'The image must not exceed 10MB in size.',
+            ]);
         
         if ($request->hasFile('image')) {
 
