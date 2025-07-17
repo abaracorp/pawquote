@@ -28,7 +28,7 @@ class BlogController extends Controller
             return redirect()->route('frontend.blog'); 
         }
 
-         $latestBlogs = Blog::latest()->whereNot('id', $blog->id)->take(3)->get();
+         $latestBlogs = Blog::latest()->OfStatus(0)->whereNot('id', $blog->id)->take(3)->get();
 
         return view('frontend.blog_detail', compact('blog','latestBlogs'));
     }

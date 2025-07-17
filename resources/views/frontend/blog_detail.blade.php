@@ -35,6 +35,13 @@
                     </div>
                 </div>
 
+                @if(@$blog->summary)
+                <h3>Excerpt/Summary</h3>
+
+                <p>{{$blog->summary ?? ''}}</p>
+
+                @endif
+
                 {!! $blog->content ?? '' !!}
 
 

@@ -30,7 +30,7 @@
                             <ul class="radio-card">
                                 <li>
                                     <label class="radio-container">Published
-                                        <input type="radio" value="0" name="status" {{ old('status')==='0' ? 'checked'
+                                        <input type="radio" value="0" checked name="status" {{ old('status')==='0' ? 'checked'
                                             : '' }}>
                                         <span class="checkmark"></span>
                                     </label>
