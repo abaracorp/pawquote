@@ -63,7 +63,7 @@
 
     <!-- Modal -->
     
-    @include('modal.affiliateModal');
+    @include('modal.affiliateModal')
 
 </main>
 
