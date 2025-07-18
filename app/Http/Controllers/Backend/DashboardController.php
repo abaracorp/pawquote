@@ -366,7 +366,8 @@ class DashboardController extends Controller
     {
         $metrics = ['sessions'];
         // $dimensions = ['date'];
-        $dimensions = ['sessionSource', 'sessionMedium'];
+        $dimensions = ['sessionSource'];
+        // $dimensions = ['sessionSource', 'sessionMedium'];
         $maxResults = 1000;
 
         $results = $analytics->get(
@@ -376,7 +377,7 @@ class DashboardController extends Controller
             $maxResults
         );
 
-        // dd($results); // Uncomment only for debugging
+        // dd($results); 
 
         // $sources = $results->map(function ($row) {
         //     return [
